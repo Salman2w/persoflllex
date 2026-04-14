@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles for Inter font */
+@layer base {
+  html {
+    font-family: 'Inter', sans-serif;
+  }
+}
