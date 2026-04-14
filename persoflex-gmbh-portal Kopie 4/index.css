@@ -43,7 +43,7 @@
   }
 
   * {
-    @apply border-border;
+    border-color: hsl(var(--border));
   }
   
   html {
@@ -143,7 +143,8 @@
   
   /* Card Hover Effect */
   .card-hell {
-    @apply bg-card border border-border rounded-xl transition-all duration-500;
+    @apply bg-card border rounded-xl transition-all duration-500;
+    border-color: hsl(var(--border));
   }
   
   .card-hell:hover {
