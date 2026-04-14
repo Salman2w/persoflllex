@@ -48,23 +48,24 @@ export default {
         },
         flame: {
           orange: "hsl(var(--flame-orange))",
-          red: "hsl(var(--flame-red))",
-          yellow: "hsl(var(--flame-yellow))",
+          coral: "hsl(var(--flame-coral))",
+          amber: "hsl(var(--flame-amber))",
+          teal: "hsl(var(--flame-teal))",
           ember: "hsl(var(--ember))",
         },
-        // Hell-Theme Farben
-        hell: {
-          void: "#0a0a0a",
-          charcoal: "#1a1a1a",
-          smoke: "#2a2a2a",
-          ash: "#9ca3af",
-          flame: "#ff4500",
-          ember: "#ff6b35",
-          inferno: "#dc2626",
+        // Vibrant Colors
+        vibrant: {
+          orange: "#ff6b00",
+          coral: "#ff5a4a",
+          amber: "#ffb800",
+          teal: "#14a89d",
+          peach: "#fff5f0",
+          cream: "#fffaf5",
         },
-        // Brand Farbe (Kompatibilitat)
+        // Brand Colors
         brand: {
-          orange: "#ff4500",
+          orange: "#ff6b00",
+          coral: "#ff5a4a",
         },
       },
       borderRadius: {

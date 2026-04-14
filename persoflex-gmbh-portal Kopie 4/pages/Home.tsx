@@ -121,22 +121,23 @@ export const Home: React.FC = () => {
       </script>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-amber-50 via-orange-50/50 to-white">
         {/* Background Effects */}
         <div className="absolute inset-0">
-          <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-orange-500/10 rounded-full blur-[120px]" />
-          <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-red-500/10 rounded-full blur-[100px]" />
+          <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-orange-400/20 rounded-full blur-[150px]" />
+          <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-coral-500/15 rounded-full blur-[130px]" />
+          <div className="absolute top-1/2 right-1/3 w-[300px] h-[300px] bg-teal-400/10 rounded-full blur-[100px]" />
         </div>
         
         {/* Grid Pattern */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.03)_1px,transparent_1px)] bg-[size:64px_64px]" />
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,107,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,107,0,0.03)_1px,transparent_1px)] bg-[size:64px_64px]" />
 
         <div className="relative max-w-7xl mx-auto px-6 pt-32 pb-20">
           <div className="text-center max-w-4xl mx-auto">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-50 border border-gray-200 mb-8">
+            <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-orange-100 to-amber-100 border border-orange-200/50 mb-8 shadow-sm">
               <Flame className="w-4 h-4 text-orange-500" />
-              <span className="text-sm text-gray-600">Ihr Personaldienstleister in Pforzheim</span>
+              <span className="text-sm font-medium text-orange-700">Ihr Personaldienstleister in Pforzheim</span>
             </div>
 
             {/* Headline */}
@@ -156,32 +157,32 @@ export const Home: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 to="/jobs" 
-                className="group relative overflow-hidden bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-4 rounded-lg font-bold transition-all duration-300 hover:shadow-lg hover:scale-105 inline-flex items-center justify-center gap-2"
+                className="group relative overflow-hidden bg-gradient-to-r from-orange-500 via-orange-500 to-amber-500 text-white px-8 py-4 rounded-xl font-bold transition-all duration-300 hover:shadow-[0_8px_30px_rgba(255,107,0,0.35)] hover:scale-105 inline-flex items-center justify-center gap-2"
               >
                 <span className="relative z-10">Jobs entdecken</span>
                 <ArrowRight size={18} className="relative z-10 transition-transform group-hover:translate-x-1" />
               </Link>
               <Link 
                 to="/unternehmen" 
-                className="px-8 py-4 border border-gray-300 rounded-lg text-gray-900 font-bold hover:bg-gray-50 hover:border-orange-500/50 transition-all inline-flex items-center justify-center gap-2"
+                className="px-8 py-4 bg-white border-2 border-orange-200 rounded-xl text-gray-900 font-bold hover:bg-orange-50 hover:border-orange-400 transition-all inline-flex items-center justify-center gap-2 shadow-sm"
               >
                 Personal anfragen
               </Link>
             </div>
 
             {/* Trust Indicators */}
-            <div className="mt-16 flex flex-wrap justify-center gap-8">
-              <div className="flex items-center gap-2 px-4 py-2 bg-gray-50 rounded-full border border-gray-200">
-                <CheckCircle2 className="w-4 h-4 text-orange-500" />
-                <span className="text-sm text-gray-600">GVP Mitglied</span>
+            <div className="mt-16 flex flex-wrap justify-center gap-4">
+              <div className="flex items-center gap-2 px-5 py-2.5 bg-white rounded-full border border-teal-200 shadow-sm">
+                <CheckCircle2 className="w-4 h-4 text-teal-500" />
+                <span className="text-sm font-medium text-gray-700">GVP Mitglied</span>
               </div>
-              <div className="flex items-center gap-2 px-4 py-2 bg-gray-50 rounded-full border border-gray-200">
+              <div className="flex items-center gap-2 px-5 py-2.5 bg-white rounded-full border border-orange-200 shadow-sm">
                 <CheckCircle2 className="w-4 h-4 text-orange-500" />
-                <span className="text-sm text-gray-600">AÜG Erlaubnis</span>
+                <span className="text-sm font-medium text-gray-700">AÜG Erlaubnis</span>
               </div>
-              <div className="flex items-center gap-2 px-4 py-2 bg-gray-50 rounded-full border border-gray-200">
-                <CheckCircle2 className="w-4 h-4 text-orange-500" />
-                <span className="text-sm text-gray-600">Tarifgebunden</span>
+              <div className="flex items-center gap-2 px-5 py-2.5 bg-white rounded-full border border-amber-200 shadow-sm">
+                <CheckCircle2 className="w-4 h-4 text-amber-500" />
+                <span className="text-sm font-medium text-gray-700">Tarifgebunden</span>
               </div>
             </div>
           </div>
@@ -189,26 +190,25 @@ export const Home: React.FC = () => {
 
         {/* Scroll Indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
-          <div className="w-6 h-10 border-2 border-orange-500/30 rounded-full flex items-start justify-center p-2">
+          <div className="w-6 h-10 border-2 border-orange-400/50 rounded-full flex items-start justify-center p-2">
             <div className="w-1 h-2 bg-orange-500 rounded-full animate-bounce" />
           </div>
         </div>
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-gray-50 border-y border-gray-200 relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-orange-500/50 to-transparent" />
-        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-orange-500/50 to-transparent" />
+      <section className="py-20 bg-gradient-to-r from-orange-500 via-orange-500 to-amber-500 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:32px_32px]" />
         
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-6 relative">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center group">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-orange-500/10 text-orange-500 mb-4 transition-all duration-300 group-hover:bg-orange-500 group-hover:text-white group-hover:shadow-lg group-hover:scale-110">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-white/20 text-white mb-4 transition-all duration-300 group-hover:bg-white group-hover:text-orange-500 group-hover:shadow-xl group-hover:scale-110">
                   <stat.icon size={28} />
                 </div>
-                <div className="text-3xl md:text-4xl font-black text-gray-900 mb-2">{stat.value}</div>
-                <div className="text-sm text-gray-600">{stat.label}</div>
+                <div className="text-3xl md:text-4xl font-black text-white mb-2">{stat.value}</div>
+                <div className="text-sm text-white/80">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -216,12 +216,13 @@ export const Home: React.FC = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-24 bg-white relative overflow-hidden">
-        <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-orange-500/5 rounded-full blur-[150px] -translate-y-1/2" />
+      <section className="py-24 bg-gradient-to-b from-white to-amber-50/50 relative overflow-hidden">
+        <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-teal-400/10 rounded-full blur-[150px] -translate-y-1/2" />
+        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-orange-400/10 rounded-full blur-[120px]" />
         
         <div className="max-w-7xl mx-auto px-6 relative">
           <div className="text-center mb-16">
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500/10 text-orange-500 text-sm font-semibold uppercase tracking-wider mb-4">
+            <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-teal-100 to-teal-50 border border-teal-200 text-teal-600 text-sm font-semibold uppercase tracking-wider mb-4">
               <Flame className="w-4 h-4" />
               Unsere Leistungen
             </span>
@@ -235,36 +236,43 @@ export const Home: React.FC = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <div 
-                key={index} 
-                className="group bg-white border border-gray-200 rounded-2xl p-8 transition-all duration-500 hover:border-orange-500/50 hover:shadow-xl hover:-translate-y-2 relative overflow-hidden"
-              >
-                <div className="absolute top-0 right-0 w-32 h-32 bg-orange-500/5 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                
-                <div className="w-16 h-16 rounded-2xl bg-orange-500/10 text-orange-500 flex items-center justify-center mb-6 transition-all duration-300 group-hover:bg-orange-500 group-hover:text-white group-hover:shadow-lg">
-                  <service.icon size={32} />
+            {services.map((service, index) => {
+              const colors = [
+                { bg: 'bg-orange-500', light: 'bg-orange-100', text: 'text-orange-500', border: 'border-orange-200' },
+                { bg: 'bg-teal-500', light: 'bg-teal-100', text: 'text-teal-500', border: 'border-teal-200' },
+                { bg: 'bg-amber-500', light: 'bg-amber-100', text: 'text-amber-500', border: 'border-amber-200' },
+              ][index];
+              return (
+                <div 
+                  key={index} 
+                  className={`group bg-white border-2 ${colors.border} rounded-2xl p-8 transition-all duration-500 hover:border-${colors.text.split('-')[1]}-400 hover:shadow-xl hover:-translate-y-2 relative overflow-hidden`}
+                >
+                  <div className={`absolute top-0 right-0 w-32 h-32 ${colors.light} rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+                  
+                  <div className={`w-16 h-16 rounded-2xl ${colors.light} ${colors.text} flex items-center justify-center mb-6 transition-all duration-300 group-hover:${colors.bg} group-hover:text-white group-hover:shadow-lg`}>
+                    <service.icon size={32} />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">{service.title}</h3>
+                  <p className="text-gray-600 leading-relaxed mb-6">{service.description}</p>
+                  <div className={`flex items-center ${colors.text} font-semibold group-hover:gap-4 transition-all`}>
+                    <span>Mehr erfahren</span>
+                    <ArrowRight size={18} className="ml-2 transition-transform group-hover:translate-x-2" />
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">{service.title}</h3>
-                <p className="text-gray-600 leading-relaxed mb-6">{service.description}</p>
-                <div className="flex items-center text-orange-500 font-semibold group-hover:gap-4 transition-all">
-                  <span>Mehr erfahren</span>
-                  <ArrowRight size={18} className="ml-2 transition-transform group-hover:translate-x-2" />
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
 
       {/* Industries Section */}
-      <section className="py-24 bg-gray-50 border-y border-gray-200 relative overflow-hidden">
-        <div className="absolute top-1/2 right-0 w-[600px] h-[600px] bg-orange-500/5 rounded-full blur-[150px] -translate-y-1/2" />
+      <section className="py-24 bg-gradient-to-br from-teal-50 via-white to-amber-50 relative overflow-hidden">
+        <div className="absolute top-1/2 right-0 w-[600px] h-[600px] bg-teal-400/10 rounded-full blur-[150px] -translate-y-1/2" />
         
         <div className="max-w-7xl mx-auto px-6 relative">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500/10 text-orange-500 text-sm font-semibold uppercase tracking-wider mb-4">
+              <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-amber-100 to-orange-100 border border-amber-200 text-amber-600 text-sm font-semibold uppercase tracking-wider mb-4">
                 Branchen
               </span>
               <h2 className="text-3xl md:text-5xl font-black text-gray-900 mt-4 mb-6">
@@ -276,53 +284,56 @@ export const Home: React.FC = () => {
               </p>
               
               <div className="space-y-4">
-                {industries.map((industry, index) => (
-                  <div 
-                    key={index}
-                    className="flex items-center justify-between p-5 bg-white border border-gray-200 rounded-xl hover:border-orange-500/50 hover:shadow-md transition-all group cursor-pointer"
-                  >
-                    <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-orange-500/10 text-orange-500 flex items-center justify-center group-hover:bg-orange-500 group-hover:text-white transition-all">
-                        <industry.icon size={24} />
+                {industries.map((industry, index) => {
+                  const colors = ['bg-orange-100 text-orange-500 border-orange-200', 'bg-teal-100 text-teal-500 border-teal-200', 'bg-amber-100 text-amber-500 border-amber-200', 'bg-rose-100 text-rose-500 border-rose-200'][index];
+                  return (
+                    <div 
+                      key={index}
+                      className="flex items-center justify-between p-5 bg-white border-2 border-gray-100 rounded-xl hover:border-orange-300 hover:shadow-lg transition-all group cursor-pointer"
+                    >
+                      <div className="flex items-center gap-4">
+                        <div className={`w-12 h-12 rounded-xl ${colors.split(' ').slice(0, 2).join(' ')} flex items-center justify-center group-hover:scale-110 transition-all`}>
+                          <industry.icon size={24} />
+                        </div>
+                        <span className="font-semibold text-gray-900">{industry.name}</span>
                       </div>
-                      <span className="font-semibold text-gray-900">{industry.name}</span>
+                      <span className="text-sm bg-orange-100 text-orange-600 px-3 py-1 rounded-full font-bold">{industry.jobs}</span>
                     </div>
-                    <span className="text-sm text-orange-500 font-bold">{industry.jobs}</span>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
 
               <Link 
                 to="/jobs" 
-                className="mt-8 inline-flex items-center gap-2 text-orange-500 font-bold hover:gap-4 transition-all"
+                className="mt-8 inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-amber-500 text-white px-6 py-3 rounded-xl font-bold hover:shadow-lg transition-all"
               >
                 Alle Jobs ansehen <ArrowRight size={18} />
               </Link>
             </div>
 
             <div className="relative">
-              <div className="aspect-square rounded-3xl bg-gradient-to-br from-orange-500/20 via-red-500/10 to-orange-500/5 p-8 flex items-center justify-center border border-orange-500/20 relative overflow-hidden">
+              <div className="aspect-square rounded-3xl bg-gradient-to-br from-orange-400 via-amber-400 to-orange-500 p-8 flex items-center justify-center relative overflow-hidden shadow-2xl">
                 {/* Animated background */}
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(234,88,12,0.2),transparent_50%)]" />
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,rgba(220,38,38,0.1),transparent_50%)]" />
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.3),transparent_50%)]" />
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,rgba(255,255,255,0.2),transparent_50%)]" />
                 
                 <div className="text-center relative z-10">
-                  <Zap className="w-24 h-24 text-orange-500 mx-auto mb-6" />
-                  <p className="text-4xl font-black text-gray-900 mb-2">365+</p>
-                  <p className="text-xl text-gray-600">offene Stellen</p>
-                  <p className="text-sm text-gray-500 mt-2">in der Region Pforzheim</p>
+                  <Zap className="w-24 h-24 text-white mx-auto mb-6 drop-shadow-lg" />
+                  <p className="text-5xl font-black text-white mb-2 drop-shadow-md">365+</p>
+                  <p className="text-xl text-white/90">offene Stellen</p>
+                  <p className="text-sm text-white/70 mt-2">in der Region Pforzheim</p>
                 </div>
               </div>
               
               {/* Floating badges */}
-              <div className="absolute -top-4 -right-4 px-4 py-2 bg-white border border-orange-500/30 rounded-full shadow-md">
-                <span className="text-sm font-bold text-gray-900">Produktion</span>
+              <div className="absolute -top-4 -right-4 px-4 py-2 bg-white border-2 border-teal-200 rounded-full shadow-lg">
+                <span className="text-sm font-bold text-teal-600">Produktion</span>
               </div>
-              <div className="absolute -bottom-4 -left-4 px-4 py-2 bg-white border border-orange-500/30 rounded-full shadow-md">
-                <span className="text-sm font-bold text-gray-900">Logistik</span>
+              <div className="absolute -bottom-4 -left-4 px-4 py-2 bg-white border-2 border-amber-200 rounded-full shadow-lg">
+                <span className="text-sm font-bold text-amber-600">Logistik</span>
               </div>
-              <div className="absolute top-1/2 -right-6 px-4 py-2 bg-white border border-orange-500/30 rounded-full shadow-md">
-                <span className="text-sm font-bold text-gray-900">Handwerk</span>
+              <div className="absolute top-1/2 -right-6 px-4 py-2 bg-white border-2 border-orange-200 rounded-full shadow-lg">
+                <span className="text-sm font-bold text-orange-600">Handwerk</span>
               </div>
             </div>
           </div>
@@ -334,62 +345,66 @@ export const Home: React.FC = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-8">
             {/* For Companies */}
-            <div className="group bg-white border border-gray-200 rounded-2xl p-10 relative overflow-hidden hover:border-orange-500/50 transition-all duration-500 hover:shadow-xl">
-              <div className="absolute top-0 right-0 w-48 h-48 bg-orange-500/10 rounded-full blur-3xl transition-all group-hover:bg-orange-500/20" />
-              <Building2 className="w-14 h-14 text-orange-500 mb-6" />
+            <div className="group bg-gradient-to-br from-orange-50 to-amber-50 border-2 border-orange-200 rounded-3xl p-10 relative overflow-hidden hover:border-orange-400 transition-all duration-500 hover:shadow-2xl">
+              <div className="absolute top-0 right-0 w-48 h-48 bg-orange-400/20 rounded-full blur-3xl transition-all group-hover:bg-orange-400/30" />
+              <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-amber-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                <Building2 className="w-8 h-8 text-white" />
+              </div>
               <h3 className="text-2xl font-black text-gray-900 mb-4">Für Unternehmen</h3>
               <p className="text-gray-600 mb-6 leading-relaxed">
                 Sie suchen qualifizierte Mitarbeiter für Produktion, Logistik oder Handwerk? 
                 Wir liefern Ihnen schnell und zuverlässig die passenden Fachkräfte.
               </p>
               <ul className="space-y-3 mb-8">
-                <li className="flex items-center gap-3 text-gray-600">
+                <li className="flex items-center gap-3 text-gray-700">
                   <CheckCircle2 className="w-5 h-5 text-orange-500 shrink-0" />
                   <span>Schnelle Personalvermittlung innerhalb 24h</span>
                 </li>
-                <li className="flex items-center gap-3 text-gray-600">
+                <li className="flex items-center gap-3 text-gray-700">
                   <CheckCircle2 className="w-5 h-5 text-orange-500 shrink-0" />
                   <span>Flexible Einsatzzeiten und Vertragsmodelle</span>
                 </li>
-                <li className="flex items-center gap-3 text-gray-600">
+                <li className="flex items-center gap-3 text-gray-700">
                   <CheckCircle2 className="w-5 h-5 text-orange-500 shrink-0" />
                   <span>Persönliche Betreuung vor Ort</span>
                 </li>
               </ul>
               <Link 
                 to="/unternehmen" 
-                className="inline-flex items-center gap-2 text-orange-500 font-bold group-hover:gap-4 transition-all"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-amber-500 text-white px-6 py-3 rounded-xl font-bold hover:shadow-lg transition-all"
               >
                 Personal anfragen <ArrowRight size={18} />
               </Link>
             </div>
 
             {/* For Applicants */}
-            <div className="group bg-white border border-gray-200 rounded-2xl p-10 relative overflow-hidden hover:border-red-500/50 transition-all duration-500 hover:shadow-xl">
-              <div className="absolute top-0 right-0 w-48 h-48 bg-red-500/10 rounded-full blur-3xl transition-all group-hover:bg-red-500/20" />
-              <Users className="w-14 h-14 text-red-500 mb-6" />
+            <div className="group bg-gradient-to-br from-teal-50 to-cyan-50 border-2 border-teal-200 rounded-3xl p-10 relative overflow-hidden hover:border-teal-400 transition-all duration-500 hover:shadow-2xl">
+              <div className="absolute top-0 right-0 w-48 h-48 bg-teal-400/20 rounded-full blur-3xl transition-all group-hover:bg-teal-400/30" />
+              <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg">
+                <Users className="w-8 h-8 text-white" />
+              </div>
               <h3 className="text-2xl font-black text-gray-900 mb-4">Für Bewerber</h3>
               <p className="text-gray-600 mb-6 leading-relaxed">
                 Auf der Suche nach einem neuen Job in Pforzheim oder Umgebung? 
                 Wir helfen Ihnen, Ihren Traumjob zu finden - kostenlos und persönlich.
               </p>
               <ul className="space-y-3 mb-8">
-                <li className="flex items-center gap-3 text-gray-600">
-                  <CheckCircle2 className="w-5 h-5 text-red-500 shrink-0" />
+                <li className="flex items-center gap-3 text-gray-700">
+                  <CheckCircle2 className="w-5 h-5 text-teal-500 shrink-0" />
                   <span>Über 365 aktuelle Jobangebote</span>
                 </li>
-                <li className="flex items-center gap-3 text-gray-600">
-                  <CheckCircle2 className="w-5 h-5 text-red-500 shrink-0" />
+                <li className="flex items-center gap-3 text-gray-700">
+                  <CheckCircle2 className="w-5 h-5 text-teal-500 shrink-0" />
                   <span>Faire Bezahlung nach Tarif</span>
                 </li>
-                <li className="flex items-center gap-3 text-gray-600">
-                  <CheckCircle2 className="w-5 h-5 text-red-500 shrink-0" />
+                <li className="flex items-center gap-3 text-gray-700">
+                  <CheckCircle2 className="w-5 h-5 text-teal-500 shrink-0" />
                   <span>Persönliche Karriereberatung</span>
                 </li>
               </ul>
               <Link 
                 to="/jobs" 
-                className="inline-flex items-center gap-2 text-red-500 font-bold group-hover:gap-4 transition-all"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-teal-500 to-cyan-500 text-white px-6 py-3 rounded-xl font-bold hover:shadow-lg transition-all"
               >
                 Jobs entdecken <ArrowRight size={18} />
               </Link>

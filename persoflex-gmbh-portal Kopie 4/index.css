@@ -4,45 +4,50 @@
 
 @layer base {
   :root {
-    /* Helles Theme mit feurigen Akzenten */
-    --background: 0 0% 100%;
-    --foreground: 220 10% 15%;
+    /* Vibrant Light Theme with Energetic Colors */
+    --background: 30 50% 98%;
+    --foreground: 220 25% 10%;
     
-    --card: 0 0% 97%;
-    --card-foreground: 220 10% 15%;
+    --card: 30 30% 96%;
+    --card-foreground: 220 25% 10%;
     
     --popover: 0 0% 100%;
-    --popover-foreground: 220 10% 15%;
+    --popover-foreground: 220 25% 10%;
     
-    --primary: 24 95% 53%;
+    /* Vibrant Orange - Primary */
+    --primary: 24 100% 50%;
     --primary-foreground: 0 0% 100%;
     
-    --secondary: 0 72% 51%;
+    /* Coral Red - Secondary */
+    --secondary: 12 90% 55%;
     --secondary-foreground: 0 0% 100%;
     
-    --muted: 220 5% 94%;
-    --muted-foreground: 220 8% 40%;
+    /* Warm Cream - Muted */
+    --muted: 35 40% 92%;
+    --muted-foreground: 220 15% 35%;
     
-    --accent: 24 95% 53%;
+    /* Teal Accent */
+    --accent: 175 70% 40%;
     --accent-foreground: 0 0% 100%;
     
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
     
-    --border: 220 10% 88%;
-    --input: 220 10% 88%;
-    --ring: 24 95% 53%;
+    --border: 30 20% 85%;
+    --input: 30 20% 88%;
+    --ring: 24 100% 50%;
     
-    --radius: 0.75rem;
+    --radius: 0.875rem;
     
-    /* Flammen-Gradient Farben */
-    --flame-orange: 24 95% 53%;
-    --flame-red: 0 72% 51%;
-    --flame-yellow: 38 92% 50%;
-    --ember: 15 80% 40%;
+    /* Vibrant Gradient Colors */
+    --flame-orange: 24 100% 50%;
+    --flame-coral: 12 90% 55%;
+    --flame-amber: 38 100% 50%;
+    --flame-teal: 175 70% 40%;
+    --ember: 15 85% 45%;
     
     /* Brand Orange */
-    --brand-orange: 24 95% 53%;
+    --brand-orange: 24 100% 50%;
   }
 
   * {
@@ -66,20 +71,20 @@
 }
 
 @layer components {
-  /* Flammen-Glow Effekt */
+  /* Vibrant Glow Effect */
   .flame-glow {
     box-shadow: 
-      0 0 20px hsl(var(--primary) / 0.3),
-      0 0 40px hsl(var(--primary) / 0.2),
-      0 0 60px hsl(var(--secondary) / 0.1);
+      0 0 20px hsl(var(--primary) / 0.4),
+      0 0 40px hsl(var(--primary) / 0.25),
+      0 0 60px hsl(var(--secondary) / 0.15);
   }
   
   .flame-text {
     background: linear-gradient(
       135deg,
-      hsl(var(--flame-yellow)) 0%,
+      hsl(var(--flame-amber)) 0%,
       hsl(var(--flame-orange)) 50%,
-      hsl(var(--flame-red)) 100%
+      hsl(var(--flame-coral)) 100%
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -90,7 +95,7 @@
     border-image: linear-gradient(
       135deg,
       hsl(var(--flame-orange)) 0%,
-      hsl(var(--flame-red)) 100%
+      hsl(var(--flame-coral)) 100%
     ) 1;
   }
   
@@ -110,12 +115,12 @@
     animation: ember-pulse 3s ease-in-out infinite;
   }
   
-  /* Fire Gradient Background */
+  /* Vibrant Gradient Background */
   .fire-gradient {
     background: linear-gradient(
       180deg,
       hsl(var(--background)) 0%,
-      hsl(0 0% 6%) 50%,
+      hsl(30 40% 95%) 50%,
       hsl(var(--background)) 100%
     );
   }
@@ -123,26 +128,26 @@
   .fire-gradient-radial {
     background: radial-gradient(
       ellipse at center bottom,
-      hsl(var(--primary) / 0.15) 0%,
+      hsl(var(--primary) / 0.12) 0%,
       hsl(var(--background)) 70%
     );
   }
   
-  /* Button Styles */
+  /* Vibrant Button Styles */
   .btn-flame {
     position: relative;
     overflow: hidden;
     padding: 1rem 2rem;
     font-weight: 600;
     color: white;
-    border-radius: 0.5rem;
+    border-radius: var(--radius);
     transition: all 0.3s;
     background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%);
   }
   
   .btn-flame:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 40px hsl(var(--primary) / 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 35px hsl(var(--primary) / 0.4);
   }
   
   .btn-flame::before {
@@ -158,31 +163,50 @@
     opacity: 1;
   }
   
-  /* Card Hover Effect */
+  /* Vibrant Card Hover Effect */
   .card-hell {
     background-color: hsl(var(--card));
     border: 1px solid hsl(var(--border));
-    border-radius: 0.75rem;
-    transition: all 0.5s;
+    border-radius: var(--radius);
+    transition: all 0.4s ease;
   }
   
   .card-hell:hover {
     border-color: hsl(var(--primary) / 0.5);
     box-shadow: 
-      0 20px 40px hsl(var(--background) / 0.8),
-      0 0 20px hsl(var(--primary) / 0.1);
+      0 20px 50px hsl(var(--primary) / 0.15),
+      0 0 0 1px hsl(var(--primary) / 0.1);
+    transform: translateY(-4px);
   }
   
-  /* Section divider with ember effect */
+  /* Section divider with vibrant effect */
   .ember-divider {
-    height: 1px;
+    height: 2px;
     width: 100%;
     background: linear-gradient(
       90deg,
       transparent 0%,
-      hsl(var(--primary) / 0.5) 50%,
+      hsl(var(--primary) / 0.6) 30%,
+      hsl(var(--secondary) / 0.8) 50%,
+      hsl(var(--primary) / 0.6) 70%,
       transparent 100%
     );
+  }
+  
+  /* Vibrant Badge */
+  .badge-vibrant {
+    background: linear-gradient(135deg, hsl(var(--primary) / 0.15) 0%, hsl(var(--secondary) / 0.1) 100%);
+    border: 1px solid hsl(var(--primary) / 0.3);
+    color: hsl(var(--primary));
+  }
+  
+  /* Teal Accent */
+  .accent-teal {
+    color: hsl(var(--accent));
+  }
+  
+  .bg-accent-teal {
+    background-color: hsl(var(--accent));
   }
 }
 
@@ -197,9 +221,33 @@
     color: transparent;
     background-image: linear-gradient(
       135deg,
-      hsl(38 92% 50%) 0%,
-      hsl(24 95% 53%) 50%,
-      hsl(0 72% 51%) 100%
+      hsl(38 100% 50%) 0%,
+      hsl(24 100% 50%) 40%,
+      hsl(12 90% 55%) 100%
     );
+  }
+  
+  .text-gradient-teal {
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(
+      135deg,
+      hsl(175 70% 45%) 0%,
+      hsl(175 70% 35%) 100%
+    );
+  }
+  
+  /* Vibrant background utilities */
+  .bg-warm-cream {
+    background-color: hsl(30 50% 98%);
+  }
+  
+  .bg-warm-peach {
+    background-color: hsl(25 60% 95%);
+  }
+  
+  .bg-warm-coral {
+    background-color: hsl(15 70% 96%);
   }
 }
