@@ -5,9 +5,6 @@ import {
   Shield, 
   Users, 
   Clock, 
-  Search, 
-  UserCheck, 
-  Handshake, 
   ArrowRight, 
   Package, 
   Wrench, 
@@ -15,8 +12,7 @@ import {
   Award, 
   MapPin,
   Flame,
-  Building2,
-  Zap
+  Building2
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
 
@@ -50,10 +46,10 @@ export const Unternehmen: React.FC = () => {
   ];
 
   const processSteps = [
-    { step: "01", title: "Anfrage", desc: "Sie melden uns Ihren Bedarf. Unkompliziert per Telefon oder Formular.", icon: Search },
-    { step: "02", title: "Matching", desc: "Wir gleichen Ihr Profil mit unserem Bewerberpool ab und suchen gezielt.", icon: Users },
-    { step: "03", title: "Auswahl", desc: "Wir stellen Ihnen passende Profile vor. Sie entscheiden, wen Sie kennenlernen.", icon: UserCheck },
-    { step: "04", title: "Start", desc: "Mitarbeiter startet zum Wunschtermin. Wir kümmern uns um die Bürokratie.", icon: Handshake }
+    { step: "01", title: "Anfrage", desc: "Sie melden uns Ihren Bedarf. Unkompliziert per Telefon oder Formular." },
+    { step: "02", title: "Matching", desc: "Wir gleichen Ihr Profil mit unserem Bewerberpool ab und suchen gezielt." },
+    { step: "03", title: "Auswahl", desc: "Wir stellen Ihnen passende Profile vor. Sie entscheiden, wen Sie kennenlernen." },
+    { step: "04", title: "Start", desc: "Mitarbeiter startet zum Wunschtermin. Wir kümmern uns um die Bürokratie." }
   ];
 
   return (
@@ -196,10 +192,7 @@ export const Unternehmen: React.FC = () => {
                 <span className="absolute top-4 right-4 text-5xl font-black text-muted/30 group-hover:text-primary/20 transition-colors">
                   {item.step}
                 </span>
-                <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary text-white rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-all shadow-[0_0_20px_rgba(234,88,12,0.3)]">
-                  <item.icon size={28} />
-                </div>
-                <h3 className="text-xl font-bold text-foreground mb-3">{item.title}</h3>
+                <h3 className="text-xl font-bold text-foreground mb-3 mt-8">{item.title}</h3>
                 <p className="text-sm text-muted-foreground">{item.desc}</p>
               </div>
             ))}
