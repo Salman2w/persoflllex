@@ -13,6 +13,8 @@ import { PersonalAnfrage } from './pages/PersonalAnfrage';
 import { Impressum } from './pages/Impressum';
 import { Datenschutz } from './pages/Datenschutz';
 import { AGB } from './pages/AGB';
+import { Blog } from './pages/Blog';
+import BlogDetail from './pages/BlogDetail';
 
 // --- KOMPONENTEN IMPORTIEREN ---
 import { Footer } from './components/Footer'; 
@@ -36,6 +38,8 @@ function App() {
         <Route path="/impressum" element={<Impressum />} />
         <Route path="/datenschutz" element={<Datenschutz />} />
         <Route path="/agb" element={<AGB />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:id" element={<BlogDetail />} />
       </Routes>
 
       <Footer />

@@ -33,6 +33,10 @@ export const Navbar = () => {
             Über uns
             <span className="absolute left-0 -bottom-1.5 w-full h-0.5 bg-brand-orange scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
           </Link>
+          <Link to="/blog" className="relative group hover:text-brand-orange transition-colors">
+            Blog
+            <span className="absolute left-0 -bottom-1.5 w-full h-0.5 bg-brand-orange scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+          </Link>
           <Link to="/kontakt" className="relative group hover:text-brand-orange transition-colors">
             Kontakt
             <span className="absolute left-0 -bottom-1.5 w-full h-0.5 bg-brand-orange scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
