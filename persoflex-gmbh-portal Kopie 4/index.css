@@ -6,13 +6,13 @@
   :root {
     /* Helles Theme mit feurigen Akzenten */
     --background: 0 0% 100%;
-    --foreground: 0 0% 10%;
+    --foreground: 220 10% 15%;
     
-    --card: 0 0% 98%;
-    --card-foreground: 0 0% 10%;
+    --card: 0 0% 97%;
+    --card-foreground: 220 10% 15%;
     
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 10%;
+    --popover-foreground: 220 10% 15%;
     
     --primary: 24 95% 53%;
     --primary-foreground: 0 0% 100%;
@@ -20,8 +20,8 @@
     --secondary: 0 72% 51%;
     --secondary-foreground: 0 0% 100%;
     
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 220 5% 94%;
+    --muted-foreground: 220 8% 40%;
     
     --accent: 24 95% 53%;
     --accent-foreground: 0 0% 100%;
@@ -29,8 +29,8 @@
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
     
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
+    --border: 220 10% 88%;
+    --input: 220 10% 88%;
     --ring: 24 95% 53%;
     
     --radius: 0.75rem;
