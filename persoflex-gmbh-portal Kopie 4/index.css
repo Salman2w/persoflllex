@@ -4,33 +4,33 @@
 
 @layer base {
   :root {
-    /* Höllen-Theme: Dunkle Basis mit feurigen Akzenten */
-    --background: 0 0% 4%;
-    --foreground: 0 0% 98%;
+    /* Helles Theme mit feurigen Akzenten */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 10%;
     
-    --card: 0 0% 7%;
-    --card-foreground: 0 0% 98%;
+    --card: 0 0% 98%;
+    --card-foreground: 0 0% 10%;
     
-    --popover: 0 0% 7%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
     
     --primary: 24 95% 53%;
-    --primary-foreground: 0 0% 98%;
+    --primary-foreground: 0 0% 100%;
     
     --secondary: 0 72% 51%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary-foreground: 0 0% 100%;
     
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 64%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
     
     --accent: 24 95% 53%;
-    --accent-foreground: 0 0% 98%;
+    --accent-foreground: 0 0% 100%;
     
     --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive-foreground: 0 0% 100%;
     
-    --border: 0 0% 18%;
-    --input: 0 0% 18%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
     --ring: 24 95% 53%;
     
     --radius: 0.75rem;
@@ -40,6 +40,9 @@
     --flame-red: 0 72% 51%;
     --flame-yellow: 38 92% 50%;
     --ember: 15 80% 40%;
+    
+    /* Brand Orange */
+    --brand-orange: 24 95% 53%;
   }
 
   * {

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Phone, Menu, X, Flame } from 'lucide-react';
+import { Phone, Menu, X } from 'lucide-react';
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -30,8 +30,8 @@ export const Navbar = () => {
     <nav 
       className={`fixed w-full top-0 left-0 z-50 transition-all duration-500 ${
         isScrolled 
-          ? 'bg-background/95 backdrop-blur-md border-b border-border shadow-lg shadow-primary/5' 
-          : 'bg-transparent'
+          ? 'bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-lg' 
+          : 'bg-white'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6">
@@ -39,14 +39,11 @@ export const Navbar = () => {
           
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
-            <div className="relative">
-              <Flame className="w-10 h-10 text-primary transition-transform duration-300 group-hover:scale-110" />
-              <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
-            </div>
-            <div className="flex flex-col">
-              <span className="text-xl font-bold text-foreground tracking-tight">PersoFlex</span>
-              <span className="text-xs text-muted-foreground tracking-widest uppercase">GmbH</span>
-            </div>
+            <img 
+              src="/bilder/logo.webp" 
+              alt="PersoFlex GmbH Logo" 
+              className="h-12 w-auto transition-transform duration-300 group-hover:scale-105"
+            />
           </Link>
           
           {/* Desktop Navigation */}
@@ -57,8 +54,8 @@ export const Navbar = () => {
                 to={link.to} 
                 className={`relative font-medium text-sm transition-colors duration-300 ${
                   isActive(link.to) 
-                    ? 'text-primary' 
-                    : 'text-muted-foreground hover:text-foreground'
+                    ? 'text-orange-500' 
+                    : 'text-gray-600 hover:text-gray-900'
                 }`}
               >
                 {link.label}
@@ -89,7 +86,7 @@ export const Navbar = () => {
           {/* Mobile Menu Button */}
           <button 
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 text-foreground hover:text-primary transition-colors"
+            className="lg:hidden p-2 text-gray-700 hover:text-orange-500 transition-colors"
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -99,7 +96,7 @@ export const Navbar = () => {
 
       {/* Mobile Menu */}
       <div 
-        className={`lg:hidden absolute top-full left-0 w-full bg-background/98 backdrop-blur-lg border-b border-border transition-all duration-300 ${
+        className={`lg:hidden absolute top-full left-0 w-full bg-white/98 backdrop-blur-lg border-b border-gray-200 transition-all duration-300 ${
           isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
         }`}
       >
@@ -109,8 +106,8 @@ export const Navbar = () => {
               key={link.to}
               to={link.to}
               onClick={() => setIsMobileMenuOpen(false)}
-              className={`block py-3 font-medium transition-colors border-b border-border/50 ${
-                isActive(link.to) ? 'text-primary' : 'text-muted-foreground hover:text-foreground'
+              className={`block py-3 font-medium transition-colors border-b border-gray-100 ${
+                isActive(link.to) ? 'text-primary' : 'text-gray-600 hover:text-gray-900'
               }`}
             >
               {link.label}
