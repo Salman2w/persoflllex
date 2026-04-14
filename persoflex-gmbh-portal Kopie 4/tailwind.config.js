@@ -52,6 +52,20 @@ export default {
           yellow: "hsl(var(--flame-yellow))",
           ember: "hsl(var(--ember))",
         },
+        // Hell-Theme Farben
+        hell: {
+          void: "#0a0a0a",
+          charcoal: "#1a1a1a",
+          smoke: "#2a2a2a",
+          ash: "#9ca3af",
+          flame: "#ff4500",
+          ember: "#ff6b35",
+          inferno: "#dc2626",
+        },
+        // Brand Farbe (Kompatibilitat)
+        brand: {
+          orange: "#ff4500",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
