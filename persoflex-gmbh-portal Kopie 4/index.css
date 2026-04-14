@@ -49,11 +49,16 @@
   html {
     font-family: 'Inter', system-ui, sans-serif;
     scroll-behavior: smooth;
-    @apply bg-background text-foreground antialiased;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   
   body {
-    @apply bg-background text-foreground min-h-screen;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    min-height: 100vh;
   }
 }
 
@@ -122,33 +127,44 @@
   
   /* Button Styles */
   .btn-flame {
-    @apply relative overflow-hidden px-8 py-4 font-semibold text-white rounded-lg transition-all duration-300;
+    position: relative;
+    overflow: hidden;
+    padding: 1rem 2rem;
+    font-weight: 600;
+    color: white;
+    border-radius: 0.5rem;
+    transition: all 0.3s;
     background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%);
   }
   
   .btn-flame:hover {
-    @apply scale-105;
+    transform: scale(1.05);
     box-shadow: 0 10px 40px hsl(var(--primary) / 0.4);
   }
   
   .btn-flame::before {
     content: '';
-    @apply absolute inset-0 opacity-0 transition-opacity duration-300;
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.3s;
     background: linear-gradient(135deg, hsl(var(--secondary)) 0%, hsl(var(--primary)) 100%);
   }
   
   .btn-flame:hover::before {
-    @apply opacity-100;
+    opacity: 1;
   }
   
   /* Card Hover Effect */
   .card-hell {
-    @apply bg-card border rounded-xl transition-all duration-500;
-    border-color: hsl(var(--border));
+    background-color: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+    border-radius: 0.75rem;
+    transition: all 0.5s;
   }
   
   .card-hell:hover {
-    @apply border-primary/50;
+    border-color: hsl(var(--primary) / 0.5);
     box-shadow: 
       0 20px 40px hsl(var(--background) / 0.8),
       0 0 20px hsl(var(--primary) / 0.1);
@@ -156,7 +172,8 @@
   
   /* Section divider with ember effect */
   .ember-divider {
-    @apply h-px w-full;
+    height: 1px;
+    width: 100%;
     background: linear-gradient(
       90deg,
       transparent 0%,
@@ -172,7 +189,9 @@
   }
   
   .text-gradient-flame {
-    @apply bg-clip-text text-transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
     background-image: linear-gradient(
       135deg,
       hsl(38 92% 50%) 0%,
