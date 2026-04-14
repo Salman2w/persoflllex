@@ -5,7 +5,7 @@ import { Logo } from './Logo'; // Hier ist dein Logo-Import
 
 export const Navbar = () => {
   return (
-    <nav className="fixed w-full top-0 z-50 bg-white border-b border-gray-100 h-20 flex items-center relative">
+    <nav className="fixed w-full top-0 left-0 z-50 bg-white border-b border-gray-100 h-20 flex items-center shadow-sm">
       <div className="max-w-7xl mx-auto px-6 w-full flex justify-between items-center h-full">
         
         {/* --- LINKS: LOGO --- */}
