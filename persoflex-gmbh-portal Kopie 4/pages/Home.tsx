@@ -1,47 +1,27 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight, Briefcase, Users, CheckCircle, Star, Quote, Factory, Truck, ShieldCheck, MapPin, Clock, Search, UserCheck, Package, Wrench, FileText, Award } from 'lucide-react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { 
+  ArrowRight, 
+  Users, 
+  Building2, 
+  Clock, 
+  CheckCircle2, 
+  Flame,
+  Briefcase,
+  Shield,
+  TrendingUp,
+  MapPin,
+  Star,
+  Zap,
+  Factory,
+  Truck,
+  Package,
+  Wrench,
+  Quote
+} from 'lucide-react';
 import { SEO } from '../components/SEO';
 
-const fadeIn = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 }
-};
-
-// Data for Reviews
-const REVIEWS = [
-  {
-    type: 'B2B',
-    author: 'Markus W.',
-    role: 'Logistikleiter, Pforzheim',
-    text: 'Endlich mal eine Zeitarbeitsfirma, die wirklich zuhört. Die Reaktionszeiten sind top und die Mitarbeiter motiviert.',
-    rating: 5
-  },
-  {
-    type: 'B2B',
-    author: 'Julia S.',
-    role: 'HR Managerin, Enzkreis',
-    text: 'Sehr angenehme, frische Zusammenarbeit. Man merkt, dass hier ein neues Team am Werk ist, das sich wirklich bemüht.',
-    rating: 5
-  },
-  {
-    type: 'B2C',
-    author: 'Ali K.',
-    role: 'Staplerfahrer',
-    text: 'Habe schnell einen Job bekommen. Das Team ist jung, nett und kümmert sich.',
-    rating: 5
-  },
-  {
-    type: 'B2C',
-    author: 'Sabine M.',
-    role: 'Produktionshelferin',
-    text: 'Fühle mich hier sehr gut aufgehoben. Alles wird genau erklärt und man ist nicht nur eine Nummer.',
-    rating: 5
-  }
-];
-
-// Schema.org Structured Data
+// Schema.org Structured Data for SEO
 const structuredData = {
   "@context": "https://schema.org",
   "@graph": [
@@ -75,517 +55,475 @@ const structuredData = {
 };
 
 export const Home: React.FC = () => {
+  const stats = [
+    { value: '500+', label: 'Vermittelte Fachkräfte', icon: Users },
+    { value: '150+', label: 'Partnerunternehmen', icon: Building2 },
+    { value: '24h', label: 'Schnelle Vermittlung', icon: Clock },
+    { value: '98%', label: 'Zufriedenheitsrate', icon: Star },
+  ];
+
+  const services = [
+    {
+      icon: Briefcase,
+      title: 'Arbeitnehmerüberlassung',
+      description: 'Flexible Personallösungen für Ihr Unternehmen. Von kurzfristigen Einsätzen bis zur langfristigen Zusammenarbeit.',
+    },
+    {
+      icon: Users,
+      title: 'Personalvermittlung',
+      description: 'Direkte Vermittlung qualifizierter Fachkräfte. Wir finden den perfekten Match für Ihre Anforderungen.',
+    },
+    {
+      icon: Shield,
+      title: 'Personalberatung',
+      description: 'Strategische HR-Beratung und Unterstützung bei der Personalplanung für nachhaltigen Erfolg.',
+    },
+  ];
+
+  const industries = [
+    { name: 'Produktion & Fertigung', jobs: '120+ Jobs', icon: Factory },
+    { name: 'Logistik & Lager', jobs: '85+ Jobs', icon: Truck },
+    { name: 'Handwerk & Technik', jobs: '65+ Jobs', icon: Wrench },
+    { name: 'Industrie & Metall', jobs: '95+ Jobs', icon: Package },
+  ];
+
+  const reviews = [
+    {
+      author: 'Markus W.',
+      role: 'Logistikleiter, Pforzheim',
+      text: 'Endlich mal eine Zeitarbeitsfirma, die wirklich zuhört. Die Reaktionszeiten sind top und die Mitarbeiter motiviert.',
+      rating: 5
+    },
+    {
+      author: 'Julia S.',
+      role: 'HR Managerin, Enzkreis',
+      text: 'Sehr angenehme, frische Zusammenarbeit. Man merkt, dass hier ein neues Team am Werk ist, das sich wirklich bemüht.',
+      rating: 5
+    },
+    {
+      author: 'Ali K.',
+      role: 'Staplerfahrer',
+      text: 'Habe schnell einen Job bekommen. Das Team ist jung, nett und kümmert sich.',
+      rating: 5
+    },
+  ];
+
   return (
-    <div className="flex flex-col min-h-screen">
+    <>
       <SEO 
-        title="PersoFlex GmbH | Zeitarbeit & Personalvermittlung in Pforzheim"
-        description="PersoFlex GmbH - Wir bringen frischen Wind in die Zeitarbeit. Ihr neuer, motivierter Partner für Jobs und Personal in Pforzheim & Enzkreis."
+        title="PersoFlex GmbH | Zeitarbeit & Personalvermittlung Pforzheim"
+        description="Ihr Partner für Zeitarbeit und Personalvermittlung in Pforzheim und Enzkreis. Über 500 vermittelte Fachkräfte in Produktion, Logistik und Industrie. Jetzt bewerben!"
+        keywords="Zeitarbeit Pforzheim, Personalvermittlung Enzkreis, Jobs Pforzheim, Personaldienstleister Baden-Württemberg, Arbeitnehmerüberlassung"
       />
       
       <script type="application/ld+json">
         {JSON.stringify(structuredData)}
       </script>
 
-      {/* Split Screen Hero */}
-      <section className="flex flex-col lg:flex-row min-h-[calc(100vh-80px)] mt-[80px]">
-        {/* LEFT SIDE: B2B */}
-        <motion.div 
-          initial="hidden"
-          animate="visible"
-          transition={{ duration: 0.6 }}
-          variants={fadeIn}
-          className="flex-1 bg-white text-brand-black p-6 sm:p-10 lg:p-20 flex flex-col justify-center relative overflow-hidden group min-h-[50vh] lg:min-h-auto"
-        >
-          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] opacity-30"></div>
-          <div className="relative z-10 max-w-lg mx-auto lg:mx-0 lg:mr-10 text-center lg:text-left">
-            <span className="inline-block py-1 px-3 border border-brand-black text-xs font-bold uppercase tracking-widest mb-4 sm:mb-6 rounded-sm">
-              Für Unternehmen
-            </span>
-            <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-4 sm:mb-6 leading-tight tracking-tight hyphens-none">
-              Personalvermittlung<br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange to-amber-500">
-                & Zeitarbeit
-              </span><br />
-              in Pforzheim.
-            </h1>
-            <p className="text-gray-600 text-base sm:text-lg mb-6 sm:mb-8 leading-relaxed">
-              Wir sind angetreten, um Zeitarbeit besser zu machen. Persönlicher, schneller und fairer. 
-              Finden Sie mit uns motivierte Fachkräfte für Industrie, Logistik, das Büro und hochqualifizierte Positionen.
-            </p>
-            <ul className="mb-8 space-y-3 inline-block text-left">
-              <li className="flex items-center gap-3 font-medium text-brand-dark">
-                <CheckCircle className="text-brand-orange shrink-0" size={20} /> 
-                <span>Persönliche Betreuung</span>
-              </li>
-              <li className="flex items-center gap-3 font-medium text-brand-dark">
-                <CheckCircle className="text-brand-orange shrink-0" size={20} /> 
-                <span>Rechtssichere AÜG-Verträge</span>
-              </li>
-              <li className="flex items-center gap-3 font-medium text-brand-dark">
-                <CheckCircle className="text-brand-orange shrink-0" size={20} /> 
-                <span>Branchenübergreifende Auswahl</span>
-              </li>
-            </ul>
-            <div className="block">
-              <NavLink to="/unternehmen" className="inline-flex items-center gap-3 bg-brand-black text-white px-6 py-4 sm:px-8 sm:py-4 text-base sm:text-lg font-bold hover:bg-brand-orange transition-colors rounded-sm shadow-xl w-full sm:w-auto justify-center">
-                Personal anfragen <ArrowRight size={20} />
-              </NavLink>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* RIGHT SIDE: B2C */}
-        <motion.div 
-          initial="hidden"
-          animate="visible"
-          transition={{ duration: 0.6, delay: 0.2 }}
-          variants={fadeIn}
-          className="flex-1 bg-brand-black text-white p-6 sm:p-10 lg:p-20 flex flex-col justify-center relative overflow-hidden min-h-[50vh] lg:min-h-auto"
-        >
-          <div className="absolute -right-20 -top-20 w-64 h-64 sm:w-96 sm:h-96 bg-brand-orange opacity-10 blur-[100px] rounded-full"></div>
-          <div className="relative z-10 max-w-lg mx-auto lg:mx-0 lg:ml-10 text-center lg:text-left">
-             <span className="inline-block py-1 px-3 bg-brand-orange/20 text-brand-orange border border-brand-orange text-xs font-bold uppercase tracking-widest mb-4 sm:mb-6 rounded-sm">
-              Für Bewerber
-            </span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-4 sm:mb-6 leading-tight tracking-tight break-words">
-              Dein neuer<br/>
-              Job in <br/>
-              <span className="text-brand-orange">Pforzheim & Umgebung.</span>
-            </h2>
-            <p className="text-gray-400 text-base sm:text-lg mb-6 sm:mb-8 leading-relaxed">
-              Lust auf was Neues? Wir auch! Starte mit uns durch in Logistik, Industrie, Verwaltung oder Technik. 
-              Wir bieten dir faire Bezahlung, echte Chancen und ein Team, das für dich da ist.
-            </p>
-            <ul className="mb-8 space-y-3 inline-block text-left">
-              <li className="flex items-center gap-3 font-medium text-white">
-                <CheckCircle className="text-brand-orange shrink-0" size={20} /> 
-                <span>30 Tage Urlaub</span>
-              </li>
-              <li className="flex items-center gap-3 font-medium text-white">
-                <CheckCircle className="text-brand-orange shrink-0" size={20} /> 
-                <span>50€ Tankgutschein</span>
-              </li>
-              <li className="flex items-center gap-3 font-medium text-white">
-                <CheckCircle className="text-brand-orange shrink-0" size={20} /> 
-                <span>GVP-Tarifvertrag</span>
-              </li>
-            </ul>
-            <div className="block">
-              <NavLink to="/fuer-bewerber" className="inline-flex items-center gap-3 bg-brand-orange text-white px-6 py-4 sm:px-8 sm:py-4 text-base sm:text-lg font-bold hover:bg-white hover:text-brand-black transition-colors rounded-sm shadow-xl shadow-brand-orange/20 w-full sm:w-auto justify-center">
-                Mehr für Bewerber <Briefcase size={20} />
-              </NavLink>
-            </div>
-          </div>
-        </motion.div>
-      </section>
-
-      {/* Trust Section (Redesigned: Premium Dark Bar) */}
-      <section className="bg-gray-900 text-white py-16 relative overflow-hidden">
-        {/* Hintergrundelemte für Dynamik */}
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-brand-orange via-orange-400 to-gray-900"></div>
-        <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-brand-orange opacity-5 rounded-full blur-3xl"></div>
-        <div className="absolute -top-20 -right-20 w-64 h-64 bg-blue-500 opacity-5 rounded-full blur-3xl"></div>
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8">
-            
-            {/* Linker Text-Teil */}
-            <div className="lg:w-1/3 text-center lg:text-left">
-              <span className="text-brand-orange font-bold uppercase tracking-widest text-xs mb-2 block">
-                Qualität & Sicherheit
-              </span>
-              <h2 className="text-3xl font-black mb-4 leading-tight">
-                Ein Partner auf <br className="hidden lg:block" /> Augenhöhe.
-              </h2>
-              <p className="text-gray-400 text-sm leading-relaxed max-w-md mx-auto lg:mx-0">
-                Wir arbeiten nach klaren Standards. Für unsere Kunden bedeutet das Planungssicherheit – für unsere Mitarbeiter faire Bedingungen.
-              </p>
-            </div>
-
-            {/* Rechter Icon-Teil (Grid) */}
-            <div className="lg:w-2/3 w-full">
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                
-                {/* Item 1 */}
-                <div className="flex flex-col items-center justify-center p-4 group cursor-default">
-                  <div className="w-16 h-16 rounded-2xl bg-gray-800 border border-gray-700 flex items-center justify-center mb-4 group-hover:border-brand-orange group-hover:bg-gray-800/80 transition-all duration-300 shadow-lg">
-                    <Factory size={32} className="text-gray-300 group-hover:text-brand-orange transition-colors" />
-                  </div>
-                  <span className="font-bold text-white text-lg">Industrie</span>
-                  <span className="text-xs text-gray-500 mt-1 uppercase tracking-wide">Produktion</span>
-                </div>
-
-                {/* Item 2 */}
-                <div className="flex flex-col items-center justify-center p-4 group cursor-default">
-                  <div className="w-16 h-16 rounded-2xl bg-gray-800 border border-gray-700 flex items-center justify-center mb-4 group-hover:border-brand-orange group-hover:bg-gray-800/80 transition-all duration-300 shadow-lg">
-                    <Truck size={32} className="text-gray-300 group-hover:text-brand-orange transition-colors" />
-                  </div>
-                  <span className="font-bold text-white text-lg">Logistik</span>
-                  <span className="text-xs text-gray-500 mt-1 uppercase tracking-wide">Transport</span>
-                </div>
-
-                {/* Item 3 */}
-                <div className="flex flex-col items-center justify-center p-4 group cursor-default">
-                  <div className="w-16 h-16 rounded-2xl bg-gray-800 border border-gray-700 flex items-center justify-center mb-4 group-hover:border-brand-orange group-hover:bg-gray-800/80 transition-all duration-300 shadow-lg">
-                    <Briefcase size={32} className="text-gray-300 group-hover:text-brand-orange transition-colors" />
-                  </div>
-                  <span className="font-bold text-white text-lg">Büro</span>
-                  <span className="text-xs text-gray-500 mt-1 uppercase tracking-wide">Kaufmännisch</span>
-                </div>
-
-                {/* Item 4 */}
-                <div className="flex flex-col items-center justify-center p-4 group cursor-default">
-                  <div className="w-16 h-16 rounded-2xl bg-gray-800 border border-gray-700 flex items-center justify-center mb-4 group-hover:border-green-500 group-hover:bg-gray-800/80 transition-all duration-300 shadow-lg relative">
-                    <ShieldCheck size={32} className="text-gray-300 group-hover:text-green-500 transition-colors" />
-                    {/* Kleiner Indikator */}
-                    <div className="absolute top-0 right-0 w-3 h-3 bg-green-500 rounded-full border-2 border-gray-800"></div>
-                  </div>
-                  <span className="font-bold text-white text-lg">GVP</span>
-                  <span className="text-xs text-gray-500 mt-1 uppercase tracking-wide">Tarifvertrag</span>
-                </div>
-
-              </div>
-            </div>
-
-          </div>
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
+        {/* Background Effects */}
+        <div className="absolute inset-0">
+          <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px] animate-pulse" />
+          <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-secondary/15 rounded-full blur-[100px]" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[150px]" />
         </div>
-      </section>
-
-     {/* --- SEKTION: KOMPETENZFELDER (Unified Premium Dark) --- */}
-      <section className="py-20 sm:py-24 bg-gray-50 relative overflow-hidden">
         
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="inline-block py-1 px-3 rounded-full bg-white border border-gray-200 text-brand-orange text-xs font-bold uppercase tracking-widest mb-4 shadow-sm">
-              Unsere Expertise
-            </span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-brand-black mb-6">
-              Vier Bereiche. <span className="text-brand-orange">Ein Standard.</span>
-            </h2>
-            <p className="text-lg text-gray-600 leading-relaxed">
-              Egal ob Blaumann oder Anzug – wir arbeiten in jedem Bereich mit derselben Sorgfalt und Qualität.
-            </p>
-          </div>
+        {/* Grid Pattern */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:64px_64px]" />
+        
+        {/* Ember particles effect */}
+        <div className="absolute inset-0 overflow-hidden">
+          {[...Array(20)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute w-1 h-1 bg-primary rounded-full opacity-60"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                animation: `float ${3 + Math.random() * 4}s ease-in-out infinite`,
+                animationDelay: `${Math.random() * 2}s`,
+              }}
+            />
+          ))}
+        </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="relative max-w-7xl mx-auto px-6 pt-32 pb-20">
+          <div className="text-center max-w-4xl mx-auto">
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-card/80 backdrop-blur border border-primary/20 mb-8">
+              <Flame className="w-4 h-4 text-primary animate-pulse" />
+              <span className="text-sm text-muted-foreground">Ihr Personaldienstleister in Pforzheim</span>
+            </div>
+
+            {/* Headline */}
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-foreground mb-6 leading-[1.1] tracking-tight">
+              Brennen Sie für{' '}
+              <span className="relative">
+                <span className="text-gradient-flame">Ihren Erfolg</span>
+                <span className="absolute -inset-1 bg-primary/20 blur-2xl -z-10" />
+              </span>
+            </h1>
             
-            {/* Card 1: Logistik */}
-            <div className="group bg-brand-black p-8 rounded-2xl border border-gray-800 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col h-full relative overflow-hidden">
-              {/* Einheitlicher Hover-Effekt: Orange Glow */}
-              <div className="absolute top-0 right-0 w-32 h-32 bg-brand-orange opacity-0 group-hover:opacity-10 rounded-bl-full -mr-8 -mt-8 transition-all duration-500"></div>
-              
-              <div className="w-14 h-14 bg-gray-900 text-brand-orange rounded-xl flex items-center justify-center mb-6 border border-gray-800 group-hover:border-brand-orange group-hover:bg-brand-orange group-hover:text-white transition-all duration-300 relative z-10">
-                <Package size={28} />
-              </div>
-              
-              <h3 className="text-xl font-bold text-white mb-3 relative z-10">
-                Lager & Logistik
-              </h3>
-              <p className="text-gray-400 text-sm mb-6 flex-grow relative z-10 leading-relaxed">
-                Das Herz der Wirtschaft. Wir besetzen Stellen in den großen Logistikzentren der Region Pforzheim.
-              </p>
-              
-              <div className="flex flex-wrap gap-2 mt-auto relative z-10">
-                <span className="px-2 py-1 bg-gray-800/50 text-gray-400 text-xs rounded border border-gray-700">Staplerfahrer</span>
-                <span className="px-2 py-1 bg-gray-800/50 text-gray-400 text-xs rounded border border-gray-700">Kommissionierung</span>
-              </div>
+            <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed">
+              PersoFlex verbindet Unternehmen mit den besten Fachkräften in Pforzheim und dem Enzkreis. 
+              Zeitarbeit und Personalvermittlung mit Leidenschaft.
+            </p>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                to="/jobs" 
+                className="group relative overflow-hidden bg-gradient-to-r from-primary to-secondary text-white px-8 py-4 rounded-lg font-bold transition-all duration-300 hover:shadow-[0_0_40px_rgba(234,88,12,0.4)] hover:scale-105 inline-flex items-center justify-center gap-2"
+              >
+                <span className="relative z-10">Jobs entdecken</span>
+                <ArrowRight size={18} className="relative z-10 transition-transform group-hover:translate-x-1" />
+                <div className="absolute inset-0 bg-gradient-to-r from-secondary to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </Link>
+              <Link 
+                to="/unternehmen" 
+                className="px-8 py-4 border border-border rounded-lg text-foreground font-bold hover:bg-card hover:border-primary/50 hover:shadow-[0_0_20px_rgba(234,88,12,0.1)] transition-all inline-flex items-center justify-center gap-2"
+              >
+                Personal anfragen
+              </Link>
             </div>
 
-            {/* Card 2: Industrie */}
-            <div className="group bg-brand-black p-8 rounded-2xl border border-gray-800 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col h-full relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-brand-orange opacity-0 group-hover:opacity-10 rounded-bl-full -mr-8 -mt-8 transition-all duration-500"></div>
-              
-              <div className="w-14 h-14 bg-gray-900 text-brand-orange rounded-xl flex items-center justify-center mb-6 border border-gray-800 group-hover:border-brand-orange group-hover:bg-brand-orange group-hover:text-white transition-all duration-300 relative z-10">
-                <Wrench size={28} />
+            {/* Trust Indicators */}
+            <div className="mt-16 flex flex-wrap justify-center gap-8 text-muted-foreground">
+              <div className="flex items-center gap-2 px-4 py-2 bg-card/50 rounded-full border border-border">
+                <CheckCircle2 className="w-4 h-4 text-primary" />
+                <span className="text-sm">GVP Mitglied</span>
               </div>
-              
-              <h3 className="text-xl font-bold text-white mb-3 relative z-10">
-                Industrie & Handwerk
-              </h3>
-              <p className="text-gray-400 text-sm mb-6 flex-grow relative z-10 leading-relaxed">
-                Macher gesucht. Unterstützung für die starke Metall- und Elektroindustrie im Nordschwarzwald.
-              </p>
-              
-              <div className="flex flex-wrap gap-2 mt-auto relative z-10">
-                <span className="px-2 py-1 bg-gray-800/50 text-gray-400 text-xs rounded border border-gray-700">Maschinenführer</span>
-                <span className="px-2 py-1 bg-gray-800/50 text-gray-400 text-xs rounded border border-gray-700">Produktion</span>
+              <div className="flex items-center gap-2 px-4 py-2 bg-card/50 rounded-full border border-border">
+                <CheckCircle2 className="w-4 h-4 text-primary" />
+                <span className="text-sm">AÜG Erlaubnis</span>
+              </div>
+              <div className="flex items-center gap-2 px-4 py-2 bg-card/50 rounded-full border border-border">
+                <CheckCircle2 className="w-4 h-4 text-primary" />
+                <span className="text-sm">Tarifgebunden</span>
               </div>
             </div>
+          </div>
+        </div>
 
-            {/* Card 3: Kaufmännisch */}
-            <div className="group bg-brand-black p-8 rounded-2xl border border-gray-800 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col h-full relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-brand-orange opacity-0 group-hover:opacity-10 rounded-bl-full -mr-8 -mt-8 transition-all duration-500"></div>
-              
-              <div className="w-14 h-14 bg-gray-900 text-brand-orange rounded-xl flex items-center justify-center mb-6 border border-gray-800 group-hover:border-brand-orange group-hover:bg-brand-orange group-hover:text-white transition-all duration-300 relative z-10">
-                <FileText size={28} />
-              </div>
-              
-              <h3 className="text-xl font-bold text-white mb-3 relative z-10">
-                Office & Verwaltung
-              </h3>
-              <p className="text-gray-400 text-sm mb-6 flex-grow relative z-10 leading-relaxed">
-                Organisationstalente. Kompetentes Personal für Assistenz, Vertrieb und Sachbearbeitung.
-              </p>
-              
-              <div className="flex flex-wrap gap-2 mt-auto relative z-10">
-                <span className="px-2 py-1 bg-gray-800/50 text-gray-400 text-xs rounded border border-gray-700">Sachbearbeitung</span>
-                <span className="px-2 py-1 bg-gray-800/50 text-gray-400 text-xs rounded border border-gray-700">Empfang</span>
-              </div>
-            </div>
-
-            {/* Card 4: Experts */}
-            <div className="group bg-brand-black p-8 rounded-2xl border border-gray-800 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col h-full relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-brand-orange opacity-0 group-hover:opacity-10 rounded-bl-full -mr-8 -mt-8 transition-all duration-500"></div>
-              
-              <div className="w-14 h-14 bg-gray-900 text-brand-orange rounded-xl flex items-center justify-center mb-6 border border-gray-800 group-hover:border-brand-orange group-hover:bg-brand-orange group-hover:text-white transition-all duration-300 relative z-10">
-                <Award size={28} />
-              </div>
-              
-              <h3 className="text-xl font-bold text-white mb-3 relative z-10">
-                Experts & Führung
-              </h3>
-              <p className="text-gray-400 text-sm mb-6 flex-grow relative z-10 leading-relaxed">
-                Next Level. Wir vermitteln hochqualifizierte Spezialisten für anspruchsvolle Projekte.
-              </p>
-              
-              <div className="flex flex-wrap gap-2 mt-auto relative z-10">
-                <span className="px-2 py-1 bg-gray-800/50 text-gray-400 text-xs rounded border border-gray-700">Ingenieure</span>
-                <span className="px-2 py-1 bg-gray-800/50 text-gray-400 text-xs rounded border border-gray-700">Meister</span>
-              </div>
-            </div>
-
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
+          <div className="w-6 h-10 border-2 border-primary/30 rounded-full flex items-start justify-center p-2">
+            <div className="w-1 h-2 bg-primary rounded-full animate-bounce" />
           </div>
         </div>
       </section>
 
-      {/* --- SEKTION: ÜBER UNS & REGION (Modern & Clean) --- */}
-      <section className="py-20 sm:py-24 bg-white relative overflow-hidden">
-        {/* Dezentes Hintergrund-Muster (Punkte) */}
-        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(#000 1px, transparent 1px)', backgroundSize: '32px 32px' }}></div>
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            
-            {/* Linke Seite: Story */}
-            <div>
-              <span className="text-brand-orange font-bold uppercase tracking-widest text-xs mb-2 block">
-                Über PersoFlex
-              </span>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-brand-black mb-6 leading-tight">
-                Personal neu gedacht.<br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange to-orange-400">
-                  Direkt in Pforzheim.
-                </span>
-              </h2>
-              
-              <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
-                <p>
-                  Zeitarbeit hat ein Update verdient. Wir sind nicht der typische Konzern, sondern Ihr <strong>lokaler Partner</strong> im Nordschwarzwald. Schnell, ehrlich und ohne unnötige Bürokratie.
-                </p>
-                <p>
-                  Unser Ziel: Unternehmen und Talente so zusammenzubringen, dass es für beide Seiten passt. Egal ob <strong>gewerblich, kaufmännisch oder hochqualifiziert</strong> – wir kennen den Markt vor der Haustür.
-                </p>
+      {/* Stats Section */}
+      <section className="py-20 bg-card border-y border-border relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
+        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
+        
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center group">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 text-primary mb-4 transition-all duration-300 group-hover:bg-primary group-hover:text-white group-hover:shadow-[0_0_30px_rgba(234,88,12,0.4)] group-hover:scale-110">
+                  <stat.icon size={28} />
+                </div>
+                <div className="text-3xl md:text-4xl font-black text-foreground mb-2">{stat.value}</div>
+                <div className="text-sm text-muted-foreground">{stat.label}</div>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-10">
-                <div className="flex items-start">
-                  <div className="bg-orange-50 p-3 rounded-lg mr-4 text-brand-orange shrink-0">
-                    <Search size={24} />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-brand-black">Gezielte Suche</h4>
-                    <p className="text-sm text-gray-500 mt-1">Keine Karteileichen. Wir finden Leute, die wirklich wollen.</p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <div className="bg-orange-50 p-3 rounded-lg mr-4 text-brand-orange shrink-0">
-                    <UserCheck size={24} />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-brand-black">Faire Deals</h4>
-                    <p className="text-sm text-gray-500 mt-1">Tarifliche Bezahlung und Respekt sind unser Standard.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+      {/* Services Section */}
+      <section className="py-24 bg-background relative overflow-hidden">
+        <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[150px] -translate-y-1/2" />
+        
+        <div className="max-w-7xl mx-auto px-6 relative">
+          <div className="text-center mb-16">
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold uppercase tracking-wider mb-4">
+              <Flame className="w-4 h-4" />
+              Unsere Leistungen
+            </span>
+            <h2 className="text-3xl md:text-5xl font-black text-foreground mt-4 mb-6">
+              Personaldienstleistungen mit <span className="text-gradient-flame">Feuer</span>
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+              Von der Arbeitnehmerüberlassung bis zur direkten Personalvermittlung - 
+              wir bieten maßgeschneiderte Lösungen für Unternehmen in Pforzheim und Umgebung.
+            </p>
+          </div>
 
-            {/* Rechte Seite: Region / Orte (Als modernes Grid, keine Box mehr) */}
-            <div className="relative">
-              {/* Deko-Element */}
-              <div className="absolute -top-10 -right-10 w-40 h-40 bg-gray-100 rounded-full blur-3xl -z-10"></div>
-              
-              <div className="bg-gray-50 border border-gray-100 p-8 rounded-2xl shadow-sm">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="bg-brand-black text-white p-2 rounded-md">
-                    <MapPin size={20} />
-                  </div>
-                  <h3 className="text-xl font-bold text-brand-black">Hier sind wir aktiv</h3>
-                </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <div 
+                key={index} 
+                className="group bg-card border border-border rounded-2xl p-8 transition-all duration-500 hover:border-primary/50 hover:shadow-[0_20px_60px_rgba(0,0,0,0.3),0_0_30px_rgba(234,88,12,0.1)] hover:-translate-y-2 relative overflow-hidden"
+              >
+                <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 
-                <p className="text-gray-600 mb-8 text-sm">
-                  Kurze Wege sind uns wichtig. Unser Fokus liegt auf der starken Wirtschaftsregion Nordschwarzwald:
-                </p>
-
-                {/* Modernes Grid statt Liste */}
-                <div className="flex flex-wrap gap-2">
-                  {[
-                    'Pforzheim', 'Enzkreis', 'Mühlacker', 
-                    'Keltern', 'Birkenfeld', 'Königsbach-Stein', 
-                    'Niefern-Öschelbronn', 'Remchingen', 'Karlsruhe', 'Stuttgart'
-                  ].map((city) => (
-                    <span 
-                      key={city} 
-                      className="inline-flex items-center px-4 py-2 bg-white border border-gray-200 rounded-full text-sm font-medium text-gray-700 hover:border-brand-orange hover:text-brand-orange transition-colors cursor-default shadow-sm"
-                    >
-                      {city}
-                    </span>
-                  ))}
+                <div className="w-16 h-16 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mb-6 transition-all duration-300 group-hover:bg-primary group-hover:text-white group-hover:shadow-[0_0_30px_rgba(234,88,12,0.4)]">
+                  <service.icon size={32} />
                 </div>
-
-                <div className="mt-8 p-4 bg-white rounded-lg border border-gray-100 flex gap-4 items-center">
-                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse shrink-0"></div>
-                  <p className="text-xs text-gray-500 font-medium">
-                    Durch unsere lokale Nähe können wir oft innerhalb von 24h reagieren.
-                  </p>
+                <h3 className="text-xl font-bold text-foreground mb-4">{service.title}</h3>
+                <p className="text-muted-foreground leading-relaxed mb-6">{service.description}</p>
+                <div className="flex items-center text-primary font-semibold group-hover:gap-4 transition-all">
+                  <span>Mehr erfahren</span>
+                  <ArrowRight size={18} className="ml-2 transition-transform group-hover:translate-x-2" />
                 </div>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Industries Section */}
+      <section className="py-24 bg-card border-y border-border relative overflow-hidden">
+        <div className="absolute top-1/2 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[150px] -translate-y-1/2" />
+        
+        <div className="max-w-7xl mx-auto px-6 relative">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold uppercase tracking-wider mb-4">
+                Branchen
+              </span>
+              <h2 className="text-3xl md:text-5xl font-black text-foreground mt-4 mb-6">
+                Jobs in allen <span className="text-gradient-flame">Bereichen</span>
+              </h2>
+              <p className="text-muted-foreground mb-8 leading-relaxed text-lg">
+                Von der Produktion über Logistik bis hin zum Handwerk - wir vermitteln qualifizierte 
+                Fachkräfte in alle relevanten Branchen der Region Pforzheim und Enzkreis.
+              </p>
+              
+              <div className="space-y-4">
+                {industries.map((industry, index) => (
+                  <div 
+                    key={index}
+                    className="flex items-center justify-between p-5 bg-background border border-border rounded-xl hover:border-primary/50 hover:shadow-[0_0_20px_rgba(234,88,12,0.1)] transition-all group cursor-pointer"
+                  >
+                    <div className="flex items-center gap-4">
+                      <div className="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all">
+                        <industry.icon size={24} />
+                      </div>
+                      <span className="font-semibold text-foreground">{industry.name}</span>
+                    </div>
+                    <span className="text-sm text-primary font-bold">{industry.jobs}</span>
+                  </div>
+                ))}
+              </div>
+
+              <Link 
+                to="/jobs" 
+                className="mt-8 inline-flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all"
+              >
+                Alle Jobs ansehen <ArrowRight size={18} />
+              </Link>
             </div>
 
+            <div className="relative">
+              <div className="aspect-square rounded-3xl bg-gradient-to-br from-primary/20 via-secondary/10 to-primary/5 p-8 flex items-center justify-center border border-primary/20 relative overflow-hidden">
+                {/* Animated background */}
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(234,88,12,0.2),transparent_50%)]" />
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,rgba(220,38,38,0.1),transparent_50%)]" />
+                
+                <div className="text-center relative z-10">
+                  <Zap className="w-24 h-24 text-primary mx-auto mb-6 drop-shadow-[0_0_30px_rgba(234,88,12,0.5)]" />
+                  <p className="text-4xl font-black text-foreground mb-2">365+</p>
+                  <p className="text-xl text-muted-foreground">offene Stellen</p>
+                  <p className="text-sm text-muted-foreground mt-2">in der Region Pforzheim</p>
+                </div>
+              </div>
+              
+              {/* Floating badges */}
+              <div className="absolute -top-4 -right-4 px-4 py-2 bg-background border border-primary/30 rounded-full shadow-[0_0_20px_rgba(234,88,12,0.2)]">
+                <span className="text-sm font-bold text-foreground">Produktion</span>
+              </div>
+              <div className="absolute -bottom-4 -left-4 px-4 py-2 bg-background border border-primary/30 rounded-full shadow-[0_0_20px_rgba(234,88,12,0.2)]">
+                <span className="text-sm font-bold text-foreground">Logistik</span>
+              </div>
+              <div className="absolute top-1/2 -right-6 px-4 py-2 bg-background border border-primary/30 rounded-full shadow-[0_0_20px_rgba(234,88,12,0.2)]">
+                <span className="text-sm font-bold text-foreground">Handwerk</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* For Companies & Applicants Section */}
+      <section className="py-24 bg-background">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* For Companies */}
+            <div className="group bg-card border border-border rounded-2xl p-10 relative overflow-hidden hover:border-primary/50 transition-all duration-500 hover:shadow-[0_20px_60px_rgba(0,0,0,0.3),0_0_40px_rgba(234,88,12,0.1)]">
+              <div className="absolute top-0 right-0 w-48 h-48 bg-primary/10 rounded-full blur-3xl transition-all group-hover:bg-primary/20" />
+              <Building2 className="w-14 h-14 text-primary mb-6" />
+              <h3 className="text-2xl font-black text-foreground mb-4">Für Unternehmen</h3>
+              <p className="text-muted-foreground mb-6 leading-relaxed">
+                Sie suchen qualifizierte Mitarbeiter für Produktion, Logistik oder Handwerk? 
+                Wir liefern Ihnen schnell und zuverlässig die passenden Fachkräfte.
+              </p>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-center gap-3 text-muted-foreground">
+                  <CheckCircle2 className="w-5 h-5 text-primary shrink-0" />
+                  <span>Schnelle Personalvermittlung innerhalb 24h</span>
+                </li>
+                <li className="flex items-center gap-3 text-muted-foreground">
+                  <CheckCircle2 className="w-5 h-5 text-primary shrink-0" />
+                  <span>Flexible Einsatzzeiten und Vertragsmodelle</span>
+                </li>
+                <li className="flex items-center gap-3 text-muted-foreground">
+                  <CheckCircle2 className="w-5 h-5 text-primary shrink-0" />
+                  <span>Persönliche Betreuung vor Ort</span>
+                </li>
+              </ul>
+              <Link 
+                to="/unternehmen" 
+                className="inline-flex items-center gap-2 text-primary font-bold group-hover:gap-4 transition-all"
+              >
+                Personal anfragen <ArrowRight size={18} />
+              </Link>
+            </div>
+
+            {/* For Applicants */}
+            <div className="group bg-card border border-border rounded-2xl p-10 relative overflow-hidden hover:border-secondary/50 transition-all duration-500 hover:shadow-[0_20px_60px_rgba(0,0,0,0.3),0_0_40px_rgba(220,38,38,0.1)]">
+              <div className="absolute top-0 right-0 w-48 h-48 bg-secondary/10 rounded-full blur-3xl transition-all group-hover:bg-secondary/20" />
+              <Users className="w-14 h-14 text-secondary mb-6" />
+              <h3 className="text-2xl font-black text-foreground mb-4">Für Bewerber</h3>
+              <p className="text-muted-foreground mb-6 leading-relaxed">
+                Auf der Suche nach einem neuen Job in Pforzheim oder Umgebung? 
+                Wir helfen Ihnen, Ihren Traumjob zu finden - kostenlos und persönlich.
+              </p>
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-center gap-3 text-muted-foreground">
+                  <CheckCircle2 className="w-5 h-5 text-secondary shrink-0" />
+                  <span>Über 365 aktuelle Jobangebote</span>
+                </li>
+                <li className="flex items-center gap-3 text-muted-foreground">
+                  <CheckCircle2 className="w-5 h-5 text-secondary shrink-0" />
+                  <span>Faire Bezahlung nach Tarif</span>
+                </li>
+                <li className="flex items-center gap-3 text-muted-foreground">
+                  <CheckCircle2 className="w-5 h-5 text-secondary shrink-0" />
+                  <span>Persönliche Karriereberatung</span>
+                </li>
+              </ul>
+              <Link 
+                to="/jobs" 
+                className="inline-flex items-center gap-2 text-secondary font-bold group-hover:gap-4 transition-all"
+              >
+                Jobs entdecken <ArrowRight size={18} />
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Reviews Section */}
-      <section className="bg-brand-dark text-white py-16 sm:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-black mb-4">Das sagen unsere Partner</h2>
-            <p className="text-gray-400 text-sm sm:text-base">Erstes Feedback von Unternehmen und Mitarbeitern aus der Region.</p>
+      <section className="py-24 bg-card border-y border-border">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold uppercase tracking-wider mb-4">
+              Bewertungen
+            </span>
+            <h2 className="text-3xl md:text-5xl font-black text-foreground mt-4 mb-6">
+              Was unsere <span className="text-gradient-flame">Partner</span> sagen
+            </h2>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
-            <div className="space-y-8">
-               <div className="flex items-center gap-4 mb-6">
-                 <div className="bg-white p-2 rounded text-brand-black"><Briefcase size={20} /></div>
-                 <h3 className="text-xl sm:text-2xl font-bold">Stimmen von Unternehmen</h3>
-               </div>
-               {REVIEWS.filter(r => r.type === 'B2B').map((review, idx) => (
-                 <motion.div 
-                    key={idx}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ delay: idx * 0.2 }}
-                    viewport={{ once: true }}
-                    className="bg-brand-gray/50 p-6 sm:p-8 rounded-lg border border-white/5 relative hover:border-brand-orange/50 transition-colors"
-                 >
-                   <Quote className="absolute top-6 right-6 text-brand-orange/20" size={32} />
-                   <div className="flex gap-1 text-brand-orange mb-4">
-                     {[...Array(review.rating)].map((_, i) => <Star key={i} size={16} fill="currentColor" />)}
-                   </div>
-                   <p className="text-gray-300 italic mb-6 leading-relaxed text-sm sm:text-base">"{review.text}"</p>
-                   <div>
-                     <span className="block font-bold text-white">{review.author}</span>
-                     <span className="text-xs sm:text-sm text-brand-orange uppercase tracking-wider font-bold">{review.role}</span>
-                   </div>
-                 </motion.div>
-               ))}
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {reviews.map((review, index) => (
+              <div key={index} className="bg-background border border-border rounded-2xl p-8 relative">
+                <Quote className="w-10 h-10 text-primary/20 absolute top-6 right-6" />
+                <div className="flex gap-1 mb-4">
+                  {[...Array(review.rating)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-primary fill-primary" />
+                  ))}
+                </div>
+                <p className="text-muted-foreground mb-6 leading-relaxed">{review.text}</p>
+                <div>
+                  <p className="font-bold text-foreground">{review.author}</p>
+                  <p className="text-sm text-muted-foreground">{review.role}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Location Section */}
+      <section className="py-24 bg-background">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold uppercase tracking-wider mb-4">
+              Standort
+            </span>
+            <h2 className="text-3xl md:text-5xl font-black text-foreground mt-4 mb-6">
+              Lokal verwurzelt in <span className="text-gradient-flame">Pforzheim</span>
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+              Als regionaler Personaldienstleister kennen wir den Arbeitsmarkt in Pforzheim, 
+              dem Enzkreis und Baden-Württemberg wie unsere Westentasche.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="text-center p-8 bg-card border border-border rounded-2xl hover:border-primary/50 transition-all group">
+              <div className="w-16 h-16 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mx-auto mb-4 group-hover:bg-primary group-hover:text-white transition-all">
+                <MapPin size={32} />
+              </div>
+              <h3 className="text-xl font-bold text-foreground mb-2">Pforzheim</h3>
+              <p className="text-muted-foreground">Hauptstandort</p>
             </div>
-            <div className="space-y-8">
-               <div className="flex items-center gap-4 mb-6">
-                 <div className="bg-brand-orange p-2 rounded text-white"><Users size={20} /></div>
-                 <h3 className="text-xl sm:text-2xl font-bold">Stimmen von Bewerbern</h3>
-               </div>
-               {REVIEWS.filter(r => r.type === 'B2C').map((review, idx) => (
-                 <motion.div 
-                    key={idx}
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ delay: idx * 0.2 }}
-                    viewport={{ once: true }}
-                    className="bg-brand-gray/50 p-6 sm:p-8 rounded-lg border border-white/5 relative hover:border-brand-orange/50 transition-colors"
-                 >
-                   <Quote className="absolute top-6 right-6 text-brand-orange/20" size={32} />
-                   <div className="flex gap-1 text-brand-orange mb-4">
-                     {[...Array(review.rating)].map((_, i) => <Star key={i} size={16} fill="currentColor" />)}
-                   </div>
-                   <p className="text-gray-300 italic mb-6 leading-relaxed text-sm sm:text-base">"{review.text}"</p>
-                   <div>
-                     <span className="block font-bold text-white">{review.author}</span>
-                     <span className="text-xs sm:text-sm text-gray-400 uppercase tracking-wider">{review.role}</span>
-                   </div>
-                 </motion.div>
-               ))}
+            <div className="text-center p-8 bg-card border border-border rounded-2xl hover:border-primary/50 transition-all group">
+              <div className="w-16 h-16 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mx-auto mb-4 group-hover:bg-primary group-hover:text-white transition-all">
+                <TrendingUp size={32} />
+              </div>
+              <h3 className="text-xl font-bold text-foreground mb-2">Enzkreis</h3>
+              <p className="text-muted-foreground">Einzugsgebiet</p>
+            </div>
+            <div className="text-center p-8 bg-card border border-border rounded-2xl hover:border-primary/50 transition-all group">
+              <div className="w-16 h-16 rounded-2xl bg-primary/10 text-primary flex items-center justify-center mx-auto mb-4 group-hover:bg-primary group-hover:text-white transition-all">
+                <Building2 size={32} />
+              </div>
+              <h3 className="text-xl font-bold text-foreground mb-2">Baden-Württemberg</h3>
+              <p className="text-muted-foreground">Aktiv in der Region</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Map Section */}
-      <section className="bg-gray-100 w-full">
-        <div className="flex flex-col lg:flex-row min-h-[550px]">
-          
-          {/* Linke Seite: Infos */}
-          <div className="w-full lg:w-1/3 bg-white p-10 lg:p-16 flex flex-col justify-center border-r border-gray-200 z-10 shadow-xl lg:shadow-none">
-            <span className="text-brand-orange font-bold uppercase tracking-widest text-xs mb-3 block">
-              Anfahrt
-            </span>
-            <h2 className="text-3xl font-black mb-6 text-brand-black">Hier finden Sie uns.</h2>
-            
-            <div className="space-y-6 text-gray-600 mb-8">
-              <div className="flex items-start gap-4">
-                <div className="bg-gray-50 p-2 rounded-full">
-                  <MapPin className="text-brand-orange" size={24} />
-                </div>
-                <div>
-                  <strong className="block text-brand-black text-lg mb-1">PersoFlex GmbH</strong>
-                  <p className="text-base leading-relaxed">
-                    Kiehnlestraße 4<br/>
-                    75172 Pforzheim
-                  </p>
-                </div>
-              </div>
-              
-              <div className="flex items-start gap-4">
-                <div className="bg-gray-50 p-2 rounded-full">
-                  <Clock className="text-brand-orange" size={24} />
-                </div>
-                <div>
-                  <strong className="block text-brand-black text-lg mb-1">Öffnungszeiten</strong>
-                  <p className="text-base">
-                    Mo - Fr: 08:00 - 17:00 Uhr
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <a 
-              href="https://maps.google.com/?cid=444259936772408734&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 bg-brand-black text-white px-8 py-4 font-bold hover:bg-brand-orange transition-colors rounded-sm w-full sm:w-auto justify-center shadow-lg"
+      {/* CTA Section */}
+      <section className="py-24 bg-card border-t border-border relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/10 rounded-full blur-[150px]" />
+        </div>
+        
+        <div className="max-w-4xl mx-auto px-6 text-center relative">
+          <Flame className="w-20 h-20 text-primary mx-auto mb-8 drop-shadow-[0_0_40px_rgba(234,88,12,0.5)]" />
+          <h2 className="text-3xl md:text-5xl font-black text-foreground mb-6">
+            Bereit durchzustarten?
+          </h2>
+          <p className="text-lg text-muted-foreground mb-10 max-w-2xl mx-auto">
+            Ob Sie Personal suchen oder einen neuen Job - wir sind für Sie da. 
+            Kontaktieren Sie uns noch heute für ein unverbindliches Gespräch.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              to="/kontakt" 
+              className="group relative overflow-hidden bg-gradient-to-r from-primary to-secondary text-white px-8 py-4 rounded-lg font-bold transition-all duration-300 hover:shadow-[0_0_50px_rgba(234,88,12,0.5)] hover:scale-105 inline-flex items-center justify-center gap-2"
             >
-              Route planen <ArrowRight size={20} />
+              <span className="relative z-10">Jetzt Kontakt aufnehmen</span>
+              <ArrowRight size={18} className="relative z-10" />
+              <div className="absolute inset-0 bg-gradient-to-r from-secondary to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            </Link>
+            <a 
+              href="tel:072316039493" 
+              className="px-8 py-4 border border-border rounded-lg text-foreground font-bold hover:bg-background hover:border-primary/50 hover:shadow-[0_0_30px_rgba(234,88,12,0.2)] transition-all inline-flex items-center justify-center gap-2"
+            >
+              07231 60 39 493
             </a>
           </div>
-
-          {/* Rechte Seite: Karte */}
-          <div className="w-full lg:w-2/3 relative min-h-[400px]">
-            <iframe 
-              width="100%" 
-              height="100%" 
-              frameBorder="0" 
-              scrolling="no" 
-              loading="lazy" 
-              marginHeight={0} 
-              marginWidth={0} 
-              src="https://maps.google.com/maps?width=100%25&height=600&hl=de&q=PersoFlex%20GmbH%20Kiehnlestra%C3%9Fe%204%2075172%20Pforzheim&t=&z=15&ie=UTF8&iwloc=B&output=embed"
-              className="absolute inset-0 w-full h-full grayscale-0"
-              title="Standort PersoFlex GmbH Pforzheim"
-            ></iframe>
-          </div>
-
         </div>
       </section>
-
-    </div>
+    </>
   );
 };

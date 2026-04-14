@@ -2,9 +2,181 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom styles for Inter font */
 @layer base {
+  :root {
+    /* Höllen-Theme: Dunkle Basis mit feurigen Akzenten */
+    --background: 0 0% 4%;
+    --foreground: 0 0% 98%;
+    
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 98%;
+    
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 98%;
+    
+    --primary: 24 95% 53%;
+    --primary-foreground: 0 0% 98%;
+    
+    --secondary: 0 72% 51%;
+    --secondary-foreground: 0 0% 98%;
+    
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 64%;
+    
+    --accent: 24 95% 53%;
+    --accent-foreground: 0 0% 98%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 24 95% 53%;
+    
+    --radius: 0.75rem;
+    
+    /* Flammen-Gradient Farben */
+    --flame-orange: 24 95% 53%;
+    --flame-red: 0 72% 51%;
+    --flame-yellow: 38 92% 50%;
+    --ember: 15 80% 40%;
+  }
+
+  * {
+    @apply border-border;
+  }
+  
   html {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', system-ui, sans-serif;
+    scroll-behavior: smooth;
+    @apply bg-background text-foreground antialiased;
+  }
+  
+  body {
+    @apply bg-background text-foreground min-h-screen;
+  }
+}
+
+@layer components {
+  /* Flammen-Glow Effekt */
+  .flame-glow {
+    box-shadow: 
+      0 0 20px hsl(var(--primary) / 0.3),
+      0 0 40px hsl(var(--primary) / 0.2),
+      0 0 60px hsl(var(--secondary) / 0.1);
+  }
+  
+  .flame-text {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--flame-yellow)) 0%,
+      hsl(var(--flame-orange)) 50%,
+      hsl(var(--flame-red)) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .flame-border {
+    border-image: linear-gradient(
+      135deg,
+      hsl(var(--flame-orange)) 0%,
+      hsl(var(--flame-red)) 100%
+    ) 1;
+  }
+  
+  /* Ember Animation */
+  @keyframes ember-pulse {
+    0%, 100% {
+      opacity: 0.6;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+  }
+  
+  .ember-pulse {
+    animation: ember-pulse 3s ease-in-out infinite;
+  }
+  
+  /* Fire Gradient Background */
+  .fire-gradient {
+    background: linear-gradient(
+      180deg,
+      hsl(var(--background)) 0%,
+      hsl(0 0% 6%) 50%,
+      hsl(var(--background)) 100%
+    );
+  }
+  
+  .fire-gradient-radial {
+    background: radial-gradient(
+      ellipse at center bottom,
+      hsl(var(--primary) / 0.15) 0%,
+      hsl(var(--background)) 70%
+    );
+  }
+  
+  /* Button Styles */
+  .btn-flame {
+    @apply relative overflow-hidden px-8 py-4 font-semibold text-white rounded-lg transition-all duration-300;
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%);
+  }
+  
+  .btn-flame:hover {
+    @apply scale-105;
+    box-shadow: 0 10px 40px hsl(var(--primary) / 0.4);
+  }
+  
+  .btn-flame::before {
+    content: '';
+    @apply absolute inset-0 opacity-0 transition-opacity duration-300;
+    background: linear-gradient(135deg, hsl(var(--secondary)) 0%, hsl(var(--primary)) 100%);
+  }
+  
+  .btn-flame:hover::before {
+    @apply opacity-100;
+  }
+  
+  /* Card Hover Effect */
+  .card-hell {
+    @apply bg-card border border-border rounded-xl transition-all duration-500;
+  }
+  
+  .card-hell:hover {
+    @apply border-primary/50;
+    box-shadow: 
+      0 20px 40px hsl(var(--background) / 0.8),
+      0 0 20px hsl(var(--primary) / 0.1);
+  }
+  
+  /* Section divider with ember effect */
+  .ember-divider {
+    @apply h-px w-full;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      hsl(var(--primary) / 0.5) 50%,
+      transparent 100%
+    );
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .text-gradient-flame {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(
+      135deg,
+      hsl(38 92% 50%) 0%,
+      hsl(24 95% 53%) 50%,
+      hsl(0 72% 51%) 100%
+    );
   }
 }

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom'; // <--- WICHTIG: react-router-dom statt next/link
-import { ArrowRight, MapPin, Search, Loader2, AlertCircle, Briefcase } from 'lucide-react';
-// import { SEO } from '../components/SEO'; // Falls SEO in Vite anders gelöst ist, ggf. auskommentieren
+import { Link } from 'react-router-dom';
+import { ArrowRight, MapPin, Search, Loader2, AlertCircle, Briefcase, Flame, Filter } from 'lucide-react';
+import { SEO } from '../components/SEO';
 
 interface JobListItem {
   ObjectUuid: string;
@@ -62,102 +62,184 @@ export const Jobs: React.FC = () => {
     return title.includes(term) || location.includes(term);
   });
 
-  const scrollToJobs = () => {
-    const element = document.getElementById('jobboard-section');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
-    <div className="flex flex-col min-h-screen bg-white pt-[80px]">
-      {/* <SEO ... />  Falls vorhanden */}
+    <div className="flex flex-col min-h-screen bg-background">
+      <SEO 
+        title="Jobs in Pforzheim & Enzkreis | Aktuelle Stellenangebote | PersoFlex"
+        description="Finde deinen neuen Job in Pforzheim, Enzkreis und Baden-Württemberg. Aktuelle Stellenangebote in Produktion, Logistik, Handwerk und mehr. Jetzt bewerben!"
+        keywords="Jobs Pforzheim, Stellenangebote Enzkreis, Arbeit Pforzheim, Zeitarbeit Jobs, Produktion Jobs"
+      />
       
-      <section className="bg-brand-black text-white py-20 relative overflow-hidden">
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        {/* Background Effects */}
+        <div className="absolute inset-0">
+          <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-primary/15 rounded-full blur-[120px]" />
+          <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-secondary/10 rounded-full blur-[100px]" />
+        </div>
+        
         <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <h1 className="text-4xl md:text-5xl font-black mb-6">
-            Deine Zukunft <span className="text-brand-orange">startet hier.</span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl">
-            Entdecke aktuelle Stellenangebote in Pforzheim, Enzkreis und der Region Karlsruhe/Stuttgart.
-          </p>
-          <button onClick={scrollToJobs} className="bg-brand-orange text-white px-8 py-4 font-bold rounded-sm hover:bg-white hover:text-brand-orange transition-colors">
-            Zu den offenen Stellen
-          </button>
+          <div className="text-center max-w-3xl mx-auto">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-card border border-primary/20 mb-6">
+              <Flame className="w-4 h-4 text-primary" />
+              <span className="text-sm text-muted-foreground">Aktuelle Stellenangebote</span>
+            </div>
+            
+            <h1 className="text-4xl md:text-6xl font-black text-foreground mb-6">
+              Deine Zukunft <span className="text-gradient-flame">startet hier.</span>
+            </h1>
+            <p className="text-lg text-muted-foreground mb-10">
+              Entdecke aktuelle Stellenangebote in Pforzheim, Enzkreis und der Region. 
+              Produktion, Logistik, Handwerk und mehr.
+            </p>
+          </div>
         </div>
       </section>
 
-      <div id="jobboard-section" className="w-full bg-gray-50 py-16">
-        <div className="max-w-7xl mx-auto px-6">
-          
-          <div className="bg-white p-6 rounded-lg shadow-sm mb-10 -mt-24 relative z-20 border border-gray-100">
+      {/* Search Section */}
+      <div className="relative -mt-8 z-20 px-6">
+        <div className="max-w-3xl mx-auto">
+          <div className="bg-card border border-border rounded-2xl p-6 shadow-2xl shadow-primary/5">
             <div className="relative">
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" size={20} />
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground" size={20} />
               <input 
                 type="text"
                 placeholder="Jobtitel oder Ort eingeben..."
-                className="w-full pl-12 pr-4 py-4 bg-gray-50 border border-gray-200 rounded-sm focus:outline-none focus:border-brand-orange transition-colors"
+                className="w-full pl-12 pr-4 py-4 bg-background border border-border rounded-xl text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
               />
             </div>
+            
+            {/* Quick Filters */}
+            <div className="flex flex-wrap gap-2 mt-4">
+              <button className="px-4 py-2 text-sm bg-primary/10 text-primary rounded-lg hover:bg-primary hover:text-white transition-all">
+                Alle Jobs
+              </button>
+              <button className="px-4 py-2 text-sm bg-card border border-border text-muted-foreground rounded-lg hover:border-primary/50 hover:text-foreground transition-all">
+                Produktion
+              </button>
+              <button className="px-4 py-2 text-sm bg-card border border-border text-muted-foreground rounded-lg hover:border-primary/50 hover:text-foreground transition-all">
+                Logistik
+              </button>
+              <button className="px-4 py-2 text-sm bg-card border border-border text-muted-foreground rounded-lg hover:border-primary/50 hover:text-foreground transition-all">
+                Handwerk
+              </button>
+            </div>
           </div>
+        </div>
+      </div>
+
+      {/* Jobs Grid */}
+      <section className="py-16 px-6">
+        <div className="max-w-7xl mx-auto">
+          
+          {/* Results count */}
+          {!loading && !error && (
+            <div className="flex items-center justify-between mb-8">
+              <p className="text-muted-foreground">
+                <span className="text-foreground font-bold">{filteredJobs.length}</span> Jobs gefunden
+              </p>
+              <button className="flex items-center gap-2 px-4 py-2 text-sm bg-card border border-border rounded-lg text-muted-foreground hover:border-primary/50 transition-all">
+                <Filter size={16} />
+                Filter
+              </button>
+            </div>
+          )}
 
           {loading && (
-            <div className="text-center py-20 text-gray-500">
-              <Loader2 className="animate-spin mb-4 mx-auto text-brand-orange" size={40} />
-              <p className="font-medium">Lade aktuelle Jobs...</p>
+            <div className="text-center py-20">
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 mb-6">
+                <Loader2 className="animate-spin text-primary" size={32} />
+              </div>
+              <p className="text-muted-foreground font-medium">Lade aktuelle Jobs...</p>
             </div>
           )}
 
           {error && (
-            <div className="bg-red-50 text-red-600 p-6 rounded-sm text-center border border-red-200 max-w-2xl mx-auto">
-              <AlertCircle size={32} className="mx-auto mb-2" />
-              <p>{error}</p>
+            <div className="bg-destructive/10 border border-destructive/30 text-destructive p-6 rounded-2xl text-center max-w-2xl mx-auto">
+              <AlertCircle size={32} className="mx-auto mb-4" />
+              <p className="font-medium">{error}</p>
             </div>
           )}
 
           {!loading && !error && (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {filteredJobs.map((job) => (
-                <div key={job.ObjectUuid} className="bg-white p-6 rounded-sm shadow-sm border border-gray-100 flex flex-col h-full hover:shadow-lg hover:border-brand-orange transition-all group">
-                  
+                <div 
+                  key={job.ObjectUuid} 
+                  className="group bg-card border border-border rounded-2xl p-6 flex flex-col h-full hover:border-primary/50 hover:shadow-[0_20px_60px_rgba(0,0,0,0.3),0_0_30px_rgba(234,88,12,0.1)] transition-all duration-300"
+                >
                   <div className="flex justify-between items-start mb-4">
-                    <div className="bg-brand-orange/10 text-brand-orange p-2 rounded-sm">
-                       <Briefcase size={20} />
+                    <div className="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all">
+                       <Briefcase size={24} />
                     </div>
                     {job.VertragsartBezeichnung && (
-                      <span className="text-xs font-semibold bg-gray-100 text-gray-600 px-2 py-1 rounded">
+                      <span className="text-xs font-semibold bg-muted text-muted-foreground px-3 py-1 rounded-full">
                         {job.VertragsartBezeichnung}
                       </span>
                     )}
                   </div>
 
-                  <h3 className="text-xl font-bold text-brand-black mb-3 group-hover:text-brand-orange transition-colors">
+                  <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors line-clamp-2">
                     {job.Bezeichnung}
                   </h3>
                   
-                  <div className="flex items-center text-gray-500 mb-6 text-sm">
-                    <MapPin size={16} className="mr-2 text-brand-orange" />
+                  <div className="flex items-center text-muted-foreground mb-6 text-sm">
+                    <MapPin size={16} className="mr-2 text-primary" />
                     {job.EinsatzortPlz} {job.EinsatzortOrt || 'Pforzheim'}
                   </div>
 
-                  <div className="mt-auto w-full">
-                    {/* WICHTIG: Hier nutzen wir "to" statt "href" und KEIN next/link */}
+                  <div className="mt-auto">
                     <Link 
                       to={`/jobs/${job.ObjectUuid}`} 
-                      className="flex items-center justify-center bg-gray-900 text-white py-3 rounded-sm group-hover:bg-brand-orange transition-colors font-medium w-full"
+                      className="flex items-center justify-center w-full bg-gradient-to-r from-primary to-secondary text-white py-3 rounded-xl font-semibold transition-all duration-300 hover:shadow-[0_0_20px_rgba(234,88,12,0.4)] hover:scale-[1.02]"
                     >
                       Details ansehen <ArrowRight size={16} className="ml-2" />
                     </Link>
                   </div>
-
                 </div>
               ))}
             </div>
           )}
+
+          {/* Empty state */}
+          {!loading && !error && filteredJobs.length === 0 && (
+            <div className="text-center py-20">
+              <div className="w-20 h-20 bg-muted rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <Search size={32} className="text-muted-foreground" />
+              </div>
+              <h3 className="text-xl font-bold text-foreground mb-2">Keine Jobs gefunden</h3>
+              <p className="text-muted-foreground mb-6">Versuche es mit anderen Suchbegriffen</p>
+              <button 
+                onClick={() => setSearchTerm('')}
+                className="px-6 py-3 bg-primary text-white rounded-xl font-semibold hover:bg-primary/90 transition-all"
+              >
+                Filter zurücksetzen
+              </button>
+            </div>
+          )}
         </div>
-      </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 px-6 border-t border-border">
+        <div className="max-w-4xl mx-auto text-center">
+          <Flame className="w-12 h-12 text-primary mx-auto mb-6" />
+          <h2 className="text-2xl md:text-3xl font-black text-foreground mb-4">
+            Nicht das Richtige dabei?
+          </h2>
+          <p className="text-muted-foreground mb-8">
+            Schick uns deine Initiativbewerbung und wir melden uns, sobald der passende Job verfügbar ist.
+          </p>
+          <Link 
+            to="/kontakt" 
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-primary to-secondary text-white px-8 py-4 rounded-xl font-bold hover:shadow-[0_0_30px_rgba(234,88,12,0.4)] transition-all"
+          >
+            Initiativbewerbung senden <ArrowRight size={18} />
+          </Link>
+        </div>
+      </section>
     </div>
   );
 };

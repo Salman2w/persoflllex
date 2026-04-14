@@ -1,13 +1,7 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { NavLink } from 'react-router-dom';
-import { Calendar, Clock, ArrowRight, User, Tag } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Calendar, Clock, ArrowRight, Tag, Flame, BookOpen } from 'lucide-react';
 import { SEO } from '../components/SEO';
-
-const fadeIn = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 }
-};
 
 // Blog-Artikel Daten für SEO
 export const BLOG_POSTS = [
@@ -237,14 +231,14 @@ const blogStructuredData = {
 };
 
 export const Blog: React.FC = () => {
-  // Kategorien aus den Posts extrahieren
   const categories = [...new Set(BLOG_POSTS.map(post => post.category))];
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="min-h-screen bg-background">
       <SEO 
         title="Blog | Zeitarbeit & Karriere Ratgeber | PersoFlex GmbH Pforzheim"
         description="Expertenwissen rund um Zeitarbeit, Jobs und Karriere in Pforzheim & Enzkreis. Tipps für Bewerber, Infos zu Logistik-Jobs und Arbeitsrecht."
+        keywords="Zeitarbeit Blog, Karriere Ratgeber, Jobs Pforzheim, Personaldienstleister Tipps"
       />
       
       <script type="application/ld+json">
@@ -252,44 +246,40 @@ export const Blog: React.FC = () => {
       </script>
 
       {/* Hero Section */}
-      <section className="bg-brand-black text-white pt-32 pb-20 relative overflow-hidden">
-        <div className="absolute -right-20 -top-20 w-96 h-96 bg-brand-orange opacity-10 blur-[100px] rounded-full"></div>
-        <div className="absolute -left-20 -bottom-20 w-64 h-64 bg-blue-500 opacity-5 blur-[80px] rounded-full"></div>
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-primary/15 rounded-full blur-[120px]" />
+          <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-secondary/10 rounded-full blur-[100px]" />
+        </div>
         
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            transition={{ duration: 0.6 }}
-            variants={fadeIn}
-            className="text-center max-w-3xl mx-auto"
-          >
-            <span className="inline-block py-1 px-3 bg-brand-orange/20 text-brand-orange border border-brand-orange text-xs font-bold uppercase tracking-widest mb-6 rounded-sm">
-              Wissen & Karriere
-            </span>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-black mb-6 leading-tight">
-              Der PersoFlex <span className="text-brand-orange">Blog</span>
-            </h1>
-            <p className="text-gray-400 text-lg leading-relaxed">
-              Expertenwissen rund um Zeitarbeit, Jobs und Karriere in Pforzheim und dem Enzkreis. 
-              Praktische Tipps, aktuelle Informationen und Einblicke in die Arbeitswelt.
-            </p>
-          </motion.div>
+        <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-card border border-primary/20 mb-6">
+            <BookOpen className="w-4 h-4 text-primary" />
+            <span className="text-sm text-muted-foreground">Wissen & Karriere</span>
+          </div>
+          
+          <h1 className="text-4xl md:text-6xl font-black text-foreground mb-6">
+            Der PersoFlex <span className="text-gradient-flame">Blog</span>
+          </h1>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Expertenwissen rund um Zeitarbeit, Jobs und Karriere in Pforzheim und dem Enzkreis. 
+            Praktische Tipps, aktuelle Informationen und Einblicke in die Arbeitswelt.
+          </p>
         </div>
       </section>
 
-      {/* Kategorien Filter */}
-      <section className="bg-gray-50 py-6 border-b border-gray-200 sticky top-20 z-30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      {/* Categories Filter */}
+      <section className="py-6 border-y border-border bg-card/50 backdrop-blur sticky top-20 z-30">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-wrap items-center gap-3 justify-center">
-            <span className="text-sm font-medium text-gray-500 mr-2">Kategorien:</span>
-            <button className="px-4 py-2 bg-brand-black text-white text-sm font-medium rounded-full hover:bg-brand-orange transition-colors">
+            <span className="text-sm font-medium text-muted-foreground mr-2">Kategorien:</span>
+            <button className="px-4 py-2 bg-gradient-to-r from-primary to-secondary text-white text-sm font-medium rounded-full">
               Alle
             </button>
             {categories.map((category) => (
               <button 
                 key={category}
-                className="px-4 py-2 bg-white text-gray-700 text-sm font-medium rounded-full border border-gray-200 hover:border-brand-orange hover:text-brand-orange transition-colors"
+                className="px-4 py-2 bg-card text-muted-foreground text-sm font-medium rounded-full border border-border hover:border-primary/50 hover:text-foreground transition-colors"
               >
                 {category}
               </button>
@@ -299,40 +289,35 @@ export const Blog: React.FC = () => {
       </section>
 
       {/* Blog Posts Grid */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {BLOG_POSTS.map((post, index) => (
-              <motion.article
+            {BLOG_POSTS.map((post) => (
+              <article
                 key={post.id}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                variants={fadeIn}
-                className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group flex flex-col"
+                className="group bg-card border border-border rounded-2xl overflow-hidden hover:border-primary/50 hover:shadow-[0_20px_60px_rgba(0,0,0,0.3),0_0_30px_rgba(234,88,12,0.1)] transition-all duration-300"
               >
                 {/* Category Badge */}
                 <div className="p-6 pb-0">
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-brand-orange/10 text-brand-orange text-xs font-bold rounded-full">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-primary/10 text-primary text-xs font-bold rounded-full">
                     <Tag size={12} />
                     {post.category}
                   </span>
                 </div>
                 
                 {/* Content */}
-                <div className="p-6 flex-grow flex flex-col">
-                  <h2 className="text-xl font-bold text-brand-black mb-3 group-hover:text-brand-orange transition-colors leading-tight">
-                    <NavLink to={`/blog/${post.id}`}>
+                <div className="p-6 flex flex-col">
+                  <h2 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors leading-tight">
+                    <Link to={`/blog/${post.id}`}>
                       {post.title}
-                    </NavLink>
+                    </Link>
                   </h2>
-                  <p className="text-gray-600 text-sm leading-relaxed mb-4 flex-grow">
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-4 line-clamp-3">
                     {post.excerpt}
                   </p>
                   
                   {/* Meta Info */}
-                  <div className="flex items-center gap-4 text-xs text-gray-500 mb-4">
+                  <div className="flex items-center gap-4 text-xs text-muted-foreground mb-4">
                     <span className="flex items-center gap-1">
                       <Calendar size={14} />
                       {new Date(post.date).toLocaleDateString('de-DE', { 
@@ -348,42 +333,46 @@ export const Blog: React.FC = () => {
                   </div>
                   
                   {/* Read More Link */}
-                  <NavLink 
+                  <Link 
                     to={`/blog/${post.id}`}
-                    className="inline-flex items-center gap-2 text-brand-orange font-bold text-sm group-hover:gap-3 transition-all"
+                    className="inline-flex items-center gap-2 text-primary font-bold text-sm group-hover:gap-3 transition-all"
                   >
                     Weiterlesen <ArrowRight size={16} />
-                  </NavLink>
+                  </Link>
                 </div>
-              </motion.article>
+              </article>
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-brand-black text-white relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-brand-orange via-orange-400 to-brand-black"></div>
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center relative z-10">
-          <h2 className="text-3xl sm:text-4xl font-black mb-6">
-            Bereit für den nächsten <span className="text-brand-orange">Karriereschritt?</span>
+      <section className="py-20 bg-card border-t border-border relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[150px]" />
+        </div>
+        
+        <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
+          <Flame className="w-12 h-12 text-primary mx-auto mb-6" />
+          <h2 className="text-3xl font-black text-foreground mb-4">
+            Bereit für den nächsten Schritt?
           </h2>
-          <p className="text-gray-400 text-lg mb-8 max-w-2xl mx-auto">
-            Ob Jobsuche oder Personalanfrage – wir sind für Sie da. Kontaktieren Sie uns noch heute!
+          <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
+            Sie haben Fragen oder suchen einen neuen Job? Unser Team in Pforzheim freut sich auf Sie!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <NavLink 
+            <Link 
               to="/jobs" 
-              className="inline-flex items-center justify-center gap-2 bg-brand-orange text-white px-8 py-4 font-bold rounded-sm hover:bg-white hover:text-brand-black transition-colors"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-primary to-secondary text-white px-8 py-4 rounded-xl font-bold hover:shadow-[0_0_40px_rgba(234,88,12,0.4)] transition-all"
             >
               Jobs entdecken <ArrowRight size={18} />
-            </NavLink>
-            <NavLink 
+            </Link>
+            <Link 
               to="/kontakt" 
-              className="inline-flex items-center justify-center gap-2 bg-transparent text-white px-8 py-4 font-bold rounded-sm border-2 border-white hover:bg-white hover:text-brand-black transition-colors"
+              className="px-8 py-4 border border-border rounded-xl text-foreground font-bold hover:bg-background hover:border-primary/50 transition-all"
             >
               Kontakt aufnehmen
-            </NavLink>
+            </Link>
           </div>
         </div>
       </section>
