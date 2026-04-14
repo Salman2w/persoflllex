@@ -251,15 +251,12 @@ export const FuerBewerber: React.FC = () => {
 
           <div className="grid md:grid-cols-3 gap-8">
             {steps.map((step, idx) => (
-              <div key={idx} className="relative text-center">
-                <div className="w-20 h-20 bg-gradient-to-br from-primary to-secondary text-white rounded-2xl flex items-center justify-center text-3xl font-black mx-auto mb-6 shadow-[0_0_30px_rgba(234,88,12,0.3)]">
-                  {step.num}
-                </div>
+              <div key={idx} className="relative text-center p-8 bg-card border border-border rounded-2xl">
                 <h3 className="text-xl font-bold text-foreground mb-3">{step.title}</h3>
                 <p className="text-muted-foreground">{step.desc}</p>
                 
                 {idx < steps.length - 1 && (
-                  <div className="hidden md:block absolute top-10 left-[60%] w-[80%] h-px bg-gradient-to-r from-primary/50 to-transparent" />
+                  <div className="hidden md:block absolute top-1/2 -right-4 w-8 h-px bg-gradient-to-r from-primary to-transparent" />
                 )}
               </div>
             ))}
