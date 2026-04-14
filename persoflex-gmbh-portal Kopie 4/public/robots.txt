@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.persoflex-gmbh.de/sitemap.xml

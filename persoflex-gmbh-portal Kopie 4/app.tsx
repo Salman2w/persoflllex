@@ -1,0 +1,46 @@
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+// Alle Seiten importieren
+import { Home } from './pages/Home';
+import { Jobs } from './pages/Jobs';
+import JobDetail from './pages/JobDetail';
+import { Kontakt } from './pages/Kontakt';
+import { Unternehmen } from './pages/Unternehmen';
+import { FuerBewerber } from './pages/FuerBewerber';
+import { UeberUns } from './pages/UeberUns';
+import { PersonalAnfrage } from './pages/PersonalAnfrage';
+import { Impressum } from './pages/Impressum';
+import { Datenschutz } from './pages/Datenschutz';
+import { AGB } from './pages/AGB';
+
+// --- KOMPONENTEN IMPORTIEREN ---
+import { Footer } from './components/Footer'; 
+import { Navbar } from './components/Navbar'; // <-- Hier ist die Navbar jetzt aktiv!
+
+function App() {
+  return (
+    <Router>
+      {/* Navbar ist jetzt aktiv! */}
+      <Navbar />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/jobs" element={<Jobs />} />
+        <Route path="/jobs/:id" element={<JobDetail />} />
+        <Route path="/kontakt" element={<Kontakt />} />
+        <Route path="/unternehmen" element={<Unternehmen />} />
+        <Route path="/fuer-bewerber" element={<FuerBewerber />} />
+        <Route path="/ueber-uns" element={<UeberUns />} />
+        <Route path="/personalanfrage" element={<PersonalAnfrage />} />
+        <Route path="/impressum" element={<Impressum />} />
+        <Route path="/datenschutz" element={<Datenschutz />} />
+        <Route path="/agb" element={<AGB />} />
+      </Routes>
+
+      <Footer />
+    </Router>
+  );
+}
+
+export default App;
