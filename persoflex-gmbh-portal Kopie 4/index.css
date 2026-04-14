@@ -2,9 +2,163 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom styles for Inter font */
 @layer base {
+  :root {
+    /* Hell/Fire Theme - Dark with fiery accents */
+    --background: 0 0% 4%;
+    --foreground: 0 0% 98%;
+    
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 98%;
+    
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 98%;
+    
+    --primary: 24 95% 53%;
+    --primary-foreground: 0 0% 98%;
+    
+    --secondary: 0 72% 51%;
+    --secondary-foreground: 0 0% 98%;
+    
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 64%;
+    
+    --accent: 24 95% 53%;
+    --accent-foreground: 0 0% 98%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 24 95% 53%;
+    
+    --radius: 0.5rem;
+    
+    /* Fire gradient colors */
+    --fire-orange: 24 95% 53%;
+    --fire-red: 0 72% 51%;
+    --fire-yellow: 38 92% 50%;
+    --ember: 15 90% 40%;
+  }
+
+  * {
+    @apply border-border;
+  }
+  
   html {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', system-ui, sans-serif;
+    scroll-behavior: smooth;
+    @apply bg-background text-foreground;
+  }
+  
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+
+  /* Custom scrollbar for dark theme */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-background;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary;
+  }
+}
+
+@layer components {
+  /* Fire glow effect */
+  .fire-glow {
+    box-shadow: 
+      0 0 20px hsl(var(--primary) / 0.3),
+      0 0 40px hsl(var(--primary) / 0.2),
+      0 0 60px hsl(var(--secondary) / 0.1);
+  }
+  
+  .fire-text {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--fire-yellow)) 0%,
+      hsl(var(--fire-orange)) 50%,
+      hsl(var(--fire-red)) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .fire-border {
+    border-image: linear-gradient(
+      135deg,
+      hsl(var(--fire-orange)),
+      hsl(var(--fire-red))
+    ) 1;
+  }
+  
+  /* Animated fire gradient background */
+  .fire-gradient {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--fire-red)) 0%,
+      hsl(var(--fire-orange)) 50%,
+      hsl(var(--fire-yellow)) 100%
+    );
+  }
+  
+  .fire-gradient-animated {
+    background: linear-gradient(
+      -45deg,
+      hsl(0 0% 7%),
+      hsl(0 72% 20%),
+      hsl(24 95% 30%),
+      hsl(0 0% 7%)
+    );
+    background-size: 400% 400%;
+    animation: fireGradient 15s ease infinite;
+  }
+  
+  @keyframes fireGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  /* Ember particles effect */
+  .ember-particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: hsl(var(--fire-orange));
+    border-radius: 50%;
+    animation: rise 3s ease-in infinite;
+  }
+  
+  @keyframes rise {
+    0% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-100px) scale(0);
+    }
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .text-pretty {
+    text-wrap: pretty;
   }
 }
