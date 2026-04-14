@@ -42,7 +42,7 @@ const TEAM_MEMBERS = [
 
 export const UeberUns: React.FC = () => {
   return (
-    <div className="min-h-screen bg-hell-void pt-[80px]">
+    <div className="min-h-screen bg-white pt-[80px]">
       <SEO 
         title="Uber PersoFlex GmbH | Ihr Personaldienstleister in Pforzheim"
         description="Lernen Sie das Team hinter PersoFlex kennen. Wir stehen fur faire Zeitarbeit, Menschlichkeit & Prazision in der Personalvermittlung im Enzkreis."
@@ -51,9 +51,9 @@ export const UeberUns: React.FC = () => {
       {/* Hero Section */}
       <section className="relative py-24 md:py-32 overflow-hidden">
         {/* Background Effects */}
-        <div className="absolute inset-0 bg-gradient-to-b from-hell-ember/20 via-transparent to-transparent"></div>
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-hell-flame/10 rounded-full blur-[150px]"></div>
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-hell-ember/10 rounded-full blur-[100px]"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-orange-500/10 via-transparent to-transparent"></div>
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-orange-500/10 rounded-full blur-[150px]"></div>
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-red-500/10 rounded-full blur-[100px]"></div>
         
         <div className="max-w-7xl mx-auto px-6 relative z-10 text-center md:text-left">
           <motion.div
@@ -62,17 +62,17 @@ export const UeberUns: React.FC = () => {
             transition={{ duration: 0.6 }}
             variants={fadeIn}
           >
-            <span className="inline-flex items-center gap-2 py-1.5 px-4 bg-hell-flame/20 text-hell-flame border border-hell-flame/30 text-xs font-bold uppercase tracking-widest mb-6 rounded-sm">
+            <span className="inline-flex items-center gap-2 py-1.5 px-4 bg-orange-500/10 text-orange-500 border border-orange-500/30 text-xs font-bold uppercase tracking-widest mb-6 rounded-sm">
               <Flame size={14} />
               Uber PersoFlex
             </span>
-            <h1 className="text-4xl md:text-6xl font-black mb-6 leading-tight max-w-5xl text-white">
+            <h1 className="text-4xl md:text-6xl font-black mb-6 leading-tight max-w-5xl text-gray-900">
               Wir verbinden <br/>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-hell-flame to-hell-ember">
+              <span className="text-gradient-flame">
                 Menschen & Visionen.
               </span>
             </h1>
-            <p className="text-xl text-hell-ash max-w-2xl mb-10 leading-relaxed">
+            <p className="text-xl text-gray-600 max-w-2xl mb-10 leading-relaxed">
               Seit unserer Grundung stehen wir fur eine moderne, faire und transparente Personaldienstleistung in Pforzheim und dem Enzkreis. Wir sind kein anonymer Grosskonzern, sondern Ihr Partner vor Ort.
             </p>
           </motion.div>
@@ -80,7 +80,7 @@ export const UeberUns: React.FC = () => {
       </section>
 
       {/* Mission Section */}
-      <section className="py-24 relative">
+      <section className="py-24 relative bg-gray-50">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           
           {/* Visual Side */}
@@ -90,23 +90,23 @@ export const UeberUns: React.FC = () => {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="aspect-square md:aspect-[4/3] bg-hell-charcoal rounded-sm overflow-hidden relative border border-hell-smoke/20">
+            <div className="aspect-square md:aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden relative border border-gray-200">
               <img 
                 src="/bilder/buero_pforzheim.webp"
                 alt="PersoFlex Teammeeting im Buro Pforzheim - Personalvermittlung"
-                className="w-full h-full object-cover opacity-80"
+                className="w-full h-full object-cover"
                 width="800"
                 height="600"
                 loading="lazy"
               />
               {/* Overlay Box */}
-              <div className="absolute bottom-8 left-8 bg-gradient-to-r from-hell-flame to-hell-ember text-white p-6 rounded-sm shadow-2xl max-w-xs">
+              <div className="absolute bottom-8 left-8 bg-gradient-to-r from-orange-500 to-red-500 text-white p-6 rounded-xl shadow-2xl max-w-xs">
                 <p className="font-black text-3xl mb-1">100%</p>
                 <p className="text-sm font-medium uppercase tracking-wider">Leidenschaft fur Pforzheim</p>
               </div>
             </div>
             {/* Fire decoration */}
-            <div className="absolute -top-4 -right-4 w-24 h-24 bg-hell-flame/20 rounded-full blur-2xl"></div>
+            <div className="absolute -top-4 -right-4 w-24 h-24 bg-orange-500/20 rounded-full blur-2xl"></div>
           </motion.div>
 
           {/* Text Side */}
@@ -115,11 +115,11 @@ export const UeberUns: React.FC = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-black text-white mb-6">
+            <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-6">
               Mehr als nur <br/>
-              <span className="text-hell-flame">Personalvermittlung.</span>
+              <span className="text-orange-500">Personalvermittlung.</span>
             </h2>
-            <div className="space-y-6 text-hell-ash text-lg leading-relaxed">
+            <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
               <p>
                 PersoFlex wurde mit dem Ziel gegrundet, den Arbeitsmarkt in der Region Pforzheim menschlicher und effizienter zu gestalten. Wir glauben daran, dass Zeitarbeit ein Sprungbrett ist - keine Sackgasse.
               </p>
@@ -132,8 +132,8 @@ export const UeberUns: React.FC = () => {
                   { icon: <Target size={20} />, text: "Prazises Matching statt Massenabfertigung" },
                   { icon: <Zap size={20} />, text: "Reaktionszeit unter 24 Stunden" }
                 ].map((item, idx) => (
-                  <li key={idx} className="flex items-center gap-4 font-bold text-white">
-                    <div className="text-hell-flame">{item.icon}</div>
+                  <li key={idx} className="flex items-center gap-4 font-bold text-gray-900">
+                    <div className="text-orange-500">{item.icon}</div>
                     {item.text}
                   </li>
                 ))}
@@ -144,13 +144,11 @@ export const UeberUns: React.FC = () => {
       </section>
 
       {/* Values Grid */}
-      <section className="py-24 relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-hell-charcoal/50 to-transparent"></div>
-        
+      <section className="py-24 relative bg-white">
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-black text-white">Unsere Werte</h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-hell-flame to-hell-ember mx-auto mt-6"></div>
+            <h2 className="text-3xl font-black text-gray-900">Unsere Werte</h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-orange-500 to-red-500 mx-auto mt-6"></div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -159,11 +157,11 @@ export const UeberUns: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0 }}
-              className="bg-hell-charcoal/50 backdrop-blur-sm p-10 rounded-sm border border-hell-smoke/20 hover:border-hell-flame/50 transition-all group"
+              className="bg-gray-50 p-10 rounded-xl border border-gray-200 hover:border-orange-500/50 hover:shadow-lg transition-all group"
             >
-              <Target className="text-hell-flame mb-6 group-hover:scale-110 transition-transform" size={48} strokeWidth={1.5} />
-              <h3 className="text-xl font-bold text-white mb-4">Prazision</h3>
-              <p className="text-hell-ash">
+              <Target className="text-orange-500 mb-6 group-hover:scale-110 transition-transform" size={48} strokeWidth={1.5} />
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Prazision</h3>
+              <p className="text-gray-600">
                 Wir schicken Ihnen nicht "irgendjemanden". Wir prufen Skills, Erfahrung und Personlichkeit genau, bevor wir Vorschlage machen.
               </p>
             </motion.div>
@@ -173,12 +171,11 @@ export const UeberUns: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="bg-hell-charcoal/50 backdrop-blur-sm p-10 rounded-sm border border-hell-flame/30 hover:border-hell-flame transition-all group relative overflow-hidden"
+              className="bg-orange-50 p-10 rounded-xl border border-orange-200 hover:border-orange-500 hover:shadow-lg transition-all group relative overflow-hidden"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-hell-flame/10 to-transparent"></div>
-              <Heart className="text-hell-flame mb-6 group-hover:scale-110 transition-transform relative z-10" size={48} strokeWidth={1.5} />
-              <h3 className="text-xl font-bold text-white mb-4 relative z-10">Menschlichkeit</h3>
-              <p className="text-hell-ash relative z-10">
+              <Heart className="text-orange-500 mb-6 group-hover:scale-110 transition-transform relative z-10" size={48} strokeWidth={1.5} />
+              <h3 className="text-xl font-bold text-gray-900 mb-4 relative z-10">Menschlichkeit</h3>
+              <p className="text-gray-600 relative z-10">
                 Hinter jedem Lebenslauf steckt ein Mensch. Wir behandeln Bewerber mit Respekt, zahlen punktlich und kommunizieren auf Augenhohe.
               </p>
             </motion.div>
@@ -188,11 +185,11 @@ export const UeberUns: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="bg-hell-charcoal/50 backdrop-blur-sm p-10 rounded-sm border border-hell-smoke/20 hover:border-hell-flame/50 transition-all group"
+              className="bg-gray-50 p-10 rounded-xl border border-gray-200 hover:border-orange-500/50 hover:shadow-lg transition-all group"
             >
-              <Zap className="text-hell-flame mb-6 group-hover:scale-110 transition-transform" size={48} strokeWidth={1.5} />
-              <h3 className="text-xl font-bold text-white mb-4">Geschwindigkeit</h3>
-              <p className="text-hell-ash">
+              <Zap className="text-orange-500 mb-6 group-hover:scale-110 transition-transform" size={48} strokeWidth={1.5} />
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Geschwindigkeit</h3>
+              <p className="text-gray-600">
                 Zeit ist Geld. Unsere Prozesse sind digital und schlank, damit Sie schnellstmoglich die Unterstutzung bekommen, die Sie brauchen.
               </p>
             </motion.div>
@@ -201,14 +198,14 @@ export const UeberUns: React.FC = () => {
       </section>
 
       {/* Team Section */}
-      <section className="py-24">
+      <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
             <div>
-              <span className="text-hell-flame font-bold uppercase tracking-widest text-sm mb-2 block">Das Team</span>
-              <h2 className="text-4xl font-black text-white">Gesichter hinter PersoFlex.</h2>
+              <span className="text-orange-500 font-bold uppercase tracking-widest text-sm mb-2 block">Das Team</span>
+              <h2 className="text-4xl font-black text-gray-900">Gesichter hinter PersoFlex.</h2>
             </div>
-            <p className="text-hell-ash max-w-md text-right md:text-left">
+            <p className="text-gray-600 max-w-md text-right md:text-left">
               Kompetent, freundlich und immer fur Sie erreichbar. Wir freuen uns darauf, Sie kennenzulernen.
             </p>
           </div>
@@ -224,30 +221,30 @@ export const UeberUns: React.FC = () => {
                 className="group relative"
               >
                 {/* Image Area */}
-                <div className="aspect-[3/4] bg-hell-charcoal rounded-sm overflow-hidden relative mb-6 border border-hell-smoke/20 group-hover:border-hell-flame/50 transition-all">
+                <div className="aspect-[3/4] bg-gray-100 rounded-xl overflow-hidden relative mb-6 border border-gray-200 group-hover:border-orange-500/50 transition-all">
                    <img 
                       src={member.imageSrc} 
                       alt={`Portrait von ${member.name} - ${member.role} bei PersoFlex Pforzheim`}
-                      className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       width="400"
                       height="500"
                       loading="lazy"
                    />
                   
                   {/* Hover Actions */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-hell-void via-hell-void/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-8 gap-4">
-                     <a href={`mailto:${member.email}`} className="bg-hell-flame p-3 rounded-sm text-white hover:bg-white hover:text-hell-flame transition-colors" title="E-Mail senden">
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-8 gap-4">
+                     <a href={`mailto:${member.email}`} className="bg-orange-500 p-3 rounded-lg text-white hover:bg-white hover:text-orange-500 transition-colors" title="E-Mail senden">
                        <Mail size={20} />
                      </a>
-                     <a href={`tel:${member.phone.replace(/\s/g, '')}`} className="bg-hell-flame p-3 rounded-sm text-white hover:bg-white hover:text-hell-flame transition-colors" title="Anrufen">
+                     <a href={`tel:${member.phone.replace(/\s/g, '')}`} className="bg-orange-500 p-3 rounded-lg text-white hover:bg-white hover:text-orange-500 transition-colors" title="Anrufen">
                        <Phone size={20} />
                      </a>
                   </div>
                 </div>
 
                 {/* Info */}
-                <h3 className="text-xl font-bold text-white">{member.name}</h3>
-                <p className="text-hell-flame font-medium text-sm uppercase tracking-wide mb-1">{member.role}</p>
+                <h3 className="text-xl font-bold text-gray-900">{member.name}</h3>
+                <p className="text-orange-500 font-medium text-sm uppercase tracking-wide mb-1">{member.role}</p>
               </motion.div>
             ))}
           </div>
@@ -255,20 +252,20 @@ export const UeberUns: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-hell-flame/20 to-hell-ember/20"></div>
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-hell-flame/10 rounded-full blur-[150px]"></div>
+      <section className="py-20 relative overflow-hidden bg-white">
+        <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 to-red-500/10"></div>
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-orange-500/10 rounded-full blur-[150px]"></div>
         
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
-          <h2 className="text-3xl md:text-4xl font-black text-white mb-8">
+          <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-8">
             Wollen Sie Teil unserer Erfolgsgeschichte werden?
           </h2>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-             <NavLink to="/kontakt" className="group inline-flex items-center justify-center gap-2 bg-hell-flame text-white px-8 py-4 rounded-sm font-bold hover:bg-white hover:text-hell-void transition-colors">
+             <NavLink to="/kontakt" className="group inline-flex items-center justify-center gap-2 bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-4 rounded-xl font-bold hover:shadow-lg transition-all">
                Kontakt aufnehmen
                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
              </NavLink>
-             <NavLink to="/jobs" className="inline-flex items-center justify-center gap-2 bg-transparent border border-white/30 text-white px-8 py-4 rounded-sm font-bold hover:bg-white/10 transition-colors">
+             <NavLink to="/jobs" className="inline-flex items-center justify-center gap-2 bg-transparent border border-gray-300 text-gray-900 px-8 py-4 rounded-xl font-bold hover:bg-gray-50 transition-colors">
                Jobs ansehen
              </NavLink>
           </div>
