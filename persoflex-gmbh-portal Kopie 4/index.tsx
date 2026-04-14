@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import App from './app';
 import './index.css';
 
-console.log("[v0] PersoFlex GmbH Portal - App starting...");
+// PersoFlex GmbH Portal Entry Point
 
 const rootElement = document.getElementById('root');
 if (!rootElement) {
