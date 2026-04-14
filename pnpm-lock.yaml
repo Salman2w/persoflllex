@@ -54,10 +54,6 @@ importers:
       vite:
         specifier: ^6.2.0
         version: 6.4.2(@types/node@22.19.17)(jiti@1.21.7)
-    optionalDependencies:
-      '@rollup/rollup-darwin-arm64':
-        specifier: ^4.53.3
-        version: 4.60.1
 
 packages:
 
