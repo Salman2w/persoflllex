@@ -257,14 +257,14 @@ export const Home: React.FC = () => {
             {services.map((service, index) => (
               <div 
                 key={index} 
-                className="group bg-white border border-gray-200 rounded-xl p-8 transition-all duration-300 hover:border-orange-300 hover:shadow-lg"
+                className="group bg-white border border-gray-200 rounded-xl p-8 transition-all duration-300 hover:border-orange-300 hover:shadow-lg h-full flex flex-col"
               >
-                <div className="w-14 h-14 rounded-xl bg-orange-500 text-white flex items-center justify-center mb-6">
+                <div className="w-14 h-14 rounded-xl bg-orange-500 text-white flex items-center justify-center mb-6 flex-shrink-0">
                   <service.icon size={28} />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">{service.title}</h3>
-                <p className="text-gray-600 leading-relaxed mb-6">{service.description}</p>
-                <div className="flex items-center text-orange-500 font-semibold group-hover:gap-3 transition-all">
+                <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-4 line-clamp-3 break-words">{service.title}</h3>
+                <p className="text-gray-600 leading-relaxed mb-6 flex-grow text-sm">{service.description}</p>
+                <div className="flex items-center text-orange-500 font-semibold group-hover:gap-3 transition-all mt-auto">
                   <span>Mehr erfahren</span>
                   <ArrowRight size={18} className="ml-2 transition-transform group-hover:translate-x-1" />
                 </div>
