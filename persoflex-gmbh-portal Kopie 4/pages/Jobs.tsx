@@ -86,7 +86,7 @@ export const Jobs: React.FC = () => {
             </div>
             
             <h1 className="text-4xl md:text-6xl font-black text-gray-900 mb-6">
-              Deine Zukunft <span className="text-gradient-flame">startet hier.</span>
+              Deine Zukunft <span className="text-orange-500">startet hier.</span>
             </h1>
             <p className="text-lg text-gray-600 mb-10">
               Entdecke aktuelle Stellenangebote in Pforzheim, Enzkreis und der Region. 
@@ -193,7 +193,7 @@ export const Jobs: React.FC = () => {
                   <div className="mt-auto">
                     <Link 
                       to={`/jobs/${job.ObjectUuid}`} 
-                      className="flex items-center justify-center w-full bg-gradient-to-r from-orange-500 to-red-500 text-white py-3 rounded-xl font-semibold transition-all duration-300 hover:shadow-lg hover:scale-[1.02]"
+                      className="flex items-center justify-center w-full bg-orange-500 hover:bg-orange-600 text-white py-3 rounded-xl font-semibold transition-all duration-300 hover:shadow-lg"
                     >
                       Details ansehen <ArrowRight size={16} className="ml-2" />
                     </Link>
@@ -234,7 +234,7 @@ export const Jobs: React.FC = () => {
           </p>
           <Link 
             to="/kontakt" 
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-4 rounded-xl font-bold hover:shadow-lg transition-all"
+            className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg transition-all"
           >
             Initiativbewerbung senden <ArrowRight size={18} />
           </Link>

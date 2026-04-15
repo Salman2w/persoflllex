@@ -4,68 +4,48 @@
 
 @layer base {
   :root {
-    /* Ultra Vibrant Light Theme */
-    --background: 45 100% 98%;
-    --foreground: 220 30% 10%;
+    /* Clean Professional Palette: Gray, Orange, White */
+    --background: 0 0% 100%;
+    --foreground: 220 15% 20%;
     
-    --card: 40 60% 97%;
-    --card-foreground: 220 30% 10%;
+    --card: 0 0% 99%;
+    --card-foreground: 220 15% 20%;
     
     --popover: 0 0% 100%;
-    --popover-foreground: 220 30% 10%;
+    --popover-foreground: 220 15% 20%;
     
-    /* Vibrant Orange - Primary */
-    --primary: 24 100% 55%;
+    /* Brand Orange - Primary (from logo) */
+    --primary: 24 95% 53%;
     --primary-foreground: 0 0% 100%;
     
-    /* Hot Coral - Secondary */
-    --secondary: 350 90% 60%;
+    /* Darker Orange - Secondary */
+    --secondary: 20 90% 48%;
     --secondary-foreground: 0 0% 100%;
     
-    /* Warm Peach - Muted */
-    --muted: 35 60% 94%;
-    --muted-foreground: 220 20% 35%;
+    /* Light Gray - Muted */
+    --muted: 220 10% 96%;
+    --muted-foreground: 220 10% 45%;
     
-    /* Vibrant Teal Accent */
-    --accent: 175 85% 42%;
+    /* Orange Accent */
+    --accent: 24 95% 53%;
     --accent-foreground: 0 0% 100%;
     
-    /* Electric Purple */
-    --purple: 270 90% 60%;
-    --purple-foreground: 0 0% 100%;
-    
-    /* Hot Pink */
-    --pink: 330 90% 60%;
-    --pink-foreground: 0 0% 100%;
-    
-    /* Lime Green */
-    --lime: 85 80% 45%;
-    --lime-foreground: 0 0% 100%;
-    
-    /* Electric Blue */
-    --electric: 200 100% 50%;
-    --electric-foreground: 0 0% 100%;
-    
-    --destructive: 0 90% 60%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
     
-    --border: 35 30% 88%;
-    --input: 35 30% 90%;
-    --ring: 24 100% 55%;
+    /* Gray borders */
+    --border: 220 10% 90%;
+    --input: 220 10% 92%;
+    --ring: 24 95% 53%;
     
-    --radius: 1rem;
+    --radius: 0.75rem;
     
-    /* Ultra Vibrant Gradient Colors */
-    --flame-orange: 24 100% 55%;
-    --flame-coral: 350 90% 60%;
-    --flame-amber: 45 100% 55%;
-    --flame-teal: 175 85% 42%;
-    --flame-purple: 270 90% 60%;
-    --flame-pink: 330 90% 60%;
-    --ember: 15 90% 50%;
-    
-    /* Brand Orange */
-    --brand-orange: 24 100% 55%;
+    /* Brand Colors */
+    --brand-orange: 24 95% 53%;
+    --brand-orange-dark: 20 90% 48%;
+    --brand-gray-light: 220 10% 96%;
+    --brand-gray: 220 10% 75%;
+    --brand-gray-dark: 220 15% 30%;
   }
 
   * {
@@ -89,142 +69,89 @@
 }
 
 @layer components {
-  /* Vibrant Glow Effect */
-  .flame-glow {
+  /* Orange Glow Effect */
+  .orange-glow {
     box-shadow: 
-      0 0 20px hsl(var(--primary) / 0.4),
-      0 0 40px hsl(var(--primary) / 0.25),
-      0 0 60px hsl(var(--secondary) / 0.15);
+      0 0 20px hsl(var(--primary) / 0.3),
+      0 0 40px hsl(var(--primary) / 0.15);
   }
   
-  .flame-text {
+  .orange-text {
     background: linear-gradient(
       135deg,
-      hsl(var(--flame-amber)) 0%,
-      hsl(var(--flame-orange)) 50%,
-      hsl(var(--flame-coral)) 100%
+      hsl(30 100% 55%) 0%,
+      hsl(24 95% 53%) 50%,
+      hsl(20 90% 48%) 100%
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
   
-  .flame-border {
-    border-image: linear-gradient(
-      135deg,
-      hsl(var(--flame-orange)) 0%,
-      hsl(var(--flame-coral)) 100%
-    ) 1;
+  /* Clean Card Style */
+  .card-clean {
+    background-color: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+    border-radius: var(--radius);
+    transition: all 0.3s ease;
   }
   
-  /* Ember Animation */
-  @keyframes ember-pulse {
-    0%, 100% {
-      opacity: 0.6;
-      transform: scale(1);
-    }
-    50% {
-      opacity: 1;
-      transform: scale(1.05);
-    }
+  .card-clean:hover {
+    border-color: hsl(var(--primary) / 0.4);
+    box-shadow: 0 10px 40px hsl(var(--primary) / 0.1);
   }
   
-  .ember-pulse {
-    animation: ember-pulse 3s ease-in-out infinite;
-  }
-  
-  /* Vibrant Gradient Background */
-  .fire-gradient {
-    background: linear-gradient(
-      180deg,
-      hsl(var(--background)) 0%,
-      hsl(30 40% 95%) 50%,
-      hsl(var(--background)) 100%
-    );
-  }
-  
-  .fire-gradient-radial {
-    background: radial-gradient(
-      ellipse at center bottom,
-      hsl(var(--primary) / 0.12) 0%,
-      hsl(var(--background)) 70%
-    );
-  }
-  
-  /* Vibrant Button Styles */
-  .btn-flame {
+  /* Professional Button Styles */
+  .btn-primary {
     position: relative;
     overflow: hidden;
-    padding: 1rem 2rem;
+    padding: 0.875rem 1.75rem;
     font-weight: 600;
     color: white;
     border-radius: var(--radius);
     transition: all 0.3s;
-    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--secondary)) 100%);
+    background: hsl(var(--primary));
   }
   
-  .btn-flame:hover {
+  .btn-primary:hover {
+    background: hsl(var(--secondary));
     transform: translateY(-2px);
-    box-shadow: 0 12px 35px hsl(var(--primary) / 0.4);
+    box-shadow: 0 8px 25px hsl(var(--primary) / 0.3);
   }
   
-  .btn-flame::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    opacity: 0;
-    transition: opacity 0.3s;
-    background: linear-gradient(135deg, hsl(var(--secondary)) 0%, hsl(var(--primary)) 100%);
-  }
-  
-  .btn-flame:hover::before {
-    opacity: 1;
-  }
-  
-  /* Vibrant Card Hover Effect */
-  .card-hell {
-    background-color: hsl(var(--card));
-    border: 1px solid hsl(var(--border));
+  .btn-secondary {
+    padding: 0.875rem 1.75rem;
+    font-weight: 600;
+    color: hsl(var(--foreground));
     border-radius: var(--radius);
-    transition: all 0.4s ease;
+    transition: all 0.3s;
+    background: transparent;
+    border: 2px solid hsl(var(--border));
   }
   
-  .card-hell:hover {
-    border-color: hsl(var(--primary) / 0.5);
-    box-shadow: 
-      0 20px 50px hsl(var(--primary) / 0.15),
-      0 0 0 1px hsl(var(--primary) / 0.1);
-    transform: translateY(-4px);
+  .btn-secondary:hover {
+    border-color: hsl(var(--primary));
+    color: hsl(var(--primary));
+    background: hsl(var(--primary) / 0.05);
   }
   
-  /* Section divider with vibrant effect */
-  .ember-divider {
+  /* Section divider */
+  .divider-orange {
     height: 2px;
     width: 100%;
     background: linear-gradient(
       90deg,
       transparent 0%,
-      hsl(var(--primary) / 0.6) 30%,
-      hsl(var(--secondary) / 0.8) 50%,
-      hsl(var(--primary) / 0.6) 70%,
+      hsl(var(--primary) / 0.5) 50%,
       transparent 100%
     );
   }
   
-  /* Vibrant Badge */
-  .badge-vibrant {
-    background: linear-gradient(135deg, hsl(var(--primary) / 0.15) 0%, hsl(var(--secondary) / 0.1) 100%);
-    border: 1px solid hsl(var(--primary) / 0.3);
+  /* Badge Style */
+  .badge-orange {
+    background: hsl(var(--primary) / 0.1);
+    border: 1px solid hsl(var(--primary) / 0.2);
     color: hsl(var(--primary));
-  }
-  
-  /* Teal Accent */
-  .accent-teal {
-    color: hsl(var(--accent));
-  }
-  
-  .bg-accent-teal {
-    background-color: hsl(var(--accent));
   }
 }
 
@@ -233,93 +160,25 @@
     text-wrap: balance;
   }
   
-  .text-gradient-flame {
+  /* Orange text gradient */
+  .text-gradient-orange {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     background-image: linear-gradient(
       135deg,
-      hsl(45 100% 55%) 0%,
-      hsl(24 100% 55%) 35%,
-      hsl(350 90% 60%) 100%
+      hsl(30 100% 55%) 0%,
+      hsl(24 95% 53%) 50%,
+      hsl(20 90% 48%) 100%
     );
   }
   
-  .text-gradient-teal {
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    background-image: linear-gradient(
-      135deg,
-      hsl(175 85% 50%) 0%,
-      hsl(200 100% 50%) 100%
-    );
+  /* Background utilities */
+  .bg-gray-subtle {
+    background-color: hsl(220 10% 98%);
   }
   
-  .text-gradient-purple {
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    background-image: linear-gradient(
-      135deg,
-      hsl(270 90% 60%) 0%,
-      hsl(330 90% 60%) 100%
-    );
-  }
-  
-  .text-gradient-rainbow {
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    background-image: linear-gradient(
-      135deg,
-      hsl(24 100% 55%) 0%,
-      hsl(350 90% 60%) 25%,
-      hsl(270 90% 60%) 50%,
-      hsl(200 100% 50%) 75%,
-      hsl(175 85% 42%) 100%
-    );
-  }
-  
-  /* Vibrant background utilities */
-  .bg-warm-cream {
-    background-color: hsl(45 100% 98%);
-  }
-  
-  .bg-warm-peach {
-    background-color: hsl(25 80% 96%);
-  }
-  
-  .bg-warm-coral {
-    background-color: hsl(350 60% 97%);
-  }
-  
-  .bg-cool-teal {
-    background-color: hsl(175 50% 96%);
-  }
-  
-  .bg-cool-purple {
-    background-color: hsl(270 50% 97%);
-  }
-  
-  .bg-cool-pink {
-    background-color: hsl(330 50% 97%);
-  }
-  
-  /* Vibrant gradient backgrounds */
-  .bg-gradient-vibrant {
-    background: linear-gradient(135deg, hsl(24 100% 55%) 0%, hsl(350 90% 60%) 50%, hsl(270 90% 60%) 100%);
-  }
-  
-  .bg-gradient-sunset {
-    background: linear-gradient(135deg, hsl(45 100% 55%) 0%, hsl(24 100% 55%) 50%, hsl(350 90% 60%) 100%);
-  }
-  
-  .bg-gradient-ocean {
-    background: linear-gradient(135deg, hsl(175 85% 42%) 0%, hsl(200 100% 50%) 50%, hsl(270 90% 60%) 100%);
-  }
-  
-  .bg-gradient-tropical {
-    background: linear-gradient(135deg, hsl(85 80% 45%) 0%, hsl(175 85% 42%) 50%, hsl(200 100% 50%) 100%);
+  .bg-orange-subtle {
+    background-color: hsl(24 100% 97%);
   }
 }

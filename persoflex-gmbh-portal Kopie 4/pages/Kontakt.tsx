@@ -25,7 +25,7 @@ export const Kontakt: React.FC = () => {
           </div>
           
           <h1 className="text-4xl md:text-6xl font-black text-gray-900 mb-6">
-            Wir sind <span className="text-gradient-flame">für dich da.</span>
+            Wir sind <span className="text-orange-500">für Sie da.</span>
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Egal ob Unternehmen oder Bewerber – wir freuen uns auf den Austausch.
@@ -139,7 +139,7 @@ export const Kontakt: React.FC = () => {
                   </div>
                   <button 
                     type="submit" 
-                    className="w-full bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold py-4 rounded-xl hover:shadow-lg transition-all flex items-center justify-center gap-2"
+                    className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-4 rounded-xl hover:shadow-lg transition-all flex items-center justify-center gap-2"
                   >
                     Absenden <Send size={18} />
                   </button>
