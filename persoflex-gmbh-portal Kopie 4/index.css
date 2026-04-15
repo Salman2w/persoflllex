@@ -4,50 +4,68 @@
 
 @layer base {
   :root {
-    /* Vibrant Light Theme with Energetic Colors */
-    --background: 30 50% 98%;
-    --foreground: 220 25% 10%;
+    /* Ultra Vibrant Light Theme */
+    --background: 45 100% 98%;
+    --foreground: 220 30% 10%;
     
-    --card: 30 30% 96%;
-    --card-foreground: 220 25% 10%;
+    --card: 40 60% 97%;
+    --card-foreground: 220 30% 10%;
     
     --popover: 0 0% 100%;
-    --popover-foreground: 220 25% 10%;
+    --popover-foreground: 220 30% 10%;
     
     /* Vibrant Orange - Primary */
-    --primary: 24 100% 50%;
+    --primary: 24 100% 55%;
     --primary-foreground: 0 0% 100%;
     
-    /* Coral Red - Secondary */
-    --secondary: 12 90% 55%;
+    /* Hot Coral - Secondary */
+    --secondary: 350 90% 60%;
     --secondary-foreground: 0 0% 100%;
     
-    /* Warm Cream - Muted */
-    --muted: 35 40% 92%;
-    --muted-foreground: 220 15% 35%;
+    /* Warm Peach - Muted */
+    --muted: 35 60% 94%;
+    --muted-foreground: 220 20% 35%;
     
-    /* Teal Accent */
-    --accent: 175 70% 40%;
+    /* Vibrant Teal Accent */
+    --accent: 175 85% 42%;
     --accent-foreground: 0 0% 100%;
     
-    --destructive: 0 84% 60%;
+    /* Electric Purple */
+    --purple: 270 90% 60%;
+    --purple-foreground: 0 0% 100%;
+    
+    /* Hot Pink */
+    --pink: 330 90% 60%;
+    --pink-foreground: 0 0% 100%;
+    
+    /* Lime Green */
+    --lime: 85 80% 45%;
+    --lime-foreground: 0 0% 100%;
+    
+    /* Electric Blue */
+    --electric: 200 100% 50%;
+    --electric-foreground: 0 0% 100%;
+    
+    --destructive: 0 90% 60%;
     --destructive-foreground: 0 0% 100%;
     
-    --border: 30 20% 85%;
-    --input: 30 20% 88%;
-    --ring: 24 100% 50%;
+    --border: 35 30% 88%;
+    --input: 35 30% 90%;
+    --ring: 24 100% 55%;
     
-    --radius: 0.875rem;
+    --radius: 1rem;
     
-    /* Vibrant Gradient Colors */
-    --flame-orange: 24 100% 50%;
-    --flame-coral: 12 90% 55%;
-    --flame-amber: 38 100% 50%;
-    --flame-teal: 175 70% 40%;
-    --ember: 15 85% 45%;
+    /* Ultra Vibrant Gradient Colors */
+    --flame-orange: 24 100% 55%;
+    --flame-coral: 350 90% 60%;
+    --flame-amber: 45 100% 55%;
+    --flame-teal: 175 85% 42%;
+    --flame-purple: 270 90% 60%;
+    --flame-pink: 330 90% 60%;
+    --ember: 15 90% 50%;
     
     /* Brand Orange */
-    --brand-orange: 24 100% 50%;
+    --brand-orange: 24 100% 55%;
   }
 
   * {
@@ -221,9 +239,9 @@
     color: transparent;
     background-image: linear-gradient(
       135deg,
-      hsl(38 100% 50%) 0%,
-      hsl(24 100% 50%) 40%,
-      hsl(12 90% 55%) 100%
+      hsl(45 100% 55%) 0%,
+      hsl(24 100% 55%) 35%,
+      hsl(350 90% 60%) 100%
     );
   }
   
@@ -233,21 +251,75 @@
     color: transparent;
     background-image: linear-gradient(
       135deg,
-      hsl(175 70% 45%) 0%,
-      hsl(175 70% 35%) 100%
+      hsl(175 85% 50%) 0%,
+      hsl(200 100% 50%) 100%
+    );
+  }
+  
+  .text-gradient-purple {
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(
+      135deg,
+      hsl(270 90% 60%) 0%,
+      hsl(330 90% 60%) 100%
+    );
+  }
+  
+  .text-gradient-rainbow {
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(
+      135deg,
+      hsl(24 100% 55%) 0%,
+      hsl(350 90% 60%) 25%,
+      hsl(270 90% 60%) 50%,
+      hsl(200 100% 50%) 75%,
+      hsl(175 85% 42%) 100%
     );
   }
   
   /* Vibrant background utilities */
   .bg-warm-cream {
-    background-color: hsl(30 50% 98%);
+    background-color: hsl(45 100% 98%);
   }
   
   .bg-warm-peach {
-    background-color: hsl(25 60% 95%);
+    background-color: hsl(25 80% 96%);
   }
   
   .bg-warm-coral {
-    background-color: hsl(15 70% 96%);
+    background-color: hsl(350 60% 97%);
+  }
+  
+  .bg-cool-teal {
+    background-color: hsl(175 50% 96%);
+  }
+  
+  .bg-cool-purple {
+    background-color: hsl(270 50% 97%);
+  }
+  
+  .bg-cool-pink {
+    background-color: hsl(330 50% 97%);
+  }
+  
+  /* Vibrant gradient backgrounds */
+  .bg-gradient-vibrant {
+    background: linear-gradient(135deg, hsl(24 100% 55%) 0%, hsl(350 90% 60%) 50%, hsl(270 90% 60%) 100%);
+  }
+  
+  .bg-gradient-sunset {
+    background: linear-gradient(135deg, hsl(45 100% 55%) 0%, hsl(24 100% 55%) 50%, hsl(350 90% 60%) 100%);
+  }
+  
+  .bg-gradient-ocean {
+    background: linear-gradient(135deg, hsl(175 85% 42%) 0%, hsl(200 100% 50%) 50%, hsl(270 90% 60%) 100%);
+  }
+  
+  .bg-gradient-tropical {
+    background: linear-gradient(135deg, hsl(85 80% 45%) 0%, hsl(175 85% 42%) 50%, hsl(200 100% 50%) 100%);
   }
 }

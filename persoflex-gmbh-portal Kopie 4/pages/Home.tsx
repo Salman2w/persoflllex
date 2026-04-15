@@ -121,23 +121,24 @@ export const Home: React.FC = () => {
       </script>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-amber-50 via-orange-50/50 to-white">
-        {/* Background Effects */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-amber-100/80 via-orange-50 to-rose-50/50">
+        {/* Background Effects - More Vibrant */}
         <div className="absolute inset-0">
-          <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-orange-400/20 rounded-full blur-[150px]" />
-          <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-coral-500/15 rounded-full blur-[130px]" />
-          <div className="absolute top-1/2 right-1/3 w-[300px] h-[300px] bg-teal-400/10 rounded-full blur-[100px]" />
+          <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-orange-400/30 rounded-full blur-[150px] animate-pulse" />
+          <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-rose-400/25 rounded-full blur-[130px]" />
+          <div className="absolute top-1/2 right-1/3 w-[400px] h-[400px] bg-purple-400/15 rounded-full blur-[120px]" />
+          <div className="absolute bottom-1/3 left-1/3 w-[350px] h-[350px] bg-teal-400/20 rounded-full blur-[100px]" />
         </div>
         
         {/* Grid Pattern */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,107,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,107,0,0.03)_1px,transparent_1px)] bg-[size:64px_64px]" />
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,107,0,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,107,0,0.05)_1px,transparent_1px)] bg-[size:64px_64px]" />
 
         <div className="relative max-w-7xl mx-auto px-6 pt-32 pb-20">
           <div className="text-center max-w-4xl mx-auto">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-orange-100 to-amber-100 border border-orange-200/50 mb-8 shadow-sm">
-              <Flame className="w-4 h-4 text-orange-500" />
-              <span className="text-sm font-medium text-orange-700">Ihr Personaldienstleister in Pforzheim</span>
+            <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-orange-200 via-rose-100 to-purple-100 border border-orange-300/50 mb-8 shadow-md">
+              <Flame className="w-5 h-5 text-orange-500 animate-pulse" />
+              <span className="text-sm font-bold text-orange-700">Ihr Personaldienstleister in Pforzheim</span>
             </div>
 
             {/* Headline */}
@@ -157,14 +158,14 @@ export const Home: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 to="/jobs" 
-                className="group relative overflow-hidden bg-gradient-to-r from-orange-500 via-orange-500 to-amber-500 text-white px-8 py-4 rounded-xl font-bold transition-all duration-300 hover:shadow-[0_8px_30px_rgba(255,107,0,0.35)] hover:scale-105 inline-flex items-center justify-center gap-2"
+                className="group relative overflow-hidden bg-gradient-to-r from-orange-500 via-rose-500 to-purple-500 text-white px-8 py-4 rounded-2xl font-bold transition-all duration-300 hover:shadow-[0_8px_40px_rgba(255,107,0,0.4)] hover:scale-105 inline-flex items-center justify-center gap-2"
               >
                 <span className="relative z-10">Jobs entdecken</span>
                 <ArrowRight size={18} className="relative z-10 transition-transform group-hover:translate-x-1" />
               </Link>
               <Link 
                 to="/unternehmen" 
-                className="px-8 py-4 bg-white border-2 border-orange-200 rounded-xl text-gray-900 font-bold hover:bg-orange-50 hover:border-orange-400 transition-all inline-flex items-center justify-center gap-2 shadow-sm"
+                className="px-8 py-4 bg-gradient-to-r from-teal-500 to-cyan-500 text-white rounded-2xl font-bold hover:shadow-[0_8px_40px_rgba(20,168,157,0.4)] hover:scale-105 transition-all inline-flex items-center justify-center gap-2"
               >
                 Personal anfragen
               </Link>
@@ -172,17 +173,17 @@ export const Home: React.FC = () => {
 
             {/* Trust Indicators */}
             <div className="mt-16 flex flex-wrap justify-center gap-4">
-              <div className="flex items-center gap-2 px-5 py-2.5 bg-white rounded-full border border-teal-200 shadow-sm">
-                <CheckCircle2 className="w-4 h-4 text-teal-500" />
-                <span className="text-sm font-medium text-gray-700">GVP Mitglied</span>
+              <div className="flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-teal-100 to-cyan-100 rounded-full border-2 border-teal-300 shadow-md hover:scale-105 transition-transform">
+                <CheckCircle2 className="w-5 h-5 text-teal-600" />
+                <span className="text-sm font-bold text-teal-700">GVP Mitglied</span>
               </div>
-              <div className="flex items-center gap-2 px-5 py-2.5 bg-white rounded-full border border-orange-200 shadow-sm">
-                <CheckCircle2 className="w-4 h-4 text-orange-500" />
-                <span className="text-sm font-medium text-gray-700">AÜG Erlaubnis</span>
+              <div className="flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-orange-100 to-amber-100 rounded-full border-2 border-orange-300 shadow-md hover:scale-105 transition-transform">
+                <CheckCircle2 className="w-5 h-5 text-orange-600" />
+                <span className="text-sm font-bold text-orange-700">AÜG Erlaubnis</span>
               </div>
-              <div className="flex items-center gap-2 px-5 py-2.5 bg-white rounded-full border border-amber-200 shadow-sm">
-                <CheckCircle2 className="w-4 h-4 text-amber-500" />
-                <span className="text-sm font-medium text-gray-700">Tarifgebunden</span>
+              <div className="flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-purple-100 to-pink-100 rounded-full border-2 border-purple-300 shadow-md hover:scale-105 transition-transform">
+                <CheckCircle2 className="w-5 h-5 text-purple-600" />
+                <span className="text-sm font-bold text-purple-700">Tarifgebunden</span>
               </div>
             </div>
           </div>
@@ -197,32 +198,38 @@ export const Home: React.FC = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-gradient-to-r from-orange-500 via-orange-500 to-amber-500 relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-r from-orange-500 via-rose-500 to-purple-600 relative overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:32px_32px]" />
+        <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-yellow-400/20 rounded-full blur-[120px]" />
+        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-pink-400/20 rounded-full blur-[120px]" />
         
         <div className="max-w-7xl mx-auto px-6 relative">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center group">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-white/20 text-white mb-4 transition-all duration-300 group-hover:bg-white group-hover:text-orange-500 group-hover:shadow-xl group-hover:scale-110">
-                  <stat.icon size={28} />
+            {stats.map((stat, index) => {
+              const iconColors = ['bg-amber-400', 'bg-teal-400', 'bg-pink-400', 'bg-purple-400'][index];
+              return (
+                <div key={index} className="text-center group">
+                  <div className={`inline-flex items-center justify-center w-18 h-18 rounded-2xl bg-white/25 text-white mb-4 transition-all duration-300 group-hover:${iconColors} group-hover:shadow-xl group-hover:scale-110 group-hover:rotate-3`}>
+                    <stat.icon size={32} />
+                  </div>
+                  <div className="text-3xl md:text-5xl font-black text-white mb-2 drop-shadow-lg">{stat.value}</div>
+                  <div className="text-sm font-medium text-white/90">{stat.label}</div>
                 </div>
-                <div className="text-3xl md:text-4xl font-black text-white mb-2">{stat.value}</div>
-                <div className="text-sm text-white/80">{stat.label}</div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
 
       {/* Services Section */}
-      <section className="py-24 bg-gradient-to-b from-white to-amber-50/50 relative overflow-hidden">
-        <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-teal-400/10 rounded-full blur-[150px] -translate-y-1/2" />
-        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-orange-400/10 rounded-full blur-[120px]" />
+      <section className="py-24 bg-gradient-to-br from-white via-orange-50/30 to-purple-50/30 relative overflow-hidden">
+        <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-teal-400/15 rounded-full blur-[150px] -translate-y-1/2" />
+        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-purple-400/15 rounded-full blur-[120px]" />
+        <div className="absolute top-0 right-1/4 w-[300px] h-[300px] bg-pink-400/10 rounded-full blur-[100px]" />
         
         <div className="max-w-7xl mx-auto px-6 relative">
           <div className="text-center mb-16">
-            <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-teal-100 to-teal-50 border border-teal-200 text-teal-600 text-sm font-semibold uppercase tracking-wider mb-4">
+            <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-purple-200 via-pink-100 to-orange-100 border-2 border-purple-300 text-purple-700 text-sm font-bold uppercase tracking-wider mb-4">
               <Flame className="w-4 h-4" />
               Unsere Leistungen
             </span>
@@ -238,23 +245,23 @@ export const Home: React.FC = () => {
           <div className="grid md:grid-cols-3 gap-8">
             {services.map((service, index) => {
               const colors = [
-                { bg: 'bg-orange-500', light: 'bg-orange-100', text: 'text-orange-500', border: 'border-orange-200' },
-                { bg: 'bg-teal-500', light: 'bg-teal-100', text: 'text-teal-500', border: 'border-teal-200' },
-                { bg: 'bg-amber-500', light: 'bg-amber-100', text: 'text-amber-500', border: 'border-amber-200' },
+                { bg: 'from-orange-500 to-rose-500', light: 'from-orange-100 to-rose-100', text: 'text-orange-600', border: 'border-orange-300', shadow: 'shadow-orange-500/30' },
+                { bg: 'from-teal-500 to-cyan-500', light: 'from-teal-100 to-cyan-100', text: 'text-teal-600', border: 'border-teal-300', shadow: 'shadow-teal-500/30' },
+                { bg: 'from-purple-500 to-pink-500', light: 'from-purple-100 to-pink-100', text: 'text-purple-600', border: 'border-purple-300', shadow: 'shadow-purple-500/30' },
               ][index];
               return (
                 <div 
                   key={index} 
-                  className={`group bg-white border-2 ${colors.border} rounded-2xl p-8 transition-all duration-500 hover:border-${colors.text.split('-')[1]}-400 hover:shadow-xl hover:-translate-y-2 relative overflow-hidden`}
+                  className={`group bg-white border-2 ${colors.border} rounded-3xl p-8 transition-all duration-500 hover:shadow-2xl hover:-translate-y-3 relative overflow-hidden`}
                 >
-                  <div className={`absolute top-0 right-0 w-32 h-32 ${colors.light} rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+                  <div className={`absolute top-0 right-0 w-40 h-40 bg-gradient-to-br ${colors.light} rounded-full blur-3xl opacity-50 group-hover:opacity-100 transition-opacity duration-500`} />
                   
-                  <div className={`w-16 h-16 rounded-2xl ${colors.light} ${colors.text} flex items-center justify-center mb-6 transition-all duration-300 group-hover:${colors.bg} group-hover:text-white group-hover:shadow-lg`}>
-                    <service.icon size={32} />
+                  <div className={`w-18 h-18 rounded-2xl bg-gradient-to-br ${colors.bg} text-white flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 group-hover:${colors.shadow} transition-all duration-300`}>
+                    <service.icon size={36} />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">{service.title}</h3>
+                  <h3 className="text-xl font-black text-gray-900 mb-4">{service.title}</h3>
                   <p className="text-gray-600 leading-relaxed mb-6">{service.description}</p>
-                  <div className={`flex items-center ${colors.text} font-semibold group-hover:gap-4 transition-all`}>
+                  <div className={`flex items-center ${colors.text} font-bold group-hover:gap-4 transition-all`}>
                     <span>Mehr erfahren</span>
                     <ArrowRight size={18} className="ml-2 transition-transform group-hover:translate-x-2" />
                   </div>
@@ -266,8 +273,9 @@ export const Home: React.FC = () => {
       </section>
 
       {/* Industries Section */}
-      <section className="py-24 bg-gradient-to-br from-teal-50 via-white to-amber-50 relative overflow-hidden">
-        <div className="absolute top-1/2 right-0 w-[600px] h-[600px] bg-teal-400/10 rounded-full blur-[150px] -translate-y-1/2" />
+      <section className="py-24 bg-gradient-to-br from-teal-100/50 via-cyan-50/30 to-purple-50/40 relative overflow-hidden">
+        <div className="absolute top-1/2 right-0 w-[600px] h-[600px] bg-teal-400/20 rounded-full blur-[150px] -translate-y-1/2" />
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-purple-400/15 rounded-full blur-[120px]" />
         
         <div className="max-w-7xl mx-auto px-6 relative">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -312,28 +320,29 @@ export const Home: React.FC = () => {
             </div>
 
             <div className="relative">
-              <div className="aspect-square rounded-3xl bg-gradient-to-br from-orange-400 via-amber-400 to-orange-500 p-8 flex items-center justify-center relative overflow-hidden shadow-2xl">
+              <div className="aspect-square rounded-3xl bg-gradient-to-br from-orange-500 via-rose-500 to-purple-600 p-8 flex items-center justify-center relative overflow-hidden shadow-2xl">
                 {/* Animated background */}
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.3),transparent_50%)]" />
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,rgba(255,255,255,0.2),transparent_50%)]" />
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.4),transparent_50%)]" />
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,rgba(255,255,255,0.3),transparent_50%)]" />
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,200,0,0.2),transparent_60%)]" />
                 
                 <div className="text-center relative z-10">
-                  <Zap className="w-24 h-24 text-white mx-auto mb-6 drop-shadow-lg" />
-                  <p className="text-5xl font-black text-white mb-2 drop-shadow-md">365+</p>
-                  <p className="text-xl text-white/90">offene Stellen</p>
-                  <p className="text-sm text-white/70 mt-2">in der Region Pforzheim</p>
+                  <Zap className="w-28 h-28 text-yellow-300 mx-auto mb-6 drop-shadow-lg animate-pulse" />
+                  <p className="text-6xl font-black text-white mb-2 drop-shadow-lg">365+</p>
+                  <p className="text-2xl font-bold text-white/95">offene Stellen</p>
+                  <p className="text-sm text-white/80 mt-2">in der Region Pforzheim</p>
                 </div>
               </div>
               
               {/* Floating badges */}
-              <div className="absolute -top-4 -right-4 px-4 py-2 bg-white border-2 border-teal-200 rounded-full shadow-lg">
-                <span className="text-sm font-bold text-teal-600">Produktion</span>
+              <div className="absolute -top-4 -right-4 px-5 py-2.5 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-full shadow-lg animate-bounce">
+                <span className="text-sm font-bold text-white">Produktion</span>
               </div>
-              <div className="absolute -bottom-4 -left-4 px-4 py-2 bg-white border-2 border-amber-200 rounded-full shadow-lg">
-                <span className="text-sm font-bold text-amber-600">Logistik</span>
+              <div className="absolute -bottom-4 -left-4 px-5 py-2.5 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full shadow-lg">
+                <span className="text-sm font-bold text-white">Logistik</span>
               </div>
-              <div className="absolute top-1/2 -right-6 px-4 py-2 bg-white border-2 border-orange-200 rounded-full shadow-lg">
-                <span className="text-sm font-bold text-orange-600">Handwerk</span>
+              <div className="absolute top-1/2 -right-6 px-5 py-2.5 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full shadow-lg">
+                <span className="text-sm font-bold text-white">Handwerk</span>
               </div>
             </div>
           </div>
@@ -499,36 +508,37 @@ export const Home: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
+      <section className="py-24 bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-orange-500/20 rounded-full blur-[150px]" />
-          <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-teal-500/20 rounded-full blur-[120px]" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-amber-500/10 rounded-full blur-[150px]" />
+          <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-orange-500/30 rounded-full blur-[150px]" />
+          <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-pink-500/25 rounded-full blur-[120px]" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-500/20 rounded-full blur-[150px]" />
+          <div className="absolute top-1/3 right-1/3 w-[300px] h-[300px] bg-cyan-500/15 rounded-full blur-[100px]" />
         </div>
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:64px_64px]" />
         
         <div className="max-w-4xl mx-auto px-6 text-center relative">
-          <div className="w-20 h-20 bg-gradient-to-br from-orange-500 via-amber-500 to-orange-500 rounded-3xl flex items-center justify-center mx-auto mb-8 shadow-2xl shadow-orange-500/30">
-            <Flame className="w-10 h-10 text-white" />
+          <div className="w-24 h-24 bg-gradient-to-br from-orange-500 via-rose-500 to-purple-500 rounded-3xl flex items-center justify-center mx-auto mb-8 shadow-2xl shadow-orange-500/40 animate-pulse">
+            <Flame className="w-12 h-12 text-white" />
           </div>
           <h2 className="text-3xl md:text-5xl font-black text-white mb-6">
             Bereit durchzustarten?
           </h2>
-          <p className="text-lg text-slate-400 mb-10 max-w-2xl mx-auto">
+          <p className="text-lg text-slate-300 mb-10 max-w-2xl mx-auto">
             Ob Sie Personal suchen oder einen neuen Job - wir sind für Sie da. 
             Kontaktieren Sie uns noch heute für ein unverbindliches Gespräch.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               to="/kontakt" 
-              className="group relative overflow-hidden bg-gradient-to-r from-orange-500 via-amber-500 to-orange-500 text-white px-8 py-4 rounded-xl font-bold transition-all duration-300 hover:shadow-[0_8px_30px_rgba(255,107,0,0.4)] hover:scale-105 inline-flex items-center justify-center gap-2"
+              className="group relative overflow-hidden bg-gradient-to-r from-orange-500 via-rose-500 to-purple-500 text-white px-10 py-5 rounded-2xl font-bold transition-all duration-300 hover:shadow-[0_8px_40px_rgba(255,107,0,0.5)] hover:scale-105 inline-flex items-center justify-center gap-2"
             >
               <span className="relative z-10">Jetzt Kontakt aufnehmen</span>
-              <ArrowRight size={18} className="relative z-10 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight size={20} className="relative z-10 group-hover:translate-x-1 transition-transform" />
             </Link>
             <a 
               href="tel:072316039493" 
-              className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white font-bold hover:bg-white/20 transition-all inline-flex items-center justify-center gap-2"
+              className="px-10 py-5 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-2xl text-white font-bold hover:shadow-[0_8px_40px_rgba(20,168,157,0.4)] hover:scale-105 transition-all inline-flex items-center justify-center gap-2"
             >
               07231 60 39 493
             </a>

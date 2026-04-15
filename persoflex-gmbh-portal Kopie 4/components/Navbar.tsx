@@ -30,8 +30,8 @@ export const Navbar = () => {
     <nav 
       className={`fixed w-full top-0 left-0 z-50 transition-all duration-500 ${
         isScrolled 
-          ? 'bg-white/95 backdrop-blur-md border-b border-orange-100 shadow-lg shadow-orange-500/5' 
-          : 'bg-gradient-to-r from-white via-orange-50/30 to-white'
+          ? 'bg-white/95 backdrop-blur-md border-b border-orange-200 shadow-lg shadow-orange-500/10' 
+          : 'bg-gradient-to-r from-orange-50/80 via-white to-purple-50/50'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6">
@@ -49,15 +49,16 @@ export const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-1">
             {navLinks.map((link, index) => {
-              const colors = ['from-orange-500 to-amber-500', 'from-teal-500 to-cyan-500', 'from-amber-500 to-orange-500', 'from-rose-500 to-pink-500', 'from-cyan-500 to-teal-500', 'from-orange-500 to-rose-500'][index];
+              const colors = ['from-orange-500 to-rose-500', 'from-teal-500 to-cyan-500', 'from-purple-500 to-pink-500', 'from-amber-500 to-orange-500', 'from-cyan-500 to-teal-500', 'from-rose-500 to-purple-500'][index];
+              const hoverBgs = ['hover:bg-orange-100', 'hover:bg-teal-100', 'hover:bg-purple-100', 'hover:bg-amber-100', 'hover:bg-cyan-100', 'hover:bg-rose-100'][index];
               return (
                 <Link 
                   key={link.to}
                   to={link.to} 
-                  className={`relative font-medium text-sm px-4 py-2 rounded-lg transition-all duration-300 ${
+                  className={`relative font-semibold text-sm px-4 py-2.5 rounded-xl transition-all duration-300 ${
                     isActive(link.to) 
-                      ? `bg-gradient-to-r ${colors} text-white shadow-md` 
-                      : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
+                      ? `bg-gradient-to-r ${colors} text-white shadow-lg shadow-orange-500/20` 
+                      : `text-gray-700 ${hoverBgs} hover:text-gray-900`
                   }`}
                 >
                   {link.label}
@@ -70,11 +71,11 @@ export const Navbar = () => {
           <div className="hidden lg:flex items-center gap-4">
             <a 
               href="tel:072316039493" 
-              className="group relative overflow-hidden bg-gradient-to-r from-primary to-secondary text-white px-6 py-3 rounded-lg flex items-center font-semibold text-sm transition-all duration-300 hover:shadow-lg hover:shadow-primary/30 hover:scale-105"
+              className="group relative overflow-hidden bg-gradient-to-r from-orange-500 via-rose-500 to-purple-500 text-white px-6 py-3 rounded-xl flex items-center font-bold text-sm transition-all duration-300 hover:shadow-[0_8px_25px_rgba(255,107,0,0.4)] hover:scale-105"
             >
               <Phone size={16} className="mr-2" />
               <span className="relative z-10">07231 60 39 493</span>
-              <div className="absolute inset-0 bg-gradient-to-r from-secondary to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-500 via-rose-500 to-orange-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </a>
           </div>
 
@@ -91,26 +92,29 @@ export const Navbar = () => {
 
       {/* Mobile Menu */}
       <div 
-        className={`lg:hidden absolute top-full left-0 w-full bg-white/98 backdrop-blur-lg border-b border-gray-200 transition-all duration-300 ${
+        className={`lg:hidden absolute top-full left-0 w-full bg-gradient-to-b from-white to-orange-50/50 backdrop-blur-lg border-b-2 border-orange-200 transition-all duration-300 ${
           isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-6 py-6 space-y-4">
-          {navLinks.map((link) => (
-            <Link
-              key={link.to}
-              to={link.to}
-              onClick={() => setIsMobileMenuOpen(false)}
-              className={`block py-3 font-medium transition-colors border-b border-gray-100 ${
-                isActive(link.to) ? 'text-primary' : 'text-gray-600 hover:text-gray-900'
-              }`}
-            >
-              {link.label}
-            </Link>
-          ))}
+        <div className="max-w-7xl mx-auto px-6 py-6 space-y-3">
+          {navLinks.map((link, index) => {
+            const colors = ['text-orange-500', 'text-teal-500', 'text-purple-500', 'text-amber-500', 'text-cyan-500', 'text-rose-500'][index];
+            return (
+              <Link
+                key={link.to}
+                to={link.to}
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={`block py-3 font-semibold transition-colors border-b border-orange-100 ${
+                  isActive(link.to) ? colors : 'text-gray-700 hover:text-gray-900'
+                }`}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
           <a 
             href="tel:072316039493" 
-            className="mt-4 w-full bg-gradient-to-r from-primary to-secondary text-white px-6 py-4 rounded-lg flex items-center justify-center font-semibold"
+            className="mt-4 w-full bg-gradient-to-r from-orange-500 via-rose-500 to-purple-500 text-white px-6 py-4 rounded-xl flex items-center justify-center font-bold shadow-lg"
           >
             <Phone size={18} className="mr-2" />
             07231 60 39 493

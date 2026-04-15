@@ -212,11 +212,12 @@ export const UeberUns: React.FC = () => {
       </section>
 
       {/* Team Section */}
-      <section className="py-24 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="py-24 bg-gradient-to-br from-purple-50 via-pink-50/50 to-orange-50/30 overflow-hidden">
+        <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-purple-400/10 rounded-full blur-[120px]"></div>
+        <div className="max-w-7xl mx-auto px-6 relative">
           <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
             <div>
-              <span className="text-orange-500 font-bold uppercase tracking-widest text-sm mb-2 block">Das Team</span>
+              <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-purple-100 to-pink-100 border border-purple-200 text-purple-600 text-sm font-bold uppercase tracking-widest mb-4">Das Team</span>
               <h2 className="text-4xl font-black text-gray-900">Gesichter hinter PersoFlex.</h2>
             </div>
             <p className="text-gray-600 max-w-md text-right md:text-left">
@@ -225,61 +226,67 @@ export const UeberUns: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {TEAM_MEMBERS.map((member, idx) => (
-              <motion.div 
-                key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.1 }}
-                className="group relative"
-              >
-                {/* Image Area */}
-                <div className="aspect-[3/4] bg-gray-100 rounded-xl overflow-hidden relative mb-6 border border-gray-200 group-hover:border-orange-500/50 transition-all">
-                   <img 
-                      src={member.imageSrc} 
-                      alt={`Portrait von ${member.name} - ${member.role} bei PersoFlex Pforzheim`}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                      width="400"
-                      height="500"
-                      loading="lazy"
-                   />
-                  
-                  {/* Hover Actions */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-8 gap-4">
-                     <a href={`mailto:${member.email}`} className="bg-orange-500 p-3 rounded-lg text-white hover:bg-white hover:text-orange-500 transition-colors" title="E-Mail senden">
-                       <Mail size={20} />
-                     </a>
-                     <a href={`tel:${member.phone.replace(/\s/g, '')}`} className="bg-orange-500 p-3 rounded-lg text-white hover:bg-white hover:text-orange-500 transition-colors" title="Anrufen">
-                       <Phone size={20} />
-                     </a>
+            {TEAM_MEMBERS.map((member, idx) => {
+              const borderColors = ['border-orange-300 hover:border-orange-500', 'border-teal-300 hover:border-teal-500', 'border-purple-300 hover:border-purple-500', 'border-pink-300 hover:border-pink-500'][idx];
+              const btnColors = ['from-orange-500 to-amber-500', 'from-teal-500 to-cyan-500', 'from-purple-500 to-pink-500', 'from-pink-500 to-rose-500'][idx];
+              const roleColors = ['text-orange-500', 'text-teal-500', 'text-purple-500', 'text-pink-500'][idx];
+              return (
+                <motion.div 
+                  key={idx}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: idx * 0.1 }}
+                  className="group relative"
+                >
+                  {/* Image Area */}
+                  <div className={`aspect-[3/4] bg-gradient-to-br from-gray-100 to-gray-50 rounded-3xl overflow-hidden relative mb-6 border-2 ${borderColors} transition-all shadow-lg hover:shadow-xl`}>
+                     <img 
+                        src={member.imageSrc} 
+                        alt={`Portrait von ${member.name} - ${member.role} bei PersoFlex Pforzheim`}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        width="400"
+                        height="500"
+                        loading="lazy"
+                     />
+                    
+                    {/* Hover Actions */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-8 gap-4">
+                       <a href={`mailto:${member.email}`} className={`bg-gradient-to-r ${btnColors} p-3 rounded-xl text-white hover:scale-110 transition-transform shadow-lg`} title="E-Mail senden">
+                         <Mail size={20} />
+                       </a>
+                       <a href={`tel:${member.phone.replace(/\s/g, '')}`} className={`bg-gradient-to-r ${btnColors} p-3 rounded-xl text-white hover:scale-110 transition-transform shadow-lg`} title="Anrufen">
+                         <Phone size={20} />
+                       </a>
+                    </div>
                   </div>
-                </div>
 
-                {/* Info */}
-                <h3 className="text-xl font-bold text-gray-900">{member.name}</h3>
-                <p className="text-orange-500 font-medium text-sm uppercase tracking-wide mb-1">{member.role}</p>
-              </motion.div>
-            ))}
+                  {/* Info */}
+                  <h3 className="text-xl font-bold text-gray-900">{member.name}</h3>
+                  <p className={`${roleColors} font-bold text-sm uppercase tracking-wide mb-1`}>{member.role}</p>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 relative overflow-hidden bg-white">
-        <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 to-red-500/10"></div>
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-orange-500/10 rounded-full blur-[150px]"></div>
+      <section className="py-24 relative overflow-hidden bg-gradient-to-r from-orange-500 via-rose-500 to-purple-600">
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:32px_32px]"></div>
+        <div className="absolute top-0 left-1/4 w-[400px] h-[400px] bg-yellow-400/20 rounded-full blur-[120px]"></div>
+        <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-pink-400/20 rounded-full blur-[120px]"></div>
         
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
-          <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-8">
+          <h2 className="text-3xl md:text-5xl font-black text-white mb-8 drop-shadow-lg">
             Wollen Sie Teil unserer Erfolgsgeschichte werden?
           </h2>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-             <NavLink to="/kontakt" className="group inline-flex items-center justify-center gap-2 bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-4 rounded-xl font-bold hover:shadow-lg transition-all">
+             <NavLink to="/kontakt" className="group inline-flex items-center justify-center gap-2 bg-white text-gray-900 px-10 py-5 rounded-2xl font-bold hover:shadow-[0_8px_40px_rgba(255,255,255,0.3)] hover:scale-105 transition-all">
                Kontakt aufnehmen
-               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+               <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
              </NavLink>
-             <NavLink to="/jobs" className="inline-flex items-center justify-center gap-2 bg-transparent border border-gray-300 text-gray-900 px-8 py-4 rounded-xl font-bold hover:bg-gray-50 transition-colors">
+             <NavLink to="/jobs" className="inline-flex items-center justify-center gap-2 bg-white/20 backdrop-blur-sm border-2 border-white/40 text-white px-10 py-5 rounded-2xl font-bold hover:bg-white/30 transition-all">
                Jobs ansehen
              </NavLink>
           </div>
