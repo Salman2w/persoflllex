@@ -21,10 +21,14 @@ import { Downloads } from './pages/Downloads';
 import { Footer } from './components/Footer'; 
 import { Navbar } from './components/Navbar';
 import { CookieConsent } from './components/CookieConsent';
+import { Analytics } from './components/Analytics';
 
 function App() {
   return (
     <Router>
+      {/* Analytics trackt Seitenwechsel automatisch */}
+      <Analytics />
+      
       {/* Navbar ist jetzt aktiv! */}
       <Navbar />
 
