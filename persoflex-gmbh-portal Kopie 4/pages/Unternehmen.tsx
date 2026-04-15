@@ -120,20 +120,30 @@ export const Unternehmen: React.FC = () => {
               </div>
 
               {/* Trust badges */}
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-4 mb-6">
                 <div className="flex items-center gap-2 text-sm text-gray-600">
                   <CheckCircle2 className="w-5 h-5 text-orange-500" />
                   <span>GVP Mitglied</span>
                 </div>
                 <div className="flex items-center gap-2 text-sm text-gray-600">
                   <CheckCircle2 className="w-5 h-5 text-orange-500" />
-                  <span>AÜG Erlaubnis</span>
+                  <span>AUG Erlaubnis</span>
                 </div>
                 <div className="flex items-center gap-2 text-sm text-gray-600">
                   <CheckCircle2 className="w-5 h-5 text-orange-500" />
                   <span>Tarifgebunden</span>
                 </div>
               </div>
+
+              {/* Downloads Link */}
+              <Link 
+                to="/downloads"
+                className="inline-flex items-center gap-2 text-sm text-orange-500 hover:text-orange-600 font-medium transition-colors"
+              >
+                <FileText className="w-4 h-4" />
+                <span>Zertifikate & Dokumente ansehen</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
             </div>
 
             {/* Right side - Key benefits card */}

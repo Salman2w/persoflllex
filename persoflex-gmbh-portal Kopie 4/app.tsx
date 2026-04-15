@@ -15,6 +15,7 @@ import { Datenschutz } from './pages/Datenschutz';
 import { AGB } from './pages/AGB';
 import { Blog } from './pages/Blog';
 import BlogDetail from './pages/BlogDetail';
+import { Downloads } from './pages/Downloads';
 
 // --- KOMPONENTEN IMPORTIEREN ---
 import { Footer } from './components/Footer'; 
@@ -40,6 +41,7 @@ function App() {
         <Route path="/agb" element={<AGB />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:id" element={<BlogDetail />} />
+        <Route path="/downloads" element={<Downloads />} />
       </Routes>
 
       <Footer />
