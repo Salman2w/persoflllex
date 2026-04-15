@@ -19,7 +19,8 @@ import { Downloads } from './pages/Downloads';
 
 // --- KOMPONENTEN IMPORTIEREN ---
 import { Footer } from './components/Footer'; 
-import { Navbar } from './components/Navbar'; // <-- Hier ist die Navbar jetzt aktiv!
+import { Navbar } from './components/Navbar';
+import { CookieConsent } from './components/CookieConsent';
 
 function App() {
   return (
@@ -45,6 +46,7 @@ function App() {
       </Routes>
 
       <Footer />
+      <CookieConsent />
     </Router>
   );
 }
