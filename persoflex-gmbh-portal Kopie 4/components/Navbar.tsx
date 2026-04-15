@@ -30,8 +30,8 @@ export const Navbar = () => {
     <nav 
       className={`fixed w-full top-0 left-0 z-50 transition-all duration-500 ${
         isScrolled 
-          ? 'bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-lg' 
-          : 'bg-white'
+          ? 'bg-white/95 backdrop-blur-md border-b border-orange-100 shadow-lg shadow-orange-500/5' 
+          : 'bg-gradient-to-r from-white via-orange-50/30 to-white'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6">
@@ -47,28 +47,23 @@ export const Navbar = () => {
           </Link>
           
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <Link 
-                key={link.to}
-                to={link.to} 
-                className={`relative font-medium text-sm transition-colors duration-300 ${
-                  isActive(link.to) 
-                    ? 'text-orange-500' 
-                    : 'text-gray-600 hover:text-gray-900'
-                }`}
-              >
-                {link.label}
-                <span 
-                  className={`absolute left-0 -bottom-1 h-0.5 bg-gradient-to-r from-primary to-secondary transition-all duration-300 ${
-                    isActive(link.to) ? 'w-full' : 'w-0 group-hover:w-full'
-                  }`} 
-                />
-                {isActive(link.to) && (
-                  <span className="absolute left-0 -bottom-1 w-full h-0.5 bg-gradient-to-r from-primary to-secondary" />
-                )}
-              </Link>
-            ))}
+          <div className="hidden lg:flex items-center gap-1">
+            {navLinks.map((link, index) => {
+              const colors = ['from-orange-500 to-amber-500', 'from-teal-500 to-cyan-500', 'from-amber-500 to-orange-500', 'from-rose-500 to-pink-500', 'from-cyan-500 to-teal-500', 'from-orange-500 to-rose-500'][index];
+              return (
+                <Link 
+                  key={link.to}
+                  to={link.to} 
+                  className={`relative font-medium text-sm px-4 py-2 rounded-lg transition-all duration-300 ${
+                    isActive(link.to) 
+                      ? `bg-gradient-to-r ${colors} text-white shadow-md` 
+                      : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
           </div>
 
           {/* CTA Button */}

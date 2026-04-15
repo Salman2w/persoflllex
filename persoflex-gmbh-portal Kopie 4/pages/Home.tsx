@@ -414,10 +414,13 @@ export const Home: React.FC = () => {
       </section>
 
       {/* Reviews Section */}
-      <section className="py-24 bg-gray-50 border-y border-gray-200">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="py-24 bg-gradient-to-br from-rose-50 via-orange-50 to-amber-50 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-rose-400/10 rounded-full blur-[150px]" />
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-amber-400/10 rounded-full blur-[120px]" />
+        
+        <div className="max-w-7xl mx-auto px-6 relative">
           <div className="text-center mb-16">
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500/10 text-orange-500 text-sm font-semibold uppercase tracking-wider mb-4">
+            <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-rose-100 to-pink-100 border border-rose-200 text-rose-600 text-sm font-semibold uppercase tracking-wider mb-4">
               Bewertungen
             </span>
             <h2 className="text-3xl md:text-5xl font-black text-gray-900 mt-4 mb-6">
@@ -426,30 +429,38 @@ export const Home: React.FC = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {reviews.map((review, index) => (
-              <div key={index} className="bg-white border border-gray-200 rounded-2xl p-8 relative">
-                <Quote className="w-10 h-10 text-orange-500/20 absolute top-6 right-6" />
-                <div className="flex gap-1 mb-4">
-                  {[...Array(review.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-orange-500 fill-orange-500" />
-                  ))}
+            {reviews.map((review, index) => {
+              const colors = ['from-orange-500 to-amber-500', 'from-teal-500 to-cyan-500', 'from-rose-500 to-pink-500'][index];
+              const borderColors = ['border-orange-200 hover:border-orange-400', 'border-teal-200 hover:border-teal-400', 'border-rose-200 hover:border-rose-400'][index];
+              const starColors = ['text-orange-500 fill-orange-500', 'text-teal-500 fill-teal-500', 'text-rose-500 fill-rose-500'][index];
+              return (
+                <div key={index} className={`bg-white border-2 ${borderColors} rounded-3xl p-8 relative transition-all hover:shadow-xl hover:-translate-y-1`}>
+                  <div className={`absolute top-0 right-8 w-1 h-16 bg-gradient-to-b ${colors} rounded-full`} />
+                  <Quote className="w-10 h-10 text-gray-200 absolute top-6 right-6" />
+                  <div className="flex gap-1 mb-4">
+                    {[...Array(review.rating)].map((_, i) => (
+                      <Star key={i} className={`w-5 h-5 ${starColors}`} />
+                    ))}
+                  </div>
+                  <p className="text-gray-600 mb-6 leading-relaxed">{review.text}</p>
+                  <div>
+                    <p className="font-bold text-gray-900">{review.author}</p>
+                    <p className="text-sm text-gray-500">{review.role}</p>
+                  </div>
                 </div>
-                <p className="text-gray-600 mb-6 leading-relaxed">{review.text}</p>
-                <div>
-                  <p className="font-bold text-gray-900">{review.author}</p>
-                  <p className="text-sm text-gray-500">{review.role}</p>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
 
       {/* Location Section */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="py-24 bg-gradient-to-br from-cyan-50 via-teal-50 to-white relative overflow-hidden">
+        <div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-teal-400/10 rounded-full blur-[150px] -translate-y-1/2" />
+        
+        <div className="max-w-7xl mx-auto px-6 relative">
           <div className="text-center mb-16">
-            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500/10 text-orange-500 text-sm font-semibold uppercase tracking-wider mb-4">
+            <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-cyan-100 to-teal-100 border border-cyan-200 text-teal-600 text-sm font-semibold uppercase tracking-wider mb-4">
               Standort
             </span>
             <h2 className="text-3xl md:text-5xl font-black text-gray-900 mt-4 mb-6">
@@ -462,57 +473,62 @@ export const Home: React.FC = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center p-8 bg-white border border-gray-200 rounded-2xl hover:border-orange-500/50 transition-all group">
-              <div className="w-16 h-16 rounded-2xl bg-orange-500/10 text-orange-500 flex items-center justify-center mx-auto mb-4 group-hover:bg-orange-500 group-hover:text-white transition-all">
+            <div className="text-center p-8 bg-gradient-to-br from-orange-50 to-amber-50 border-2 border-orange-200 rounded-3xl hover:border-orange-400 hover:shadow-xl transition-all group">
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-500 to-amber-500 text-white flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-all">
                 <MapPin size={32} />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Pforzheim</h3>
-              <p className="text-gray-500">Hauptstandort</p>
+              <p className="text-orange-600 font-medium">Hauptstandort</p>
             </div>
-            <div className="text-center p-8 bg-white border border-gray-200 rounded-2xl hover:border-orange-500/50 transition-all group">
-              <div className="w-16 h-16 rounded-2xl bg-orange-500/10 text-orange-500 flex items-center justify-center mx-auto mb-4 group-hover:bg-orange-500 group-hover:text-white transition-all">
+            <div className="text-center p-8 bg-gradient-to-br from-teal-50 to-cyan-50 border-2 border-teal-200 rounded-3xl hover:border-teal-400 hover:shadow-xl transition-all group">
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-teal-500 to-cyan-500 text-white flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-all">
                 <TrendingUp size={32} />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Enzkreis</h3>
-              <p className="text-gray-500">Einzugsgebiet</p>
+              <p className="text-teal-600 font-medium">Einzugsgebiet</p>
             </div>
-            <div className="text-center p-8 bg-white border border-gray-200 rounded-2xl hover:border-orange-500/50 transition-all group">
-              <div className="w-16 h-16 rounded-2xl bg-orange-500/10 text-orange-500 flex items-center justify-center mx-auto mb-4 group-hover:bg-orange-500 group-hover:text-white transition-all">
+            <div className="text-center p-8 bg-gradient-to-br from-rose-50 to-pink-50 border-2 border-rose-200 rounded-3xl hover:border-rose-400 hover:shadow-xl transition-all group">
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-rose-500 to-pink-500 text-white flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-all">
                 <Building2 size={32} />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Baden-Württemberg</h3>
-              <p className="text-gray-500">Aktiv in der Region</p>
+              <p className="text-rose-600 font-medium">Aktiv in der Region</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-gray-50 border-t border-gray-200 relative overflow-hidden">
+      <section className="py-24 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-orange-500/10 rounded-full blur-[150px]" />
+          <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-orange-500/20 rounded-full blur-[150px]" />
+          <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-teal-500/20 rounded-full blur-[120px]" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-amber-500/10 rounded-full blur-[150px]" />
         </div>
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:64px_64px]" />
         
         <div className="max-w-4xl mx-auto px-6 text-center relative">
-          <Flame className="w-20 h-20 text-orange-500 mx-auto mb-8" />
-          <h2 className="text-3xl md:text-5xl font-black text-gray-900 mb-6">
+          <div className="w-20 h-20 bg-gradient-to-br from-orange-500 via-amber-500 to-orange-500 rounded-3xl flex items-center justify-center mx-auto mb-8 shadow-2xl shadow-orange-500/30">
+            <Flame className="w-10 h-10 text-white" />
+          </div>
+          <h2 className="text-3xl md:text-5xl font-black text-white mb-6">
             Bereit durchzustarten?
           </h2>
-          <p className="text-lg text-gray-600 mb-10 max-w-2xl mx-auto">
+          <p className="text-lg text-slate-400 mb-10 max-w-2xl mx-auto">
             Ob Sie Personal suchen oder einen neuen Job - wir sind für Sie da. 
             Kontaktieren Sie uns noch heute für ein unverbindliches Gespräch.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               to="/kontakt" 
-              className="group relative overflow-hidden bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-4 rounded-lg font-bold transition-all duration-300 hover:shadow-lg hover:scale-105 inline-flex items-center justify-center gap-2"
+              className="group relative overflow-hidden bg-gradient-to-r from-orange-500 via-amber-500 to-orange-500 text-white px-8 py-4 rounded-xl font-bold transition-all duration-300 hover:shadow-[0_8px_30px_rgba(255,107,0,0.4)] hover:scale-105 inline-flex items-center justify-center gap-2"
             >
               <span className="relative z-10">Jetzt Kontakt aufnehmen</span>
-              <ArrowRight size={18} className="relative z-10" />
+              <ArrowRight size={18} className="relative z-10 group-hover:translate-x-1 transition-transform" />
             </Link>
             <a 
               href="tel:072316039493" 
-              className="px-8 py-4 border border-gray-300 rounded-lg text-gray-900 font-bold hover:bg-white hover:border-orange-500/50 transition-all inline-flex items-center justify-center gap-2"
+              className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white font-bold hover:bg-white/20 transition-all inline-flex items-center justify-center gap-2"
             >
               07231 60 39 493
             </a>
