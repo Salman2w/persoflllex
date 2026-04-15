@@ -87,10 +87,10 @@ const structuredData = {
   ];
 
   const industries = [
-    { name: 'Produktion & Fertigung', jobs: '120+ Jobs', icon: Factory },
-    { name: 'Logistik & Lager', jobs: '85+ Jobs', icon: Truck },
-    { name: 'Handwerk & Technik', jobs: '65+ Jobs', icon: Wrench },
-    { name: 'Industrie & Metall', jobs: '95+ Jobs', icon: Package },
+    { name: 'Produktion & Fertigung', jobs: 'Top-Bereich', icon: Factory },
+    { name: 'Logistik & Lager', jobs: 'Stark gefragt', icon: Truck },
+    { name: 'Handwerk & Technik', jobs: 'Wachsend', icon: Wrench },
+    { name: 'Industrie & Metall', jobs: 'Spezialisiert', icon: Package },
   ];
 
   const reviews = [
