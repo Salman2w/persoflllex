@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { 
-  ArrowLeft, MapPin, CheckCircle, Clock, Briefcase, Calendar, Info, 
-  Phone, Mail, Share2, X, Upload, Loader2, HelpCircle, ChevronDown, ChevronUp,
-  Linkedin, Facebook, Instagram, MessageCircle, Euro, Home, User, Target,
-  Award, GraduationCap, Languages, FileText, Hash, Star
+  ArrowLeft, MapPin, CheckCircle, Clock, Briefcase, Calendar, 
+  Phone, Mail, Share2, X, Upload, Loader2, ChevronDown, ChevronUp,
+  Euro, Home, User, Star, FileText, Flame
 } from 'lucide-react';
+import { SEO } from '../components/SEO';
 
 // --- DATEN INTERFACE ---
 interface JobDetailData {
@@ -134,54 +134,103 @@ export default function JobDetail() {
     return "Nach Absprache";
   };
 
-  if (loading) return <div className="min-h-screen flex items-center justify-center pt-[80px] bg-hell-void"><Loader2 className="animate-spin text-hell-flame" /></div>;
-  if (error || !job) return <div className="min-h-screen bg-hell-void pt-[100px] text-center text-white">Fehler beim Laden.</div>;
+  if (loading) return (
+    <div className="min-h-screen flex items-center justify-center pt-[80px] bg-white">
+      <Loader2 className="animate-spin text-orange-500" size={48} />
+    </div>
+  );
+  
+  if (error || !job) return (
+    <div className="min-h-screen bg-white pt-[100px] text-center">
+      <div className="max-w-md mx-auto px-6">
+        <div className="w-16 h-16 bg-red-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+          <X className="text-red-500" size={32} />
+        </div>
+        <h1 className="text-2xl font-bold text-gray-900 mb-2">Fehler beim Laden</h1>
+        <p className="text-gray-600 mb-6">{error || 'Die Stelle konnte nicht gefunden werden.'}</p>
+        <Link to="/jobs" className="inline-flex items-center gap-2 bg-orange-500 text-white px-6 py-3 rounded-xl font-semibold hover:bg-orange-600 transition-colors">
+          <ArrowLeft size={18} /> Zurück zur Jobübersicht
+        </Link>
+      </div>
+    </div>
+  );
 
   return (
-    <div className="min-h-screen bg-hell-void pt-[80px] font-sans text-white">
+    <div className="min-h-screen bg-white pt-[80px]">
+      <SEO 
+        title={`${job.BezeichnungAusschreibung || job.Bezeichnung} | Jobs bei PersoFlex`}
+        description={`Jetzt bewerben: ${job.BezeichnungAusschreibung || job.Bezeichnung} in ${job.EinsatzortOrt}. Faire Bezahlung, persönliche Betreuung.`}
+        keywords={`${job.Bezeichnung}, Jobs ${job.EinsatzortOrt}, Stellenangebot Pforzheim`}
+      />
       
       {/* --- HERO HEADER --- */}
-      <div className="relative py-16 overflow-hidden">
+      <section className="relative py-16 overflow-hidden bg-gradient-to-b from-gray-50 to-white">
         {/* Background Effects */}
-        <div className="absolute inset-0 bg-gradient-to-b from-hell-ember/20 via-transparent to-transparent"></div>
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-hell-flame/10 rounded-full blur-[150px]"></div>
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-hell-ember/10 rounded-full blur-[100px]"></div>
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-orange-500/10 rounded-full blur-[150px]"></div>
+        <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-orange-500/5 rounded-full blur-[100px]"></div>
 
         <div className="max-w-7xl mx-auto px-6 relative z-10">
-          <Link to="/jobs" className="inline-flex items-center text-hell-ash hover:text-hell-flame transition-colors text-sm mb-8 group">
-            <ArrowLeft size={16} className="mr-2 group-hover:-translate-x-1 transition-transform" /> Zuruck zur Jobborse
+          <Link to="/jobs" className="inline-flex items-center text-gray-500 hover:text-orange-500 transition-colors text-sm mb-8 group">
+            <ArrowLeft size={16} className="mr-2 group-hover:-translate-x-1 transition-transform" /> Zurück zur Jobübersicht
           </Link>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2">
               <div className="flex flex-wrap gap-3 mb-6">
-                 {job.StellenID && <span className="px-2 py-1 bg-hell-smoke/30 rounded-sm text-xs font-mono tracking-wide text-hell-ash border border-hell-smoke/20">REF: {job.StellenID}</span>}
-                 {job.VertragsartenString && <span className="px-2 py-1 bg-hell-flame rounded-sm text-xs font-bold uppercase tracking-wide">{job.VertragsartenString}</span>}
+                 {job.StellenID && (
+                   <span className="px-3 py-1.5 bg-gray-100 rounded-lg text-xs font-mono tracking-wide text-gray-600 border border-gray-200">
+                     REF: {job.StellenID}
+                   </span>
+                 )}
+                 {job.VertragsartenString && (
+                   <span className="px-3 py-1.5 bg-orange-500 text-white rounded-lg text-xs font-bold uppercase tracking-wide">
+                     {job.VertragsartenString}
+                   </span>
+                 )}
               </div>
               
-              <h1 className="text-3xl md:text-5xl font-black leading-tight mb-6 text-white">
+              <h1 className="text-3xl md:text-5xl font-black leading-tight mb-6 text-gray-900">
                 {job.BezeichnungAusschreibung || job.Bezeichnung}
               </h1>
 
-              <div className="flex flex-wrap gap-6 text-sm text-hell-ash">
-                <div className="flex items-center"><MapPin size={18} className="mr-2 text-hell-flame" /> {job.EinsatzortPlz} {job.EinsatzortOrt}</div>
-                {job.Gehalt && <div className="flex items-center"><Euro size={18} className="mr-2 text-hell-flame" /> {formatSalary()}</div>}
-                <div className="flex items-center"><Calendar size={18} className="mr-2 text-hell-flame" /> {getStartDate()}</div>
-                {job.Homeoffice && <div className="flex items-center"><Home size={18} className="mr-2 text-hell-flame" /> Homeoffice moglich</div>}
+              <div className="flex flex-wrap gap-6 text-sm text-gray-600">
+                <div className="flex items-center">
+                  <MapPin size={18} className="mr-2 text-orange-500" /> 
+                  {job.EinsatzortPlz} {job.EinsatzortOrt}
+                </div>
+                {job.Gehalt && (
+                  <div className="flex items-center">
+                    <Euro size={18} className="mr-2 text-orange-500" /> 
+                    {formatSalary()}
+                  </div>
+                )}
+                <div className="flex items-center">
+                  <Calendar size={18} className="mr-2 text-orange-500" /> 
+                  {getStartDate()}
+                </div>
+                {job.Homeoffice && (
+                  <div className="flex items-center">
+                    <Home size={18} className="mr-2 text-orange-500" /> 
+                    Homeoffice möglich
+                  </div>
+                )}
               </div>
             </div>
 
             <div className="lg:col-span-1 flex flex-col justify-center items-start lg:items-end">
-               <button onClick={() => setIsModalOpen(true)} className="w-full sm:w-auto bg-hell-flame text-white px-8 py-4 rounded-sm font-bold text-lg hover:bg-white hover:text-hell-void transition-all shadow-lg shadow-hell-flame/20 transform hover:-translate-y-1">
+               <button 
+                 onClick={() => setIsModalOpen(true)} 
+                 className="w-full sm:w-auto bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-lg shadow-orange-500/20 hover:shadow-xl hover:-translate-y-1"
+               >
                  Jetzt bewerben
                </button>
-               <p className="mt-4 text-xs text-hell-ash max-w-xs text-center lg:text-right">
-                 Bewerbung in 2 Minuten. <br/>Kein Anschreiben notig.
+               <p className="mt-4 text-xs text-gray-500 max-w-xs text-center lg:text-right">
+                 Bewerbung in 2 Minuten. <br/>Kein Anschreiben nötig.
                </p>
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* --- CONTENT BEREICH --- */}
       <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 lg:grid-cols-12 gap-16">
@@ -191,13 +240,13 @@ export default function JobDetail() {
           
           {/* Header Bild */}
           {job.Image1Uuid && (
-            <div className="rounded-sm overflow-hidden border border-hell-smoke/20 aspect-[21/9]">
-              <img src={getImageUrl(job.Image1Uuid)} alt="Job Header" className="w-full h-full object-cover opacity-80" />
+            <div className="rounded-2xl overflow-hidden border border-gray-200 aspect-[21/9]">
+              <img src={getImageUrl(job.Image1Uuid)} alt="Job Header" className="w-full h-full object-cover" />
             </div>
           )}
 
           {/* 1. Einleitung */}
-          <div className="prose prose-lg prose-invert max-w-none text-hell-ash prose-headings:font-bold prose-headings:text-white prose-a:text-hell-flame">
+          <div className="prose prose-lg max-w-none text-gray-600 prose-headings:font-bold prose-headings:text-gray-900 prose-a:text-orange-500">
              {job.Stellenziel && <div dangerouslySetInnerHTML={createMarkup(job.Stellenziel)} />}
              {job.Arbeitgebervorstellung && <div className="mt-4" dangerouslySetInnerHTML={createMarkup(job.Arbeitgebervorstellung)} />}
              {job.Unternehmensbedeutung && <div className="mt-4" dangerouslySetInnerHTML={createMarkup(job.Unternehmensbedeutung)} />}
@@ -205,33 +254,41 @@ export default function JobDetail() {
 
           {/* 2. Aufgaben */}
           {job.Aufgaben && (
-            <div className="bg-hell-charcoal/50 backdrop-blur-sm border border-hell-smoke/20 rounded-sm p-8">
-              <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
-                <div className="w-8 h-8 rounded-sm bg-hell-flame/20 flex items-center justify-center mr-3 text-hell-flame"><CheckCircle size={18} /></div>
+            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <div className="w-10 h-10 rounded-xl bg-orange-100 flex items-center justify-center mr-4 text-orange-500">
+                  <CheckCircle size={20} />
+                </div>
                 {job.AufgabenHeader || "Das erwartet Sie"}
               </h3>
-              <div className="prose prose-invert max-w-none text-hell-ash prose-li:marker:text-hell-flame" dangerouslySetInnerHTML={createMarkup(job.Aufgaben)} />
+              <div className="prose max-w-none text-gray-600 prose-li:marker:text-orange-500" dangerouslySetInnerHTML={createMarkup(job.Aufgaben)} />
             </div>
           )}
 
           {/* 3. Profil */}
           {(job.FachlicheAnforderungen || job.PersoenlicheAnforderungen) && (
-            <div className="bg-hell-charcoal/50 backdrop-blur-sm border border-hell-smoke/20 rounded-sm p-8">
-              <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
-                <div className="w-8 h-8 rounded-sm bg-hell-ember/20 flex items-center justify-center mr-3 text-hell-ember"><User size={18} /></div>
+            <div className="bg-white border border-gray-200 rounded-2xl p-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                <div className="w-10 h-10 rounded-xl bg-gray-100 flex items-center justify-center mr-4 text-gray-600">
+                  <User size={20} />
+                </div>
                 {job.FachlicheAnforderungenHeader || "Das bringen Sie mit"}
               </h3>
               
               <div className="space-y-6">
-                {job.FachlicheAnforderungen && <div className="prose prose-invert max-w-none text-hell-ash prose-li:marker:text-hell-ember" dangerouslySetInnerHTML={createMarkup(job.FachlicheAnforderungen)} />}
-                {job.PersoenlicheAnforderungen && <div className="prose prose-invert max-w-none text-hell-ash prose-li:marker:text-hell-ember" dangerouslySetInnerHTML={createMarkup(job.PersoenlicheAnforderungen)} />}
+                {job.FachlicheAnforderungen && (
+                  <div className="prose max-w-none text-gray-600 prose-li:marker:text-orange-500" dangerouslySetInnerHTML={createMarkup(job.FachlicheAnforderungen)} />
+                )}
+                {job.PersoenlicheAnforderungen && (
+                  <div className="prose max-w-none text-gray-600 prose-li:marker:text-orange-500" dangerouslySetInnerHTML={createMarkup(job.PersoenlicheAnforderungen)} />
+                )}
               </div>
 
               {/* Skills Tags */}
               {job.Skills && job.Skills.length > 0 && (
                 <div className="mt-8 flex flex-wrap gap-2">
                   {job.Skills.map((skill, i) => (
-                    <span key={i} className="px-3 py-1.5 bg-hell-smoke/30 text-hell-ash text-sm font-medium rounded-sm border border-hell-smoke/20">
+                    <span key={i} className="px-3 py-1.5 bg-gray-100 text-gray-700 text-sm font-medium rounded-lg border border-gray-200">
                       {skill.Bezeichnung}
                     </span>
                   ))}
@@ -242,29 +299,41 @@ export default function JobDetail() {
 
           {/* 4. Wir bieten */}
           {(job.Arbeitgeberleistung || job.Perspektiven) && (
-            <div className="relative overflow-hidden rounded-sm p-8 border border-hell-flame/30">
-              <div className="absolute inset-0 bg-gradient-to-br from-hell-flame/10 to-hell-ember/10"></div>
+            <div className="relative overflow-hidden rounded-2xl p-8 bg-orange-50 border border-orange-200">
               <div className="relative z-10">
-                <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
-                  <div className="w-8 h-8 rounded-sm bg-hell-flame/20 flex items-center justify-center mr-3 text-hell-flame"><Star size={18} /></div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                  <div className="w-10 h-10 rounded-xl bg-orange-500 flex items-center justify-center mr-4 text-white">
+                    <Star size={20} />
+                  </div>
                   {job.ArbeitgeberleistungHeader || "Das bieten wir Ihnen"}
                 </h3>
-                <div className="prose prose-invert max-w-none text-hell-ash prose-li:marker:text-hell-flame" dangerouslySetInnerHTML={createMarkup(job.Arbeitgeberleistung || job.Perspektiven || '')} />
+                <div className="prose max-w-none text-gray-700 prose-li:marker:text-orange-500" dangerouslySetInnerHTML={createMarkup(job.Arbeitgeberleistung || job.Perspektiven || '')} />
               </div>
             </div>
           )}
 
           {/* FAQ Accordion */}
-          <div className="border-t border-hell-smoke/20 pt-10">
-            <h3 className="font-bold text-white mb-4">Haufige Fragen</h3>
-            <div className="space-y-2">
+          <div className="border-t border-gray-200 pt-10">
+            <h3 className="font-bold text-gray-900 mb-4 text-xl">Häufige Fragen</h3>
+            <div className="space-y-3">
               {FAQS.map((faq, idx) => (
-                <div key={idx} className="border border-hell-smoke/20 rounded-sm overflow-hidden">
-                  <button onClick={() => setOpenFaqIndex(openFaqIndex === idx ? null : idx)} className="w-full flex justify-between items-center p-4 bg-hell-charcoal/50 hover:bg-hell-charcoal text-left font-medium text-sm text-white">
+                <div key={idx} className="border border-gray-200 rounded-xl overflow-hidden">
+                  <button 
+                    onClick={() => setOpenFaqIndex(openFaqIndex === idx ? null : idx)} 
+                    className="w-full flex justify-between items-center p-4 bg-white hover:bg-gray-50 text-left font-medium text-gray-900 transition-colors"
+                  >
                     {faq.question}
-                    {openFaqIndex === idx ? <ChevronUp size={16} className="text-hell-flame" /> : <ChevronDown size={16} className="text-hell-ash" />}
+                    {openFaqIndex === idx ? (
+                      <ChevronUp size={18} className="text-orange-500" />
+                    ) : (
+                      <ChevronDown size={18} className="text-gray-400" />
+                    )}
                   </button>
-                  {openFaqIndex === idx && <div className="p-4 bg-hell-smoke/10 text-sm text-hell-ash border-t border-hell-smoke/20">{faq.answer}</div>}
+                  {openFaqIndex === idx && (
+                    <div className="p-4 bg-gray-50 text-gray-600 border-t border-gray-200">
+                      {faq.answer}
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
@@ -277,89 +346,93 @@ export default function JobDetail() {
           <div className="sticky top-24 space-y-6">
             
             {/* KEY FACTS BOX */}
-            <div className="bg-hell-charcoal/50 backdrop-blur-sm border border-hell-smoke/20 rounded-sm p-6">
-              <h3 className="font-bold text-white mb-4 border-b border-hell-smoke/20 pb-2">Die Fakten</h3>
+            <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
+              <h3 className="font-bold text-gray-900 mb-4 pb-3 border-b border-gray-200">Die Fakten</h3>
               
               <ul className="space-y-4 text-sm">
                 <li className="flex items-start">
-                   <Calendar className="w-5 h-5 text-hell-flame mr-3 shrink-0" />
+                   <Calendar className="w-5 h-5 text-orange-500 mr-3 shrink-0 mt-0.5" />
                    <div>
-                     <span className="block text-hell-ash text-xs uppercase font-bold">Startdatum</span>
-                     <span className="font-medium text-white">{getStartDate()}</span>
+                     <span className="block text-gray-500 text-xs uppercase font-semibold">Startdatum</span>
+                     <span className="font-medium text-gray-900">{getStartDate()}</span>
                    </div>
                 </li>
                 {job.Arbeitsstunden && (
                   <li className="flex items-start">
-                    <Clock className="w-5 h-5 text-hell-flame mr-3 shrink-0" />
+                    <Clock className="w-5 h-5 text-orange-500 mr-3 shrink-0 mt-0.5" />
                     <div>
-                      <span className="block text-hell-ash text-xs uppercase font-bold">Arbeitszeit</span>
-                      <span className="font-medium text-white">{job.Arbeitsstunden} {job.ArbeitsstundenZeitraum === 'WEEK' ? 'Std./Woche' : 'Stunden'}</span>
+                      <span className="block text-gray-500 text-xs uppercase font-semibold">Arbeitszeit</span>
+                      <span className="font-medium text-gray-900">{job.Arbeitsstunden} {job.ArbeitsstundenZeitraum === 'WEEK' ? 'Std./Woche' : 'Stunden'}</span>
                     </div>
                   </li>
                 )}
                 {job.Tarifvertrag && (
                   <li className="flex items-start">
-                    <FileText className="w-5 h-5 text-hell-flame mr-3 shrink-0" />
+                    <FileText className="w-5 h-5 text-orange-500 mr-3 shrink-0 mt-0.5" />
                     <div>
-                      <span className="block text-hell-ash text-xs uppercase font-bold">Tarif</span>
-                      <span className="font-medium text-white">{job.Tarifvertrag} {job.Entgeltgruppe && `(${job.Entgeltgruppe})`}</span>
+                      <span className="block text-gray-500 text-xs uppercase font-semibold">Tarif</span>
+                      <span className="font-medium text-gray-900">{job.Tarifvertrag} {job.Entgeltgruppe && `(${job.Entgeltgruppe})`}</span>
                     </div>
                   </li>
                 )}
                  {job.Homeoffice && (
                   <li className="flex items-start">
-                    <Home className="w-5 h-5 text-hell-flame mr-3 shrink-0" />
+                    <Home className="w-5 h-5 text-orange-500 mr-3 shrink-0 mt-0.5" />
                     <div>
-                      <span className="block text-hell-ash text-xs uppercase font-bold">Arbeitsort</span>
-                      <span className="font-medium text-hell-flame">Homeoffice moglich</span>
+                      <span className="block text-gray-500 text-xs uppercase font-semibold">Arbeitsort</span>
+                      <span className="font-medium text-orange-500">Homeoffice möglich</span>
                     </div>
                   </li>
                 )}
               </ul>
 
-              <div className="mt-8 pt-6 border-t border-hell-smoke/20">
+              <div className="mt-8 pt-6 border-t border-gray-200">
                 <button 
                   onClick={() => setIsModalOpen(true)}
-                  className="w-full bg-hell-flame text-white py-3 rounded-sm font-bold hover:bg-white hover:text-hell-void transition-all shadow-lg shadow-hell-flame/20 mb-3"
+                  className="w-full bg-orange-500 hover:bg-orange-600 text-white py-3.5 rounded-xl font-bold transition-all shadow-lg shadow-orange-500/20 mb-3"
                 >
                   Jetzt bewerben
                 </button>
                 <div className="text-center">
-                  <span className="text-xs text-hell-ash">Dauert nur 2 Minuten. Kein Login.</span>
+                  <span className="text-xs text-gray-500">Dauert nur 2 Minuten. Kein Login.</span>
                 </div>
               </div>
             </div>
 
             {/* KONTAKT BOX */}
-            <div className="bg-hell-charcoal/50 backdrop-blur-sm border border-hell-smoke/20 rounded-sm p-6">
-              <h4 className="font-bold text-white mb-4 text-sm">Ihr Ansprechpartner</h4>
+            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-6">
+              <h4 className="font-bold text-gray-900 mb-4 text-sm">Ihr Ansprechpartner</h4>
               
               <div className="flex items-center gap-4 mb-4">
                  {job.ImageKontaktUuid ? (
-                    <img src={getImageUrl(job.ImageKontaktUuid)} className="w-12 h-12 rounded-sm object-cover border border-hell-smoke/20" alt="Kontakt" />
+                    <img src={getImageUrl(job.ImageKontaktUuid)} className="w-12 h-12 rounded-xl object-cover border border-gray-200" alt="Kontakt" />
                  ) : (
-                    <div className="w-12 h-12 rounded-sm bg-hell-smoke/30 flex items-center justify-center text-hell-ash"><User size={20} /></div>
+                    <div className="w-12 h-12 rounded-xl bg-gray-200 flex items-center justify-center text-gray-500">
+                      <User size={20} />
+                    </div>
                  )}
                  <div>
-                   <p className="text-sm font-bold text-white">Recruiting Team</p>
-                   <p className="text-xs text-hell-ash">Pforzheim</p>
+                   <p className="text-sm font-bold text-gray-900">Recruiting Team</p>
+                   <p className="text-xs text-gray-500">Pforzheim</p>
                  </div>
               </div>
               
               <div className="space-y-3">
-                 <a href="tel:+497231123456" className="flex items-center justify-center w-full py-2 border border-hell-smoke/20 rounded-sm text-sm font-medium text-white hover:bg-hell-smoke/20 transition-colors">
-                   <Phone size={16} className="mr-2 text-hell-flame" /> Anrufen
+                 <a href="tel:+497231123456" className="flex items-center justify-center w-full py-2.5 border border-gray-200 rounded-xl text-sm font-medium text-gray-700 hover:bg-white hover:border-orange-500/50 transition-all">
+                   <Phone size={16} className="mr-2 text-orange-500" /> Anrufen
                  </a>
-                 <a href="mailto:info@persoflex-gmbh.de" className="flex items-center justify-center w-full py-2 border border-hell-smoke/20 rounded-sm text-sm font-medium text-white hover:bg-hell-smoke/20 transition-colors">
-                   <Mail size={16} className="mr-2 text-hell-flame" /> E-Mail
+                 <a href="mailto:info@persoflex-gmbh.de" className="flex items-center justify-center w-full py-2.5 border border-gray-200 rounded-xl text-sm font-medium text-gray-700 hover:bg-white hover:border-orange-500/50 transition-all">
+                   <Mail size={16} className="mr-2 text-orange-500" /> E-Mail
                  </a>
               </div>
             </div>
 
             {/* SHARE */}
-            <div className="flex justify-center gap-4 text-hell-ash">
-                <span className="text-xs uppercase font-bold tracking-widest mt-1">Teilen</span>
-                <button onClick={() => alert("Link kopiert!")} className="hover:text-hell-flame transition-colors"><Share2 size={20} /></button>
+            <div className="flex justify-center gap-4 text-gray-400">
+                <span className="text-xs uppercase font-semibold tracking-widest mt-1">Teilen</span>
+                <button onClick={() => alert("Link kopiert!")} className="hover:text-orange-500 transition-colors">
+                  <Share2 size={20} />
+                </button>
             </div>
 
           </div>
@@ -368,47 +441,123 @@ export default function JobDetail() {
       </div>
 
       {/* --- MOBILE STICKY BUTTON --- */}
-      <div className="fixed bottom-0 left-0 right-0 p-4 bg-hell-charcoal border-t border-hell-smoke/20 lg:hidden z-40">
-         <button onClick={() => setIsModalOpen(true)} className="w-full bg-hell-flame text-white py-3.5 rounded-sm font-bold shadow-lg shadow-hell-flame/20">
+      <div className="fixed bottom-0 left-0 right-0 p-4 bg-white border-t border-gray-200 lg:hidden z-40">
+         <button 
+           onClick={() => setIsModalOpen(true)} 
+           className="w-full bg-orange-500 hover:bg-orange-600 text-white py-3.5 rounded-xl font-bold shadow-lg shadow-orange-500/20"
+         >
            Jetzt bewerben
          </button>
       </div>
 
       {/* --- MODAL --- */}
       {isModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-hell-void/90 backdrop-blur-sm">
-          <div className="bg-hell-charcoal border border-hell-smoke/20 rounded-sm shadow-2xl w-full max-w-lg max-h-[90vh] overflow-y-auto">
-            <div className="flex justify-between items-center p-6 border-b border-hell-smoke/20 sticky top-0 bg-hell-charcoal z-10">
-              <h2 className="text-xl font-bold text-white">Bewerbung senden</h2>
-              <button onClick={() => setIsModalOpen(false)} className="text-hell-ash hover:text-white"><X size={24} /></button>
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
+          <div className="bg-white border border-gray-200 rounded-2xl shadow-2xl w-full max-w-lg max-h-[90vh] overflow-y-auto">
+            <div className="flex justify-between items-center p-6 border-b border-gray-200 sticky top-0 bg-white z-10 rounded-t-2xl">
+              <h2 className="text-xl font-bold text-gray-900">Bewerbung senden</h2>
+              <button onClick={() => setIsModalOpen(false)} className="text-gray-400 hover:text-gray-600 transition-colors">
+                <X size={24} />
+              </button>
             </div>
             <div className="p-6">
               {submitStatus === 'success' ? (
                 <div className="text-center py-10">
-                  <div className="w-16 h-16 bg-hell-flame/20 text-hell-flame rounded-sm flex items-center justify-center mx-auto mb-4"><CheckCircle size={32} /></div>
-                  <h3 className="text-2xl font-bold text-white mb-2">Vielen Dank!</h3>
-                  <button onClick={() => setIsModalOpen(false)} className="bg-hell-flame text-white px-6 py-2 rounded-sm font-bold">Schliessen</button>
+                  <div className="w-16 h-16 bg-green-100 text-green-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <CheckCircle size={32} />
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Vielen Dank!</h3>
+                  <p className="text-gray-600 mb-6">Wir melden uns in Kürze bei Ihnen.</p>
+                  <button 
+                    onClick={() => setIsModalOpen(false)} 
+                    className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-xl font-semibold transition-colors"
+                  >
+                    Schließen
+                  </button>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="grid grid-cols-2 gap-4">
-                    <div><label className="block text-xs font-bold uppercase text-hell-ash mb-1">Vorname *</label><input required type="text" className="w-full p-3 bg-hell-smoke/20 border border-hell-smoke/30 rounded-sm text-white focus:ring-2 focus:ring-hell-flame focus:border-hell-flame outline-none" value={formData.vorname} onChange={e => setFormData({...formData, vorname: e.target.value})} /></div>
-                    <div><label className="block text-xs font-bold uppercase text-hell-ash mb-1">Nachname *</label><input required type="text" className="w-full p-3 bg-hell-smoke/20 border border-hell-smoke/30 rounded-sm text-white focus:ring-2 focus:ring-hell-flame focus:border-hell-flame outline-none" value={formData.nachname} onChange={e => setFormData({...formData, nachname: e.target.value})} /></div>
-                  </div>
-                  <div><label className="block text-xs font-bold uppercase text-hell-ash mb-1">E-Mail *</label><input required type="email" className="w-full p-3 bg-hell-smoke/20 border border-hell-smoke/30 rounded-sm text-white focus:ring-2 focus:ring-hell-flame focus:border-hell-flame outline-none" value={formData.email} onChange={e => setFormData({...formData, email: e.target.value})} /></div>
-                  <div><label className="block text-xs font-bold uppercase text-hell-ash mb-1">Telefon</label><input type="tel" className="w-full p-3 bg-hell-smoke/20 border border-hell-smoke/30 rounded-sm text-white focus:ring-2 focus:ring-hell-flame focus:border-hell-flame outline-none" value={formData.telefon} onChange={e => setFormData({...formData, telefon: e.target.value})} /></div>
-                  <div>
-                    <label className="block text-xs font-bold uppercase text-hell-ash mb-1">Lebenslauf (PDF) *</label>
-                    <div className="border-2 border-dashed border-hell-smoke/30 rounded-sm p-8 text-center relative hover:border-hell-flame/50 hover:bg-hell-smoke/10 transition-colors cursor-pointer">
-                      <input required type="file" accept="application/pdf" className="absolute inset-0 w-full h-full opacity-0 cursor-pointer" onChange={e => setFile(e.target.files ? e.target.files[0] : null)} />
-                      <Upload className="mx-auto text-hell-ash mb-2" />
-                      <p className="text-sm font-medium text-hell-ash">{file ? file.name : "Datei hier ablegen oder klicken"}</p>
+                    <div>
+                      <label className="block text-xs font-semibold uppercase text-gray-500 mb-1.5">Vorname *</label>
+                      <input 
+                        required 
+                        type="text" 
+                        className="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl text-gray-900 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none transition-all" 
+                        value={formData.vorname} 
+                        onChange={e => setFormData({...formData, vorname: e.target.value})} 
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-xs font-semibold uppercase text-gray-500 mb-1.5">Nachname *</label>
+                      <input 
+                        required 
+                        type="text" 
+                        className="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl text-gray-900 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none transition-all" 
+                        value={formData.nachname} 
+                        onChange={e => setFormData({...formData, nachname: e.target.value})} 
+                      />
                     </div>
                   </div>
-                  <div className="flex items-start gap-3 mt-4"><input required type="checkbox" className="mt-1 accent-hell-flame" checked={formData.datenschutz} onChange={e => setFormData({...formData, datenschutz: e.target.checked})}/><label className="text-xs text-hell-ash">Ich stimme der Verarbeitung meiner Daten zu.</label></div>
-                  <button disabled={isSubmitting} type="submit" className="w-full bg-hell-flame text-white py-3 rounded-sm font-bold hover:bg-white hover:text-hell-void transition-colors flex justify-center items-center shadow-lg shadow-hell-flame/20">
+                  <div>
+                    <label className="block text-xs font-semibold uppercase text-gray-500 mb-1.5">E-Mail *</label>
+                    <input 
+                      required 
+                      type="email" 
+                      className="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl text-gray-900 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none transition-all" 
+                      value={formData.email} 
+                      onChange={e => setFormData({...formData, email: e.target.value})} 
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-xs font-semibold uppercase text-gray-500 mb-1.5">Telefon</label>
+                    <input 
+                      type="tel" 
+                      className="w-full p-3 bg-gray-50 border border-gray-200 rounded-xl text-gray-900 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none transition-all" 
+                      value={formData.telefon} 
+                      onChange={e => setFormData({...formData, telefon: e.target.value})} 
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-xs font-semibold uppercase text-gray-500 mb-1.5">Lebenslauf (PDF) *</label>
+                    <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center relative hover:border-orange-500/50 hover:bg-orange-50/50 transition-colors cursor-pointer">
+                      <input 
+                        required 
+                        type="file" 
+                        accept="application/pdf" 
+                        className="absolute inset-0 w-full h-full opacity-0 cursor-pointer" 
+                        onChange={e => setFile(e.target.files ? e.target.files[0] : null)} 
+                      />
+                      <Upload className="mx-auto text-gray-400 mb-2" size={32} />
+                      <p className="text-sm font-medium text-gray-600">
+                        {file ? file.name : "Datei hier ablegen oder klicken"}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3 mt-4">
+                    <input 
+                      required 
+                      type="checkbox" 
+                      className="mt-1 w-4 h-4 accent-orange-500 rounded" 
+                      checked={formData.datenschutz} 
+                      onChange={e => setFormData({...formData, datenschutz: e.target.checked})}
+                    />
+                    <label className="text-xs text-gray-600">
+                      Ich stimme der Verarbeitung meiner Daten gemäß der Datenschutzerklärung zu.
+                    </label>
+                  </div>
+                  <button 
+                    disabled={isSubmitting} 
+                    type="submit" 
+                    className="w-full bg-orange-500 hover:bg-orange-600 text-white py-3.5 rounded-xl font-bold transition-colors flex justify-center items-center shadow-lg shadow-orange-500/20 disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
                     {isSubmitting ? <Loader2 className="animate-spin" /> : "Jetzt absenden"}
                   </button>
+                  {submitStatus === 'error' && (
+                    <p className="text-red-500 text-sm text-center">
+                      Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.
+                    </p>
+                  )}
                 </form>
               )}
             </div>
