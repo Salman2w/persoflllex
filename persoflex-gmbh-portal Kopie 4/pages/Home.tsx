@@ -260,7 +260,7 @@ const structuredData = {
                 Jobs in allen <span className="text-orange-500">Bereichen</span>
               </h2>
               <p className="text-gray-600 mb-8 leading-relaxed text-lg">
-                Als führende <span className="font-semibold text-gray-700">Zeitarbeitsfirma Pforzheim</span> verbinden wir hochqualifizierte Fachkräfte mit Unternehmen in Produktion, Logistik, Handwerk und Industrie. Unsere <span className="font-semibold text-gray-700">Zeitarbeit Pforzheim</span> Services bieten flexible Personalösungen für kurz- und langfristige Einsätze im Enzkreis. Mit schneller Vermittlung, zuverlässigen Fachkräften und umfassender Betreuung unterstützen wir Unternehmen bei ihrem Erfolg.
+                Als spezialisierte <span className="font-semibold text-gray-700">Zeitarbeitsfirma Pforzheim</span> verstehen wir die Anforderungen regionaler Unternehmen. Unser <span className="font-semibold text-gray-700">Zeitarbeit Pforzheim</span> Angebot verbindet qualifizierte Fachkräfte mit Betrieben in Produktion, Logistik, Handwerk und Industrie. Wir bieten flexible, verlässliche Personalbesetzung für Ihre kurzfristigen und mittelfristigen Projekte im Enzkreis—mit transparenter Kommunikation und fairer Zusammenarbeit auf beiden Seiten.
               </p>
               
               <div className="space-y-4">
