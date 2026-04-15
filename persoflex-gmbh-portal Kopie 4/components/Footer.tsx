@@ -127,15 +127,35 @@ export const Footer: React.FC = () => {
                 </li>
               </ul>
               
-              {/* Trust Badges */}
+              {/* Trust Badges & GVP Logo */}
               <div className="mt-8 pt-6 border-t border-gray-800">
-                <p className="text-xs text-gray-500 mb-3">Zertifiziert & Mitglied:</p>
+                <p className="text-xs text-gray-500 mb-4">Zertifiziert & Mitglied:</p>
+                
+                {/* GVP Membership Logo */}
+                <div className="mb-4">
+                  <a 
+                    href="https://www.personaldienstleister.de" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-block bg-white rounded-lg p-3 hover:shadow-lg transition-shadow"
+                    aria-label="GVP - Gesamtverband der Personaldienstleister"
+                  >
+                    <img 
+                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/GVP-Logo_Mitglied_RGB_wei%C3%9F-lS3N1nahtjpby55Pm7vnuWBHqeR7GZ.png" 
+                      alt="Mitglied im GVP - Gesamtverband der Personaldienstleister" 
+                      className="h-20 w-auto"
+                      width="100"
+                      height="80"
+                    />
+                  </a>
+                </div>
+                
                 <div className="flex gap-2 flex-wrap">
                   <span className="px-3 py-1.5 text-xs bg-gray-800 border border-gray-700 rounded-full text-gray-400 font-medium">
-                    GVP Mitglied
+                    AÜG Erlaubnis
                   </span>
                   <span className="px-3 py-1.5 text-xs bg-gray-800 border border-gray-700 rounded-full text-gray-400 font-medium">
-                    AÜG Erlaubnis
+                    Tarifgebunden
                   </span>
                 </div>
               </div>
