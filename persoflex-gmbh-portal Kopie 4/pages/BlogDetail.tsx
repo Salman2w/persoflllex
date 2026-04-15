@@ -22,6 +22,7 @@ const BlogDetail: React.FC = () => {
     "@type": "BlogPosting",
     "headline": post.title,
     "description": post.excerpt,
+    "image": post.featuredImage ? `https://www.persoflex-gmbh.de${post.featuredImage}` : "https://www.persoflex-gmbh.de/bilder/og-default.jpg",
     "author": {
       "@type": "Organization",
       "name": "PersoFlex GmbH",
@@ -43,7 +44,8 @@ const BlogDetail: React.FC = () => {
     },
     "keywords": post.tags.join(', '),
     "articleSection": post.category,
-    "inLanguage": "de-DE"
+    "inLanguage": "de-DE",
+    "wordCount": post.content.split(/\s+/).length
   };
 
   const shareUrl = `https://www.persoflex-gmbh.de/blog/${post.id}`;
@@ -112,6 +114,22 @@ const BlogDetail: React.FC = () => {
           </div>
         </div>
       </section>
+
+      {/* Featured Image */}
+      {post.featuredImage && (
+        <section className="py-8">
+          <div className="max-w-4xl mx-auto px-6">
+            <div className="rounded-xl overflow-hidden shadow-lg">
+              <img 
+                src={post.featuredImage} 
+                alt={post.title}
+                className="w-full h-auto max-h-96 object-cover"
+                loading="eager"
+              />
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Article Content */}
       <section className="py-16">

@@ -528,7 +528,8 @@ export const BLOG_POSTS: BlogPost[] = [
     date: '2025-04-15',
     readTime: '12 Min.',
     category: 'Zeitarbeit',
-    tags: ['Zeitarbeit', 'Arbeitnehmerüberlassung', 'AÜG', 'Equal Pay', 'Karriere', 'Personaldienstleister']
+    tags: ['Zeitarbeit', 'Arbeitnehmerüberlassung', 'AÜG', 'Equal Pay', 'Karriere', 'Personaldienstleister'],
+    featuredImage: '/bilder/blog/zeitarbeit-hauptartikel.jpg'
   },
   {
     id: 'zeitarbeit-pforzheim-vorteile',
@@ -600,7 +601,8 @@ export const BLOG_POSTS: BlogPost[] = [
     date: '2024-12-10',
     readTime: '5 Min.',
     category: 'Karriere',
-    tags: ['Logistik', 'Jobs', 'Pforzheim', 'Enzkreis', 'Staplerfahrer']
+    tags: ['Logistik', 'Jobs', 'Pforzheim', 'Enzkreis', 'Staplerfahrer'],
+    featuredImage: '/bilder/blog/logistik-jobs-guide.jpg'
   },
   {
     id: 'bewerbungstipps-zeitarbeit',
@@ -635,7 +637,8 @@ export const BLOG_POSTS: BlogPost[] = [
     date: '2024-12-05',
     readTime: '4 Min.',
     category: 'Bewerbung',
-    tags: ['Bewerbung', 'Tipps', 'Zeitarbeit', 'Karriere']
+    tags: ['Bewerbung', 'Tipps', 'Zeitarbeit', 'Karriere'],
+    featuredImage: '/bilder/blog/bewerbungstipps.jpg'
   },
   {
     id: 'industriejobs-pforzheim-nordschwarzwald',
@@ -663,7 +666,8 @@ export const BLOG_POSTS: BlogPost[] = [
     date: '2024-11-28',
     readTime: '5 Min.',
     category: 'Industrie',
-    tags: ['Industrie', 'Produktion', 'Pforzheim', 'Metallverarbeitung']
+    tags: ['Industrie', 'Produktion', 'Pforzheim', 'Metallverarbeitung'],
+    featuredImage: '/bilder/blog/cnc-fachkraefte.jpg'
   },
   {
     id: 'arbeitsrecht-zeitarbeit-faq',
@@ -691,7 +695,8 @@ export const BLOG_POSTS: BlogPost[] = [
     date: '2024-11-20',
     readTime: '6 Min.',
     category: 'Recht',
-    tags: ['Arbeitsrecht', 'AÜG', 'Equal Pay', 'Zeitarbeit']
+    tags: ['Arbeitsrecht', 'AÜG', 'Equal Pay', 'Zeitarbeit'],
+    featuredImage: '/bilder/blog/arbeitsrecht-faq.jpg'
   },
   {
     id: 'personaldienstleister-pforzheim-vergleich',
@@ -725,7 +730,8 @@ export const BLOG_POSTS: BlogPost[] = [
     date: '2024-11-15',
     readTime: '4 Min.',
     category: 'Ratgeber',
-    tags: ['Personaldienstleister', 'Pforzheim', 'Qualität', 'Zeitarbeit']
+    tags: ['Personaldienstleister', 'Pforzheim', 'Qualität', 'Zeitarbeit'],
+    featuredImage: '/bilder/blog/personaldienstleister-vergleich.jpg'
   }
 ];
 

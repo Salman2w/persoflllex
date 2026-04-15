@@ -53,6 +53,134 @@
     <!-- DNS Prefetch -->
     <link rel="dns-prefetch" href="https://www.google.com" />
     <link rel="dns-prefetch" href="https://persoflex-gmbh.europersonal.com" />
+    
+    <!-- Schema.org Structured Data - Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EmploymentAgency",
+      "@id": "https://www.persoflex-gmbh.de/#organization",
+      "name": "PersoFlex GmbH",
+      "alternateName": "PersoFlex Personaldienstleistungen",
+      "url": "https://www.persoflex-gmbh.de",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.persoflex-gmbh.de/bilder/logo.webp",
+        "width": 200,
+        "height": 60
+      },
+      "image": "https://www.persoflex-gmbh.de/bilder/og-image.jpg",
+      "description": "PersoFlex GmbH ist Ihr regionaler Partner fur Zeitarbeit und Personalvermittlung in Pforzheim und dem Enzkreis. Wir vermitteln Fachkrafte in Produktion, Logistik und Industrie.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Kiehnlestrasse 4",
+        "addressLocality": "Pforzheim",
+        "postalCode": "75172",
+        "addressRegion": "Baden-Wurttemberg",
+        "addressCountry": "DE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "48.8929474",
+        "longitude": "8.6949572"
+      },
+      "telephone": "+49 7231 1545010",
+      "email": "info@persoflex-gmbh.de",
+      "foundingDate": "2024",
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Pforzheim"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Enzkreis"
+        },
+        {
+          "@type": "State",
+          "name": "Baden-Wurttemberg"
+        }
+      ],
+      "serviceType": ["Zeitarbeit", "Personalvermittlung", "Arbeitnehmeruberlassung", "Personalberatung"],
+      "knowsAbout": ["Produktion", "Logistik", "Industrie", "Metallverarbeitung", "Lagerlogistik"],
+      "memberOf": {
+        "@type": "Organization",
+        "name": "GVP - Gesamtverband der Personaldienstleister"
+      },
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "AUG Erlaubnis",
+          "credentialCategory": "license"
+        }
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "17:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/company/persoflex-gmbh",
+        "https://www.xing.com/companies/persoflexgmbh"
+      ],
+      "priceRange": "Kostenlos fur Bewerber"
+    }
+    </script>
+    
+    <!-- Schema.org Structured Data - WebSite with SearchAction -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "PersoFlex GmbH",
+      "url": "https://www.persoflex-gmbh.de",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://www.persoflex-gmbh.de/jobs?search={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    
+    <!-- Schema.org Structured Data - BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.persoflex-gmbh.de/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Jobs",
+          "item": "https://www.persoflex-gmbh.de/jobs"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Fur Bewerber",
+          "item": "https://www.persoflex-gmbh.de/fuer-bewerber"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Fur Unternehmen",
+          "item": "https://www.persoflex-gmbh.de/unternehmen"
+        }
+      ]
+    }
+    </script>
   </head>
   <body class="bg-white text-gray-900">
     <div id="root"></div>
