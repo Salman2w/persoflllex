@@ -135,16 +135,21 @@ export const Home: React.FC = () => {
       </script>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-white via-orange-50/40 to-white">
-        {/* Decorative Orange Elements */}
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-orange-400/10 rounded-full blur-[120px]" />
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-orange-300/10 rounded-full blur-[100px]" />
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Subtle Orange Gradient Background */}
+        <div className="absolute inset-0 bg-gradient-to-b from-orange-50/80 via-orange-100/30 to-white" />
         
-        {/* Subtle Grid Pattern with Orange tint */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(249,115,22,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(249,115,22,0.03)_1px,transparent_1px)] bg-[size:64px_64px]" />
+        {/* Secondary diagonal gradient for depth */}
+        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-orange-50/50 to-orange-100/40" />
         
-        {/* Orange accent bar at top */}
-        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-orange-400 via-orange-500 to-orange-400" />
+        {/* Soft radial glow in upper right */}
+        <div className="absolute top-0 right-0 w-[60%] h-[60%] bg-gradient-radial from-orange-200/30 via-orange-100/20 to-transparent" />
+        
+        {/* Subtle bottom fade to white for smooth transition */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent" />
+        
+        {/* Subtle Grid Pattern */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(249,115,22,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(249,115,22,0.04)_1px,transparent_1px)] bg-[size:48px_48px]" />
 
         <div className="relative max-w-7xl mx-auto px-6 pt-32 pb-20">
           <div className="text-center max-w-4xl mx-auto">
