@@ -135,25 +135,34 @@ export const Home: React.FC = () => {
       </script>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
-        {/* Subtle Background Pattern */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.02)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.02)_1px,transparent_1px)] bg-[size:64px_64px]" />
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-white via-orange-50/40 to-white">
+        {/* Decorative Orange Elements */}
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-orange-400/10 rounded-full blur-[120px]" />
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-orange-300/10 rounded-full blur-[100px]" />
         
-        {/* Orange accent */}
-        <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-orange-50 to-transparent" />
+        {/* Subtle Grid Pattern with Orange tint */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(249,115,22,0.03)_1px,transparent_1px),linear-gradient(to_bottom,rgba(249,115,22,0.03)_1px,transparent_1px)] bg-[size:64px_64px]" />
+        
+        {/* Orange accent bar at top */}
+        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-orange-400 via-orange-500 to-orange-400" />
 
         <div className="relative max-w-7xl mx-auto px-6 pt-32 pb-20">
           <div className="text-center max-w-4xl mx-auto">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-orange-100 border border-orange-200 mb-8">
-              <MapPin className="w-4 h-4 text-orange-500" />
-              <span className="text-sm font-semibold text-orange-700">Ihr Personaldienstleister in Pforzheim</span>
+            <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-orange-500 text-white mb-8 shadow-lg shadow-orange-500/25">
+              <MapPin className="w-4 h-4" />
+              <span className="text-sm font-semibold">Ihr Personaldienstleister in Pforzheim</span>
             </div>
 
             {/* Headline */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-6 leading-tight">
               Finden Sie Ihren{' '}
-              <span className="text-orange-500">Traumjob</span>
+              <span className="text-orange-500 relative">
+                Traumjob
+                <svg className="absolute -bottom-2 left-0 w-full h-3 text-orange-300" viewBox="0 0 200 12" preserveAspectRatio="none">
+                  <path d="M0,8 Q50,0 100,8 T200,8" stroke="currentColor" strokeWidth="4" fill="none" strokeLinecap="round"/>
+                </svg>
+              </span>
             </h1>
             
             <p className="text-lg md:text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
@@ -165,14 +174,14 @@ export const Home: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 to="/jobs" 
-                className="group bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg inline-flex items-center justify-center gap-2"
+                className="group bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:shadow-xl hover:shadow-orange-500/30 hover:-translate-y-0.5 inline-flex items-center justify-center gap-2"
               >
                 <span>Jobs entdecken</span>
                 <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
               </Link>
               <Link 
                 to="/unternehmen" 
-                className="px-8 py-4 bg-white border-2 border-gray-200 text-gray-700 rounded-lg font-semibold hover:border-orange-300 hover:text-orange-500 transition-all inline-flex items-center justify-center gap-2"
+                className="px-8 py-4 bg-white border-2 border-orange-200 text-gray-700 rounded-xl font-semibold hover:border-orange-400 hover:bg-orange-50 transition-all inline-flex items-center justify-center gap-2"
               >
                 Personal anfragen
               </Link>
@@ -180,17 +189,17 @@ export const Home: React.FC = () => {
 
             {/* Trust Indicators */}
             <div className="mt-16 flex flex-wrap justify-center gap-4">
-              <div className="flex items-center gap-2 px-5 py-2.5 bg-white rounded-full border border-gray-200 shadow-sm">
+              <div className="flex items-center gap-2 px-5 py-2.5 bg-white rounded-full border-2 border-orange-200 shadow-sm hover:border-orange-400 transition-colors">
                 <CheckCircle2 className="w-5 h-5 text-orange-500" />
-                <span className="text-sm font-medium text-gray-700">GVP Mitglied</span>
+                <span className="text-sm font-semibold text-gray-700">GVP Mitglied</span>
               </div>
-              <div className="flex items-center gap-2 px-5 py-2.5 bg-white rounded-full border border-gray-200 shadow-sm">
+              <div className="flex items-center gap-2 px-5 py-2.5 bg-white rounded-full border-2 border-orange-200 shadow-sm hover:border-orange-400 transition-colors">
                 <CheckCircle2 className="w-5 h-5 text-orange-500" />
-                <span className="text-sm font-medium text-gray-700">AÜG Erlaubnis</span>
+                <span className="text-sm font-semibold text-gray-700">AÜG Erlaubnis</span>
               </div>
-              <div className="flex items-center gap-2 px-5 py-2.5 bg-white rounded-full border border-gray-200 shadow-sm">
+              <div className="flex items-center gap-2 px-5 py-2.5 bg-white rounded-full border-2 border-orange-200 shadow-sm hover:border-orange-400 transition-colors">
                 <CheckCircle2 className="w-5 h-5 text-orange-500" />
-                <span className="text-sm font-medium text-gray-700">Tarifgebunden</span>
+                <span className="text-sm font-semibold text-gray-700">Tarifgebunden</span>
               </div>
             </div>
           </div>
@@ -198,8 +207,8 @@ export const Home: React.FC = () => {
 
         {/* Scroll Indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
-          <div className="w-6 h-10 border-2 border-gray-300 rounded-full flex items-start justify-center p-2">
-            <div className="w-1 h-2 bg-orange-500 rounded-full animate-bounce" />
+          <div className="w-6 h-10 border-2 border-orange-300 rounded-full flex items-start justify-center p-2">
+            <div className="w-1.5 h-3 bg-orange-500 rounded-full animate-bounce" />
           </div>
         </div>
       </section>
