@@ -101,14 +101,14 @@ export function CookieConsent() {
             {!showSettings ? (
               <>
                 <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                  Wir verwenden Cookies, um Ihnen die bestmoegliche Erfahrung auf unserer Website zu bieten. 
-                  Einige Cookies sind fuer den Betrieb der Website notwendig, waehrend andere uns helfen, 
+                  Wir verwenden Cookies, um Ihnen die bestmögliche Erfahrung auf unserer Website zu bieten. 
+                  Einige Cookies sind für den Betrieb der Website notwendig, während andere uns helfen, 
                   die Website zu verbessern und Ihnen personalisierte Inhalte anzuzeigen.
                 </p>
                 <p className="text-gray-500 text-xs mb-4">
                   Weitere Informationen finden Sie in unserer{' '}
                   <NavLink to="/datenschutz" className="text-orange-500 hover:underline">
-                    Datenschutzerklaerung
+                    Datenschutzerklärung
                   </NavLink>.
                 </p>
               </>
@@ -124,7 +124,7 @@ export function CookieConsent() {
                     <span className="text-xs text-gray-500 bg-gray-200 px-2 py-1 rounded">Immer aktiv</span>
                   </div>
                   <p className="text-xs text-gray-600">
-                    Diese Cookies sind fuer den Betrieb der Website unbedingt erforderlich und koennen nicht deaktiviert werden.
+                    Diese Cookies sind für den Betrieb der Website unbedingt erforderlich und können nicht deaktiviert werden.
                   </p>
                 </div>
 
@@ -143,7 +143,7 @@ export function CookieConsent() {
                     </label>
                   </div>
                   <p className="text-xs text-gray-600">
-                    Helfen uns zu verstehen, wie Besucher mit der Website interagieren, und ermoglichen uns, die Nutzererfahrung zu verbessern.
+                    Helfen uns zu verstehen, wie Besucher mit der Website interagieren, und ermöglichen uns, die Nutzererfahrung zu verbessern.
                   </p>
                 </div>
 

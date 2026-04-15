@@ -35,12 +35,12 @@ const documents: Document[] = [
     icon: Shield,
     filePath: '/downloads/datenschutzerklaerung.pdf',
     fileSize: '245 KB',
-    lastUpdated: 'Marz 2025'
+    lastUpdated: 'März 2025'
   },
   {
     id: 'finanzamt',
     title: 'Bescheinigung in Steuersachen',
-    description: 'Offizielle Bescheinigung des Finanzamts Pforzheim uber die steuerliche Fuhrung der PersoFlex GmbH. Nachweis uber ordnungsgemas abgefuhrte Steuern.',
+    description: 'Offizielle Bescheinigung des Finanzamts Pforzheim über die steuerliche Führung der PersoFlex GmbH. Nachweis über ordnungsgemäß abgeführte Steuern.',
     category: 'certificate',
     icon: Building2,
     filePath: '/downloads/finanzamt-bescheinigung.pdf',
@@ -50,7 +50,7 @@ const documents: Document[] = [
   {
     id: 'vbg',
     title: 'Unbedenklichkeitsbescheinigung VBG',
-    description: 'Bescheinigung der Verwaltungs-Berufsgenossenschaft (VBG) uber die ordnungsgemas Beitragszahlung zur gesetzlichen Unfallversicherung.',
+    description: 'Bescheinigung der Verwaltungs-Berufsgenossenschaft (VBG) über die ordnungsgemäße Beitragszahlung zur gesetzlichen Unfallversicherung.',
     category: 'certificate',
     icon: Award,
     filePath: '/downloads/unbedenklichkeitsbescheinigung-vbg.pdf',
@@ -84,9 +84,10 @@ export const Downloads: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       <SEO 
-        title="Downloads & Dokumente | PersoFlex GmbH Pforzheim"
-        description="Laden Sie wichtige Dokumente der PersoFlex GmbH herunter: Datenschutzerklarung, Zertifikate, Unbedenklichkeitsbescheinigungen und mehr. Transparent und vertrauenswurdig."
-        keywords="Downloads PersoFlex, Datenschutzerklarung, Zertifikate, Unbedenklichkeitsbescheinigung, Finanzamt Bescheinigung"
+        title="Downloads - PersoFlex GmbH Dokumente"
+        description="Wichtige Dokumente: Datenschutzerklärung, Zertifikate und Bescheinigungen."
+        keywords="Downloads, Datenschutzerklärung, Zertifikate"
+        canonicalUrl="https://www.persoflex-gmbh.de/downloads"
       />
       
       {/* Hero Section */}

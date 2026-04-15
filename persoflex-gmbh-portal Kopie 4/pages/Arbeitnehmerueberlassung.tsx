@@ -34,11 +34,11 @@ export function Arbeitnehmerueberlassung() {
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-tight">
                 Arbeitnehmer-<br />
-                <span className="text-orange-500">ueberlassung</span>
+                <span className="text-orange-500">überlassung</span>
               </h1>
               
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Flexible Personalloesungen fuer Ihr Unternehmen. Von kurzfristigen Einsaetzen 
+                Flexible Personallösungen für Ihr Unternehmen. Von kurzfristigen Einsätzen 
                 bis zur langfristigen Zusammenarbeit - wir liefern qualifizierte Mitarbeiter 
                 genau dann, wenn Sie sie brauchen.
               </p>
@@ -62,7 +62,7 @@ export function Arbeitnehmerueberlassung() {
             <div className="hidden lg:grid grid-cols-2 gap-4">
               {[
                 { icon: Shield, label: 'GVP Mitglied', value: 'Zertifiziert' },
-                { icon: FileCheck, label: 'AUeG Erlaubnis', value: 'Vollstaendig' },
+                { icon: FileCheck, label: 'AÜG Erlaubnis', value: 'Vollständig' },
                 { icon: Users, label: 'Mitarbeiter', value: 'Im Einsatz' },
                 { icon: Building2, label: 'Kundenunternehmen', value: 'Vertrauen uns' },
               ].map((stat, idx) => (
@@ -83,24 +83,24 @@ export function Arbeitnehmerueberlassung() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-6">
-                Was ist <span className="text-orange-500">Arbeitnehmerueberlassung</span>?
+                Was ist <span className="text-orange-500">Arbeitnehmerüberlassung</span>?
               </h2>
               <p className="text-gray-600 text-lg leading-relaxed mb-6">
-                Bei der Arbeitnehmerueberlassung (auch Zeitarbeit oder Leiharbeit genannt) stellen 
-                wir Ihnen qualifizierte Mitarbeiter zur Verfuegung, die bei uns angestellt sind, 
+                Bei der Arbeitnehmerüberlassung (auch Zeitarbeit oder Leiharbeit genannt) stellen 
+                wir Ihnen qualifizierte Mitarbeiter zur Verfügung, die bei uns angestellt sind, 
                 aber in Ihrem Unternehmen arbeiten.
               </p>
               <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                Sie profitieren von der Flexibilitaet, Personal bedarfsgerecht einzusetzen, 
-                waehrend wir uns um alle administrativen Aufgaben kuemmern - von der Lohnabrechnung 
+                Sie profitieren von der Flexibilität, Personal bedarfsgerecht einzusetzen, 
+                während wir uns um alle administrativen Aufgaben kümmern - von der Lohnabrechnung 
                 bis zur Sozialversicherung.
               </p>
               
               <div className="space-y-4">
                 {[
-                  'Rechtlich abgesichert nach AUeG',
-                  'Tarifgebundene Verguetung (GVP)',
-                  'Volle Sozialversicherung fuer Mitarbeiter',
+                  'Rechtlich abgesichert nach AÜG',
+                  'Tarifgebundene Vergütung (GVP)',
+                  'Volle Sozialversicherung für Mitarbeiter',
                   'Flexible Einsatzdauer'
                 ].map((item, idx) => (
                   <div key={idx} className="flex items-center gap-3">

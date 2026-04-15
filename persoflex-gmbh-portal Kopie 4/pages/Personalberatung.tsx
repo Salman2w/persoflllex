@@ -31,7 +31,7 @@ export function Personalberatung() {
             <div>
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500/20 text-orange-400 text-sm font-semibold mb-6">
                 <Shield size={16} />
-                Strategische HR-Unterstuetzung
+                Strategische HR-Unterstützung
               </span>
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-tight">
@@ -40,8 +40,8 @@ export function Personalberatung() {
               </h1>
               
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Strategische HR-Beratung und Unterstuetzung bei der Personalplanung 
-                fuer nachhaltigen Unternehmenserfolg. Von der Analyse bis zur Umsetzung.
+                Strategische HR-Beratung und Unterstützung bei der Personalplanung 
+                für nachhaltigen Unternehmenserfolg. Von der Analyse bis zur Umsetzung.
               </p>
               
               <div className="flex flex-wrap gap-4">
@@ -86,14 +86,14 @@ export function Personalberatung() {
                 Was ist <span className="text-orange-500">Personalberatung</span>?
               </h2>
               <p className="text-gray-600 text-lg leading-relaxed mb-6">
-                Personalberatung geht ueber die reine Vermittlung hinaus. Wir analysieren 
-                Ihre Personalsituation, entwickeln Strategien fuer Ihr Recruiting und 
-                unterstuetzen Sie bei der Optimierung Ihrer HR-Prozesse.
+                Personalberatung geht über die reine Vermittlung hinaus. Wir analysieren 
+                Ihre Personalsituation, entwickeln Strategien für Ihr Recruiting und 
+                unterstützen Sie bei der Optimierung Ihrer HR-Prozesse.
               </p>
               <p className="text-gray-600 text-lg leading-relaxed mb-8">
                 Als regionaler Partner kennen wir den Arbeitsmarkt in Pforzheim und dem 
                 Enzkreis wie unsere Westentasche. Dieses Wissen nutzen wir, um Ihnen 
-                massgeschneiderte Loesungen fuer Ihre Personalherausforderungen zu bieten.
+                maßgeschneiderte Lösungen für Ihre Personalherausforderungen zu bieten.
               </p>
               
               <div className="space-y-4">

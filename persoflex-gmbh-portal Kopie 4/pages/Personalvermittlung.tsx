@@ -40,7 +40,7 @@ export function Personalvermittlung() {
               </h1>
               
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Wir finden den perfekten Match fuer Ihre offenen Stellen. Qualifizierte Fachkraefte 
+                Wir finden den perfekten Match für Ihre offenen Stellen. Qualifizierte Fachkräfte 
                 direkt in Festanstellung - ohne Umwege, ohne Kompromisse.
               </p>
               
@@ -49,7 +49,7 @@ export function Personalvermittlung() {
                   to="/personal-anfrage"
                   className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold transition-all"
                 >
-                  Fachkraefte finden <ArrowRight size={18} />
+                  Fachkräfte finden <ArrowRight size={18} />
                 </Link>
                 <Link 
                   to="/jobs"
@@ -94,7 +94,7 @@ export function Personalvermittlung() {
               </h2>
               <p className="text-gray-600 text-lg leading-relaxed mb-6">
                 Bei der Personalvermittlung suchen wir in Ihrem Auftrag nach dem idealen Kandidaten 
-                fuer Ihre offene Stelle. Der Arbeitsvertrag kommt direkt zwischen Ihnen und dem 
+                für Ihre offene Stelle. Der Arbeitsvertrag kommt direkt zwischen Ihnen und dem 
                 Bewerber zustande - wir sind der Vermittler, nicht der Arbeitgeber.
               </p>
               <p className="text-gray-600 text-lg leading-relaxed mb-8">

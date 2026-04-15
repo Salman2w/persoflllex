@@ -85,9 +85,9 @@ export const Footer: React.FC = () => {
               </h3>
               <ul className="space-y-3">
                 {[
-                  { to: '/jobs', label: 'Jobborse' },
-                  { to: '/unternehmen', label: 'Fur Unternehmen' },
-                  { to: '/fuer-bewerber', label: 'Fur Bewerber' },
+                  { to: '/jobs', label: 'Jobbörse' },
+                  { to: '/unternehmen', label: 'Für Unternehmen' },
+                  { to: '/fuer-bewerber', label: 'Für Bewerber' },
                   { to: '/downloads', label: 'Downloads' },
                   { to: '/blog', label: 'Blog' },
                   { to: '/kontakt', label: 'Kontakt' },
