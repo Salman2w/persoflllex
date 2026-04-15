@@ -140,9 +140,10 @@ export const PersonalAnfrage: React.FC = () => {
   return (
     <div className="min-h-screen bg-white pt-[80px]">
       <SEO
-        title="Personal anfragen | PersoFlex GmbH Pforzheim"
-        description="Finden Sie qualifiziertes Personal in Pforzheim & Enzkreis. Arbeitnehmerüberlassung & Personalvermittlung. Schnell, flexibel & zuverlässig."
-        keywords="Personal anfragen, Zeitarbeit Pforzheim, Personalvermittlung Enzkreis, Arbeitnehmerüberlassung"
+        title="Personal anfragen - PersoFlex GmbH"
+        description="Qualifiziertes Personal in Pforzheim finden. Zeitarbeit und Personalvermittlung."
+        keywords="Personal anfragen, Zeitarbeit, Personalvermittlung"
+        canonicalUrl="https://www.persoflex-gmbh.de/personalanfrage"
       />
 
       {/* Hero Section */}
