@@ -67,14 +67,7 @@ const structuredData = {
   ]
 };
 
-export const Home: React.FC = () => {
-  const stats = [
-    { value: '500+', label: 'Vermittelte Fachkräfte', icon: Users },
-    { value: '150+', label: 'Partnerunternehmen', icon: Building2 },
-    { value: '24h', label: 'Schnelle Vermittlung', icon: Clock },
-    { value: '98%', label: 'Zufriedenheitsrate', icon: Star },
-  ];
-
+  export const Home: React.FC = () => {
   const services = [
     {
       icon: Briefcase,
@@ -214,25 +207,6 @@ export const Home: React.FC = () => {
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
           <div className="w-6 h-10 border-2 border-orange-300 rounded-full flex items-start justify-center p-2">
             <div className="w-1.5 h-3 bg-orange-500 rounded-full animate-bounce" />
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-20 bg-orange-500 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:32px_32px]" />
-        
-        <div className="max-w-7xl mx-auto px-6 relative">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-white/20 text-white mb-4">
-                  <stat.icon size={28} />
-                </div>
-                <div className="text-3xl md:text-4xl font-black text-white mb-2">{stat.value}</div>
-                <div className="text-sm font-medium text-white/90">{stat.label}</div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
