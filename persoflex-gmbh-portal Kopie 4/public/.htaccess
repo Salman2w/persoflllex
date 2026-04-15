@@ -19,6 +19,11 @@ RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
 # SINGLE PAGE APPLICATION (SPA) ROUTING
 # Alle Anfragen an index.html weiterleiten (ausser existierende Dateien)
 # ----------------------------------------------------------------------
+# PDF-Dateien direkt ausliefern
+RewriteCond %{REQUEST_URI} \.(pdf)$ [NC]
+RewriteRule ^ - [L]
+
+# Alle anderen Anfragen an index.html weiterleiten
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^ index.html [L]
@@ -154,6 +159,19 @@ ErrorDocument 500 /index.html
 # VERZEICHNISAUFLISTUNG DEAKTIVIEREN
 # ----------------------------------------------------------------------
 Options -Indexes
+
+# ----------------------------------------------------------------------
+# DOWNLOADS ORDNER ZUGRIFF ERLAUBEN
+# ----------------------------------------------------------------------
+<Directory "downloads">
+    Options -Indexes
+    AllowOverride None
+    Require all granted
+</Directory>
+
+<FilesMatch "\.(pdf)$">
+    Require all granted
+</FilesMatch>
 
 # ----------------------------------------------------------------------
 # SENSIBLE DATEIEN SCHUETZEN

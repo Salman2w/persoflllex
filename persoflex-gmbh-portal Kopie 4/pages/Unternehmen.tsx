@@ -105,7 +105,7 @@ export const Unternehmen: React.FC = () => {
               
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <Link 
-                  to="/unternehmen/anfrage" 
+                  to="/personalanfrage" 
                   className="group bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:shadow-lg inline-flex items-center justify-center gap-2"
                 >
                   <span>Personal anfragen</span>
@@ -434,7 +434,7 @@ export const Unternehmen: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
-              to="/unternehmen/anfrage" 
+              to="/personalanfrage" 
               className="group bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:shadow-lg inline-flex items-center justify-center gap-2"
             >
               <span>Jetzt Personal anfragen</span>
