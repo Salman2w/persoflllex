@@ -289,24 +289,60 @@ const structuredData = {
             </div>
 
             <div className="relative">
-              <div className="aspect-square rounded-2xl bg-orange-500 p-8 flex items-center justify-center relative overflow-hidden">
-                {/* Pattern overlay */}
-                <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:24px_24px]" />
-                
-                <div className="text-center relative z-10">
-                  <Star className="w-20 h-20 text-white/80 mx-auto mb-6" />
-                  <p className="text-5xl font-black text-white mb-2">365+</p>
-                  <p className="text-xl font-semibold text-white/90">offene Stellen</p>
-                  <p className="text-sm text-white/70 mt-2">in der Region Pforzheim</p>
+              <div className="rounded-2xl bg-gradient-to-br from-orange-50 to-gray-50 border-2 border-orange-200 p-8 flex flex-col justify-between h-full">
+                {/* Header */}
+                <div className="mb-8">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Unsere Fachbereiche</h3>
+                  <div className="h-1 w-12 bg-orange-500 rounded"></div>
                 </div>
-              </div>
-              
-              {/* Floating badges */}
-              <div className="absolute -top-4 -right-4 px-5 py-2.5 bg-white rounded-full shadow-lg border border-gray-200">
-                <span className="text-sm font-semibold text-gray-700">Produktion</span>
-              </div>
-              <div className="absolute -bottom-4 -left-4 px-5 py-2.5 bg-white rounded-full shadow-lg border border-gray-200">
-                <span className="text-sm font-semibold text-gray-700">Logistik</span>
+                
+                {/* Service areas content */}
+                <div className="space-y-4 flex-grow">
+                  <div className="flex items-start gap-3">
+                    <div className="w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center flex-shrink-0 mt-1">
+                      <span className="text-white text-xs font-bold">✓</span>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-gray-900">Produktion & Fertigung</p>
+                      <p className="text-sm text-gray-600">Fachkräfte für Fertigungsprozesse und Montage</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-3">
+                    <div className="w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center flex-shrink-0 mt-1">
+                      <span className="text-white text-xs font-bold">✓</span>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-gray-900">Logistik & Lagerbetreuung</p>
+                      <p className="text-sm text-gray-600">Personal für Lagerverwaltung und Versand</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-3">
+                    <div className="w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center flex-shrink-0 mt-1">
+                      <span className="text-white text-xs font-bold">✓</span>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-gray-900">Handwerk & Technik</p>
+                      <p className="text-sm text-gray-600">Spezialisierte Handwerker und Techniker</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-3">
+                    <div className="w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center flex-shrink-0 mt-1">
+                      <span className="text-white text-xs font-bold">✓</span>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-gray-900">Industrie & Metallbearbeitung</p>
+                      <p className="text-sm text-gray-600">Fachpersonal für Industriebetriebe</p>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Bottom accent line */}
+                <div className="mt-8 pt-6 border-t border-orange-200">
+                  <p className="text-xs text-gray-500 font-medium">Alle Bereiche bundesweit verfügbar</p>
+                </div>
               </div>
             </div>
           </div>
