@@ -19,14 +19,13 @@ RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
 # SINGLE PAGE APPLICATION (SPA) ROUTING
 # Alle Anfragen an index.html weiterleiten (ausser existierende Dateien)
 # ----------------------------------------------------------------------
-# PDF-Dateien direkt ausliefern
-RewriteCond %{REQUEST_URI} \.(pdf)$ [NC]
+# Statische Dateien direkt ausliefern (Bilder, PDFs, Fonts, etc.)
+RewriteCond %{REQUEST_URI} \.(pdf|jpg|jpeg|png|gif|webp|svg|ico|woff|woff2|ttf|otf|eot|css|js|map)$ [NC]
 RewriteRule ^ - [L]
 
-# Alle anderen Anfragen an index.html weiterleiten
+# Alle anderen Anfragen an index.html weiterleiten (SPA-Routing)
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^ index.html [L]
+RewriteRule ^.*$ index.html [L]
 
 # ----------------------------------------------------------------------
 # SICHERHEITSHEADER
@@ -161,11 +160,10 @@ ErrorDocument 500 /index.html
 Options -Indexes
 
 # ----------------------------------------------------------------------
-# PDF DATEIEN ZUGRIFF ERLAUBEN
+# PDF DATEIEN ZUGRIFF ERLAUBEN (Apache 2.4+ kompatibel)
 # ----------------------------------------------------------------------
 <FilesMatch "\.(pdf)$">
-    Order allow,deny
-    Allow from all
+    Require all granted
 </FilesMatch>
 
 # ----------------------------------------------------------------------
