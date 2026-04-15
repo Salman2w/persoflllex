@@ -65,9 +65,10 @@ export const Kontakt: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       <SEO
-        title="Kontakt & Anfahrt | PersoFlex GmbH Pforzheim"
-        description="Ihr Weg zu uns! Kontaktieren Sie PersoFlex in Pforzheim. Telefon, E-Mail & Anfahrt. Wir sind für Bewerber und Unternehmen da."
-        keywords="Kontakt PersoFlex, Pforzheim Adresse, Zeitarbeit Anfahrt, Personaldienstleister Kontakt"
+        title="Kontakt - PersoFlex GmbH Pforzheim"
+        description="Kontaktieren Sie PersoFlex in Pforzheim. Telefon, E-Mail und Anfahrt."
+        keywords="Kontakt PersoFlex, Pforzheim"
+        canonicalUrl="https://www.persoflex-gmbh.de/kontakt"
       />
 
       {/* Hero Section */}

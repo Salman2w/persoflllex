@@ -72,9 +72,10 @@ export const Unternehmen: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       <SEO 
-        title="Personaldienstleister Pforzheim | Zeitarbeit & Vermittlung | PersoFlex"
-        description="Ihr zuverlässiger Partner für Personal in Pforzheim & Enzkreis. Zeitarbeit, Personalvermittlung und On-Site Management für Industrie, Logistik & Verwaltung. Jetzt anfragen!"
-        keywords="Personaldienstleister Pforzheim, Zeitarbeit Enzkreis, Personalvermittlung Baden-Württemberg, Arbeitnehmerüberlassung, On-Site Management"
+        title="Personaldienstleister Pforzheim - PersoFlex"
+        description="Zeitarbeit und Personalvermittlung in Pforzheim. On-Site Management fuer Industrie und Logistik."
+        keywords="Personaldienstleister Pforzheim, Zeitarbeit Enzkreis"
+        canonicalUrl="https://www.persoflex-gmbh.de/unternehmen"
       />
       
       {/* Hero Section */}

@@ -111,8 +111,9 @@ export const UeberUns: React.FC = () => {
   return (
     <div className="min-h-screen bg-white pt-[80px]">
       <SEO 
-        title="Über PersoFlex GmbH | Ihr Personaldienstleister in Pforzheim"
-        description="Lernen Sie das Team hinter PersoFlex kennen. Wir stehen für faire Zeitarbeit, Menschlichkeit und Präzision in der Personalvermittlung im Enzkreis."
+        title="Ueber uns - PersoFlex GmbH Pforzheim"
+        description="Das Team hinter PersoFlex. Faire Zeitarbeit und Personalvermittlung."
+        canonicalUrl="https://www.persoflex-gmbh.de/ueber-uns"
       />
       
       {/* Hero Section */}

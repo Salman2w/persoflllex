@@ -114,9 +114,10 @@ export const Jobs: React.FC = () => {
   return (
     <div className="flex flex-col min-h-screen bg-white">
       <SEO 
-        title="Jobs in Pforzheim & Enzkreis | Aktuelle Stellenangebote | PersoFlex"
-        description="Finde deinen neuen Job in Pforzheim, Enzkreis und Baden-Württemberg. Aktuelle Stellenangebote in Produktion, Logistik, Handwerk und mehr. Jetzt bewerben!"
-        keywords="Jobs Pforzheim, Stellenangebote Enzkreis, Arbeit Pforzheim, Zeitarbeit Jobs, Produktion Jobs, Logistik Jobs"
+        title="Jobs Pforzheim - Stellenangebote PersoFlex"
+        description="Aktuelle Jobs in Pforzheim und Enzkreis. Stellenangebote in Produktion und Logistik."
+        keywords="Jobs Pforzheim, Stellenangebote, Zeitarbeit"
+        canonicalUrl="https://www.persoflex-gmbh.de/jobs"
       />
       
       {/* Hero Section */}
