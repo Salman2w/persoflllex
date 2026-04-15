@@ -211,39 +211,118 @@ const structuredData = {
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Services Section - Enhanced Information Page */}
       <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
+          {/* Header */}
+          <div className="text-center mb-20">
             <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-orange-100 text-orange-600 text-sm font-semibold uppercase tracking-wider mb-4">
               Unsere Leistungen
             </span>
-            <h2 className="text-3xl md:text-4xl font-black text-gray-900 mt-4 mb-6">
+            <h2 className="text-3xl md:text-5xl font-black text-gray-900 mt-4 mb-8">
               Personaldienstleistungen für Ihren <span className="text-orange-500">Erfolg</span>
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-              Von der Arbeitnehmerüberlassung bis zur direkten Personalvermittlung - 
-              wir bieten maßgeschneiderte Lösungen für Unternehmen in Pforzheim und Umgebung.
+            <p className="text-gray-600 max-w-3xl mx-auto text-lg leading-relaxed">
+              PersoFlex bietet drei spezialisierte Lösungen für Ihren Personalbedarf. Unabhängig davon, ob Sie kurzfristige Flexibilität, gezielt qualifizierte Fachkräfte oder strategische HR-Beratung benötigen - wir haben die richtige Lösung für Sie.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          {/* Service Cards Grid */}
+          <div className="grid md:grid-cols-3 gap-8 mb-20">
             {services.map((service, index) => (
               <div 
                 key={index} 
-                className="group bg-white border border-gray-200 rounded-xl p-8 transition-all duration-300 hover:border-orange-300 hover:shadow-lg h-full flex flex-col"
+                className="group bg-white border border-gray-200 rounded-xl overflow-hidden transition-all duration-300 hover:border-orange-300 hover:shadow-2xl h-full flex flex-col"
               >
-                <div className="w-14 h-14 rounded-xl bg-orange-500 text-white flex items-center justify-center mb-6 flex-shrink-0">
-                  <service.icon size={28} />
+                {/* Icon Section */}
+                <div className="bg-gradient-to-br from-orange-50 to-orange-100 p-8 flex items-center justify-center">
+                  <div className="w-20 h-20 rounded-xl bg-orange-500 text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                    <service.icon size={40} />
+                  </div>
                 </div>
-                <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-4 line-clamp-3 break-words">{service.title}</h3>
-                <p className="text-gray-600 leading-relaxed mb-6 flex-grow text-sm">{service.description}</p>
-                <div className="flex items-center text-orange-500 font-semibold group-hover:gap-3 transition-all mt-auto">
-                  <span>Mehr erfahren</span>
-                  <ArrowRight size={18} className="ml-2 transition-transform group-hover:translate-x-1" />
+
+                {/* Content Section */}
+                <div className="p-8 flex flex-col flex-grow">
+                  <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
+                  <p className="text-gray-600 leading-relaxed mb-8 flex-grow">{service.description}</p>
+                  
+                  {/* CTA Link */}
+                  <Link 
+                    to={index === 0 ? '/unternehmen' : index === 1 ? '/fuer-bewerber' : '/kontakt'}
+                    className="inline-flex items-center text-orange-500 font-semibold hover:text-orange-600 group/link transition-all"
+                  >
+                    <span>Mehr erfahren</span>
+                    <ArrowRight size={18} className="ml-2 group-hover/link:translate-x-1 transition-transform" />
+                  </Link>
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Benefits Section */}
+          <div className="bg-white border border-gray-200 rounded-2xl p-12 md:p-16">
+            <div className="grid md:grid-cols-2 gap-12">
+              <div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-8">
+                  Warum PersoFlex wählen?
+                </h3>
+                <div className="space-y-6">
+                  {[
+                    { icon: CheckCircle2, title: 'GVP Mitglied', desc: 'Tarifgebundene Dienstleistungen nach Branchenstandards' },
+                    { icon: CheckCircle2, title: 'AÜG Erlaubnis', desc: 'Vollständig lizenziert und von der Bundesagentur für Arbeit genehmigt' },
+                    { icon: CheckCircle2, title: 'Regionale Expertise', desc: 'Tiefes Verständnis des Pforzheimer und Enzkreis Arbeitsmarkts' },
+                    { icon: CheckCircle2, title: 'Persönliche Betreuung', desc: 'Direkter Kontakt zu Ihrem Ansprechpartner vor Ort' }
+                  ].map((benefit, idx) => (
+                    <div key={idx} className="flex gap-4">
+                      <benefit.icon className="w-6 h-6 text-orange-500 flex-shrink-0 mt-1" />
+                      <div>
+                        <h4 className="font-semibold text-gray-900 mb-1">{benefit.title}</h4>
+                        <p className="text-gray-600 text-sm">{benefit.desc}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-8">
+                  Für jeden Bedarf die richtige Lösung
+                </h3>
+                <div className="space-y-6">
+                  {[
+                    { title: 'Für Unternehmen', desc: 'Sie suchen flexible Personalressourcen, um Kapazitätsspitzen zu bewältigen oder kurzfristige Ausfälle zu überbrücken.' },
+                    { title: 'Für Bewerber', desc: 'Sie möchten schnell in die Arbeitswelt einsteigen, verschiedene Unternehmen kennenlernen oder Ihre Karriere entwickeln.' },
+                    { title: 'Für Berater', desc: 'Sie benötigen strategische Unterstützung bei Personalplanung, Recruiting-Prozessen oder HR-Herausforderungen.' }
+                  ].map((item, idx) => (
+                    <div key={idx} className="p-4 bg-gray-50 rounded-lg border border-gray-200 hover:border-orange-300 transition-colors">
+                      <h4 className="font-semibold text-gray-900 mb-2">{item.title}</h4>
+                      <p className="text-gray-600 text-sm">{item.desc}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* CTA Section */}
+          <div className="mt-16 text-center">
+            <p className="text-gray-600 mb-8 text-lg">
+              Bereit, mit PersoFlex zusammenzuarbeiten?
+            </p>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Link 
+                to="/kontakt"
+                className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold transition-all"
+              >
+                Jetzt Kontakt aufnehmen <ArrowRight size={18} />
+              </Link>
+              <Link 
+                to="/jobs"
+                className="inline-flex items-center gap-2 border-2 border-orange-500 text-orange-500 hover:bg-orange-50 px-8 py-4 rounded-lg font-semibold transition-all"
+              >
+                Jobs durchsuchen <ArrowRight size={18} />
+              </Link>
+            </div>
           </div>
         </div>
       </section>
