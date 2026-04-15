@@ -248,7 +248,7 @@ const structuredData = {
                   
                   {/* CTA Link */}
                   <Link 
-                    to={index === 0 ? '/unternehmen' : index === 1 ? '/fuer-bewerber' : '/kontakt'}
+                    to={index === 0 ? '/arbeitnehmerueberlassung' : index === 1 ? '/personalvermittlung' : '/personalberatung'}
                     className="inline-flex items-center text-orange-500 font-semibold hover:text-orange-600 group/link transition-all"
                   >
                     <span>Mehr erfahren</span>

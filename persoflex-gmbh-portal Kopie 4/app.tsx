@@ -16,6 +16,9 @@ import { AGB } from './pages/AGB';
 import { Blog } from './pages/Blog';
 import BlogDetail from './pages/BlogDetail';
 import { Downloads } from './pages/Downloads';
+import { Arbeitnehmerueberlassung } from './pages/Arbeitnehmerueberlassung';
+import { Personalvermittlung } from './pages/Personalvermittlung';
+import { Personalberatung } from './pages/Personalberatung';
 
 // --- KOMPONENTEN IMPORTIEREN ---
 import { Footer } from './components/Footer'; 
@@ -47,6 +50,9 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:id" element={<BlogDetail />} />
         <Route path="/downloads" element={<Downloads />} />
+        <Route path="/arbeitnehmerueberlassung" element={<Arbeitnehmerueberlassung />} />
+        <Route path="/personalvermittlung" element={<Personalvermittlung />} />
+        <Route path="/personalberatung" element={<Personalberatung />} />
       </Routes>
 
       <Footer />
