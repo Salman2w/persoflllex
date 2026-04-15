@@ -118,7 +118,7 @@ export function Arbeitnehmerueberlassung() {
                   { step: '1', title: 'Anfrage', desc: 'Sie teilen uns Ihren Personalbedarf mit' },
                   { step: '2', title: 'Auswahl', desc: 'Wir finden passende Kandidaten aus unserem Pool' },
                   { step: '3', title: 'Einsatz', desc: 'Der Mitarbeiter arbeitet in Ihrem Unternehmen' },
-                  { step: '4', title: 'Betreuung', desc: 'Wir kuemmern uns um Administration und Abrechnung' },
+                  { step: '4', title: 'Betreuung', desc: 'Wir kümmern uns um Administration und Abrechnung' },
                 ].map((item, idx) => (
                   <div key={idx} className="flex gap-4">
                     <div className="w-10 h-10 rounded-full bg-orange-500 text-white flex items-center justify-center font-bold flex-shrink-0">
@@ -141,10 +141,10 @@ export function Arbeitnehmerueberlassung() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-4">
-              Vorteile fuer <span className="text-orange-500">Unternehmen</span>
+              Vorteile für <span className="text-orange-500">Unternehmen</span>
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Arbeitnehmerueberlassung bietet Ihnen maximale Flexibilitaet bei minimalem Risiko
+              Arbeitnehmerüberlassung bietet Ihnen maximale Flexibilität bei minimalem Risiko
             </p>
           </div>
           
@@ -152,33 +152,33 @@ export function Arbeitnehmerueberlassung() {
             {[
               { 
                 icon: Clock, 
-                title: 'Schnelle Verfuegbarkeit', 
+                title: 'Schnelle Verfügbarkeit', 
                 desc: 'Kurzfristig qualifiziertes Personal, wenn Sie es brauchen - oft innerhalb weniger Tage' 
               },
               { 
                 icon: TrendingUp, 
                 title: 'Kosteneffizienz', 
-                desc: 'Keine Recruiting-Kosten, keine Lohnnebenkosten - Sie zahlen nur fuer die geleistete Arbeit' 
+                desc: 'Keine Recruiting-Kosten, keine Lohnnebenkosten - Sie zahlen nur für die geleistete Arbeit' 
               },
               { 
                 icon: Shield, 
                 title: 'Rechtssicherheit', 
-                desc: 'Wir tragen das Arbeitgeberrisiko und kuemmern uns um alle rechtlichen Anforderungen' 
+                desc: 'Wir tragen das Arbeitgeberrisiko und kümmern uns um alle rechtlichen Anforderungen' 
               },
               { 
                 icon: Users, 
-                title: 'Flexibilitaet', 
-                desc: 'Personal bei Auftragsspitzen aufstocken oder bei Rueckgang reduzieren' 
+                title: 'Flexibilität', 
+                desc: 'Personal bei Auftragsspitzen aufstocken oder bei Rückgang reduzieren' 
               },
               { 
                 icon: Award, 
-                title: 'Qualitaet', 
-                desc: 'Vorausgewaehlte, qualifizierte Mitarbeiter mit geprueften Referenzen' 
+                title: 'Qualität', 
+                desc: 'Vorausgewählte, qualifizierte Mitarbeiter mit geprüften Referenzen' 
               },
               { 
                 icon: Handshake, 
-                title: 'Uebernahmeoption', 
-                desc: 'Bewaehrte Mitarbeiter koennen Sie in Festanstellung uebernehmen' 
+                title: 'Übernahmeoption', 
+                desc: 'Bewährte Mitarbeiter können Sie in Festanstellung übernehmen' 
               },
             ].map((benefit, idx) => (
               <div key={idx} className="bg-white border border-gray-200 rounded-xl p-8 hover:border-orange-300 hover:shadow-lg transition-all">
@@ -199,7 +199,7 @@ export function Arbeitnehmerueberlassung() {
               Unsere <span className="text-orange-500">Einsatzbereiche</span>
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Wir vermitteln Fachkraefte in verschiedenen Branchen der Region Pforzheim und Enzkreis
+              Wir vermitteln Fachkräfte in verschiedenen Branchen der Region Pforzheim und Enzkreis
             </p>
           </div>
           
@@ -211,7 +211,7 @@ export function Arbeitnehmerueberlassung() {
               'Maschinenbau',
               'Elektrotechnik',
               'Montage',
-              'Qualitaetskontrolle',
+              'Qualitätskontrolle',
               'Verpackung'
             ].map((branch, idx) => (
               <div key={idx} className="bg-gray-50 border border-gray-200 rounded-lg p-6 text-center hover:border-orange-300 hover:bg-orange-50 transition-all">
@@ -226,11 +226,11 @@ export function Arbeitnehmerueberlassung() {
       <section className="py-20 bg-gradient-to-br from-orange-500 to-orange-600">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-black text-white mb-6">
-            Bereit fuer flexible Personalloesungen?
+            Bereit für flexible Personallösungen?
           </h2>
           <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
-            Kontaktieren Sie uns fuer ein unverbindliches Beratungsgespraech. 
-            Wir finden die passende Loesung fuer Ihren Personalbedarf.
+            Kontaktieren Sie uns für ein unverbindliches Beratungsgespräch. 
+            Wir finden die passende Lösung für Ihren Personalbedarf.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link 

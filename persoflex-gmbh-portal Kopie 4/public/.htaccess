@@ -161,16 +161,11 @@ ErrorDocument 500 /index.html
 Options -Indexes
 
 # ----------------------------------------------------------------------
-# DOWNLOADS ORDNER ZUGRIFF ERLAUBEN
+# PDF DATEIEN ZUGRIFF ERLAUBEN
 # ----------------------------------------------------------------------
-<Directory "downloads">
-    Options -Indexes
-    AllowOverride None
-    Require all granted
-</Directory>
-
 <FilesMatch "\.(pdf)$">
-    Require all granted
+    Order allow,deny
+    Allow from all
 </FilesMatch>
 
 # ----------------------------------------------------------------------
