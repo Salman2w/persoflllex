@@ -1,8 +1,15 @@
 import React from 'react';
+import { SEO } from '../components/SEO';
 
 export const Impressum: React.FC = () => {
   return (
     <div className="min-h-screen bg-white pt-[100px] pb-20 text-gray-800">
+      <SEO 
+        title="Impressum | PersoFlex GmbH Pforzheim"
+        description="Impressum der PersoFlex GmbH – rechtliche Informationen, Anschrift, Geschäftsführung und Kontaktdaten Ihres Personaldienstleisters in Pforzheim."
+        canonicalUrl="https://www.persoflex-gmbh.de/impressum"
+        noIndex={false}
+      />
       <div className="max-w-3xl mx-auto px-6">
         <h1 className="text-3xl font-black mb-8 pb-4 border-b border-gray-200">Impressum</h1>
         

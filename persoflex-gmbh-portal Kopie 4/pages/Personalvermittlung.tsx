@@ -15,10 +15,17 @@ import {
   Handshake,
   BadgeCheck
 } from 'lucide-react';
+import { SEO } from '../components/SEO';
 
 export function Personalvermittlung() {
   return (
     <main className="min-h-screen bg-white">
+      <SEO 
+        title="Personalvermittlung Pforzheim | Direktvermittlung | PersoFlex GmbH"
+        description="Personalvermittlung in Pforzheim & Enzkreis: Wir finden die passenden Fachkräfte für Ihre Festanstellung – schnell, diskret und erfolgsorientiert."
+        keywords="Personalvermittlung Pforzheim, Direktvermittlung Enzkreis, Fachkräftevermittlung, Festanstellung, Recruiting"
+        canonicalUrl="https://www.persoflex-gmbh.de/personalvermittlung"
+      />
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         {/* Background Image */}

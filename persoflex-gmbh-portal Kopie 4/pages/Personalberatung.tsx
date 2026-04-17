@@ -15,10 +15,17 @@ import {
   BookOpen,
   Compass
 } from 'lucide-react';
+import { SEO } from '../components/SEO';
 
 export function Personalberatung() {
   return (
     <main className="min-h-screen bg-white">
+      <SEO 
+        title="Personalberatung Pforzheim | Strategische HR-Lösungen | PersoFlex GmbH"
+        description="Personalberatung in Pforzheim & Enzkreis: Strategische HR-Beratung, Recruiting-Konzepte und individuelle Lösungen für Ihren nachhaltigen Unternehmenserfolg."
+        keywords="Personalberatung Pforzheim, HR-Beratung Enzkreis, Recruiting Beratung, Personalstrategie, HR Consulting"
+        canonicalUrl="https://www.persoflex-gmbh.de/personalberatung"
+      />
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         {/* Background Image */}

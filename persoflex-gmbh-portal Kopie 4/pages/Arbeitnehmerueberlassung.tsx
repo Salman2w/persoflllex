@@ -13,10 +13,17 @@ import {
   Award,
   Handshake
 } from 'lucide-react';
+import { SEO } from '../components/SEO';
 
 export function Arbeitnehmerueberlassung() {
   return (
     <main className="min-h-screen bg-white">
+      <SEO 
+        title="Arbeitnehmerüberlassung Pforzheim & Enzkreis | PersoFlex GmbH"
+        description="Professionelle Arbeitnehmerüberlassung in Pforzheim und Enzkreis. Flexible Personallösungen nach AÜG – faire Konditionen, schnelle Vermittlung, hohe Qualität."
+        keywords="Arbeitnehmerüberlassung Pforzheim, AÜG, Zeitarbeit, Leiharbeit, Personalüberlassung Enzkreis"
+        canonicalUrl="https://www.persoflex-gmbh.de/arbeitnehmerueberlassung"
+      />
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         {/* Background Image */}
