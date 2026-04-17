@@ -350,18 +350,18 @@ export const Kontakt: React.FC = () => {
               </div>
 
               {/* Alternative Contact */}
-              <div className="bg-orange-50 border border-orange-200 rounded-2xl p-6">
-                <h3 className="text-lg font-bold text-gray-900 mb-3">Lieber persönlich?</h3>
-                <p className="text-gray-600 mb-4">
+              <div className="bg-orange-500 rounded-2xl p-8 shadow-lg">
+                <h3 className="text-2xl font-black text-white mb-3">Lieber persönlich?</h3>
+                <p className="text-white/90 mb-6 font-medium">
                   Besuchen Sie uns in unserem Büro in der Pforzheimer Innenstadt. 
                   Wir nehmen uns gerne Zeit für ein persönliches Gespräch.
                 </p>
                 <a 
                   href="tel:+4972316039493" 
-                  className="inline-flex items-center gap-2 text-orange-500 font-semibold hover:text-orange-600"
+                  className="inline-flex items-center gap-3 bg-white text-orange-600 font-bold py-3 px-6 rounded-xl hover:bg-orange-50 hover:shadow-lg transition-all text-lg"
                 >
-                  <Phone size={18} />
-                  Termin vereinbaren: 07231 / 60 39 493
+                  <Phone size={20} />
+                  Termin vereinbaren
                 </a>
               </div>
             </div>
