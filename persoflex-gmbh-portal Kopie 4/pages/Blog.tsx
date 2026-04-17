@@ -83,60 +83,60 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 'produktionshelfer-pforzheim-einstieg-karriere',
     title: 'Produktionshelfer in Pforzheim: Ihr Einstieg in eine erfolgreiche Karriere',
-    excerpt: 'Erfahren Sie alles uber den Beruf Produktionshelfer in Pforzheim. Gehalt, Anforderungen, Aufstiegschancen und wie Sie schnell einen Job finden.',
+    excerpt: 'Erfahren Sie alles über den Beruf Produktionshelfer in Pforzheim: Gehalt, Anforderungen, Aufstiegschancen und der schnellste Weg zu Ihrem neuen Job.',
     content: `
-      <h2>Produktionshelfer in Pforzheim: Ein Beruf mit Zukunft</h2>
-      <p>Die produzierende Industrie in Pforzheim und dem Enzkreis sucht standig nach zuverlassigen Produktionshelfern. Als traditionsreicher Industriestandort bietet die Region hervorragende Einstiegsmoglichkeiten fur Menschen, die in der Fertigung arbeiten mochten. Ob Quereinsteiger, Berufsanfanger oder erfahrene Fachkrafte - der Beruf des Produktionshelfers offnet Turen zu einer stabilen Karriere.</p>
-      <p>In Pforzheim sind besonders die Branchen Metallverarbeitung, Schmuckherstellung, Elektronik und Maschinenbau stark vertreten. Diese Vielfalt bedeutet fur Sie als Bewerber: Sie haben die Wahl zwischen unterschiedlichen Einsatzbereichen und konnen Ihre Starken optimal einbringen.</p>
+      <h2>Ein Beruf mit Zukunft: Produktionshelfer in Pforzheim</h2>
+      <p>Die produzierende Industrie in Pforzheim und dem Enzkreis sucht kontinuierlich nach zuverlässigen Produktionshelfern. Als traditionsreicher Industriestandort bietet die Region hervorragende Einstiegsmöglichkeiten für alle, die eine stabile und abwechslungsreiche Tätigkeit in der Fertigung suchen. Ob Quereinsteiger, Berufsanfänger oder erfahrene Fachkraft – dieser Beruf öffnet die Türen zu einer langfristigen Karriere.</p>
+      <p>Besonders stark vertreten sind in Pforzheim die Branchen Metallverarbeitung, Schmuckherstellung, Elektronik und Maschinenbau. Diese Vielfalt ist Ihr Vorteil: Sie können zwischen unterschiedlichen Einsatzbereichen wählen und Ihre individuellen Stärken optimal einsetzen.</p>
 
       <h2>Was macht ein Produktionshelfer?</h2>
-      <p>Als Produktionshelfer unterstutzen Sie die Fertigungsprozesse in Industrieunternehmen. Ihre Aufgaben sind vielfaltig und konnen je nach Einsatzbereich variieren:</p>
+      <p>Als Produktionshelfer übernehmen Sie eine Schlüsselrolle in den Fertigungsprozessen von Industrieunternehmen. Ihre Aufgaben sind abwechslungsreich und variieren je nach Einsatzbereich:</p>
       <ul>
-        <li><strong>Maschinenbedienung:</strong> Einfache Bedienung und Uberwachung von Produktionsanlagen</li>
-        <li><strong>Montagetarigkeiten:</strong> Zusammenbau von Bauteilen nach Anleitung</li>
-        <li><strong>Qualitatskontrolle:</strong> Sichtprufung und einfache Messungen</li>
-        <li><strong>Verpackung:</strong> Verpacken und Etikettieren von Fertigprodukten</li>
-        <li><strong>Materialbereitstellung:</strong> Transport von Rohstoffen und Bauteilen</li>
+        <li><strong>Maschinenbedienung:</strong> Einfache Bedienung und Überwachung moderner Produktionsanlagen</li>
+        <li><strong>Montagetätigkeiten:</strong> Präziser Zusammenbau von Bauteilen nach technischer Anleitung</li>
+        <li><strong>Qualitätskontrolle:</strong> Sichtprüfung und einfache Messungen zur Sicherung der Produktqualität</li>
+        <li><strong>Verpackung:</strong> Fachgerechtes Verpacken und Etikettieren von Fertigprodukten</li>
+        <li><strong>Materialbereitstellung:</strong> Transport von Rohstoffen und Bauteilen an die Produktionslinien</li>
       </ul>
 
-      <h2>Gehalt als Produktionshelfer in Pforzheim</h2>
-      <p>Die Vergutung fur Produktionshelfer in der Region Pforzheim ist attraktiv und wird durch tarifvertragliche Regelungen abgesichert. Als Mitglied im GVP (Gesamtverband der Personaldienstleister) zahlen wir nach Tarifvertrag:</p>
+      <h2>Ihr Gehalt als Produktionshelfer in Pforzheim</h2>
+      <p>Die Vergütung für Produktionshelfer in der Region Pforzheim ist attraktiv und durch tarifvertragliche Regelungen abgesichert. Als Mitglied im GVP (Gesamtverband der Personaldienstleister) zahlen wir ausschließlich nach Tarifvertrag:</p>
       <ul>
-        <li><strong>Einstiegsgehalt:</strong> 13,50 EUR bis 15,00 EUR pro Stunde</li>
-        <li><strong>Mit Erfahrung:</strong> 15,00 EUR bis 17,00 EUR pro Stunde</li>
-        <li><strong>Schichtzulagen:</strong> Zusatzliche Vergutung fur Spat- und Nachtschichten</li>
-        <li><strong>Branchenzuschlage:</strong> Steigende Zulagen bei langeren Einsatzen</li>
+        <li><strong>Einstiegsgehalt:</strong> 13,50 € bis 15,00 € pro Stunde</li>
+        <li><strong>Mit Berufserfahrung:</strong> 15,00 € bis 17,00 € pro Stunde</li>
+        <li><strong>Schichtzulagen:</strong> Zusätzliche Vergütung für Spät- und Nachtschichten</li>
+        <li><strong>Branchenzuschläge:</strong> Automatisch steigende Zulagen bei längeren Einsätzen</li>
       </ul>
-      <p>Hinzu kommen Leistungen wie Urlaubs- und Weihnachtsgeld sowie ein transparentes Arbeitszeitkonto.</p>
+      <p>Zusätzlich profitieren Sie von Urlaubs- und Weihnachtsgeld sowie einem transparenten Arbeitszeitkonto.</p>
 
-      <h2>Welche Anforderungen muss ich erfullen?</h2>
-      <p>Der Beruf des Produktionshelfers ist ideal fur den Einstieg, da keine spezielle Ausbildung erforderlich ist. Folgende Eigenschaften sind jedoch wichtig:</p>
+      <h2>Welche Anforderungen werden an mich gestellt?</h2>
+      <p>Der Beruf des Produktionshelfers ist ideal für den Berufseinstieg, da keine spezielle Ausbildung erforderlich ist. Folgende persönliche Eigenschaften sind jedoch entscheidend für Ihren Erfolg:</p>
       <ul>
-        <li><strong>Zuverlassigkeit:</strong> Punktliches Erscheinen und gewissenhaftes Arbeiten</li>
-        <li><strong>Korperliche Belastbarkeit:</strong> Stehende Tatigkeiten und teilweise Heben von Lasten</li>
+        <li><strong>Zuverlässigkeit:</strong> Pünktliches Erscheinen und gewissenhaftes Arbeiten</li>
+        <li><strong>Körperliche Belastbarkeit:</strong> Stehende Tätigkeiten und gelegentliches Heben von Lasten</li>
         <li><strong>Schichtbereitschaft:</strong> Viele Betriebe arbeiten im 2- oder 3-Schicht-System</li>
-        <li><strong>Teamfahigkeit:</strong> Gute Zusammenarbeit mit Kollegen</li>
-        <li><strong>Grundkenntnisse Deutsch:</strong> Fur Arbeitsanweisungen und Sicherheitsunterweisungen</li>
+        <li><strong>Teamfähigkeit:</strong> Eine gute Zusammenarbeit mit Kollegen ist unverzichtbar</li>
+        <li><strong>Deutschkenntnisse:</strong> Grundlegendes Verständnis für Arbeitsanweisungen und Sicherheitsunterweisungen</li>
       </ul>
 
       <h2>Ihre Karrierechancen als Produktionshelfer</h2>
-      <p>Viele erfolgreiche Fachkrafte haben als Produktionshelfer begonnen. Mit Engagement und der richtigen Unterstutzung stehen Ihnen verschiedene Wege offen:</p>
+      <p>Viele heute erfolgreiche Fachkräfte haben ihre Karriere als Produktionshelfer begonnen. Mit Engagement und der richtigen Unterstützung stehen Ihnen zahlreiche Entwicklungswege offen:</p>
       <ul>
-        <li><strong>Spezialisierung:</strong> Weiterbildung zum Maschinen- oder Anlagenfuhrer</li>
-        <li><strong>Staplerschein:</strong> Eroffnet zusatzliche Einsatzmoglichkeiten und bessere Vergutung</li>
-        <li><strong>Schichtfuhrer:</strong> Mit Erfahrung Ubernahme von Verantwortung</li>
-        <li><strong>Festanstellung:</strong> Viele Kunden ubernehmen bewahrte Zeitarbeitnehmer</li>
+        <li><strong>Spezialisierung:</strong> Weiterbildung zum Maschinen- oder Anlagenführer</li>
+        <li><strong>Staplerschein:</strong> Eröffnet zusätzliche Einsatzmöglichkeiten und bessere Vergütung</li>
+        <li><strong>Schichtführer:</strong> Mit wachsender Erfahrung übernehmen Sie Verantwortung für ein ganzes Team</li>
+        <li><strong>Festanstellung:</strong> Viele Kundenunternehmen übernehmen bewährte Zeitarbeitnehmer direkt</li>
       </ul>
 
       <h2>So finden Sie Ihren Produktionshelfer-Job in Pforzheim</h2>
-      <p>Der schnellste Weg zu Ihrem neuen Job fuhrt uber einen regionalen Personaldienstleister. Bei PersoFlex GmbH profitieren Sie von:</p>
+      <p>Der schnellste Weg zu Ihrem neuen Job führt über einen erfahrenen regionalen Personaldienstleister. Bei der PersoFlex GmbH profitieren Sie von einer Vielzahl konkreter Vorteile:</p>
       <ul>
-        <li>Direkten Kontakten zu den fuhrenden Industrieunternehmen der Region</li>
-        <li>Personlicher Beratung und individueller Jobvermittlung</li>
-        <li>Fairer Bezahlung nach GVP-Tarifvertrag</li>
-        <li>Schnellem Bewerbungsprozess - oft innerhalb weniger Tage zum neuen Job</li>
+        <li>Direkte Kontakte zu den führenden Industrieunternehmen der Region</li>
+        <li>Persönliche Beratung und individuell abgestimmte Jobvermittlung</li>
+        <li>Faire Bezahlung strikt nach GVP-Tarifvertrag</li>
+        <li>Schneller Bewerbungsprozess – oft nur wenige Tage bis zum ersten Einsatz</li>
       </ul>
-      <p>Bewerben Sie sich noch heute bei uns und starten Sie Ihre Karriere als Produktionshelfer in Pforzheim!</p>
+      <p>Bewerben Sie sich noch heute bei uns und starten Sie Ihre Karriere als Produktionshelfer in Pforzheim – wir freuen uns auf Sie!</p>
     `,
     author: 'PersoFlex Team',
     date: '2025-04-14',
@@ -147,50 +147,50 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     id: 'fachkraefte-logistik-enzkreis-chancen-2025',
-    title: 'Fachkrafte Logistik im Enzkreis: Beste Chancen fur 2025',
-    excerpt: 'Der Logistiksektor im Enzkreis boomt. Erfahren Sie, welche Jobs gefragt sind und wie Sie Teil dieser wachsenden Branche werden.',
+    title: 'Fachkräfte Logistik im Enzkreis: Die besten Chancen für 2025',
+    excerpt: 'Der Logistiksektor im Enzkreis boomt. Erfahren Sie, welche Jobs besonders gefragt sind und wie Sie schnell Teil dieser wachsenden Branche werden.',
     content: `
       <h2>Logistik im Enzkreis: Eine Branche im Aufschwung</h2>
-      <p>Der Enzkreis hat sich in den letzten Jahren zu einem bedeutenden Logistikstandort in Baden-Wurttemberg entwickelt. Die zentrale Lage zwischen Stuttgart, Karlsruhe und dem Nordschwarzwald macht die Region zum idealen Drehkreuz fur Warenstrrome aller Art. Fur Fachkrafte bedeutet das: Beste Jobaussichten und attraktive Karrieremoglichkeiten.</p>
-      <p>Unternehmen aus E-Commerce, Produktion und Handel haben Logistikzentren in der Region aufgebaut. Diese Entwicklung sorgt fur einen konstant hohen Bedarf an qualifiziertem Personal - vom Lagerhelfer bis zur Fachkraft fur Lagerlogistik.</p>
+      <p>Der Enzkreis hat sich in den vergangenen Jahren zu einem der bedeutendsten Logistikstandorte in Baden-Württemberg entwickelt. Die zentrale Lage zwischen Stuttgart, Karlsruhe und dem Nordschwarzwald macht die Region zum idealen Drehkreuz für Warenströme aller Art. Für Fachkräfte bedeutet das vor allem eines: hervorragende Jobaussichten und attraktive Karrieremöglichkeiten.</p>
+      <p>Zahlreiche Unternehmen aus E-Commerce, Produktion und Handel haben in der Region neue Logistikzentren errichtet. Diese Entwicklung sorgt für einen konstant hohen Bedarf an qualifiziertem Personal – vom Lagerhelfer bis zur spezialisierten Fachkraft für Lagerlogistik.</p>
 
       <h2>Die gefragtesten Logistik-Jobs im Enzkreis</h2>
       
       <h3>Kommissionierer (m/w/d)</h3>
-      <p>Als Kommissionierer stellen Sie Waren nach Auftrag zusammen. Mit moderner Scannertechnik sorgen Sie fur die korrekte Zusammenstellung von Sendungen. Besonders in der Nacht- und Fruhschicht werden dringend Mitarbeiter gesucht.</p>
+      <p>Als Kommissionierer stellen Sie Waren nach Kundenaufträgen zusammen. Mit moderner Scannertechnik sorgen Sie für die korrekte Zusammenstellung jeder Sendung. Besonders in der Nacht- und Frühschicht werden dringend neue Mitarbeiter gesucht.</p>
       <ul>
-        <li><strong>Gehalt:</strong> 13,50 - 16,00 EUR/Stunde</li>
-        <li><strong>Anforderungen:</strong> Korperliche Fitness, Genauigkeit</li>
-        <li><strong>Schichten:</strong> Fruuh-, Spat- und Nachtschicht</li>
+        <li><strong>Gehalt:</strong> 13,50 € bis 16,00 € pro Stunde</li>
+        <li><strong>Anforderungen:</strong> Körperliche Fitness und Genauigkeit</li>
+        <li><strong>Schichten:</strong> Früh-, Spät- und Nachtschicht</li>
       </ul>
 
       <h3>Staplerfahrer (m/w/d)</h3>
-      <p>Mit einem gultigen Staplerschein gehoren Sie zu den gefragtesten Kraften in der Logistik. Sie transportieren Waren, beladen LKW und sorgen fur Ordnung im Lager.</p>
+      <p>Mit einem gültigen Staplerschein gehören Sie zu den gefragtesten Fachkräften der Logistikbranche. Sie transportieren Waren, beladen LKW und sorgen für eine reibungslose Ordnung im Lager.</p>
       <ul>
-        <li><strong>Gehalt:</strong> 14,50 - 18,00 EUR/Stunde</li>
-        <li><strong>Anforderungen:</strong> Gultiger Staplerschein, Erfahrung von Vorteil</li>
-        <li><strong>Tipp:</strong> Wir vermitteln auch Staplerschein-Kurse</li>
+        <li><strong>Gehalt:</strong> 14,50 € bis 18,00 € pro Stunde</li>
+        <li><strong>Anforderungen:</strong> Gültiger Staplerschein, Berufserfahrung von Vorteil</li>
+        <li><strong>Unser Tipp:</strong> Wir vermitteln auf Wunsch auch passende Staplerschein-Kurse</li>
       </ul>
 
-      <h3>Fachkraft fur Lagerlogistik (m/w/d)</h3>
-      <p>Mit abgeschlossener Ausbildung ubernehmen Sie verantwortungsvolle Aufgaben wie Wareneingang, Bestandsfuhrung und Versandabwicklung.</p>
+      <h3>Fachkraft für Lagerlogistik (m/w/d)</h3>
+      <p>Mit abgeschlossener Ausbildung übernehmen Sie verantwortungsvolle Aufgaben wie Wareneingang, Bestandsführung und Versandabwicklung – ein vielseitiges Berufsfeld mit echten Entwicklungsperspektiven.</p>
       <ul>
-        <li><strong>Gehalt:</strong> 16,00 - 20,00 EUR/Stunde</li>
-        <li><strong>Anforderungen:</strong> Abgeschlossene Ausbildung, EDV-Kenntnisse</li>
-        <li><strong>Perspektive:</strong> Aufstieg zum Schichtleiter moglich</li>
+        <li><strong>Gehalt:</strong> 16,00 € bis 20,00 € pro Stunde</li>
+        <li><strong>Anforderungen:</strong> Abgeschlossene Ausbildung und solide EDV-Kenntnisse</li>
+        <li><strong>Perspektive:</strong> Aufstieg zum Schichtleiter problemlos möglich</li>
       </ul>
 
       <h2>Warum Logistik im Enzkreis?</h2>
-      <p>Die Region bietet einzigartige Vorteile fur Logistik-Fachkrafte:</p>
+      <p>Die Region bietet einzigartige Vorteile für Logistik-Fachkräfte, die Sie anderswo nur selten finden:</p>
       <ul>
-        <li><strong>Standortvorteil:</strong> Kurze Wege zu den Arbeitsstatten</li>
-        <li><strong>Jobvielfalt:</strong> Vom kleinen Speziallager bis zum grossen Distributionszentrum</li>
-        <li><strong>Faire Bezahlung:</strong> Tarifgebundene Unternehmen und Personaldienstleister</li>
-        <li><strong>Arbeitsplatzsicherheit:</strong> Logistik wird immer gebraucht</li>
+        <li><strong>Standortvorteil:</strong> Kurze Wege zu zahlreichen Arbeitsstätten</li>
+        <li><strong>Jobvielfalt:</strong> Vom kleinen Speziallager bis zum großen Distributionszentrum</li>
+        <li><strong>Faire Bezahlung:</strong> Tarifgebundene Unternehmen und seriöse Personaldienstleister</li>
+        <li><strong>Arbeitsplatzsicherheit:</strong> Logistik wird immer gebraucht – auch in unsicheren Zeiten</li>
       </ul>
 
-      <h2>Ihr Weg zum Logistik-Job</h2>
-      <p>PersoFlex GmbH ist Ihr regionaler Partner fur Logistik-Jobs im Enzkreis. Wir arbeiten mit den fuhrenden Unternehmen der Branche zusammen und finden fur Sie den passenden Arbeitsplatz. Bewerben Sie sich jetzt - personlich in Pforzheim oder direkt online!</p>
+      <h2>Ihr Weg zum neuen Logistik-Job</h2>
+      <p>Die PersoFlex GmbH ist Ihr regionaler Partner für Logistik-Jobs im Enzkreis. Wir arbeiten eng mit den führenden Unternehmen der Branche zusammen und finden für Sie den passenden Arbeitsplatz – oft innerhalb weniger Tage. Bewerben Sie sich jetzt, entweder persönlich in unserem Büro in Pforzheim oder bequem online!</p>
     `,
     author: 'PersoFlex Team',
     date: '2025-04-12',
@@ -201,131 +201,131 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     id: 'personalvermittlung-vs-zeitarbeit-unterschiede',
-    title: 'Personalvermittlung vs. Zeitarbeit: Die wichtigsten Unterschiede erklart',
-    excerpt: 'Was ist der Unterschied zwischen Personalvermittlung und Zeitarbeit? Wir erklaren beide Modelle und helfen Ihnen bei der Entscheidung.',
+    title: 'Personalvermittlung vs. Zeitarbeit: Die wichtigsten Unterschiede erklärt',
+    excerpt: 'Was ist der Unterschied zwischen Personalvermittlung und Zeitarbeit? Wir erklären beide Modelle und helfen Ihnen bei der richtigen Entscheidung.',
     content: `
-      <h2>Zwei Wege zum neuen Job</h2>
-      <p>Wenn Sie auf Jobsuche sind, begegnen Ihnen haufig zwei Begriffe: Personalvermittlung und Zeitarbeit (Arbeitnehmeruberlassung). Beide Modelle konnen Ihnen helfen, schnell eine neue Beschaftigung zu finden - funktionieren aber grundlegend unterschiedlich. In diesem Artikel erklaren wir die Unterschiede und helfen Ihnen, das richtige Modell fur Ihre Situation zu finden.</p>
+      <h2>Zwei Wege zum neuen Job – welcher passt zu Ihnen?</h2>
+      <p>Wenn Sie auf Jobsuche sind, begegnen Ihnen häufig zwei Begriffe: Personalvermittlung und Zeitarbeit (auch Arbeitnehmerüberlassung genannt). Beide Modelle können Ihnen helfen, schnell eine neue Beschäftigung zu finden – sie funktionieren jedoch grundlegend unterschiedlich. In diesem Ratgeber erklären wir die wichtigsten Unterschiede und helfen Ihnen, das für Ihre persönliche Situation passende Modell auszuwählen.</p>
 
       <h2>Was ist Personalvermittlung?</h2>
-      <p>Bei der Personalvermittlung sucht ein Personaldienstleister im Auftrag eines Unternehmens nach geeigneten Kandidaten. Sobald ein passender Bewerber gefunden wird, kommt der Arbeitsvertrag direkt zwischen dem Kandidaten und dem Unternehmen zustande.</p>
+      <p>Bei der Personalvermittlung sucht ein Personaldienstleister im Auftrag eines Unternehmens nach geeigneten Kandidaten. Sobald ein passender Bewerber gefunden wurde, kommt der Arbeitsvertrag direkt zwischen Ihnen und dem Unternehmen zustande – ganz ohne Zwischeninstanz.</p>
       <ul>
-        <li><strong>Ihr Arbeitgeber:</strong> Das Unternehmen, nicht der Personaldienstleister</li>
+        <li><strong>Ihr Arbeitgeber:</strong> Das Unternehmen selbst, nicht der Personaldienstleister</li>
         <li><strong>Vertrag:</strong> Direkte Festanstellung beim Kundenunternehmen</li>
-        <li><strong>Kosten fur Sie:</strong> Keine - die Vermittlungsprovision zahlt das Unternehmen</li>
-        <li><strong>Dauer:</strong> Unbefristete oder befristete Festanstellung</li>
+        <li><strong>Kosten für Sie:</strong> Keine – die Vermittlungsprovision trägt das Unternehmen</li>
+        <li><strong>Vertragsdauer:</strong> Unbefristete oder befristete Festanstellung</li>
       </ul>
 
-      <h2>Was ist Zeitarbeit (Arbeitnehmeruberlassung)?</h2>
-      <p>Bei der Zeitarbeit sind Sie beim Personaldienstleister angestellt und werden an verschiedene Kundenunternehmen verliehen. Sie arbeiten vor Ort beim Kunden, Ihr Arbeitgeber bleibt aber der Personaldienstleister.</p>
+      <h2>Was ist Zeitarbeit (Arbeitnehmerüberlassung)?</h2>
+      <p>Bei der Zeitarbeit sind Sie beim Personaldienstleister fest angestellt und werden an verschiedene Kundenunternehmen verliehen. Sie arbeiten vor Ort beim Kunden, Ihr rechtlicher Arbeitgeber bleibt jedoch der Personaldienstleister.</p>
       <ul>
-        <li><strong>Ihr Arbeitgeber:</strong> Der Personaldienstleister (z.B. PersoFlex GmbH)</li>
-        <li><strong>Vertrag:</strong> Arbeitsvertrag mit dem Personaldienstleister</li>
-        <li><strong>Einsatze:</strong> Bei verschiedenen Kundenunternehmen</li>
-        <li><strong>Sicherheit:</strong> Lohnfortzahlung auch zwischen den Einsatzen</li>
+        <li><strong>Ihr Arbeitgeber:</strong> Der Personaldienstleister (z. B. PersoFlex GmbH)</li>
+        <li><strong>Vertrag:</strong> Fester Arbeitsvertrag mit dem Personaldienstleister</li>
+        <li><strong>Einsätze:</strong> Wechselnd bei verschiedenen Kundenunternehmen</li>
+        <li><strong>Sicherheit:</strong> Volle Lohnfortzahlung auch zwischen den Einsätzen</li>
       </ul>
 
-      <h2>Vergleich: Vor- und Nachteile</h2>
+      <h2>Vergleich: Vor- und Nachteile im Überblick</h2>
       
       <h3>Personalvermittlung</h3>
-      <p><strong>Vorteile:</strong></p>
+      <p><strong>Ihre Vorteile:</strong></p>
       <ul>
         <li>Direkte Festanstellung beim Wunschunternehmen</li>
         <li>Langfristige Planungssicherheit</li>
-        <li>Volle Integration ins Unternehmen</li>
+        <li>Volle Integration ins Team und Unternehmen</li>
       </ul>
-      <p><strong>Nachteile:</strong></p>
+      <p><strong>Mögliche Nachteile:</strong></p>
       <ul>
-        <li>Langerer Bewerbungsprozess</li>
-        <li>Hoherer Konkurrenzdruck</li>
-        <li>Weniger Flexibilitat</li>
+        <li>Längerer Bewerbungs- und Auswahlprozess</li>
+        <li>Höherer Konkurrenzdruck</li>
+        <li>Geringere Flexibilität bei der Jobwahl</li>
       </ul>
 
       <h3>Zeitarbeit</h3>
-      <p><strong>Vorteile:</strong></p>
+      <p><strong>Ihre Vorteile:</strong></p>
       <ul>
         <li>Schneller Einstieg in den Arbeitsmarkt</li>
-        <li>Verschiedene Unternehmen kennenlernen</li>
-        <li>Hohe Ubernahmechancen nach Bewahrung</li>
-        <li>Vielseitige Berufserfahrung sammeln</li>
+        <li>Einblicke in verschiedene Unternehmen und Branchen</li>
+        <li>Hohe Übernahmechancen nach erfolgreicher Bewährung</li>
+        <li>Vielseitige Berufserfahrung in kurzer Zeit</li>
       </ul>
-      <p><strong>Nachteile:</strong></p>
+      <p><strong>Mögliche Nachteile:</strong></p>
       <ul>
-        <li>Wechselnde Einsatzorte moglich</li>
-        <li>Eingewohnung bei jedem neuen Einsatz</li>
+        <li>Wechselnde Einsatzorte möglich</li>
+        <li>Eingewöhnung bei jedem neuen Einsatz erforderlich</li>
       </ul>
 
-      <h2>Fur wen eignet sich welches Modell?</h2>
-      <p><strong>Personalvermittlung</strong> ist ideal, wenn Sie genau wissen, in welchem Unternehmen oder welcher Branche Sie arbeiten mochten und eine langfristige Festanstellung suchen.</p>
-      <p><strong>Zeitarbeit</strong> eignet sich besonders fur:</p>
+      <h2>Für wen eignet sich welches Modell?</h2>
+      <p><strong>Die Personalvermittlung</strong> ist ideal für Sie, wenn Sie genau wissen, in welchem Unternehmen oder in welcher Branche Sie arbeiten möchten – und eine langfristige Festanstellung anstreben.</p>
+      <p><strong>Die Zeitarbeit</strong> eignet sich besonders für:</p>
       <ul>
-        <li>Berufseinsteiger, die Erfahrung sammeln mochten</li>
-        <li>Wiedereinsteiger nach langerer Pause</li>
+        <li>Berufseinsteiger, die wertvolle Erfahrung sammeln möchten</li>
+        <li>Wiedereinsteiger nach einer längeren Berufspause</li>
         <li>Menschen in beruflicher Neuorientierung</li>
-        <li>Alle, die schnell einen Job brauchen</li>
+        <li>Alle, die möglichst schnell einen Job antreten möchten</li>
       </ul>
 
       <h2>Unser Angebot: Beides aus einer Hand</h2>
-      <p>Bei PersoFlex GmbH bieten wir Ihnen beide Moglichkeiten. In einem personlichen Gesprach finden wir gemeinsam heraus, welcher Weg fur Sie der richtige ist. Kontaktieren Sie uns - wir beraten Sie gerne!</p>
+      <p>Bei der PersoFlex GmbH bieten wir Ihnen beide Möglichkeiten unter einem Dach. In einem persönlichen Gespräch finden wir gemeinsam heraus, welcher Weg der richtige für Sie ist. Kontaktieren Sie uns einfach – wir beraten Sie gerne und absolut unverbindlich!</p>
     `,
     author: 'PersoFlex Team',
     date: '2025-04-10',
     readTime: '9 Min.',
     category: 'Ratgeber',
-    tags: ['Personalvermittlung', 'Zeitarbeit', 'Arbeitnehmeruberlassung', 'Unterschied', 'Ratgeber', 'Jobsuche'],
+    tags: ['Personalvermittlung', 'Zeitarbeit', 'Arbeitnehmerüberlassung', 'Unterschied', 'Ratgeber', 'Jobsuche'],
     featuredImage: '/bilder/blog/personalvermittlung-gespraech.jpg'
   },
   {
     id: 'staplerschein-pforzheim-kosten-ablauf',
     title: 'Staplerschein in Pforzheim: Kosten, Ablauf und Karrierechancen',
-    excerpt: 'Alles zum Staplerschein: Wo Sie die Ausbildung machen, was sie kostet und welche Jobchancen sich damit eroffnen.',
+    excerpt: 'Alles Wissenswerte zum Staplerschein: Wo Sie die Ausbildung machen, welche Kosten anfallen und welche Jobchancen sich damit eröffnen.',
     content: `
       <h2>Der Staplerschein: Ihre Eintrittskarte in die Logistik</h2>
-      <p>Ein Gabelstaplerschein (offiziell: Flurforderfahrzeugschein) ist eine der wertvollsten Zusatzqualifikationen fur Beschaftigte in Lager und Logistik. In Pforzheim und dem Enzkreis suchen Unternehmen standig nach Staplerfahrern - die Nachfrage ubersteigt das Angebot bei weitem.</p>
+      <p>Der Gabelstaplerschein – offiziell als Flurförderfahrzeugschein bezeichnet – zählt zu den wertvollsten Zusatzqualifikationen für Beschäftigte in Lager und Logistik. In Pforzheim und dem Enzkreis suchen Unternehmen kontinuierlich nach qualifizierten Staplerfahrern. Die Nachfrage übersteigt das Angebot dabei bei Weitem, was Ihre Jobchancen erheblich steigert.</p>
 
-      <h2>Was ist ein Staplerschein?</h2>
-      <p>Der Staplerschein ist ein Befaihigungsnachweis gemaiss DGUV Vorschrift 68. Er berechtigt Sie zum Fuhren von Gabelstaplern und anderen Flurforderfahrzeugen. Ohne diesen Nachweis durfen Sie keinen Stapler bedienen - auch nicht auf dem Betriebsgelande.</p>
+      <h2>Was ist ein Staplerschein überhaupt?</h2>
+      <p>Der Staplerschein ist ein offizieller Befähigungsnachweis gemäß der DGUV-Vorschrift 68. Er berechtigt Sie zum Führen von Gabelstaplern und anderen Flurförderfahrzeugen. Ohne diesen Nachweis dürfen Sie rechtlich keinen Stapler bedienen – auch nicht auf dem eigenen Betriebsgelände.</p>
 
       <h2>Die Ausbildung zum Staplerfahrer</h2>
-      <p>Die Staplerschein-Ausbildung besteht aus drei Teilen:</p>
+      <p>Die Staplerschein-Ausbildung gliedert sich in drei klar strukturierte Bereiche:</p>
       
       <h3>1. Theoretische Ausbildung</h3>
       <ul>
-        <li>Rechtliche Grundlagen und Vorschriften</li>
-        <li>Aufbau und Funktion von Gabelstaplern</li>
-        <li>Unfallverhutung und Sicherheitsregeln</li>
-        <li>Umgang mit Lasten und Lastenschwerpunkt</li>
+        <li>Rechtliche Grundlagen und relevante Vorschriften</li>
+        <li>Aufbau und Funktionsweise von Gabelstaplern</li>
+        <li>Unfallverhütung und Sicherheitsregeln am Arbeitsplatz</li>
+        <li>Umgang mit Lasten und der richtige Lastenschwerpunkt</li>
       </ul>
 
       <h3>2. Praktische Ausbildung</h3>
       <ul>
-        <li>Fahren des Gabelstaplers</li>
+        <li>Sicheres Fahren des Gabelstaplers</li>
         <li>Auf- und Abladen von Paletten</li>
-        <li>Stapeln in verschiedenen Hohen</li>
-        <li>Befahren von Steigungen und Gefahrenstellen</li>
+        <li>Stapeln in verschiedenen Höhen</li>
+        <li>Befahren von Steigungen und das Verhalten an Gefahrenstellen</li>
       </ul>
 
-      <h3>3. Theoretische und praktische Prufung</h3>
-      <p>Die Ausbildung schliesst mit einer Prufung ab. Bei Bestehen erhalten Sie Ihren Staplerfahrerausweis.</p>
+      <h3>3. Theoretische und praktische Prüfung</h3>
+      <p>Die Ausbildung schließt mit einer zweiteiligen Prüfung ab. Nach bestandener Prüfung erhalten Sie Ihren offiziellen Staplerfahrerausweis – Ihre Eintrittskarte in zahlreiche Logistikberufe.</p>
 
-      <h2>Kosten und Dauer</h2>
+      <h2>Kosten und Dauer im Überblick</h2>
       <ul>
-        <li><strong>Dauer:</strong> 2-5 Tage je nach Anbieter und Vorkenntnissen</li>
-        <li><strong>Kosten:</strong> 150-400 EUR privat</li>
-        <li><strong>Tipp:</strong> Uber PersoFlex konnen wir die Ausbildung haufig vergunnstigt oder kostenfrei vermitteln</li>
+        <li><strong>Dauer:</strong> 2 bis 5 Tage, je nach Anbieter und Vorkenntnissen</li>
+        <li><strong>Kosten:</strong> 150 € bis 400 € bei privater Finanzierung</li>
+        <li><strong>Unser Tipp:</strong> Über die PersoFlex GmbH können wir die Ausbildung häufig vergünstigt oder sogar kostenfrei für Sie organisieren</li>
       </ul>
 
-      <h2>Karrierechancen mit Staplerschein</h2>
-      <p>Mit einem Staplerschein eroffnen sich Ihnen deutlich bessere Jobmoglichkeiten:</p>
+      <h2>Ihre Karrierechancen mit Staplerschein</h2>
+      <p>Mit einem Staplerschein eröffnen sich Ihnen deutlich bessere berufliche Perspektiven – sowohl finanziell als auch hinsichtlich der Jobauswahl:</p>
       <ul>
-        <li><strong>Hoheres Gehalt:</strong> Staplerfahrer verdienen 1-3 EUR mehr pro Stunde</li>
-        <li><strong>Mehr Jobangebote:</strong> Viele Stellen setzen den Schein voraus</li>
-        <li><strong>Bessere Aufstiegschancen:</strong> Grundlage fur Schichtfuhrer-Positionen</li>
-        <li><strong>Flexibilitat:</strong> Einsetzbar in nahezu allen Branchen</li>
+        <li><strong>Höheres Gehalt:</strong> Staplerfahrer verdienen 1 € bis 3 € mehr pro Stunde</li>
+        <li><strong>Mehr Jobangebote:</strong> Viele attraktive Stellen setzen den Schein zwingend voraus</li>
+        <li><strong>Bessere Aufstiegschancen:</strong> Solide Grundlage für Schichtführer-Positionen</li>
+        <li><strong>Flexibilität:</strong> Einsetzbar in nahezu allen Industrie- und Logistikbranchen</li>
       </ul>
 
-      <h2>Staplerschein uber PersoFlex</h2>
-      <p>Als Bewerber oder Mitarbeiter bei PersoFlex unterstutzen wir Sie beim Erwerb des Staplerscheins. Sprechen Sie uns an - gemeinsam finden wir eine Losung, die zu Ihnen passt. Oft konnen wir die Kosten vollstandig ubernehmen, wenn Sie sich zu einer Zusammenarbeit verpflichten.</p>
+      <h2>Staplerschein über die PersoFlex GmbH</h2>
+      <p>Als Bewerber oder Mitarbeiter bei der PersoFlex GmbH unterstützen wir Sie aktiv beim Erwerb des Staplerscheins. Sprechen Sie uns an – gemeinsam finden wir die passende Lösung. In vielen Fällen können wir die Kosten der Ausbildung vollständig für Sie übernehmen, wenn Sie sich im Gegenzug zu einer Zusammenarbeit verpflichten. Ein fairer Deal, der Ihnen einen entscheidenden Karrierevorsprung verschafft!</p>
     `,
     author: 'PersoFlex Team',
     date: '2025-04-08',
@@ -337,137 +337,137 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 'arbeitsmarkt-pforzheim-aktuelle-trends-2025',
     title: 'Arbeitsmarkt Pforzheim 2025: Aktuelle Trends und Jobchancen',
-    excerpt: 'Wie entwickelt sich der Arbeitsmarkt in Pforzheim? Wir analysieren die aktuellen Trends und zeigen, wo die besten Chancen liegen.',
+    excerpt: 'Wie entwickelt sich der Arbeitsmarkt in Pforzheim? Wir analysieren die aktuellen Trends und zeigen Ihnen, wo die besten Chancen liegen.',
     content: `
       <h2>Der Pforzheimer Arbeitsmarkt im Wandel</h2>
-      <p>Pforzheim, die traditionsreiche Goldstadt am Nordrand des Schwarzwalds, erlebt einen spannenden wirtschaftlichen Wandel. Wahrend die klassische Schmuckindustrie nach wie vor prasent ist, haben sich neue Branchen etabliert, die den Arbeitsmarkt pragen und fur Beschaftigte vielversprechende Perspektiven bieten.</p>
+      <p>Pforzheim, die traditionsreiche Goldstadt am Nordrand des Schwarzwalds, erlebt derzeit einen spannenden wirtschaftlichen Wandel. Während die klassische Schmuckindustrie nach wie vor präsent ist, haben sich zahlreiche neue Branchen etabliert, die den Arbeitsmarkt nachhaltig prägen und Beschäftigten vielversprechende Perspektiven bieten.</p>
 
       <h2>Die wichtigsten Branchen in Pforzheim</h2>
 
       <h3>Metallverarbeitung und Maschinenbau</h3>
-      <p>Die Prazisionsfertigung hat in Pforzheim eine lange Tradition. Heute arbeiten zahlreiche Unternehmen in der Metallverarbeitung, Feinwerktechnik und im Maschinenbau. Gesucht werden:</p>
+      <p>Die Präzisionsfertigung hat in Pforzheim eine lange, weit über die Region hinaus bekannte Tradition. Heute arbeiten zahlreiche Unternehmen im Bereich Metallverarbeitung, Feinwerktechnik und Maschinenbau. Besonders gesucht werden:</p>
       <ul>
-        <li>CNC-Fachkrafte</li>
+        <li>CNC-Fachkräfte</li>
         <li>Zerspanungsmechaniker</li>
         <li>Produktionshelfer</li>
-        <li>Qualitatsprufer</li>
+        <li>Qualitätsprüfer</li>
       </ul>
 
       <h3>Logistik und Distribution</h3>
-      <p>Die zentrale Lage macht Pforzheim und den Enzkreis zum idealen Logistikstandort. Der Bedarf an Logistik-Personal ist konstant hoch:</p>
+      <p>Die zentrale Lage macht Pforzheim und den Enzkreis zum idealen Logistikstandort. Der Bedarf an qualifiziertem Logistik-Personal ist konstant hoch:</p>
       <ul>
         <li>Lagerhelfer und Kommissionierer</li>
         <li>Staplerfahrer</li>
-        <li>Fachkrafte fur Lagerlogistik</li>
+        <li>Fachkräfte für Lagerlogistik</li>
         <li>Versandmitarbeiter</li>
       </ul>
 
       <h3>Elektrotechnik und Elektronik</h3>
-      <p>Mehrere grosse Elektronikunternehmen haben sich in der Region angesiedelt. Sie suchen regelmarig:</p>
+      <p>Mehrere große Elektronikunternehmen haben sich in der Region angesiedelt und suchen regelmäßig neue Mitarbeiter:</p>
       <ul>
         <li>Elektronikfertiger</li>
-        <li>Lotfachkrafte</li>
+        <li>Lötfachkräfte</li>
         <li>Maschinenbediener</li>
-        <li>Qualitatssicherer</li>
+        <li>Qualitätssicherer</li>
       </ul>
 
-      <h2>Arbeitsmarkt-Trends 2025</h2>
+      <h2>Die wichtigsten Arbeitsmarkt-Trends 2025</h2>
 
-      <h3>1. Fachkraftemangel bleibt bestehen</h3>
-      <p>Unternehmen haben weiterhin Schwierigkeiten, qualifizierte Mitarbeiter zu finden. Das bedeutet fur Bewerber: Ihre Chancen sind ausgezeichnet, und die Verhandlungsposition ist stark.</p>
+      <h3>1. Der Fachkräftemangel bleibt bestehen</h3>
+      <p>Unternehmen haben weiterhin große Schwierigkeiten, qualifizierte Mitarbeiter zu finden. Für Bewerber bedeutet das: Ihre Chancen sind ausgezeichnet, und Ihre Verhandlungsposition war selten so stark wie heute.</p>
 
-      <h3>2. Quereinsteiger sind gefragt</h3>
-      <p>Angesichts des Fachkraftemangels sind Unternehmen zunehmend bereit, Quereinsteiger einzuarbeiten. Motivation und Lernbereitschaft zahlen mehr als formale Qualifikationen.</p>
+      <h3>2. Quereinsteiger sind gefragter denn je</h3>
+      <p>Angesichts des anhaltenden Fachkräftemangels sind Unternehmen zunehmend bereit, engagierte Quereinsteiger gezielt einzuarbeiten. Motivation und Lernbereitschaft zählen dabei oft mehr als formale Qualifikationen.</p>
 
-      <h3>3. Zeitarbeit als Turoffner</h3>
-      <p>Immer mehr Menschen nutzen Zeitarbeit als Einstieg in begehrte Unternehmen. Die Ubernahmequoten sind hoch - wer sich bewahrt, wird oft ubernommen.</p>
+      <h3>3. Zeitarbeit als bewährter Türöffner</h3>
+      <p>Immer mehr Menschen nutzen Zeitarbeit als Einstieg in begehrte Unternehmen. Die Übernahmequoten sind hoch – wer sich bewährt, wird in den meisten Fällen direkt übernommen.</p>
 
-      <h3>4. Digitalisierung schafft neue Jobs</h3>
-      <p>Auch in traditionellen Branchen entstehen durch Automatisierung und Digitalisierung neue Tatigkeitsfelder, die interessante Karrieremoglichkeiten bieten.</p>
+      <h3>4. Digitalisierung schafft neue Jobprofile</h3>
+      <p>Auch in traditionellen Branchen entstehen durch Automatisierung und Digitalisierung völlig neue Tätigkeitsfelder, die interessante und zukunftssichere Karrieremöglichkeiten eröffnen.</p>
 
-      <h2>Tipps fur Jobsuchende in Pforzheim</h2>
+      <h2>Unsere Tipps für Jobsuchende in Pforzheim</h2>
       <ul>
-        <li><strong>Flexibel sein:</strong> Schichtarbeit und verschiedene Einsatzorte erhohen Ihre Chancen</li>
-        <li><strong>Weiterbilden:</strong> Zusatzqualifikationen wie der Staplerschein machen Sie attraktiver</li>
-        <li><strong>Netzwerken:</strong> Uber Personaldienstleister erreichen Sie versteckte Stellenmarkte</li>
-        <li><strong>Schnell handeln:</strong> Gute Stellen sind schnell vergeben</li>
+        <li><strong>Flexibel bleiben:</strong> Schichtarbeit und wechselnde Einsatzorte erhöhen Ihre Chancen erheblich</li>
+        <li><strong>Weiterbilden:</strong> Zusatzqualifikationen wie der Staplerschein machen Sie für Arbeitgeber attraktiver</li>
+        <li><strong>Netzwerken:</strong> Über Personaldienstleister erreichen Sie den verdeckten Stellenmarkt</li>
+        <li><strong>Schnell handeln:</strong> Besonders gute Stellen sind erfahrungsgemäß in kürzester Zeit vergeben</li>
       </ul>
 
-      <h2>Ihr Partner fur den Pforzheimer Arbeitsmarkt</h2>
-      <p>Als regionaler Personaldienstleister kennt PersoFlex GmbH den Pforzheimer Arbeitsmarkt wie kein Zweiter. Wir wissen, welche Unternehmen suchen, und bringen Sie mit den richtigen Arbeitgebern zusammen. Vereinbaren Sie noch heute ein Beratungsgesprach!</p>
+      <h2>Ihr Partner für den Pforzheimer Arbeitsmarkt</h2>
+      <p>Als regionaler Personaldienstleister kennt die PersoFlex GmbH den Pforzheimer Arbeitsmarkt wie kein Zweiter. Wir wissen genau, welche Unternehmen gerade suchen, und bringen Sie gezielt mit den passenden Arbeitgebern zusammen. Vereinbaren Sie noch heute ein unverbindliches Beratungsgespräch!</p>
     `,
     author: 'PersoFlex Team',
     date: '2025-04-05',
     readTime: '10 Min.',
     category: 'Arbeitsmarkt',
-    tags: ['Arbeitsmarkt', 'Pforzheim', 'Jobs 2025', 'Trends', 'Karrierechancen', 'Fachkraftemangel'],
+    tags: ['Arbeitsmarkt', 'Pforzheim', 'Jobs 2025', 'Trends', 'Karrierechancen', 'Fachkräftemangel'],
     featuredImage: '/bilder/blog/arbeitsmarkt-pforzheim.jpg'
   },
   {
     id: 'rechte-zeitarbeitnehmer-was-ihnen-zusteht',
     title: 'Ihre Rechte als Zeitarbeitnehmer: Was Ihnen zusteht',
-    excerpt: 'Equal Pay, Urlaub, Kundigungsschutz: Erfahren Sie alles uber Ihre Rechte als Zeitarbeitnehmer und wie Sie diese durchsetzen.',
+    excerpt: 'Equal Pay, Urlaub, Kündigungsschutz – erfahren Sie alles über Ihre Rechte als Zeitarbeitnehmer und wie Sie diese effektiv durchsetzen.',
     content: `
-      <h2>Gut geschutzt: Ihre Rechte in der Zeitarbeit</h2>
-      <p>Zeitarbeitnehmer geniessen in Deutschland einen umfassenden gesetzlichen Schutz. Das Arbeitnehmeruberlassungsgesetz (AuG) und verschiedene Tarifvertrage stellen sicher, dass Sie fair behandelt werden. Dieser Artikel gibt Ihnen einen umfassenden Uberblick uber Ihre Rechte.</p>
+      <h2>Gut geschützt: Ihre Rechte in der Zeitarbeit</h2>
+      <p>Zeitarbeitnehmer genießen in Deutschland einen umfassenden gesetzlichen Schutz. Das Arbeitnehmerüberlassungsgesetz (AÜG) sowie verschiedene Tarifverträge stellen sicher, dass Sie fair und rechtskonform behandelt werden. Dieser Artikel gibt Ihnen einen vollständigen Überblick über Ihre wichtigsten Rechte.</p>
 
-      <h2>Equal Pay: Gleiches Geld fur gleiche Arbeit</h2>
-      <p>Eines der wichtigsten Rechte ist das Prinzip des Equal Pay (gleiche Bezahlung). Nach dem Gesetz gilt:</p>
+      <h2>Equal Pay: Gleiches Geld für gleiche Arbeit</h2>
+      <p>Eines der zentralen Rechte in der Zeitarbeit ist das Prinzip des Equal Pay, also der gleichen Bezahlung. Nach dem Gesetz gilt:</p>
       <ul>
-        <li>Nach spatestens 9 Monaten im selben Einsatzbetrieb haben Sie Anspruch auf das gleiche Entgelt wie vergleichbare Stammmitarbeiter</li>
-        <li>Bei Anwendung eines Branchenzuschlagstarifvertrags kann diese Frist auf 15 Monate verlangert werden</li>
-        <li>Branchenzuschlage erhohen Ihr Gehalt stufenweise wahrend des Einsatzes</li>
+        <li>Nach spätestens 9 Monaten im selben Einsatzbetrieb haben Sie Anspruch auf das gleiche Entgelt wie vergleichbare Stammmitarbeiter</li>
+        <li>Bei Anwendung eines Branchenzuschlagstarifvertrags kann diese Frist auf 15 Monate verlängert werden</li>
+        <li>Branchenzuschläge erhöhen Ihr Gehalt automatisch stufenweise während des laufenden Einsatzes</li>
       </ul>
 
       <h2>Urlaub und Urlaubsgeld</h2>
-      <p>Auch als Zeitarbeitnehmer haben Sie vollen Urlaubsanspruch:</p>
+      <p>Auch als Zeitarbeitnehmer haben Sie selbstverständlich vollen Urlaubsanspruch:</p>
       <ul>
         <li><strong>Gesetzlicher Mindesturlaub:</strong> 24 Werktage bei einer 6-Tage-Woche</li>
-        <li><strong>Tariflicher Urlaub:</strong> Nach GVP-Tarifvertrag bis zu 30 Tage</li>
-        <li><strong>Urlaubsgeld:</strong> Tarifvertrage sehen haufig zusatzliches Urlaubsgeld vor</li>
-        <li><strong>Urlaubsplanung:</strong> Absprache mit Ihrem Personaldienstleister und dem Einsatzbetrieb</li>
+        <li><strong>Tariflicher Urlaub:</strong> Nach GVP-Tarifvertrag bis zu 30 Tage jährlich</li>
+        <li><strong>Urlaubsgeld:</strong> Tarifverträge sehen häufig zusätzliches Urlaubsgeld vor</li>
+        <li><strong>Urlaubsplanung:</strong> Abstimmung zwischen Personaldienstleister und Einsatzbetrieb</li>
       </ul>
 
       <h2>Lohnfortzahlung und Arbeitszeitkonto</h2>
-      <p>Einer der grossen Vorteile der Zeitarbeit ist die Arbeitsplatzsicherheit:</p>
+      <p>Einer der großen Vorteile der Zeitarbeit ist die ausgeprägte Arbeitsplatzsicherheit:</p>
       <ul>
-        <li><strong>Lohnfortzahlung:</strong> Auch zwischen zwei Einsatzen erhalten Sie Ihr Gehalt</li>
-        <li><strong>Arbeitszeitkonto:</strong> Uberstunden werden erfasst und konnen ausgeglichen werden</li>
-        <li><strong>Krankheit:</strong> Im Krankheitsfall greift die normale Entgeltfortzahlung</li>
+        <li><strong>Lohnfortzahlung:</strong> Auch zwischen zwei Einsätzen erhalten Sie weiterhin Ihr Gehalt</li>
+        <li><strong>Arbeitszeitkonto:</strong> Überstunden werden lückenlos erfasst und können später ausgeglichen werden</li>
+        <li><strong>Krankheit:</strong> Im Krankheitsfall greift die reguläre Entgeltfortzahlung</li>
       </ul>
 
-      <h2>Kundigungsschutz</h2>
-      <p>Als Zeitarbeitnehmer geniessen Sie den gleichen Kundigungsschutz wie andere Arbeitnehmer:</p>
+      <h2>Kündigungsschutz</h2>
+      <p>Als Zeitarbeitnehmer genießen Sie den gleichen gesetzlichen Kündigungsschutz wie alle anderen Arbeitnehmer:</p>
       <ul>
-        <li>Kundigungsfristen nach BGB und Tarifvertrag</li>
-        <li>Kundigungsschutzgesetz greift ab 6 Monaten Betriebszugehorigkeit</li>
-        <li>Das Ende eines Einsatzes ist kein Kundigungsgrund</li>
+        <li>Kündigungsfristen nach BGB und gültigem Tarifvertrag</li>
+        <li>Der Kündigungsschutz greift ab 6 Monaten Betriebszugehörigkeit</li>
+        <li>Das Ende eines Einsatzes stellt keinen automatischen Kündigungsgrund dar</li>
       </ul>
 
-      <h2>Hochstuberlassungsdauer</h2>
-      <p>Das Gesetz begrenzt, wie lange Sie an ein einzelnes Unternehmen uberlassen werden durfen:</p>
+      <h2>Höchstüberlassungsdauer</h2>
+      <p>Das Gesetz begrenzt klar, wie lange Sie an ein einzelnes Unternehmen überlassen werden dürfen:</p>
       <ul>
         <li><strong>Grundsatz:</strong> Maximal 18 Monate beim selben Entleiher</li>
-        <li><strong>Tarifliche Abweichung:</strong> Durch Tarifvertrage kann diese Frist verlangert werden</li>
-        <li><strong>Unterbrechung:</strong> Eine Unterbrechung von mehr als 3 Monaten setzt die Frist zuruck</li>
+        <li><strong>Tarifliche Abweichung:</strong> Durch Tarifverträge kann diese Frist verlängert werden</li>
+        <li><strong>Unterbrechung:</strong> Eine Pause von mehr als 3 Monaten setzt die Frist zurück</li>
       </ul>
 
-      <h2>Weitere wichtige Rechte</h2>
+      <h2>Weitere wichtige Rechte im Überblick</h2>
       <ul>
-        <li><strong>Gleichbehandlung:</strong> Zugang zu Gemeinschaftseinrichtungen des Einsatzbetriebs</li>
-        <li><strong>Information uber freie Stellen:</strong> Der Entleiher muss Sie uber Festanstellungen informieren</li>
-        <li><strong>Arbeitssicherheit:</strong> Gleiche Sicherheitsstandards wie fur Stammpersonal</li>
-        <li><strong>Weiterbildung:</strong> Viele Personaldienstleister bieten Qualifizierungen an</li>
+        <li><strong>Gleichbehandlung:</strong> Voller Zugang zu Gemeinschaftseinrichtungen des Einsatzbetriebs</li>
+        <li><strong>Information über freie Stellen:</strong> Der Entleiher muss Sie aktiv über Festanstellungen informieren</li>
+        <li><strong>Arbeitssicherheit:</strong> Die gleichen hohen Sicherheitsstandards wie für die Stammbelegschaft</li>
+        <li><strong>Weiterbildung:</strong> Viele Personaldienstleister bieten kostenfreie Qualifizierungen an</li>
       </ul>
 
       <h2>Bei PersoFlex sind Ihre Rechte garantiert</h2>
-      <p>Als Mitglied im GVP (Gesamtverband der Personaldienstleister) verpflichten wir uns zu fairer Behandlung und tariflicher Bezahlung. Bei Fragen zu Ihren Rechten stehen Ihnen unsere Disponenten jederzeit zur Verfugung. Transparenz und Fairness sind fur uns keine leeren Worte, sondern gelebte Praxis.</p>
+      <p>Als Mitglied im GVP (Gesamtverband der Personaldienstleister) verpflichten wir uns zu fairer Behandlung und konsequent tariflicher Bezahlung. Bei Fragen zu Ihren Rechten stehen Ihnen unsere erfahrenen Disponenten jederzeit zur Verfügung. Transparenz und Fairness sind für uns keine leeren Worte, sondern gelebte Unternehmenspraxis.</p>
     `,
     author: 'PersoFlex Team',
     date: '2025-04-01',
     readTime: '8 Min.',
     category: 'Ratgeber',
-    tags: ['Rechte', 'Zeitarbeit', 'Equal Pay', 'Urlaub', 'Kundigungsschutz', 'AuG'],
+    tags: ['Rechte', 'Zeitarbeit', 'Equal Pay', 'Urlaub', 'Kündigungsschutz', 'AÜG'],
     featuredImage: '/bilder/blog/rechte-zeitarbeitnehmer.jpg'
   },
   {
@@ -574,28 +574,28 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     id: 'logistik-jobs-pforzheim-enzkreis',
-    title: 'Logistik Jobs in Pforzheim & Enzkreis: Der komplette Guide 2024',
-    excerpt: 'Alles über Logistik-Karrieren in der Region: Von Kommissionierer bis Lagerleiter. Gehälter und Anforderungen.',
+    title: 'Logistik-Jobs in Pforzheim & Enzkreis: Der komplette Guide 2024',
+    excerpt: 'Alles über Logistik-Karrieren in der Region: vom Kommissionierer bis zum Lagerleiter. Mit aktuellen Gehältern und Anforderungsprofilen.',
     content: `
       <h2>Die Logistik-Branche in Pforzheim boomt</h2>
-      <p>Pforzheim und der Enzkreis haben sich zu einem wichtigen Logistik-Standort in Baden-Württemberg entwickelt. Die zentrale Lage und gute Verkehrsanbindung machen die Region attraktiv für Logistikunternehmen.</p>
+      <p>Pforzheim und der Enzkreis haben sich in den vergangenen Jahren zu einem bedeutenden Logistik-Standort in Baden-Württemberg entwickelt. Die zentrale Lage und die hervorragende Verkehrsanbindung machen die Region besonders attraktiv für Logistikunternehmen – und schaffen zahlreiche neue Arbeitsplätze.</p>
       
       <h2>Welche Logistik-Jobs gibt es?</h2>
       
-      <h3>Kommissionierer/in</h3>
-      <p>Als Kommissionierer stellen Sie Waren nach Auftrag zusammen. Einstiegsgehälter liegen bei ca. 13-15€ pro Stunde.</p>
+      <h3>Kommissionierer (m/w/d)</h3>
+      <p>Als Kommissionierer stellen Sie Waren nach Kundenaufträgen zusammen – oft mit moderner Scannertechnik. Die Einstiegsgehälter liegen derzeit bei 13 € bis 15 € pro Stunde.</p>
       
-      <h3>Staplerfahrer/in</h3>
-      <p>Mit einem gültigen Staplerschein sind Sie in der Logistik heiß begehrt. Staplerfahrer verdienen zwischen 14-17€ pro Stunde.</p>
+      <h3>Staplerfahrer (m/w/d)</h3>
+      <p>Mit einem gültigen Staplerschein sind Sie in der Logistik heiß begehrt. Staplerfahrer verdienen zwischen 14 € und 17 € pro Stunde und profitieren von einer besonders hohen Nachfrage.</p>
       
-      <h3>Lagerhelfer/in</h3>
-      <p>Der Einstieg in die Logistik: Vorkenntnisse sind meist nicht erforderlich, Einarbeitung erfolgt vor Ort.</p>
+      <h3>Lagerhelfer (m/w/d)</h3>
+      <p>Der ideale Einstieg in die Logistikbranche: Vorkenntnisse sind in der Regel nicht erforderlich, die Einarbeitung erfolgt direkt vor Ort.</p>
       
       <h3>Fachkraft für Lagerlogistik</h3>
-      <p>Mit abgeschlossener Ausbildung übernehmen Sie verantwortungsvolle Aufgaben wie Wareneingang und Bestandskontrolle.</p>
+      <p>Mit abgeschlossener Ausbildung übernehmen Sie verantwortungsvolle Aufgaben wie Wareneingang, Bestandskontrolle und Versandabwicklung.</p>
       
       <h2>So finden Sie Ihren Logistik-Job</h2>
-      <p>Der schnellste Weg führt über einen spezialisierten Personaldienstleister wie PersoFlex GmbH. Wir kennen die Unternehmen der Region.</p>
+      <p>Der schnellste und effektivste Weg zum neuen Job führt über einen spezialisierten Personaldienstleister wie die PersoFlex GmbH. Wir kennen die Unternehmen der Region und ihre konkreten Bedarfe – und bringen Sie gezielt mit dem passenden Arbeitgeber zusammen.</p>
     `,
     author: 'PersoFlex Team',
     date: '2024-12-10',
@@ -607,31 +607,31 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 'bewerbungstipps-zeitarbeit',
     title: 'Bewerbungstipps für Zeitarbeit: So überzeugen Sie beim Personaldienstleister',
-    excerpt: 'Praktische Tipps für Ihre Bewerbung bei einer Zeitarbeitsfirma. Was Sie beachten sollten.',
+    excerpt: 'Praxisnahe Tipps für Ihre Bewerbung bei einer Zeitarbeitsfirma – darauf sollten Sie unbedingt achten, um erfolgreich zu sein.',
     content: `
       <h2>Die Bewerbung bei einer Zeitarbeitsfirma</h2>
-      <p>Eine Bewerbung bei einem Personaldienstleister unterscheidet sich in einigen Punkten von einer klassischen Bewerbung.</p>
+      <p>Eine Bewerbung bei einem Personaldienstleister unterscheidet sich in einigen wichtigen Punkten von einer klassischen Bewerbung bei einem einzelnen Unternehmen. Mit der richtigen Vorbereitung steigern Sie Ihre Chancen erheblich – und finden oft innerhalb weniger Tage Ihren neuen Job.</p>
       
-      <h2>Welche Unterlagen brauche ich?</h2>
+      <h2>Welche Unterlagen benötigen Sie?</h2>
       <ul>
-        <li>Aktueller Lebenslauf</li>
-        <li>Arbeitszeugnisse (falls vorhanden)</li>
-        <li>Relevante Zertifikate (z.B. Staplerschein)</li>
-        <li>Ausweisdokument</li>
+        <li>Aktueller, übersichtlicher Lebenslauf</li>
+        <li>Arbeitszeugnisse (sofern vorhanden)</li>
+        <li>Relevante Zertifikate (z. B. Staplerschein, Schweißerausweis)</li>
+        <li>Gültiges Ausweisdokument</li>
       </ul>
       
       <h2>Das persönliche Gespräch</h2>
-      <p>Seien Sie ehrlich über Ihre Stärken und Schwächen – nur so können wir Sie optimal vermitteln.</p>
+      <p>Im persönlichen Gespräch gilt: Seien Sie offen und ehrlich über Ihre Stärken und Schwächen. Nur so können wir Sie optimal einschätzen und Ihnen die passenden Jobangebote unterbreiten.</p>
       
       <h2>Was Sie mitbringen sollten</h2>
       <ul>
-        <li>Klare Vorstellung über gewünschte Einsatzbereiche</li>
-        <li>Flexibilität bei Arbeitszeiten und Einsatzorten</li>
-        <li>Motivation und Zuverlässigkeit</li>
+        <li>Eine klare Vorstellung über gewünschte Einsatzbereiche</li>
+        <li>Flexibilität bei Arbeitszeiten und möglichen Einsatzorten</li>
+        <li>Motivation, Zuverlässigkeit und Pünktlichkeit</li>
       </ul>
       
       <h2>Unser Tipp</h2>
-      <p>Bei PersoFlex GmbH legen wir Wert auf persönliche Betreuung. Kommen Sie einfach vorbei!</p>
+      <p>Bei der PersoFlex GmbH legen wir besonderen Wert auf persönliche Betreuung. Kommen Sie einfach zu einem unverbindlichen Gespräch in unserem Büro in Pforzheim vorbei – wir freuen uns auf Sie!</p>
     `,
     author: 'PersoFlex Team',
     date: '2024-12-05',
@@ -643,24 +643,24 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 'industriejobs-pforzheim-nordschwarzwald',
     title: 'Industrie-Jobs in Pforzheim: Chancen in der Metallverarbeitung',
-    excerpt: 'Die Metallverarbeitung prägt Pforzheim seit Jahrhunderten. Entdecken Sie aktuelle Karrieremöglichkeiten.',
+    excerpt: 'Die Metallverarbeitung prägt Pforzheim seit Jahrhunderten. Entdecken Sie aktuelle Karrieremöglichkeiten in einer der traditionsreichsten Branchen der Region.',
     content: `
-      <h2>Pforzheim - Stadt der Industrie</h2>
-      <p>Pforzheim, bekannt als Goldstadt, hat eine lange Tradition in der Metallverarbeitung. Moderne Produktionsunternehmen bieten vielfältige Karrieremöglichkeiten.</p>
+      <h2>Pforzheim – Stadt der Industrie</h2>
+      <p>Pforzheim, weithin bekannt als Goldstadt, blickt auf eine lange und beeindruckende Tradition in der Metallverarbeitung zurück. Moderne Produktionsunternehmen bieten heute vielfältige Karrieremöglichkeiten für engagierte Fachkräfte und motivierte Quereinsteiger.</p>
       
-      <h2>Beliebte Industrie-Jobs</h2>
+      <h2>Beliebte Industrie-Jobs im Überblick</h2>
       
-      <h3>Produktionshelfer/in</h3>
-      <p>Als Produktionshelfer unterstützen Sie in der Fertigung. Wichtig sind Zuverlässigkeit und Schichtbereitschaft.</p>
+      <h3>Produktionshelfer (m/w/d)</h3>
+      <p>Als Produktionshelfer unterstützen Sie aktiv in der Fertigung. Besonders wichtig sind dabei Zuverlässigkeit, Genauigkeit und Schichtbereitschaft.</p>
       
-      <h3>Maschinenführer/in</h3>
-      <p>Mit Erfahrung übernehmen Sie Verantwortung für Produktionsanlagen.</p>
+      <h3>Maschinenführer (m/w/d)</h3>
+      <p>Mit wachsender Erfahrung übernehmen Sie verantwortungsvolle Aufgaben an modernen Produktionsanlagen – eine perfekte Position für alle mit technischem Verständnis.</p>
       
-      <h3>Qualitätsprüfer/in</h3>
-      <p>Als Qualitätsprüfer stellen Sie sicher, dass Produkte den Anforderungen entsprechen.</p>
+      <h3>Qualitätsprüfer (m/w/d)</h3>
+      <p>Als Qualitätsprüfer stellen Sie sicher, dass sämtliche Produkte den hohen Anforderungen entsprechen und die Qualitätsstandards eingehalten werden.</p>
       
       <h2>Verdienst in der Industrie</h2>
-      <p>Industriejobs bieten überdurchschnittliche Verdienstmöglichkeiten durch Schichtzulagen.</p>
+      <p>Industriejobs bieten durch Schichtzulagen, Sonderzahlungen und Branchenzuschläge überdurchschnittliche Verdienstmöglichkeiten – besonders attraktiv für alle, die ihr Einkommen langfristig steigern möchten.</p>
     `,
     author: 'PersoFlex Team',
     date: '2024-11-28',
@@ -672,24 +672,24 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 'arbeitsrecht-zeitarbeit-faq',
     title: 'Arbeitsrecht in der Zeitarbeit: Die wichtigsten Fragen und Antworten',
-    excerpt: 'Was sind Ihre Rechte als Zeitarbeitnehmer? Wir klären die häufigsten Fragen.',
+    excerpt: 'Was sind Ihre Rechte als Zeitarbeitnehmer? Wir beantworten die häufigsten Fragen rund um Arbeitsrecht, Equal Pay und Kündigungsschutz.',
     content: `
       <h2>Ihre Rechte als Zeitarbeitnehmer</h2>
-      <p>Als Zeitarbeitnehmer haben Sie dieselben grundlegenden Rechte wie alle anderen Arbeitnehmer in Deutschland.</p>
+      <p>Als Zeitarbeitnehmer haben Sie dieselben grundlegenden Rechte wie alle anderen Arbeitnehmer in Deutschland – und teilweise sogar zusätzliche Schutzmechanismen durch spezielle Tarifverträge.</p>
       
-      <h2>Häufige Fragen</h2>
+      <h2>Häufig gestellte Fragen</h2>
       
       <h3>Wie lange darf ich beim selben Kunden eingesetzt werden?</h3>
-      <p>Die maximale Überlassungsdauer beträgt grundsätzlich 18 Monate.</p>
+      <p>Die gesetzliche Höchstüberlassungsdauer beträgt grundsätzlich 18 Monate. Durch Tarifverträge kann diese Frist in bestimmten Fällen verlängert werden.</p>
       
       <h3>Was bedeutet Equal Pay?</h3>
-      <p>Nach 9 Monaten haben Sie Anspruch auf gleiche Bezahlung wie vergleichbare Stammmitarbeiter.</p>
+      <p>Nach spätestens 9 Monaten Einsatz beim selben Kunden haben Sie Anspruch auf die gleiche Bezahlung wie vergleichbare Stammmitarbeiter des Einsatzbetriebs.</p>
       
       <h3>Wie sieht es mit dem Kündigungsschutz aus?</h3>
-      <p>Es gelten die regulären Kündigungsfristen nach Arbeitsvertrag.</p>
+      <p>Es gelten die regulären gesetzlichen und tariflichen Kündigungsfristen entsprechend Ihrem Arbeitsvertrag – ganz wie bei einer klassischen Festanstellung.</p>
       
       <h3>Bekomme ich auch Urlaubsgeld?</h3>
-      <p>Bei PersoFlex GmbH arbeiten wir nach GVP-Tarifvertrag: 30 Tage Urlaub und Urlaubsgeld.</p>
+      <p>Bei der PersoFlex GmbH arbeiten wir konsequent nach GVP-Tarifvertrag: Sie erhalten bis zu 30 Tage Urlaub sowie zusätzliches Urlaubsgeld.</p>
     `,
     author: 'PersoFlex Team',
     date: '2024-11-20',
@@ -701,30 +701,30 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     id: 'personaldienstleister-pforzheim-vergleich',
     title: 'Personaldienstleister in Pforzheim: Worauf Sie achten sollten',
-    excerpt: 'Nicht alle Zeitarbeitsfirmen sind gleich. Erfahren Sie, woran Sie einen seriösen Partner erkennen.',
+    excerpt: 'Nicht alle Zeitarbeitsfirmen sind gleich. Erfahren Sie, woran Sie einen seriösen Partner erkennen – und wovor Sie sich in Acht nehmen sollten.',
     content: `
       <h2>Qualitätsmerkmale seriöser Personaldienstleister</h2>
-      <p>In Pforzheim gibt es zahlreiche Personaldienstleister. Wie erkennen Sie einen seriösen Partner?</p>
+      <p>In Pforzheim und dem Enzkreis gibt es zahlreiche Personaldienstleister – doch Qualität und Seriosität unterscheiden sich teils erheblich. Woran erkennen Sie einen wirklich vertrauenswürdigen Partner, der Ihre Interessen ernst nimmt?</p>
       
-      <h2>Checkliste für die Auswahl</h2>
+      <h2>Checkliste für die richtige Auswahl</h2>
       
       <h3>1. Gültige AÜG-Erlaubnis</h3>
-      <p>Jeder seriöse Personaldienstleister muss eine gültige Erlaubnis zur Arbeitnehmerüberlassung besitzen.</p>
+      <p>Jeder seriöse Personaldienstleister muss eine gültige Erlaubnis zur Arbeitnehmerüberlassung gemäß AÜG besitzen. Fragen Sie im Zweifel gezielt danach – ein vertrauenswürdiger Anbieter legt diese jederzeit offen vor.</p>
       
       <h3>2. Tarifbindung</h3>
-      <p>Achten Sie auf Tarifbindung (z.B. GVP/BAP). Das garantiert faire Löhne.</p>
+      <p>Achten Sie unbedingt auf Tarifbindung (z. B. GVP oder BAP). Dies garantiert Ihnen faire Löhne, tarifliche Zusatzleistungen und rechtliche Sicherheit.</p>
       
       <h3>3. Transparente Verträge</h3>
-      <p>Alle Konditionen sollten klar im Arbeitsvertrag stehen.</p>
+      <p>Alle Konditionen sollten klar, verständlich und vollständig im Arbeitsvertrag geregelt sein. Versteckte Klauseln oder schwammige Formulierungen sind ein deutliches Warnsignal.</p>
       
       <h3>4. Persönliche Betreuung</h3>
-      <p>Ein guter Personaldienstleister nimmt sich Zeit für Sie.</p>
+      <p>Ein guter Personaldienstleister nimmt sich ausreichend Zeit für Sie – sowohl im Auswahlprozess als auch während der gesamten Zusammenarbeit.</p>
       
       <h3>5. Regionale Verwurzelung</h3>
-      <p>Kenntnis des lokalen Arbeitsmarktes ist Gold wert.</p>
+      <p>Fundierte Kenntnisse des lokalen Arbeitsmarktes sind Gold wert: Sie eröffnen Ihnen Zugang zu Unternehmen, die Sie auf eigene Faust nur schwer erreichen würden.</p>
       
       <h2>PersoFlex GmbH: Ihr Partner in Pforzheim</h2>
-      <p>Wir erfüllen alle diese Kriterien. Überzeugen Sie sich selbst!</p>
+      <p>Wir erfüllen alle genannten Qualitätskriterien – und leben echte Partnerschaft. Überzeugen Sie sich gerne selbst bei einem unverbindlichen Gespräch in unserem Büro!</p>
     `,
     author: 'PersoFlex Team',
     date: '2024-11-15',
@@ -732,24 +732,7 @@ export const BLOG_POSTS: BlogPost[] = [
     category: 'Ratgeber',
     tags: ['Personaldienstleister', 'Pforzheim', 'Qualität', 'Zeitarbeit'],
     featuredImage: '/bilder/blog/personaldienstleister-vergleich.jpg'
-  }
-];
-
-// Schema.org Structured Data für Blog
-const blogStructuredData = {
-  "@context": "https://schema.org",
-  "@type": "Blog",
-  "name": "PersoFlex GmbH Blog - Zeitarbeit & Karriere Ratgeber",
-  "description": "Expertenwissen rund um Zeitarbeit, Jobs und Karriere in Pforzheim und dem Enzkreis",
-  "url": "https://www.persoflex-gmbh.de/blog",
-  "inLanguage": "de-DE",
-  "publisher": {
-    "@type": "Organization",
-    "name": "PersoFlex GmbH",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://www.persoflex-gmbh.de/bilder/logo.webp"
-    },
+  },
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Kiehnlestraße 4",
@@ -771,9 +754,9 @@ export const Blog: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       <SEO 
-        title="Blog - Karriere Ratgeber PersoFlex"
-        description="Tipps zu Zeitarbeit, Jobs und Karriere in Pforzheim. Ratgeber fuer Bewerber."
-        keywords="Zeitarbeit Blog, Karriere Ratgeber, Jobs"
+        title="Blog – Karriere-Ratgeber & Expertenwissen | PersoFlex GmbH"
+        description="Praxisnahe Tipps zu Zeitarbeit, Jobs und Karriere in Pforzheim und dem Enzkreis. Ratgeber, Brancheneinblicke und Expertenwissen für Bewerber und Unternehmen."
+        keywords="Zeitarbeit Blog, Karriere Ratgeber, Jobs Pforzheim, Personaldienstleister Enzkreis, Arbeitsmarkt Pforzheim"
         canonicalUrl="https://www.persoflex-gmbh.de/blog"
       />
       
@@ -789,12 +772,12 @@ export const Blog: React.FC = () => {
             <span className="text-sm font-medium text-orange-700">Wissen & Karriere</span>
           </div>
           
-          <h1 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">
+          <h1 className="text-4xl md:text-5xl font-black text-gray-900 mb-6 text-balance">
             Der PersoFlex <span className="text-orange-500">Blog</span>
           </h1>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Expertenwissen rund um Zeitarbeit, Jobs und Karriere in Pforzheim und dem Enzkreis. 
-            Praktische Tipps und aktuelle Informationen.
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed text-pretty">
+            Expertenwissen rund um Zeitarbeit, Jobs und Karriere in Pforzheim und dem Enzkreis – 
+            praxisnahe Ratgeber, Brancheneinblicke und aktuelle Informationen aus der Region.
           </p>
         </div>
       </section>
@@ -915,11 +898,12 @@ export const Blog: React.FC = () => {
       {/* CTA Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl font-black text-gray-900 mb-4">
-            Bereit für den nächsten Schritt?
+          <h2 className="text-3xl font-black text-gray-900 mb-4 text-balance">
+            Bereit für den nächsten Schritt in Ihrer Karriere?
           </h2>
-          <p className="text-gray-600 mb-8 max-w-xl mx-auto">
-            Sie haben Fragen oder suchen einen neuen Job? Unser Team in Pforzheim freut sich auf Sie.
+          <p className="text-gray-600 mb-8 max-w-xl mx-auto leading-relaxed text-pretty">
+            Sie haben Fragen oder suchen einen neuen Job? Unser Team in Pforzheim freut sich auf Ihren 
+            Kontakt – persönlich, telefonisch oder bequem online.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 

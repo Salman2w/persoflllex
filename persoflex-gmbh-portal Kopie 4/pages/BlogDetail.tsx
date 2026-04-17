@@ -143,13 +143,17 @@ const BlogDetail: React.FC = () => {
             {/* Article Body */}
             <article 
               className="prose prose-lg max-w-none
-                prose-headings:font-bold prose-headings:text-gray-900
-                prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4
-                prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3
-                prose-p:text-gray-600 prose-p:leading-relaxed
-                prose-li:text-gray-600
-                prose-strong:text-gray-900
-                prose-a:text-orange-500 prose-a:no-underline hover:prose-a:underline"
+                prose-headings:font-black prose-headings:text-gray-900 prose-headings:tracking-tight
+                prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-5 prose-h2:pb-3 prose-h2:border-b-2 prose-h2:border-orange-100 prose-h2:leading-tight
+                prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-h3:text-orange-600 prose-h3:leading-snug
+                prose-p:text-gray-700 prose-p:leading-[1.8] prose-p:text-base prose-p:mb-5
+                prose-li:text-gray-700 prose-li:leading-relaxed prose-li:my-2
+                prose-ul:my-6 prose-ul:space-y-2 prose-ul:pl-6
+                prose-ol:my-6 prose-ol:space-y-2 prose-ol:pl-6
+                prose-strong:text-gray-900 prose-strong:font-bold
+                prose-a:text-orange-600 prose-a:font-semibold prose-a:no-underline hover:prose-a:underline hover:prose-a:text-orange-700
+                prose-blockquote:border-l-4 prose-blockquote:border-orange-500 prose-blockquote:bg-orange-50 prose-blockquote:py-2 prose-blockquote:px-6 prose-blockquote:rounded-r-lg prose-blockquote:not-italic prose-blockquote:text-gray-800
+                [&>ul>li]:marker:text-orange-500 [&>ol>li]:marker:text-orange-500 [&>ol>li]:marker:font-bold"
               dangerouslySetInnerHTML={{ __html: post.content }}
             />
 
