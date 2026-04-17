@@ -113,48 +113,48 @@ export const Kontakt: React.FC = () => {
             </div>
 
             {/* Quick Info Card */}
-            <div className="bg-white border-2 border-orange-400 rounded-2xl p-8 shadow-xl">
-              <h3 className="text-2xl font-black text-gray-900 mb-8">Kontaktdaten auf einen Blick</h3>
+            <div className="bg-orange-500 rounded-2xl p-8 shadow-xl">
+              <h3 className="text-2xl font-black text-white mb-8">Kontaktdaten auf einen Blick</h3>
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center flex-shrink-0 shadow-md">
+                  <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
                     <MapPin className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <p className="font-bold text-gray-900 mb-1">Adresse</p>
-                    <p className="text-gray-700 font-medium">Kiehnlestraße 4, 75172 Pforzheim</p>
+                    <p className="font-bold text-white mb-1">Adresse</p>
+                    <p className="text-white/90 font-medium">Kiehnlestraße 4, 75172 Pforzheim</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center flex-shrink-0 shadow-md">
+                  <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Phone className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <p className="font-bold text-gray-900 mb-1">Telefon</p>
-                    <a href="tel:+4972316039493" className="text-gray-900 hover:text-orange-600 font-bold text-lg transition-colors">
+                    <p className="font-bold text-white mb-1">Telefon</p>
+                    <a href="tel:+4972316039493" className="text-white hover:text-white/80 font-bold text-lg transition-colors">
                       07231 / 60 39 493
                     </a>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center flex-shrink-0 shadow-md">
+                  <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Mail className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <p className="font-bold text-gray-900 mb-1">E-Mail</p>
-                    <a href="mailto:info@persoflex-gmbh.de" className="text-gray-900 hover:text-orange-600 font-bold transition-colors break-all">
+                    <p className="font-bold text-white mb-1">E-Mail</p>
+                    <a href="mailto:info@persoflex-gmbh.de" className="text-white hover:text-white/80 font-bold transition-colors break-all">
                       info@persoflex-gmbh.de
                     </a>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center flex-shrink-0 shadow-md">
+                  <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Clock className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <p className="font-bold text-gray-900 mb-1">Öffnungszeiten</p>
-                    <p className="text-gray-700 font-medium">Mo - Fr: 08:00 - 17:00 Uhr</p>
-                    <p className="text-sm text-gray-600 font-medium">sowie nach Vereinbarung</p>
+                    <p className="font-bold text-white mb-1">Öffnungszeiten</p>
+                    <p className="text-white/90 font-medium">Mo - Fr: 08:00 - 17:00 Uhr</p>
+                    <p className="text-sm text-white/80 font-medium">sowie nach Vereinbarung</p>
                   </div>
                 </div>
               </div>
