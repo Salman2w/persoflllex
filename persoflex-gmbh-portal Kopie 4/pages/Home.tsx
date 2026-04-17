@@ -128,32 +128,42 @@ const structuredData = {
       </script>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Bright background image with optimal positioning */}
-        <div className="absolute inset-0">
-          <img 
-            src="/bilder/hero-diverse-team.jpg" 
-            alt="Vielfältiges Team aus zufriedenen Fachkräften und Mitarbeitern in Produktion, Logistik und Büro - Menschen, die ihren Traumjob bei PersoFlex gefunden haben" 
-            className="w-full h-full object-cover object-[center_35%]"
-            fetchPriority="high"
-            decoding="async"
-          />
-          {/* Subtle darkening overlay - keeps image bright while providing text contrast */}
-          <div className="absolute inset-0 bg-gradient-to-b from-gray-900/30 via-gray-900/20 to-gray-900/40" />
-          {/* Radial spotlight effect behind content for guaranteed readability */}
-          <div 
-            className="absolute inset-0"
-            style={{
-              background: 'radial-gradient(ellipse 900px 600px at center 45%, rgba(17, 24, 39, 0.55) 0%, rgba(17, 24, 39, 0.25) 50%, rgba(17, 24, 39, 0) 80%)'
-            }}
-          />
-        </div>
+      <section 
+        className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gray-900"
+        style={{
+          backgroundImage: "url('/bilder/hero-diverse-team.jpg')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center 35%',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
+        {/* Hidden img tag for SEO and accessibility */}
+        <img 
+          src="/bilder/hero-diverse-team.jpg" 
+          alt="Vielfältiges Team aus zufriedenen Fachkräften und Mitarbeitern in Produktion, Logistik und Büro - Menschen, die ihren Traumjob bei PersoFlex gefunden haben" 
+          className="sr-only"
+          fetchPriority="high"
+          decoding="async"
+        />
         
-        {/* Warm orange accent glow */}
-        <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-transparent to-orange-500/5" />
+        {/* Light overlay for text readability - keeps image fully visible */}
+        <div 
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background: 'linear-gradient(180deg, rgba(17,24,39,0.15) 0%, rgba(17,24,39,0.05) 40%, rgba(17,24,39,0.25) 100%)'
+          }}
+        />
+        
+        {/* Soft radial spotlight only behind the text for readability */}
+        <div 
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background: 'radial-gradient(ellipse 700px 500px at center 50%, rgba(17, 24, 39, 0.35) 0%, rgba(17, 24, 39, 0) 70%)'
+          }}
+        />
         
         {/* Smooth bottom fade to white */}
-        <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-white via-white/60 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white via-white/50 to-transparent pointer-events-none" />
 
         <div className="relative max-w-7xl mx-auto px-6 pt-32 pb-20">
           <div className="text-center max-w-4xl mx-auto">
