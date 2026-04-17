@@ -80,7 +80,15 @@ export const Unternehmen: React.FC = () => {
       
       {/* Hero Section */}
       <section className="relative pt-32 pb-24 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-orange-50 via-white to-white" />
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img 
+            src="/bilder/unternehmen-hero.jpg" 
+            alt="Für Unternehmen" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/80 to-white/40" />
+        </div>
         <div className="absolute inset-0">
           <div className="absolute top-1/4 right-0 w-[600px] h-[600px] bg-orange-400/10 rounded-full blur-[150px]" />
           <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-orange-300/10 rounded-full blur-[120px]" />

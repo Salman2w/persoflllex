@@ -114,7 +114,15 @@ export const FuerBewerber: React.FC = () => {
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-24 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-orange-50 via-orange-50/50 to-white" />
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img 
+            src="/bilder/bewerber-hero.jpg" 
+            alt="Für Bewerber" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-white/50" />
+        </div>
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-orange-200/30 rounded-full blur-[120px]" />
 
         <div className="max-w-7xl mx-auto px-6 relative z-10">
