@@ -751,10 +751,6 @@ export const Blog: React.FC = () => {
         keywords="Zeitarbeit Blog, Karriere Ratgeber, Jobs Pforzheim, Personaldienstleister Enzkreis, Arbeitsmarkt Pforzheim"
         canonicalUrl="https://www.persoflex-gmbh.de/blog"
       />
-      
-      <script type="application/ld+json">
-        {JSON.stringify(blogStructuredData)}
-      </script>
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-16 bg-gray-50">
