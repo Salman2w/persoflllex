@@ -25,10 +25,14 @@ import { Footer } from './components/Footer';
 import { Navbar } from './components/Navbar';
 import { CookieConsent } from './components/CookieConsent';
 import { Analytics } from './components/Analytics';
+import { ScrollToTop } from './components/ScrollToTop';
 
 function App() {
   return (
     <Router>
+      {/* Scroll zum Seitenanfang bei Routenwechsel */}
+      <ScrollToTop />
+      
       {/* Analytics trackt Seitenwechsel automatisch */}
       <Analytics />
       
