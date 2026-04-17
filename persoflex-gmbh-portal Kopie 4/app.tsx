@@ -19,6 +19,7 @@ import { Downloads } from './pages/Downloads';
 import { Arbeitnehmerueberlassung } from './pages/Arbeitnehmerueberlassung';
 import { Personalvermittlung } from './pages/Personalvermittlung';
 import { Personalberatung } from './pages/Personalberatung';
+import { NotFound } from './pages/NotFound';
 
 // --- KOMPONENTEN IMPORTIEREN ---
 import { Footer } from './components/Footer'; 
@@ -57,6 +58,8 @@ function App() {
         <Route path="/arbeitnehmerueberlassung" element={<Arbeitnehmerueberlassung />} />
         <Route path="/personalvermittlung" element={<Personalvermittlung />} />
         <Route path="/personalberatung" element={<Personalberatung />} />
+        {/* 404 Catch-all Route - muss immer als letztes stehen */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
 
       <Footer />

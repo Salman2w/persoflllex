@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de-DE">
   <head>
     <meta charset="UTF-8" />
     
@@ -43,6 +43,7 @@
     <meta property="og:image" content="https://www.persoflex-gmbh.de/bilder/og-image.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="PersoFlex GmbH - Ihr Partner für Zeitarbeit und Personalvermittlung in Pforzheim" />
     <meta property="og:locale" content="de_DE" />
     <meta property="og:site_name" content="PersoFlex GmbH" />
     
@@ -57,8 +58,11 @@
     <meta name="theme-color" content="#f97316" />
     <meta name="msapplication-TileColor" content="#f97316" />
     
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://www.persoflex-gmbh.de/" />
+    <!-- Web Manifest for PWA -->
+    <link rel="manifest" href="/manifest.json" />
+    
+    <!-- Preload critical hero image -->
+    <link rel="preload" as="image" href="/bilder/hero-logistik-produktion.jpg" fetchpriority="high" />
     
     <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -84,13 +88,13 @@
         "height": 60
       },
       "image": "https://www.persoflex-gmbh.de/bilder/og-image.jpg",
-      "description": "PersoFlex GmbH ist Ihr regionaler Partner fur Zeitarbeit und Personalvermittlung in Pforzheim und dem Enzkreis. Wir vermitteln Fachkrafte in Produktion, Logistik und Industrie.",
+      "description": "PersoFlex GmbH ist Ihr regionaler Partner für Zeitarbeit und Personalvermittlung in Pforzheim und dem Enzkreis. Wir vermitteln Fachkräfte in Produktion, Logistik und Industrie.",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Kiehnlestrasse 4",
+        "streetAddress": "Kiehnlestraße 4",
         "addressLocality": "Pforzheim",
         "postalCode": "75172",
-        "addressRegion": "Baden-Wurttemberg",
+        "addressRegion": "Baden-Württemberg",
         "addressCountry": "DE"
       },
       "geo": {
@@ -112,7 +116,7 @@
         },
         {
           "@type": "State",
-          "name": "Baden-Wurttemberg"
+          "name": "Baden-Württemberg"
         }
       ],
       "makesOffer": [
@@ -121,7 +125,7 @@
           "itemOffered": {
             "@type": "Service",
             "name": "Zeitarbeit",
-            "description": "Flexible Personalloesungen durch Arbeitnehmerueberlassung"
+            "description": "Flexible Personallösungen durch Arbeitnehmerüberlassung"
           }
         },
         {
@@ -129,15 +133,15 @@
           "itemOffered": {
             "@type": "Service",
             "name": "Personalvermittlung",
-            "description": "Direkte Vermittlung von Fachkraeften in Festanstellung"
+            "description": "Direkte Vermittlung von Fachkräften in Festanstellung"
           }
         },
         {
           "@type": "Offer",
           "itemOffered": {
             "@type": "Service",
-            "name": "Arbeitnehmerueberlassung",
-            "description": "Professionelle Personaldienstleistung nach AUeG"
+            "name": "Arbeitnehmerüberlassung",
+            "description": "Professionelle Personaldienstleistung nach AÜG"
           }
         },
         {
@@ -157,7 +161,7 @@
       "hasCredential": [
         {
           "@type": "EducationalOccupationalCredential",
-          "name": "AUG Erlaubnis",
+          "name": "AÜG Erlaubnis",
           "credentialCategory": "license"
         }
       ],
@@ -173,7 +177,7 @@
         "https://www.linkedin.com/company/persoflex-gmbh",
         "https://www.xing.com/companies/persoflexgmbh"
       ],
-      "priceRange": "Kostenlos fur Bewerber"
+      "priceRange": "Kostenlos für Bewerber"
     }
     </script>
     
@@ -216,13 +220,13 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Fur Bewerber",
+          "name": "Für Bewerber",
           "item": "https://www.persoflex-gmbh.de/fuer-bewerber"
         },
         {
           "@type": "ListItem",
           "position": 4,
-          "name": "Fur Unternehmen",
+          "name": "Für Unternehmen",
           "item": "https://www.persoflex-gmbh.de/unternehmen"
         }
       ]
