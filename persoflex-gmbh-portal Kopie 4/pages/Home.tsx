@@ -17,6 +17,7 @@ import {
   Quote
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
+import heroDiverseTeam from '../public/bilder/hero-diverse-team.jpg';
 
 // Schema.org Structured Data for SEO
 const structuredData = {
@@ -131,11 +132,12 @@ const structuredData = {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image - classic img tag with absolute positioning */}
         <img 
-          src="/bilder/hero-diverse-team.jpg" 
+          src={heroDiverseTeam} 
           alt="Vielfältiges Team aus zufriedenen Fachkräften und Mitarbeitern in Produktion, Logistik und Büro - Menschen, die ihren Traumjob bei PersoFlex gefunden haben" 
           className="absolute inset-0 w-full h-full object-cover object-center z-0"
           fetchPriority="high"
           decoding="async"
+          onError={(e) => { console.log('[v0] Hero image failed to load:', e.currentTarget.src); }}
         />
         
         {/* Light overlay for text readability - keeps image visible */}
