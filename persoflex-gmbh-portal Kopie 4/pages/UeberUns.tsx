@@ -442,6 +442,7 @@ export const UeberUns: React.FC = () => {
                       <p className="font-semibold text-gray-900">Persönlicher Kontakt</p>
                       <p className="text-sm text-gray-600">Kein anonymes Callcenter, sondern echte Ansprechpartner</p>
                     </div>
+                  </div>
                 </div>
               </div>
             </div>
