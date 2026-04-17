@@ -118,7 +118,15 @@ export const UeberUns: React.FC = () => {
       
       {/* Hero Section */}
       <section className="relative py-24 md:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-orange-50 via-orange-50/50 to-white" />
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img 
+            src="/bilder/ueberuns-hero.jpg" 
+            alt="Über PersoFlex" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-white/50" />
+        </div>
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-orange-200/30 rounded-full blur-[120px]" />
         
         <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -213,8 +221,8 @@ export const UeberUns: React.FC = () => {
             <div className="relative">
               <div className="aspect-[4/3] bg-gray-100 rounded-2xl overflow-hidden relative border border-gray-200 shadow-lg">
                 <img 
-                  src="/bilder/buero_pforzheim.webp"
-                  alt="PersoFlex Teammeeting im Büro Pforzheim - Personalvermittlung"
+                  src="/bilder/werte-teamwork.jpg"
+                  alt="PersoFlex Büroumgebung - Teamwork und Partnerschaft"
                   className="w-full h-full object-cover"
                   width="800"
                   height="600"
@@ -313,8 +321,17 @@ export const UeberUns: React.FC = () => {
       </section>
 
       {/* History / Milestones */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="py-24 bg-white relative overflow-hidden">
+        {/* Subtle background image */}
+        <div className="absolute inset-0 opacity-5">
+          <img 
+            src="/bilder/meilensteine.jpg" 
+            alt="" 
+            className="w-full h-full object-cover"
+            aria-hidden="true"
+          />
+        </div>
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
             <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-100 border border-orange-200 text-orange-600 text-sm font-semibold uppercase tracking-wider mb-4">
               Unsere Geschichte
@@ -385,36 +402,46 @@ export const UeberUns: React.FC = () => {
               </div>
             </div>
 
-            <div className="bg-white border-2 border-orange-200 rounded-2xl p-8 shadow-lg">
-              <h3 className="text-xl font-bold text-gray-900 mb-6">Warum regional?</h3>
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-orange-500 flex-shrink-0 mt-0.5" />
-                  <div>
-                    <p className="font-semibold text-gray-900">Kurze Wege</p>
-                    <p className="text-sm text-gray-600">Schnelle Reaktionszeiten und persönliche Betreuung</p>
+            <div>
+              {/* Pforzheim Image */}
+              <div className="aspect-video rounded-2xl overflow-hidden mb-6 shadow-lg border border-gray-200">
+                <img 
+                  src="/bilder/pforzheim-stadt.jpg" 
+                  alt="Pforzheim Stadtbild" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              
+              <div className="bg-white border-2 border-orange-200 rounded-2xl p-8 shadow-lg">
+                <h3 className="text-xl font-bold text-gray-900 mb-6">Warum regional?</h3>
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="w-6 h-6 text-orange-500 flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="font-semibold text-gray-900">Kurze Wege</p>
+                      <p className="text-sm text-gray-600">Schnelle Reaktionszeiten und persönliche Betreuung</p>
+                    </div>
                   </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-orange-500 flex-shrink-0 mt-0.5" />
-                  <div>
-                    <p className="font-semibold text-gray-900">Lokales Netzwerk</p>
-                    <p className="text-sm text-gray-600">Etablierte Kontakte zu Unternehmen der Region</p>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="w-6 h-6 text-orange-500 flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="font-semibold text-gray-900">Lokales Netzwerk</p>
+                      <p className="text-sm text-gray-600">Etablierte Kontakte zu Unternehmen der Region</p>
+                    </div>
                   </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-orange-500 flex-shrink-0 mt-0.5" />
-                  <div>
-                    <p className="font-semibold text-gray-900">Marktkenntnis</p>
-                    <p className="text-sm text-gray-600">Wissen über branchenspezifische Anforderungen</p>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="w-6 h-6 text-orange-500 flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="font-semibold text-gray-900">Marktkenntnis</p>
+                      <p className="text-sm text-gray-600">Wissen über branchenspezifische Anforderungen</p>
+                    </div>
                   </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-6 h-6 text-orange-500 flex-shrink-0 mt-0.5" />
-                  <div>
-                    <p className="font-semibold text-gray-900">Persönlicher Kontakt</p>
-                    <p className="text-sm text-gray-600">Kein anonymes Callcenter, sondern echte Ansprechpartner</p>
-                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle2 className="w-6 h-6 text-orange-500 flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="font-semibold text-gray-900">Persönlicher Kontakt</p>
+                      <p className="text-sm text-gray-600">Kein anonymes Callcenter, sondern echte Ansprechpartner</p>
+                    </div>
                 </div>
               </div>
             </div>
