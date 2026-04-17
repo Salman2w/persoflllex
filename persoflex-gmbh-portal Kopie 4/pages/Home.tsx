@@ -128,44 +128,31 @@ const structuredData = {
       </script>
 
       {/* Hero Section */}
-      <section 
-        className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gray-900"
-        style={{
-          backgroundImage: "url('/bilder/hero-diverse-team.jpg')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center 35%',
-          backgroundRepeat: 'no-repeat',
-        }}
-      >
-        {/* Hidden img tag for SEO and accessibility */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Background Image - classic img tag with absolute positioning */}
         <img 
           src="/bilder/hero-diverse-team.jpg" 
           alt="Vielfältiges Team aus zufriedenen Fachkräften und Mitarbeitern in Produktion, Logistik und Büro - Menschen, die ihren Traumjob bei PersoFlex gefunden haben" 
-          className="sr-only"
+          className="absolute inset-0 w-full h-full object-cover object-center z-0"
           fetchPriority="high"
           decoding="async"
         />
         
-        {/* Light overlay for text readability - keeps image fully visible */}
-        <div 
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            background: 'linear-gradient(180deg, rgba(17,24,39,0.15) 0%, rgba(17,24,39,0.05) 40%, rgba(17,24,39,0.25) 100%)'
-          }}
-        />
+        {/* Light overlay for text readability - keeps image visible */}
+        <div className="absolute inset-0 z-10 pointer-events-none bg-gradient-to-b from-gray-900/25 via-gray-900/15 to-gray-900/35" />
         
-        {/* Soft radial spotlight only behind the text for readability */}
+        {/* Soft radial spotlight behind text for readability */}
         <div 
-          className="absolute inset-0 pointer-events-none"
+          className="absolute inset-0 z-10 pointer-events-none"
           style={{
-            background: 'radial-gradient(ellipse 700px 500px at center 50%, rgba(17, 24, 39, 0.35) 0%, rgba(17, 24, 39, 0) 70%)'
+            background: 'radial-gradient(ellipse 800px 550px at center 50%, rgba(17, 24, 39, 0.4) 0%, rgba(17, 24, 39, 0) 70%)'
           }}
         />
         
         {/* Smooth bottom fade to white */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white via-white/50 to-transparent pointer-events-none" />
+        <div className="absolute bottom-0 left-0 right-0 h-32 z-10 bg-gradient-to-t from-white via-white/50 to-transparent pointer-events-none" />
 
-        <div className="relative max-w-7xl mx-auto px-6 pt-32 pb-20">
+        <div className="relative z-20 max-w-7xl mx-auto px-6 pt-32 pb-20">
           <div className="text-center max-w-4xl mx-auto">
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-orange-500 text-white mb-8 shadow-2xl shadow-orange-500/50 ring-2 ring-orange-400/40">
