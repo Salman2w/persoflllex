@@ -732,16 +732,8 @@ export const BLOG_POSTS: BlogPost[] = [
     category: 'Ratgeber',
     tags: ['Personaldienstleister', 'Pforzheim', 'Qualität', 'Zeitarbeit'],
     featuredImage: '/bilder/blog/personaldienstleister-vergleich.jpg'
-  },
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Kiehnlestraße 4",
-      "addressLocality": "Pforzheim",
-      "postalCode": "75172",
-      "addressCountry": "DE"
-    }
   }
-};
+];
 
 export const Blog: React.FC = () => {
   const categories = [...new Set(BLOG_POSTS.map(post => post.category))];
