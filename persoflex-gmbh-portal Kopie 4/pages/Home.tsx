@@ -87,10 +87,10 @@ const structuredData = {
   ];
 
   const industries = [
-    { name: 'Produktion & Fertigung', jobs: 'Top-Bereich', icon: Factory },
-    { name: 'Logistik & Lager', jobs: 'Stark gefragt', icon: Truck },
-    { name: 'Handwerk & Technik', jobs: 'Wachsend', icon: Wrench },
-    { name: 'Industrie & Metall', jobs: 'Spezialisiert', icon: Package },
+    { name: 'Produktion & Fertigung', jobs: 'Top-Bereich', icon: Factory, image: '/bilder/branche-produktion.jpg' },
+    { name: 'Logistik & Lager', jobs: 'Stark gefragt', icon: Truck, image: '/bilder/branche-logistik.jpg' },
+    { name: 'Handwerk & Technik', jobs: 'Wachsend', icon: Wrench, image: '/bilder/branche-handwerk.jpg' },
+    { name: 'Industrie & Metall', jobs: 'Spezialisiert', icon: Package, image: '/bilder/branche-industrie.jpg' },
   ];
 
   const reviews = [
@@ -129,20 +129,21 @@ const structuredData = {
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Prominent Orange Gradient Background */}
-        <div className="absolute inset-0 bg-gradient-to-b from-orange-100 via-orange-50 to-white" />
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img 
+            src="/bilder/hero-logistik-produktion.jpg" 
+            alt="Logistik und Produktion" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/70 to-gray-900/50" />
+        </div>
         
-        {/* Secondary diagonal gradient for depth and warmth */}
-        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-orange-100/60 to-orange-200/50" />
+        {/* Orange accent overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-transparent" />
         
-        {/* Radial glow in upper right for visual interest */}
-        <div className="absolute top-0 right-0 w-[70%] h-[70%] bg-gradient-radial from-orange-300/40 via-orange-200/25 to-transparent" />
-        
-        {/* Smooth bottom fade to white for transition */}
+        {/* Smooth bottom fade */}
         <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-white to-transparent" />
-        
-        {/* Visible Grid Pattern */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(249,115,22,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(249,115,22,0.08)_1px,transparent_1px)] bg-[size:48px_48px]" />
 
         <div className="relative max-w-7xl mx-auto px-6 pt-32 pb-20">
           <div className="text-center max-w-4xl mx-auto">
@@ -153,17 +154,17 @@ const structuredData = {
             </div>
 
             {/* Headline */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-6 leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-tight">
               Finden Sie Ihren{' '}
               <span className="text-orange-500 relative">
                 Traumjob
-                <svg className="absolute -bottom-2 left-0 w-full h-3 text-orange-300" viewBox="0 0 200 12" preserveAspectRatio="none">
+                <svg className="absolute -bottom-2 left-0 w-full h-3 text-orange-400" viewBox="0 0 200 12" preserveAspectRatio="none">
                   <path d="M0,8 Q50,0 100,8 T200,8" stroke="currentColor" strokeWidth="4" fill="none" strokeLinecap="round"/>
                 </svg>
               </span>
             </h1>
             
-            <p className="text-lg md:text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
               PersoFlex verbindet Unternehmen mit den besten Fachkräften in Pforzheim und dem Enzkreis. 
               Zeitarbeit und Personalvermittlung mit Leidenschaft.
             </p>
@@ -179,7 +180,7 @@ const structuredData = {
               </Link>
               <Link 
                 to="/unternehmen" 
-                className="px-8 py-4 bg-white border-2 border-orange-200 text-gray-700 rounded-xl font-semibold hover:border-orange-400 hover:bg-orange-50 transition-all inline-flex items-center justify-center gap-2"
+                className="px-8 py-4 bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white rounded-xl font-semibold hover:bg-white/20 hover:border-white/50 transition-all inline-flex items-center justify-center gap-2"
               >
                 Personal anfragen
               </Link>
@@ -187,17 +188,17 @@ const structuredData = {
 
             {/* Trust Indicators */}
             <div className="mt-16 flex flex-wrap justify-center gap-4">
-              <div className="flex items-center gap-2 px-5 py-2.5 bg-white rounded-full border-2 border-orange-200 shadow-sm hover:border-orange-400 transition-colors">
+              <div className="flex items-center gap-2 px-5 py-2.5 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
                 <CheckCircle2 className="w-5 h-5 text-orange-500" />
-                <span className="text-sm font-semibold text-gray-700">GVP Mitglied</span>
+                <span className="text-sm font-semibold text-white">GVP Mitglied</span>
               </div>
-              <div className="flex items-center gap-2 px-5 py-2.5 bg-white rounded-full border-2 border-orange-200 shadow-sm hover:border-orange-400 transition-colors">
+              <div className="flex items-center gap-2 px-5 py-2.5 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
                 <CheckCircle2 className="w-5 h-5 text-orange-500" />
-                <span className="text-sm font-semibold text-gray-700">AÜG Erlaubnis</span>
+                <span className="text-sm font-semibold text-white">AÜG Erlaubnis</span>
               </div>
-              <div className="flex items-center gap-2 px-5 py-2.5 bg-white rounded-full border-2 border-orange-200 shadow-sm hover:border-orange-400 transition-colors">
+              <div className="flex items-center gap-2 px-5 py-2.5 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
                 <CheckCircle2 className="w-5 h-5 text-orange-500" />
-                <span className="text-sm font-semibold text-gray-700">Tarifgebunden</span>
+                <span className="text-sm font-semibold text-white">Tarifgebunden</span>
               </div>
             </div>
           </div>
@@ -346,13 +347,20 @@ const structuredData = {
                 {industries.map((industry, index) => (
                   <div 
                     key={index}
-                    className="flex items-center justify-between p-5 bg-gray-50 border border-gray-200 rounded-xl hover:border-orange-300 hover:bg-orange-50 transition-all group cursor-pointer"
+                    className="flex items-center justify-between p-4 bg-gray-50 border border-gray-200 rounded-xl hover:border-orange-300 hover:bg-orange-50 transition-all group cursor-pointer"
                   >
                     <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-orange-100 text-orange-500 flex items-center justify-center group-hover:bg-orange-500 group-hover:text-white transition-colors">
-                        <industry.icon size={24} />
+                      <div className="w-16 h-16 rounded-xl overflow-hidden flex-shrink-0">
+                        <img 
+                          src={industry.image} 
+                          alt={industry.name} 
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                        />
                       </div>
-                      <span className="font-semibold text-gray-900">{industry.name}</span>
+                      <div>
+                        <span className="font-semibold text-gray-900 block">{industry.name}</span>
+                        <span className="text-sm text-gray-500">Fachkräfte verfügbar</span>
+                      </div>
                     </div>
                     <span className="text-sm bg-orange-100 text-orange-600 px-3 py-1 rounded-full font-semibold">{industry.jobs}</span>
                   </div>

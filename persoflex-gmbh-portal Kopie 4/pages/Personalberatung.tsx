@@ -20,7 +20,17 @@ export function Personalberatung() {
   return (
     <main className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 overflow-hidden">
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img 
+            src="/bilder/beratung-strategie.jpg" 
+            alt="Personalberatung" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/95 via-gray-900/80 to-gray-900/60" />
+        </div>
+        
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-10 left-20 w-72 h-72 bg-orange-500 rounded-full blur-3xl" />
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-orange-400 rounded-full blur-3xl" />
