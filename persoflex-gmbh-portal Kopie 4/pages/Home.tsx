@@ -129,39 +129,50 @@ const structuredData = {
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Image with improved positioning */}
+        {/* Bright background image with optimal positioning */}
         <div className="absolute inset-0">
           <img 
             src="/bilder/hero-diverse-team.jpg" 
             alt="Vielfältiges Team aus zufriedenen Fachkräften und Mitarbeitern in Produktion, Logistik und Büro - Menschen, die ihren Traumjob bei PersoFlex gefunden haben" 
-            className="w-full h-full object-cover object-[center_30%] scale-105"
+            className="w-full h-full object-cover object-[center_35%]"
             fetchPriority="high"
             decoding="async"
           />
-          {/* Stronger contrast gradient for WCAG AA compliance */}
-          <div className="absolute inset-0 bg-gradient-to-r from-gray-950/95 via-gray-900/85 to-gray-900/65" />
-          {/* Additional dark vignette for text clarity */}
-          <div className="absolute inset-0 bg-gradient-to-b from-gray-900/40 via-transparent to-gray-900/50" />
+          {/* Subtle darkening overlay - keeps image bright while providing text contrast */}
+          <div className="absolute inset-0 bg-gradient-to-b from-gray-900/30 via-gray-900/20 to-gray-900/40" />
+          {/* Radial spotlight effect behind content for guaranteed readability */}
+          <div 
+            className="absolute inset-0"
+            style={{
+              background: 'radial-gradient(ellipse 900px 600px at center 45%, rgba(17, 24, 39, 0.55) 0%, rgba(17, 24, 39, 0.25) 50%, rgba(17, 24, 39, 0) 80%)'
+            }}
+          />
         </div>
         
-        {/* Orange accent overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-orange-500/15 to-transparent" />
+        {/* Warm orange accent glow */}
+        <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-transparent to-orange-500/5" />
         
-        {/* Smooth bottom fade */}
-        <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-white to-transparent" />
+        {/* Smooth bottom fade to white */}
+        <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-white via-white/60 to-transparent" />
 
         <div className="relative max-w-7xl mx-auto px-6 pt-32 pb-20">
           <div className="text-center max-w-4xl mx-auto">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-orange-500 text-white mb-8 shadow-xl shadow-orange-500/40 ring-1 ring-orange-400/50">
+            <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-orange-500 text-white mb-8 shadow-2xl shadow-orange-500/50 ring-2 ring-orange-400/40">
               <MapPin className="w-4 h-4" />
               <span className="text-sm font-semibold tracking-wide">Ihr Personaldienstleister in Pforzheim</span>
             </div>
 
-            {/* Headline - with text shadow for enhanced readability */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-tight [text-shadow:_0_2px_20px_rgb(0_0_0_/_60%)]">
+            {/* Headline - strong text shadow for readability on bright image */}
+            <h1 
+              className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-tight"
+              style={{ textShadow: '0 2px 4px rgba(0,0,0,0.5), 0 4px 24px rgba(0,0,0,0.7)' }}
+            >
               Finden Sie Ihren{' '}
-              <span className="text-orange-400 relative [text-shadow:_0_2px_20px_rgb(0_0_0_/_60%)]">
+              <span 
+                className="text-orange-400 relative"
+                style={{ textShadow: '0 2px 4px rgba(0,0,0,0.5), 0 4px 24px rgba(0,0,0,0.7)' }}
+              >
                 Traumjob
                 <svg className="absolute -bottom-2 left-0 w-full h-3 text-orange-400 drop-shadow-lg" viewBox="0 0 200 12" preserveAspectRatio="none">
                   <path d="M0,8 Q50,0 100,8 T200,8" stroke="currentColor" strokeWidth="4" fill="none" strokeLinecap="round"/>
@@ -169,8 +180,11 @@ const structuredData = {
               </span>
             </h1>
             
-            {/* Improved text contrast - white with 95% opacity and text shadow */}
-            <p className="text-lg md:text-xl text-white/95 mb-10 max-w-2xl mx-auto leading-relaxed font-medium [text-shadow:_0_1px_10px_rgb(0_0_0_/_70%)]">
+            {/* Paragraph - pure white with strong text shadow for WCAG AA contrast */}
+            <p 
+              className="text-lg md:text-xl text-white mb-10 max-w-2xl mx-auto leading-relaxed font-semibold"
+              style={{ textShadow: '0 1px 3px rgba(0,0,0,0.6), 0 2px 16px rgba(0,0,0,0.8)' }}
+            >
               PersoFlex verbindet Unternehmen mit den besten Fachkräften in Pforzheim und dem Enzkreis. 
               Zeitarbeit und Personalvermittlung mit Leidenschaft.
             </p>
@@ -179,30 +193,30 @@ const structuredData = {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 to="/jobs" 
-                className="group bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:shadow-2xl hover:shadow-orange-500/40 hover:-translate-y-0.5 inline-flex items-center justify-center gap-2 ring-1 ring-orange-400/50"
+                className="group bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 shadow-2xl shadow-orange-500/40 hover:shadow-orange-500/60 hover:-translate-y-0.5 inline-flex items-center justify-center gap-2 ring-2 ring-orange-400/50"
               >
                 <span>Jobs entdecken</span>
                 <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
               </Link>
               <Link 
                 to="/unternehmen" 
-                className="px-8 py-4 bg-white/15 backdrop-blur-md border-2 border-white/50 text-white rounded-xl font-semibold hover:bg-white/25 hover:border-white/70 transition-all inline-flex items-center justify-center gap-2 shadow-lg"
+                className="px-8 py-4 bg-gray-900/60 backdrop-blur-md border-2 border-white/70 text-white rounded-xl font-semibold hover:bg-gray-900/80 hover:border-white transition-all inline-flex items-center justify-center gap-2 shadow-xl"
               >
                 Personal anfragen
               </Link>
             </div>
 
-            {/* Trust Indicators - improved contrast */}
+            {/* Trust Indicators - darker pill backgrounds for strong contrast on bright image */}
             <div className="mt-16 flex flex-wrap justify-center gap-4">
-              <div className="flex items-center gap-2 px-5 py-2.5 bg-white/15 backdrop-blur-md rounded-full border border-white/40 shadow-lg">
+              <div className="flex items-center gap-2 px-5 py-2.5 bg-gray-900/70 backdrop-blur-md rounded-full border border-white/30 shadow-xl">
                 <CheckCircle2 className="w-5 h-5 text-orange-400" />
                 <span className="text-sm font-semibold text-white">GVP Mitglied</span>
               </div>
-              <div className="flex items-center gap-2 px-5 py-2.5 bg-white/15 backdrop-blur-md rounded-full border border-white/40 shadow-lg">
+              <div className="flex items-center gap-2 px-5 py-2.5 bg-gray-900/70 backdrop-blur-md rounded-full border border-white/30 shadow-xl">
                 <CheckCircle2 className="w-5 h-5 text-orange-400" />
                 <span className="text-sm font-semibold text-white">AÜG Erlaubnis</span>
               </div>
-              <div className="flex items-center gap-2 px-5 py-2.5 bg-white/15 backdrop-blur-md rounded-full border border-white/40 shadow-lg">
+              <div className="flex items-center gap-2 px-5 py-2.5 bg-gray-900/70 backdrop-blur-md rounded-full border border-white/30 shadow-xl">
                 <CheckCircle2 className="w-5 h-5 text-orange-400" />
                 <span className="text-sm font-semibold text-white">Tarifgebunden</span>
               </div>
