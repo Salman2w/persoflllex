@@ -132,11 +132,12 @@ const structuredData = {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img 
-            src="/bilder/hero-logistik-produktion.jpg" 
-            alt="Logistik und Produktion" 
-            className="w-full h-full object-cover"
+            src="/bilder/hero-diverse-team.jpg" 
+            alt="Vielfältiges Team aus zufriedenen Fachkräften und Mitarbeitern in Produktion, Logistik und Büro - Menschen, die ihren Traumjob bei PersoFlex gefunden haben" 
+            className="w-full h-full object-cover object-center"
+            fetchPriority="high"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/70 to-gray-900/50" />
+          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/92 via-gray-900/75 to-gray-900/55" />
         </div>
         
         {/* Orange accent overlay */}
