@@ -129,19 +129,23 @@ const structuredData = {
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Image */}
+        {/* Background Image with improved positioning */}
         <div className="absolute inset-0">
           <img 
             src="/bilder/hero-diverse-team.jpg" 
             alt="Vielfältiges Team aus zufriedenen Fachkräften und Mitarbeitern in Produktion, Logistik und Büro - Menschen, die ihren Traumjob bei PersoFlex gefunden haben" 
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-cover object-[center_30%] scale-105"
             fetchPriority="high"
+            decoding="async"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/92 via-gray-900/75 to-gray-900/55" />
+          {/* Stronger contrast gradient for WCAG AA compliance */}
+          <div className="absolute inset-0 bg-gradient-to-r from-gray-950/95 via-gray-900/85 to-gray-900/65" />
+          {/* Additional dark vignette for text clarity */}
+          <div className="absolute inset-0 bg-gradient-to-b from-gray-900/40 via-transparent to-gray-900/50" />
         </div>
         
         {/* Orange accent overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-br from-orange-500/15 to-transparent" />
         
         {/* Smooth bottom fade */}
         <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-white to-transparent" />
@@ -149,23 +153,24 @@ const structuredData = {
         <div className="relative max-w-7xl mx-auto px-6 pt-32 pb-20">
           <div className="text-center max-w-4xl mx-auto">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-orange-500 text-white mb-8 shadow-lg shadow-orange-500/25">
+            <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-orange-500 text-white mb-8 shadow-xl shadow-orange-500/40 ring-1 ring-orange-400/50">
               <MapPin className="w-4 h-4" />
-              <span className="text-sm font-semibold">Ihr Personaldienstleister in Pforzheim</span>
+              <span className="text-sm font-semibold tracking-wide">Ihr Personaldienstleister in Pforzheim</span>
             </div>
 
-            {/* Headline */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-tight">
+            {/* Headline - with text shadow for enhanced readability */}
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-tight [text-shadow:_0_2px_20px_rgb(0_0_0_/_60%)]">
               Finden Sie Ihren{' '}
-              <span className="text-orange-500 relative">
+              <span className="text-orange-400 relative [text-shadow:_0_2px_20px_rgb(0_0_0_/_60%)]">
                 Traumjob
-                <svg className="absolute -bottom-2 left-0 w-full h-3 text-orange-400" viewBox="0 0 200 12" preserveAspectRatio="none">
+                <svg className="absolute -bottom-2 left-0 w-full h-3 text-orange-400 drop-shadow-lg" viewBox="0 0 200 12" preserveAspectRatio="none">
                   <path d="M0,8 Q50,0 100,8 T200,8" stroke="currentColor" strokeWidth="4" fill="none" strokeLinecap="round"/>
                 </svg>
               </span>
             </h1>
             
-            <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
+            {/* Improved text contrast - white with 95% opacity and text shadow */}
+            <p className="text-lg md:text-xl text-white/95 mb-10 max-w-2xl mx-auto leading-relaxed font-medium [text-shadow:_0_1px_10px_rgb(0_0_0_/_70%)]">
               PersoFlex verbindet Unternehmen mit den besten Fachkräften in Pforzheim und dem Enzkreis. 
               Zeitarbeit und Personalvermittlung mit Leidenschaft.
             </p>
@@ -174,31 +179,31 @@ const structuredData = {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 to="/jobs" 
-                className="group bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:shadow-xl hover:shadow-orange-500/30 hover:-translate-y-0.5 inline-flex items-center justify-center gap-2"
+                className="group bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:shadow-2xl hover:shadow-orange-500/40 hover:-translate-y-0.5 inline-flex items-center justify-center gap-2 ring-1 ring-orange-400/50"
               >
                 <span>Jobs entdecken</span>
                 <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
               </Link>
               <Link 
                 to="/unternehmen" 
-                className="px-8 py-4 bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white rounded-xl font-semibold hover:bg-white/20 hover:border-white/50 transition-all inline-flex items-center justify-center gap-2"
+                className="px-8 py-4 bg-white/15 backdrop-blur-md border-2 border-white/50 text-white rounded-xl font-semibold hover:bg-white/25 hover:border-white/70 transition-all inline-flex items-center justify-center gap-2 shadow-lg"
               >
                 Personal anfragen
               </Link>
             </div>
 
-            {/* Trust Indicators */}
+            {/* Trust Indicators - improved contrast */}
             <div className="mt-16 flex flex-wrap justify-center gap-4">
-              <div className="flex items-center gap-2 px-5 py-2.5 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
-                <CheckCircle2 className="w-5 h-5 text-orange-500" />
+              <div className="flex items-center gap-2 px-5 py-2.5 bg-white/15 backdrop-blur-md rounded-full border border-white/40 shadow-lg">
+                <CheckCircle2 className="w-5 h-5 text-orange-400" />
                 <span className="text-sm font-semibold text-white">GVP Mitglied</span>
               </div>
-              <div className="flex items-center gap-2 px-5 py-2.5 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
-                <CheckCircle2 className="w-5 h-5 text-orange-500" />
+              <div className="flex items-center gap-2 px-5 py-2.5 bg-white/15 backdrop-blur-md rounded-full border border-white/40 shadow-lg">
+                <CheckCircle2 className="w-5 h-5 text-orange-400" />
                 <span className="text-sm font-semibold text-white">AÜG Erlaubnis</span>
               </div>
-              <div className="flex items-center gap-2 px-5 py-2.5 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
-                <CheckCircle2 className="w-5 h-5 text-orange-500" />
+              <div className="flex items-center gap-2 px-5 py-2.5 bg-white/15 backdrop-blur-md rounded-full border border-white/40 shadow-lg">
+                <CheckCircle2 className="w-5 h-5 text-orange-400" />
                 <span className="text-sm font-semibold text-white">Tarifgebunden</span>
               </div>
             </div>
