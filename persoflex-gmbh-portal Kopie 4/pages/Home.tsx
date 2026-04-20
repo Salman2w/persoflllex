@@ -18,6 +18,7 @@ import {
   Check
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
+import { FAQSection } from '../components/FAQSection';
 import heroDiverseTeam from '../public/bilder/hero-diverse-team.jpg';
 
 // Schema.org Structured Data for SEO
@@ -98,21 +99,24 @@ const structuredData = {
   const reviews = [
     {
       author: 'Markus W.',
-      role: 'Logistikleiter, Pforzheim',
-      text: 'Endlich mal eine Zeitarbeitsfirma, die wirklich zuhört. Die Reaktionszeiten sind top und die Mitarbeiter motiviert.',
-      rating: 5
+      role: 'Logistikleiter',
+      company: 'Produktionsbetrieb Pforzheim',
+      text: 'Wir hatten kurzfristig einen Personalengpass in der Kommissionierung. PersoFlex hatte innerhalb von 48 Stunden zwei passende Staplerfahrer vor Ort – zuverlässig und eingearbeitet.',
+      rating: 5,
     },
     {
       author: 'Julia S.',
-      role: 'HR Managerin, Enzkreis',
-      text: 'Sehr angenehme, frische Zusammenarbeit. Man merkt, dass hier ein neues Team am Werk ist, das sich wirklich bemüht.',
-      rating: 5
+      role: 'HR Managerin',
+      company: 'Metallverarbeitung Enzkreis',
+      text: 'Die persönliche Betreuung macht den Unterschied. Unser Ansprechpartner kennt unseren Betrieb und schickt nur Kandidaten, die wirklich passen. Das spart uns Zeit und teure Fehlbesetzungen.',
+      rating: 5,
     },
     {
       author: 'Ali K.',
       role: 'Staplerfahrer',
-      text: 'Habe schnell einen Job bekommen. Das Team ist jung, nett und kümmert sich.',
-      rating: 5
+      company: 'in Festanstellung übernommen',
+      text: 'Nach drei Monaten bei einem Logistikkunden wurde ich übernommen. Bezahlung war von Anfang an nach Tarif, inklusive Urlaubsgeld. Genau so soll Zeitarbeit laufen.',
+      rating: 5,
     },
   ];
 
@@ -523,15 +527,19 @@ const structuredData = {
                   &ldquo;{review.text}&rdquo;
                 </p>
                 
-                <div>
-                  <p className="font-bold text-gray-900">{review.author}</p>
-                  <p className="text-sm text-gray-500">{review.role}</p>
-                </div>
+                  <div className="pt-4 border-t border-gray-200">
+                    <p className="font-semibold text-gray-900 text-sm">{review.author}</p>
+                    <p className="text-xs text-gray-500 mt-0.5">{review.role}</p>
+                    <p className="text-xs text-orange-600 font-medium mt-0.5">{review.company}</p>
+                  </div>
               </div>
             ))}
           </div>
         </div>
       </section>
+
+      {/* FAQ Section - mirrors JSON-LD FAQPage schema for improved SEO/LLM discoverability */}
+      <FAQSection />
 
       {/* CTA Section */}
       <section className="py-24 bg-orange-500">

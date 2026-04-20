@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { ObfuscatedEmail } from '../components/ObfuscatedEmail';
 import { 
   MapPin, 
   Phone, 
@@ -142,9 +143,11 @@ export const Kontakt: React.FC = () => {
                   </div>
                   <div>
                     <p className="font-bold text-white mb-1">E-Mail</p>
-                    <a href="mailto:info@persoflex-gmbh.de" className="text-white hover:text-white/80 font-bold transition-colors break-all">
-                      info@persoflex-gmbh.de
-                    </a>
+                    <ObfuscatedEmail
+                      user="info"
+                      domain="persoflex-gmbh.de"
+                      className="text-white hover:text-white/80 font-bold transition-colors break-all"
+                    />
                   </div>
                 </div>
                 <div className="flex items-start gap-4">

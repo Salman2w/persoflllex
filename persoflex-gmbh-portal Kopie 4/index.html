@@ -2,15 +2,6 @@
 <html lang="de-DE">
   <head>
     <meta charset="UTF-8" />
-    
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-54EE1QK7FJ"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-54EE1QK7FJ');
-    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
     
     <!-- Favicon & Icons -->
@@ -291,5 +282,20 @@
   <body class="bg-white text-gray-900">
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
+
+    <!-- Google Analytics - deferred to prevent render-blocking -->
+    <script>
+      window.addEventListener('load', function () {
+        var gaScript = document.createElement('script');
+        gaScript.async = true;
+        gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-54EE1QK7FJ';
+        document.head.appendChild(gaScript);
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { window.dataLayer.push(arguments); }
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', 'G-54EE1QK7FJ', { 'anonymize_ip': true });
+      });
+    </script>
   </body>
 </html>

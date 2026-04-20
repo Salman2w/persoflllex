@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { MapPin, Phone, Mail, Shield, FileText, ArrowRight, Linkedin } from 'lucide-react';
+import { ObfuscatedEmail } from './ObfuscatedEmail';
 
 export const Footer: React.FC = () => {
   return (
@@ -70,9 +71,11 @@ export const Footer: React.FC = () => {
                     <div className="w-8 h-8 rounded-lg bg-gray-800 flex items-center justify-center shrink-0">
                       <Mail className="text-orange-500" size={16} />
                     </div>
-                    <a href="mailto:info@persoflex-gmbh.de" className="text-sm text-gray-400 hover:text-orange-500 transition-colors">
-                      info@persoflex-gmbh.de
-                    </a>
+                    <ObfuscatedEmail
+                      user="info"
+                      domain="persoflex-gmbh.de"
+                      className="text-sm text-gray-400 hover:text-orange-500 transition-colors break-all"
+                    />
                   </li>
                 </ul>
               </address>

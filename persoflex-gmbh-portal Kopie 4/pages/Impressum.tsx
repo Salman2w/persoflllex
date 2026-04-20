@@ -1,5 +1,6 @@
 import React from 'react';
 import { SEO } from '../components/SEO';
+import { ObfuscatedEmail } from '../components/ObfuscatedEmail';
 
 export const Impressum: React.FC = () => {
   return (
@@ -34,7 +35,7 @@ export const Impressum: React.FC = () => {
             <h2 className="text-xl font-bold mb-2">Kontakt</h2>
             <p className="leading-relaxed">
               Telefon: 07231 6039493<br />
-              E-Mail: info@persoflex-gmbh.de<br />
+              E-Mail: <ObfuscatedEmail user="info" domain="persoflex-gmbh.de" className="text-orange-600 hover:text-orange-700 underline underline-offset-2" /><br />
               Web: www.persoflex-gmbh.de
             </p>
           </section>

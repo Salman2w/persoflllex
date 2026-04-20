@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { SEO } from '../components/SEO';
 import { Shield, ChevronDown, ChevronUp, Lock, Server, FileText, Users, Globe, Mail } from 'lucide-react';
+import { ObfuscatedEmail } from '../components/ObfuscatedEmail';
 
 interface SectionProps {
   title: string;
@@ -104,7 +105,10 @@ export const Datenschutz: React.FC = () => {
                 <Mail className="w-5 h-5" />
               </div>
               <h3 className="font-bold text-gray-900 mb-1">Kontakt Datenschutz</h3>
-              <p className="text-sm text-gray-600">info@persoflex-gmbh.de<br />Tel: 07231 6039493</p>
+              <p className="text-sm text-gray-600">
+                <ObfuscatedEmail user="info" domain="persoflex-gmbh.de" className="hover:text-orange-500 transition-colors" />
+                <br />Tel: 07231 6039493
+              </p>
             </div>
             <div className="bg-white rounded-xl p-5 shadow-lg border border-gray-100">
               <div className="w-10 h-10 rounded-lg bg-orange-100 flex items-center justify-center text-orange-500 mb-3">
@@ -188,7 +192,7 @@ export const Datenschutz: React.FC = () => {
                 Wilhelmshoehe 7<br />
                 75173 Pforzheim<br />
                 Telefon: 07231 6039493<br />
-                E-Mail: info@persoflex-gmbh.de
+                E-Mail: <ObfuscatedEmail user="info" domain="persoflex-gmbh.de" className="text-orange-600 hover:text-orange-700 underline underline-offset-2" />
               </p>
             </div>
 
@@ -283,13 +287,14 @@ export const Datenschutz: React.FC = () => {
                 <p className="text-sm text-gray-600 mb-3">
                   Bei Fragen zur Erhebung, Verarbeitung oder Nutzung Ihrer personenbezogenen Daten wenden Sie sich bitte an uns.
                 </p>
-                <a 
-                  href="mailto:info@persoflex-gmbh.de" 
+                <ObfuscatedEmail
+                  user="info"
+                  domain="persoflex-gmbh.de"
                   className="inline-flex items-center gap-2 text-sm font-medium text-orange-500 hover:text-orange-600 transition-colors"
                 >
                   <Mail className="w-4 h-4" />
-                  info@persoflex-gmbh.de
-                </a>
+                  <span>info<span aria-hidden="true">&nbsp;[at]&nbsp;</span>persoflex-gmbh.de</span>
+                </ObfuscatedEmail>
               </div>
             </div>
           </div>
