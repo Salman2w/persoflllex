@@ -14,7 +14,8 @@ import {
   Truck,
   Package,
   Wrench,
-  Quote
+  Quote,
+  Check
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
 import heroDiverseTeam from '../public/bilder/hero-diverse-team.jpg';
@@ -268,24 +269,24 @@ const structuredData = {
           </div>
 
           {/* Benefits Section */}
-          <div className="bg-white border border-gray-200 rounded-2xl p-12 md:p-16">
-            <div className="grid md:grid-cols-2 gap-12">
+          <div className="bg-white border border-gray-200 rounded-2xl p-10 md:p-14">
+            <div className="grid md:grid-cols-2 gap-12 md:gap-14">
               <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-8">
+                <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-8 tracking-tight">
                   Warum PersoFlex wählen?
                 </h3>
-                <div className="space-y-6">
+                <div className="space-y-5">
                   {[
-                    { icon: CheckCircle2, title: 'GVP Mitglied', desc: 'Tarifgebundene Dienstleistungen nach Branchenstandards' },
-                    { icon: CheckCircle2, title: 'AÜG Erlaubnis', desc: 'Vollständig lizenziert und von der Bundesagentur für Arbeit genehmigt' },
-                    { icon: CheckCircle2, title: 'Regionale Expertise', desc: 'Tiefes Verständnis des Pforzheimer und Enzkreis Arbeitsmarkts' },
-                    { icon: CheckCircle2, title: 'Persönliche Betreuung', desc: 'Direkter Kontakt zu Ihrem Ansprechpartner vor Ort' }
+                    { title: 'GVP Mitglied', desc: 'Tarifgebundene Dienstleistungen nach Branchenstandards' },
+                    { title: 'AÜG Erlaubnis', desc: 'Vollständig lizenziert und von der Bundesagentur für Arbeit genehmigt' },
+                    { title: 'Regionale Expertise', desc: 'Tiefes Verständnis des Pforzheimer und Enzkreis Arbeitsmarkts' },
+                    { title: 'Persönliche Betreuung', desc: 'Direkter Kontakt zu Ihrem Ansprechpartner vor Ort' }
                   ].map((benefit, idx) => (
-                    <div key={idx} className="flex gap-4">
-                      <benefit.icon className="w-6 h-6 text-orange-500 flex-shrink-0 mt-1" />
+                    <div key={idx} className="flex gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-orange-500 flex-shrink-0 mt-0.5" strokeWidth={2} />
                       <div>
-                        <h4 className="font-semibold text-gray-900 mb-1">{benefit.title}</h4>
-                        <p className="text-gray-600 text-sm">{benefit.desc}</p>
+                        <h4 className="font-semibold text-gray-900 mb-1 text-sm">{benefit.title}</h4>
+                        <p className="text-gray-600 text-sm leading-relaxed">{benefit.desc}</p>
                       </div>
                     </div>
                   ))}
@@ -293,18 +294,18 @@ const structuredData = {
               </div>
 
               <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-8">
+                <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-8 tracking-tight">
                   Für jeden Bedarf die richtige Lösung
                 </h3>
-                <div className="space-y-6">
+                <div className="space-y-4">
                   {[
                     { title: 'Für Unternehmen', desc: 'Sie suchen flexible Personalressourcen, um Kapazitätsspitzen zu bewältigen oder kurzfristige Ausfälle zu überbrücken.' },
                     { title: 'Für Bewerber', desc: 'Sie möchten schnell in die Arbeitswelt einsteigen, verschiedene Unternehmen kennenlernen oder Ihre Karriere entwickeln.' },
                     { title: 'Für Berater', desc: 'Sie benötigen strategische Unterstützung bei Personalplanung, Recruiting-Prozessen oder HR-Herausforderungen.' }
                   ].map((item, idx) => (
                     <div key={idx} className="p-4 bg-gray-50 rounded-lg border border-gray-200 hover:border-orange-300 transition-colors">
-                      <h4 className="font-semibold text-gray-900 mb-2">{item.title}</h4>
-                      <p className="text-gray-600 text-sm">{item.desc}</p>
+                      <h4 className="font-semibold text-gray-900 mb-1.5 text-sm">{item.title}</h4>
+                      <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
                     </div>
                   ))}
                 </div>
@@ -314,21 +315,21 @@ const structuredData = {
 
           {/* CTA Section */}
           <div className="mt-16 text-center">
-            <p className="text-gray-600 mb-8 text-lg">
+            <p className="text-gray-600 mb-6 text-base md:text-lg">
               Bereit, mit PersoFlex zusammenzuarbeiten?
             </p>
-            <div className="flex flex-wrap gap-4 justify-center">
+            <div className="flex flex-wrap gap-3 justify-center">
               <Link 
                 to="/kontakt"
-                className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold transition-all"
+                className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-7 py-3.5 rounded-lg font-semibold text-sm transition-all shadow-sm hover:shadow-md"
               >
-                Jetzt Kontakt aufnehmen <ArrowRight size={18} />
+                Jetzt Kontakt aufnehmen <ArrowRight size={15} />
               </Link>
               <Link 
                 to="/jobs"
-                className="inline-flex items-center gap-2 border-2 border-orange-500 text-orange-500 hover:bg-orange-50 px-8 py-4 rounded-lg font-semibold transition-all"
+                className="inline-flex items-center gap-2 border border-gray-300 text-gray-900 hover:border-orange-500 hover:text-orange-500 px-7 py-3.5 rounded-lg font-semibold text-sm transition-all"
               >
-                Jobs durchsuchen <ArrowRight size={18} />
+                Jobs durchsuchen <ArrowRight size={15} />
               </Link>
             </div>
           </div>
@@ -340,102 +341,79 @@ const structuredData = {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-gray-100 text-gray-600 text-sm font-semibold uppercase tracking-wider mb-4">
+              <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-orange-600 mb-4">
                 Branchen
               </span>
-              <h2 className="text-3xl md:text-4xl font-black text-gray-900 mt-4 mb-6">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 tracking-tight leading-tight mb-6 text-balance">
                 Jobs in allen <span className="text-orange-500">Bereichen</span>
               </h2>
-              <p className="text-gray-600 mb-8 leading-relaxed text-lg">
+              <p className="text-gray-600 mb-8 leading-relaxed text-base md:text-lg">
                 Als spezialisierte <span className="font-semibold text-gray-700">Zeitarbeitsfirma Pforzheim</span> verstehen wir die Anforderungen regionaler Unternehmen. Unser <span className="font-semibold text-gray-700">Zeitarbeit Pforzheim</span> Angebot verbindet qualifizierte Fachkräfte mit Betrieben in Produktion, Logistik, Handwerk und Industrie. Wir bieten flexible, verlässliche Personalbesetzung für Ihre kurzfristigen und mittelfristigen Projekte im Enzkreis—mit transparenter Kommunikation und fairer Zusammenarbeit auf beiden Seiten.
               </p>
               
-              <div className="space-y-4">
+              <div className="space-y-3">
                 {industries.map((industry, index) => (
                   <div 
                     key={index}
-                    className="flex items-center justify-between p-4 bg-gray-50 border border-gray-200 rounded-xl hover:border-orange-300 hover:bg-orange-50 transition-all group cursor-pointer"
+                    className="flex items-center justify-between p-4 bg-gray-50 border border-gray-200 rounded-lg hover:border-orange-300 hover:bg-white transition-all group cursor-pointer"
                   >
                     <div className="flex items-center gap-4">
-                      <div className="w-16 h-16 rounded-xl overflow-hidden flex-shrink-0">
+                      <div className="w-14 h-14 rounded-lg overflow-hidden flex-shrink-0">
                         <img 
                           src={industry.image} 
                           alt={industry.name} 
-                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         />
                       </div>
                       <div>
-                        <span className="font-semibold text-gray-900 block">{industry.name}</span>
-                        <span className="text-sm text-gray-500">Fachkräfte verfügbar</span>
+                        <span className="font-semibold text-gray-900 block text-sm">{industry.name}</span>
+                        <span className="text-xs text-gray-500">Fachkräfte verfügbar</span>
                       </div>
                     </div>
-                    <span className="text-sm bg-orange-100 text-orange-600 px-3 py-1 rounded-full font-semibold">{industry.jobs}</span>
+                    <span className="text-xs text-orange-600 font-semibold tracking-wide">{industry.jobs}</span>
                   </div>
                 ))}
               </div>
 
               <Link 
                 to="/jobs" 
-                className="mt-8 inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold transition-all"
+                className="mt-8 inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold text-sm transition-all shadow-sm hover:shadow-md"
               >
-                Alle Jobs ansehen <ArrowRight size={18} />
+                Alle Jobs ansehen <ArrowRight size={16} />
               </Link>
             </div>
 
             <div className="relative">
-              <div className="rounded-2xl bg-gradient-to-br from-orange-50 to-gray-50 border-2 border-orange-200 p-8 flex flex-col justify-between h-full">
+              <div className="rounded-2xl bg-gradient-to-br from-orange-50/60 to-gray-50 border border-orange-200/60 p-8 md:p-10 flex flex-col justify-between h-full">
                 {/* Header */}
                 <div className="mb-8">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Unsere Fachbereiche</h3>
-                  <div className="h-1 w-12 bg-orange-500 rounded"></div>
+                  <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 tracking-tight">Unsere Fachbereiche</h3>
+                  <div className="h-0.5 w-10 bg-orange-500 rounded-full"></div>
                 </div>
                 
                 {/* Service areas content */}
-                <div className="space-y-4 flex-grow">
-                  <div className="flex items-start gap-3">
-                    <div className="w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center flex-shrink-0 mt-1">
-                      <span className="text-white text-xs font-bold">✓</span>
+                <div className="space-y-5 flex-grow">
+                  {[
+                    { title: 'Produktion & Fertigung', desc: 'Fachkräfte für Fertigungsprozesse und Montage' },
+                    { title: 'Logistik & Lagerbetreuung', desc: 'Personal für Lagerverwaltung und Versand' },
+                    { title: 'Handwerk & Technik', desc: 'Spezialisierte Handwerker und Techniker' },
+                    { title: 'Industrie & Metallbearbeitung', desc: 'Fachpersonal für Industriebetriebe' },
+                  ].map((area, idx) => (
+                    <div key={idx} className="flex items-start gap-3">
+                      <div className="w-5 h-5 rounded-full bg-orange-500 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <Check className="w-3 h-3 text-white" strokeWidth={3} />
+                      </div>
+                      <div>
+                        <p className="font-semibold text-gray-900 text-sm">{area.title}</p>
+                        <p className="text-xs text-gray-600 mt-0.5">{area.desc}</p>
+                      </div>
                     </div>
-                    <div>
-                      <p className="font-semibold text-gray-900">Produktion & Fertigung</p>
-                      <p className="text-sm text-gray-600">Fachkräfte für Fertigungsprozesse und Montage</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start gap-3">
-                    <div className="w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center flex-shrink-0 mt-1">
-                      <span className="text-white text-xs font-bold">✓</span>
-                    </div>
-                    <div>
-                      <p className="font-semibold text-gray-900">Logistik & Lagerbetreuung</p>
-                      <p className="text-sm text-gray-600">Personal für Lagerverwaltung und Versand</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start gap-3">
-                    <div className="w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center flex-shrink-0 mt-1">
-                      <span className="text-white text-xs font-bold">✓</span>
-                    </div>
-                    <div>
-                      <p className="font-semibold text-gray-900">Handwerk & Technik</p>
-                      <p className="text-sm text-gray-600">Spezialisierte Handwerker und Techniker</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start gap-3">
-                    <div className="w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center flex-shrink-0 mt-1">
-                      <span className="text-white text-xs font-bold">✓</span>
-                    </div>
-                    <div>
-                      <p className="font-semibold text-gray-900">Industrie & Metallbearbeitung</p>
-                      <p className="text-sm text-gray-600">Fachpersonal für Industriebetriebe</p>
-                    </div>
-                  </div>
+                  ))}
                 </div>
                 
                 {/* Bottom accent line */}
-                <div className="mt-8 pt-6 border-t border-orange-200">
-                  <p className="text-xs text-gray-500 font-medium">Alle Bereiche bundesweit verfügbar</p>
+                <div className="mt-8 pt-6 border-t border-orange-200/60">
+                  <p className="text-xs text-gray-500 font-medium tracking-wide">Alle Bereiche regional in Pforzheim & Enzkreis</p>
                 </div>
               </div>
             </div>
@@ -448,66 +426,66 @@ const structuredData = {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-8">
             {/* For Companies */}
-            <div className="group bg-white border border-gray-200 rounded-xl p-10 hover:border-orange-300 transition-all duration-300 hover:shadow-lg">
-              <div className="w-16 h-16 bg-orange-500 rounded-xl flex items-center justify-center mb-6">
-                <Building2 className="w-8 h-8 text-white" />
+            <div className="group bg-white border border-gray-200 rounded-xl p-8 md:p-10 hover:border-orange-300 transition-all duration-300 hover:shadow-lg">
+              <div className="w-11 h-11 bg-orange-50 text-orange-500 rounded-lg flex items-center justify-center mb-6 group-hover:bg-orange-500 group-hover:text-white transition-colors">
+                <Building2 className="w-5 h-5" strokeWidth={1.75} />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Für Unternehmen</h3>
-              <p className="text-gray-600 mb-6 leading-relaxed">
+              <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 tracking-tight">Für Unternehmen</h3>
+              <p className="text-gray-600 mb-6 leading-relaxed text-sm md:text-base">
                 Sie suchen qualifizierte Mitarbeiter für Produktion, Logistik oder Handwerk? 
                 Wir liefern Ihnen schnell und zuverlässig die passenden Fachkräfte.
               </p>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-center gap-3 text-gray-700">
-                  <CheckCircle2 className="w-5 h-5 text-orange-500 flex-shrink-0" />
+              <ul className="space-y-2.5 mb-8">
+                <li className="flex items-center gap-2.5 text-gray-700 text-sm">
+                  <Check className="w-4 h-4 text-orange-500 flex-shrink-0" strokeWidth={2.5} />
                   <span>Schnelle Besetzung offener Stellen</span>
                 </li>
-                <li className="flex items-center gap-3 text-gray-700">
-                  <CheckCircle2 className="w-5 h-5 text-orange-500 flex-shrink-0" />
+                <li className="flex items-center gap-2.5 text-gray-700 text-sm">
+                  <Check className="w-4 h-4 text-orange-500 flex-shrink-0" strokeWidth={2.5} />
                   <span>Geprüfte und qualifizierte Mitarbeiter</span>
                 </li>
-                <li className="flex items-center gap-3 text-gray-700">
-                  <CheckCircle2 className="w-5 h-5 text-orange-500 flex-shrink-0" />
+                <li className="flex items-center gap-2.5 text-gray-700 text-sm">
+                  <Check className="w-4 h-4 text-orange-500 flex-shrink-0" strokeWidth={2.5} />
                   <span>Flexible Personalplanung</span>
                 </li>
               </ul>
               <Link 
                 to="/unternehmen" 
-                className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold transition-all"
+                className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-5 py-2.5 rounded-lg font-semibold text-sm transition-all shadow-sm hover:shadow-md"
               >
-                Personal anfragen <ArrowRight size={18} />
+                Personal anfragen <ArrowRight size={15} />
               </Link>
             </div>
 
             {/* For Applicants */}
-            <div className="group bg-white border border-gray-200 rounded-xl p-10 hover:border-orange-300 transition-all duration-300 hover:shadow-lg">
-              <div className="w-16 h-16 bg-gray-700 rounded-xl flex items-center justify-center mb-6">
-                <Users className="w-8 h-8 text-white" />
+            <div className="group bg-white border border-gray-200 rounded-xl p-8 md:p-10 hover:border-gray-400 transition-all duration-300 hover:shadow-lg">
+              <div className="w-11 h-11 bg-gray-100 text-gray-700 rounded-lg flex items-center justify-center mb-6 group-hover:bg-gray-800 group-hover:text-white transition-colors">
+                <Users className="w-5 h-5" strokeWidth={1.75} />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Für Bewerber</h3>
-              <p className="text-gray-600 mb-6 leading-relaxed">
+              <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 tracking-tight">Für Bewerber</h3>
+              <p className="text-gray-600 mb-6 leading-relaxed text-sm md:text-base">
                 Sie suchen einen neuen Job mit fairer Bezahlung und guten Arbeitsbedingungen? 
-                Wir finden die perfekte Stelle für Sie.
+                Wir finden die passende Stelle für Sie.
               </p>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-center gap-3 text-gray-700">
-                  <CheckCircle2 className="w-5 h-5 text-orange-500 flex-shrink-0" />
+              <ul className="space-y-2.5 mb-8">
+                <li className="flex items-center gap-2.5 text-gray-700 text-sm">
+                  <Check className="w-4 h-4 text-orange-500 flex-shrink-0" strokeWidth={2.5} />
                   <span>Faire Bezahlung nach Tarif</span>
                 </li>
-                <li className="flex items-center gap-3 text-gray-700">
-                  <CheckCircle2 className="w-5 h-5 text-orange-500 flex-shrink-0" />
+                <li className="flex items-center gap-2.5 text-gray-700 text-sm">
+                  <Check className="w-4 h-4 text-orange-500 flex-shrink-0" strokeWidth={2.5} />
                   <span>Persönliche Betreuung</span>
                 </li>
-                <li className="flex items-center gap-3 text-gray-700">
-                  <CheckCircle2 className="w-5 h-5 text-orange-500 flex-shrink-0" />
+                <li className="flex items-center gap-2.5 text-gray-700 text-sm">
+                  <Check className="w-4 h-4 text-orange-500 flex-shrink-0" strokeWidth={2.5} />
                   <span>Übernahmechancen</span>
                 </li>
               </ul>
               <Link 
                 to="/fuer-bewerber" 
-                className="inline-flex items-center gap-2 bg-gray-700 hover:bg-gray-800 text-white px-6 py-3 rounded-lg font-semibold transition-all"
+                className="inline-flex items-center gap-2 bg-gray-900 hover:bg-gray-800 text-white px-5 py-2.5 rounded-lg font-semibold text-sm transition-all shadow-sm hover:shadow-md"
               >
-                Jetzt bewerben <ArrowRight size={18} />
+                Jetzt bewerben <ArrowRight size={15} />
               </Link>
             </div>
           </div>
@@ -517,11 +495,11 @@ const structuredData = {
       {/* Reviews Section */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-orange-100 text-orange-600 text-sm font-semibold uppercase tracking-wider mb-4">
+          <div className="text-center mb-16 max-w-3xl mx-auto">
+            <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-orange-600 mb-4">
               Kundenstimmen
             </span>
-            <h2 className="text-3xl md:text-4xl font-black text-gray-900 mt-4 mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 tracking-tight leading-tight text-balance">
               Das sagen unsere <span className="text-orange-500">Kunden</span>
             </h2>
           </div>
@@ -586,42 +564,41 @@ const structuredData = {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-orange-100 text-orange-600 text-sm font-semibold uppercase tracking-wider mb-4">
-                <MapPin size={16} />
+              <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-orange-600 mb-4">
                 Standort
               </span>
-              <h2 className="text-3xl md:text-4xl font-black text-gray-900 mt-4 mb-6">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 tracking-tight leading-tight mb-6 text-balance">
                 Besuchen Sie uns in <span className="text-orange-500">Pforzheim</span>
               </h2>
-              <p className="text-gray-600 mb-8 leading-relaxed text-lg">
+              <p className="text-gray-600 mb-8 leading-relaxed text-base md:text-lg">
                 Unser Büro befindet sich zentral in Pforzheim. Kommen Sie vorbei für ein persönliches Gespräch 
                 oder rufen Sie uns einfach an.
               </p>
               
-              <address className="not-italic space-y-4 text-gray-700">
+              <address className="not-italic space-y-4 text-gray-700 text-sm">
                 <div className="flex items-start gap-3">
-                  <MapPin className="w-5 h-5 text-orange-500 mt-1 flex-shrink-0" />
+                  <MapPin className="w-4 h-4 text-orange-500 mt-1 flex-shrink-0" strokeWidth={2} />
                   <div>
-                    <p className="font-semibold">PersoFlex GmbH</p>
+                    <p className="font-semibold text-gray-900">PersoFlex GmbH</p>
                     <p>Kiehnlestraße 4</p>
                     <p>75172 Pforzheim</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Clock className="w-5 h-5 text-orange-500 flex-shrink-0" />
-                  <p>Mo - Fr: 08:00 - 17:00 Uhr</p>
+                  <Clock className="w-4 h-4 text-orange-500 flex-shrink-0" strokeWidth={2} />
+                  <p>Mo – Fr: 08:00 – 17:00 Uhr</p>
                 </div>
               </address>
 
               <Link 
                 to="/kontakt" 
-                className="mt-8 inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold transition-all"
+                className="mt-8 inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold text-sm transition-all shadow-sm hover:shadow-md"
               >
-                Kontakt aufnehmen <ArrowRight size={18} />
+                Kontakt aufnehmen <ArrowRight size={15} />
               </Link>
             </div>
 
-            <div className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-lg">
+            <div className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm">
               <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.0!2d8.6949572!3d48.8929474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDjCsDUzJzM0LjYiTiA4wrA0MScxNy44IkU!5e0!3m2!1sde!2sde!4v1234567890"
                 width="100%"
