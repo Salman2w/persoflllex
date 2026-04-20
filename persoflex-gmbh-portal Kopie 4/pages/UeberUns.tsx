@@ -19,6 +19,7 @@ import {
   Star
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
+import { ObfuscatedEmail } from '../components/ObfuscatedEmail';
 
 const TEAM_MEMBERS = [
   {
@@ -122,8 +123,12 @@ export const UeberUns: React.FC = () => {
         <div className="absolute inset-0">
           <img 
             src="/bilder/ueberuns-hero.jpg" 
-            alt="Über PersoFlex" 
+            alt="PersoFlex GmbH - Team und Büro in Pforzheim" 
             className="w-full h-full object-cover"
+            width={1920}
+            height={1080}
+            fetchPriority="high"
+            decoding="async"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-white/50" />
         </div>
@@ -328,6 +333,10 @@ export const UeberUns: React.FC = () => {
             src="/bilder/meilensteine.jpg" 
             alt="" 
             className="w-full h-full object-cover"
+            width={1920}
+            height={800}
+            loading="lazy"
+            decoding="async"
             aria-hidden="true"
           />
         </div>
@@ -407,8 +416,12 @@ export const UeberUns: React.FC = () => {
               <div className="aspect-video rounded-2xl overflow-hidden mb-6 shadow-lg border border-gray-200">
                 <img 
                   src="/bilder/pforzheim-stadt.jpg" 
-                  alt="Pforzheim Stadtbild" 
+                  alt="Pforzheim Stadtbild - Standort von PersoFlex GmbH" 
                   className="w-full h-full object-cover"
+                  width={1280}
+                  height={720}
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               
@@ -487,9 +500,13 @@ export const UeberUns: React.FC = () => {
                   
                   {/* Hover Actions */}
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-8 gap-4">
-                     <a href={`mailto:${member.email}`} className="bg-orange-500 hover:bg-orange-600 p-3 rounded-lg text-white transition-colors shadow-md" title="E-Mail senden">
-                       <Mail size={20} />
-                     </a>
+                     <ObfuscatedEmail
+                       user={member.email.split('@')[0]}
+                       domain={member.email.split('@')[1]}
+                       className="bg-orange-500 hover:bg-orange-600 p-3 rounded-lg text-white transition-colors shadow-md inline-flex items-center justify-center"
+                     >
+                       <Mail size={20} aria-label={`E-Mail an ${member.name} senden`} />
+                     </ObfuscatedEmail>
                      <a href={`tel:${member.phone.replace(/\s/g, '')}`} className="bg-orange-500 hover:bg-orange-600 p-3 rounded-lg text-white transition-colors shadow-md" title="Anrufen">
                        <Phone size={20} />
                      </a>

@@ -19,6 +19,8 @@ import {
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
 import { FAQSection } from '../components/FAQSection';
+import { TeamPreview } from '../components/TeamPreview';
+import { TrustBar } from '../components/TrustBar';
 import heroDiverseTeam from '../public/bilder/hero-diverse-team.jpg';
 
 // Schema.org Structured Data for SEO
@@ -137,9 +139,10 @@ const structuredData = {
           src={heroDiverseTeam} 
           alt="Vielfältiges Team aus zufriedenen Fachkräften und Mitarbeitern in Produktion, Logistik und Büro - Menschen, die ihren Traumjob bei PersoFlex gefunden haben" 
           className="absolute inset-0 w-full h-full object-cover object-center z-0"
+          width={1920}
+          height={1080}
           fetchPriority="high"
           decoding="async"
-          onError={(e) => { console.log('[v0] Hero image failed to load:', e.currentTarget.src); }}
         />
         
         {/* Light overlay for text readability - keeps image visible */}
@@ -230,8 +233,11 @@ const structuredData = {
         </div>
       </section>
 
+      {/* Trust Bar — credibility & regulatory signals with cited sources */}
+      <TrustBar />
+
       {/* Services Section */}
-      <section className="py-24 bg-gray-50 border-t border-gray-100">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           {/* Header - refined typography */}
           <div className="text-center mb-16 max-w-3xl mx-auto">
@@ -365,8 +371,12 @@ const structuredData = {
                       <div className="w-14 h-14 rounded-lg overflow-hidden flex-shrink-0">
                         <img 
                           src={industry.image} 
-                          alt={industry.name} 
+                          alt={`${industry.name} - Jobs in Pforzheim und Enzkreis`}
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                          width={56}
+                          height={56}
+                          loading="lazy"
+                          decoding="async"
                         />
                       </div>
                       <div>
@@ -496,8 +506,11 @@ const structuredData = {
         </div>
       </section>
 
+      {/* Team Preview - Named team members build Subject Expertise & Credibility signals */}
+      <TeamPreview />
+
       {/* Reviews Section */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-gray-50 border-y border-gray-100">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16 max-w-3xl mx-auto">
             <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-orange-600 mb-4">
