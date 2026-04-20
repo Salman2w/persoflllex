@@ -41,8 +41,8 @@ export const Unternehmen: React.FC = () => {
     { 
       icon: Shield, 
       title: "On-Site Management", 
-      desc: "Bei hohem Personalbedarf sind wir direkt bei Ihnen vor Ort präsent. Ein fester Ansprechpartner koordiniert alle Einsätze, löst Probleme sofort und sorgt für reibungslose Abläufe in Ihrem Betrieb.",
-      benefits: ["Direkter Ansprechpartner", "Schnelle Problemlösung", "Optimierte Koordination"]
+      desc: "Bei größerem Personalbedarf arbeiten wir direkt bei Ihnen vor Ort. Ein fester Ansprechpartner koordiniert die Einsätze, klärt Fragen kurz und direkt und hält Ihnen den Rücken frei.",
+      benefits: ["Fester Ansprechpartner vor Ort", "Kurze Entscheidungswege", "Weniger interner Aufwand"]
     }
   ];
 
@@ -72,9 +72,9 @@ export const Unternehmen: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       <SEO 
-        title="Personaldienstleister Pforzheim - PersoFlex"
-        description="Zeitarbeit und Personalvermittlung in Pforzheim. On-Site Management fuer Industrie und Logistik."
-        keywords="Personaldienstleister Pforzheim, Zeitarbeit Enzkreis"
+        title="Personal für Unternehmen in Pforzheim & Enzkreis | PersoFlex GmbH"
+        description="Schnelle Personallösungen für Produktion, Logistik und Industrie in Pforzheim. Arbeitnehmerüberlassung, Personalvermittlung und On-Site Management aus einer Hand."
+        keywords="Personaldienstleister Pforzheim, Zeitarbeit Enzkreis, Arbeitnehmerüberlassung Baden-Württemberg, On-Site Management, Personal für Unternehmen"
         canonicalUrl="https://www.persoflex-gmbh.de/unternehmen"
       />
       

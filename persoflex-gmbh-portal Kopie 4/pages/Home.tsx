@@ -73,17 +73,17 @@ const structuredData = {
     {
       icon: Briefcase,
       title: 'Arbeitnehmerüberlassung',
-      description: 'Flexible Personallösungen für Ihr Unternehmen. Von kurzfristigen Einsätzen bis zur langfristigen Zusammenarbeit.',
+      description: 'Personal für Auftragsspitzen, Krankheitsvertretungen oder saisonale Einsätze – kurzfristig verfügbar und tariflich abgesichert.',
     },
     {
       icon: Users,
       title: 'Personalvermittlung',
-      description: 'Direkte Vermittlung qualifizierter Fachkräfte. Wir finden den perfekten Match für Ihre Anforderungen.',
+      description: 'Wir vermitteln qualifizierte Fachkräfte direkt in Festanstellung bei Unternehmen in Pforzheim und dem Enzkreis.',
     },
     {
       icon: Shield,
       title: 'Personalberatung',
-      description: 'Strategische HR-Beratung und Unterstützung bei der Personalplanung für nachhaltigen Erfolg.',
+      description: 'Wir beraten Sie bei Personalplanung, Recruiting-Strategien und Fachkräftemangel – konkret und auf Ihre Situation zugeschnitten.',
     },
   ];
 
@@ -118,15 +118,12 @@ const structuredData = {
   return (
     <>
       <SEO 
-        title="PersoFlex - Zeitarbeit Pforzheim"
-        description="Zeitarbeit und Personalvermittlung in Pforzheim. Jobs in Produktion und Logistik."
-        keywords="Zeitarbeit Pforzheim, Personalvermittlung, Jobs"
+        title="Zeitarbeit & Personalvermittlung Pforzheim | PersoFlex GmbH"
+        description="PersoFlex GmbH aus Pforzheim vermittelt Personal in Produktion, Logistik und Industrie. Tariflich bezahlt, persönlich betreut, regional verwurzelt im Enzkreis."
+        keywords="Zeitarbeit Pforzheim, Personalvermittlung Enzkreis, Jobs Pforzheim, Arbeitnehmerüberlassung, Personaldienstleister Baden-Württemberg"
         canonicalUrl="https://www.persoflex-gmbh.de/"
+        structuredData={structuredData}
       />
-      
-      <script type="application/ld+json">
-        {JSON.stringify(structuredData)}
-      </script>
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">

@@ -101,16 +101,13 @@ export const FuerBewerber: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      <SEO
-        title="Bewerberportal - Jobs bei PersoFlex"
-        description="Jobs in Pforzheim finden. Faire Zeitarbeit mit bis zu 30 Tagen Urlaub."
-        keywords="Jobs Pforzheim, Bewerber, Zeitarbeit"
-        canonicalUrl="https://www.persoflex-gmbh.de/fuer-bewerber"
-      />
-
-      <script type="application/ld+json">
-        {JSON.stringify(structuredData)}
-      </script>
+  <SEO
+  title="Jobs in Pforzheim finden | Für Bewerber | PersoFlex GmbH"
+  description="Jobs in Produktion, Logistik und Handwerk in Pforzheim & Enzkreis. Tariflicher Lohn, 30 Tage Urlaub, Tankgutschein und persönliche Betreuung. Jetzt bewerben."
+  keywords="Jobs Pforzheim, Bewerber, Zeitarbeit Enzkreis, Produktionshelfer, Staplerfahrer, Lagerjobs"
+  canonicalUrl="https://www.persoflex-gmbh.de/fuer-bewerber"
+  structuredData={structuredData}
+  />
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-24 overflow-hidden">
