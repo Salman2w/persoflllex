@@ -60,11 +60,9 @@ const BlogDetail: React.FC = () => {
         ogType="article"
         articlePublishedTime={post.date}
         articleAuthor={post.author}
+        ogImage={post.featuredImage}
+        structuredData={articleStructuredData}
       />
-      
-      <script type="application/ld+json">
-        {JSON.stringify(articleStructuredData)}
-      </script>
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-16 bg-gray-50" role="banner">

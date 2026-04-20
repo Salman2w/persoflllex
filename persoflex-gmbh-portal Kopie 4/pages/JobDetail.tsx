@@ -161,6 +161,68 @@ export default function JobDetail() {
         title={`${job.BezeichnungAusschreibung || job.Bezeichnung} | Jobs bei PersoFlex`}
         description={`Jetzt bewerben: ${job.BezeichnungAusschreibung || job.Bezeichnung} in ${job.EinsatzortOrt}. Faire Bezahlung, persönliche Betreuung.`}
         keywords={`${job.Bezeichnung}, Jobs ${job.EinsatzortOrt}, Stellenangebot Pforzheim`}
+        canonicalUrl={`https://www.persoflex-gmbh.de/jobs/${job.ObjectUuid}`}
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "JobPosting",
+          "title": job.BezeichnungAusschreibung || job.Bezeichnung,
+          "description": [
+            job.Stellenziel,
+            job.Aufgaben,
+            job.FachlicheAnforderungen,
+            job.Arbeitgeberleistung
+          ].filter(Boolean).join('\n\n') || `${job.BezeichnungAusschreibung || job.Bezeichnung} in ${job.EinsatzortOrt} bei PersoFlex GmbH.`,
+          "identifier": {
+            "@type": "PropertyValue",
+            "name": "PersoFlex GmbH",
+            "value": job.StellenID || job.ObjectUuid
+          },
+          "datePosted": new Date().toISOString().split('T')[0],
+          "validThrough": new Date(Date.now() + 90 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
+          "employmentType": job.VertragsartenString?.toUpperCase().includes('VOLLZEIT') ? 'FULL_TIME' : 
+                            job.VertragsartenString?.toUpperCase().includes('TEILZEIT') ? 'PART_TIME' : 
+                            'FULL_TIME',
+          "hiringOrganization": {
+            "@type": "Organization",
+            "name": "PersoFlex GmbH",
+            "sameAs": "https://www.persoflex-gmbh.de",
+            "logo": "https://www.persoflex-gmbh.de/bilder/logo.webp"
+          },
+          "jobLocation": {
+            "@type": "Place",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "",
+              "addressLocality": job.EinsatzortOrt,
+              "postalCode": job.EinsatzortPlz || "",
+              "addressRegion": "Baden-Württemberg",
+              "addressCountry": "DE"
+            }
+          },
+          ...(job.Gehalt ? {
+            "baseSalary": {
+              "@type": "MonetaryAmount",
+              "currency": job.GehaltWaehrung || "EUR",
+              "value": {
+                "@type": "QuantitativeValue",
+                "minValue": job.Gehalt,
+                ...(job.GehaltBis ? { "maxValue": job.GehaltBis } : {}),
+                "unitText": job.GehaltZeitraum?.toUpperCase().includes('STUNDE') ? 'HOUR' :
+                           job.GehaltZeitraum?.toUpperCase().includes('MONAT') ? 'MONTH' :
+                           job.GehaltZeitraum?.toUpperCase().includes('JAHR') ? 'YEAR' :
+                           'HOUR'
+              }
+            }
+          } : {}),
+          ...(job.Skills && job.Skills.length > 0 ? {
+            "skills": job.Skills.map(s => s.Bezeichnung).join(', ')
+          } : {}),
+          ...(job.Qualifikation ? {
+            "qualifications": job.Qualifikation.Bezeichnung
+          } : {}),
+          "directApply": true,
+          "inLanguage": "de-DE"
+        }}
       />
       
       {/* --- HERO HEADER --- */}

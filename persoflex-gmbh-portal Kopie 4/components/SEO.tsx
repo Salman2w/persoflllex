@@ -11,6 +11,7 @@ interface SEOProps {
   articleModifiedTime?: string;
   articleAuthor?: string;
   noIndex?: boolean;
+  structuredData?: Record<string, unknown> | Record<string, unknown>[];
 }
 
 /**
@@ -35,7 +36,8 @@ export const SEO: React.FC<SEOProps> = ({
   articlePublishedTime,
   articleModifiedTime,
   articleAuthor,
-  noIndex = false
+  noIndex = false,
+  structuredData
 }) => {
   useEffect(() => {
     // Update Title
@@ -112,7 +114,26 @@ export const SEO: React.FC<SEOProps> = ({
     updateMetaTag('geo.region', 'DE-BW');
     updateMetaTag('geo.placename', 'Pforzheim');
 
-  }, [title, description, keywords, canonicalUrl, ogImage, ogType, articlePublishedTime, articleModifiedTime, articleAuthor, noIndex]);
+    // Inject Schema.org JSON-LD structured data for this specific page
+    const SCHEMA_ID = 'dynamic-page-schema';
+    const existingSchema = document.getElementById(SCHEMA_ID);
+    if (existingSchema) {
+      existingSchema.remove();
+    }
+    if (structuredData) {
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.id = SCHEMA_ID;
+      script.textContent = JSON.stringify(structuredData);
+      document.head.appendChild(script);
+    }
+
+    return () => {
+      const schemaToRemove = document.getElementById(SCHEMA_ID);
+      if (schemaToRemove) schemaToRemove.remove();
+    };
+
+  }, [title, description, keywords, canonicalUrl, ogImage, ogType, articlePublishedTime, articleModifiedTime, articleAuthor, noIndex, structuredData]);
 
   return null;
 };
