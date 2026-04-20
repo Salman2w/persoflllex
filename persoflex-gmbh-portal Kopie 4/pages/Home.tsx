@@ -153,126 +153,117 @@ const structuredData = {
 
         <div className="relative z-20 max-w-7xl mx-auto px-6 pt-32 pb-20">
           <div className="text-center max-w-4xl mx-auto">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-orange-500 text-white mb-8 shadow-2xl shadow-orange-500/50 ring-2 ring-orange-400/40">
-              <MapPin className="w-4 h-4" />
-              <span className="text-sm font-semibold tracking-wide">Ihr Personaldienstleister in Pforzheim</span>
+            {/* Badge - refined, less flashy */}
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md text-white mb-10 border border-white/20">
+              <MapPin className="w-3.5 h-3.5 text-orange-400" />
+              <span className="text-xs font-medium tracking-wider uppercase">Personaldienstleister in Pforzheim</span>
             </div>
 
-            {/* Headline - strong text shadow for readability on bright image */}
+            {/* Headline - serious, sharper typography */}
             <h1 
-              className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-tight"
-              style={{ textShadow: '0 2px 4px rgba(0,0,0,0.5), 0 4px 24px rgba(0,0,0,0.7)' }}
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 leading-[1.1] tracking-tight text-balance"
+              style={{ textShadow: '0 2px 20px rgba(0,0,0,0.5)' }}
             >
               Finden Sie Ihren{' '}
-              <span 
-                className="text-orange-400 relative"
-                style={{ textShadow: '0 2px 4px rgba(0,0,0,0.5), 0 4px 24px rgba(0,0,0,0.7)' }}
-              >
+              <span className="text-orange-400">
                 Traumjob
-                <svg className="absolute -bottom-2 left-0 w-full h-3 text-orange-400 drop-shadow-lg" viewBox="0 0 200 12" preserveAspectRatio="none">
-                  <path d="M0,8 Q50,0 100,8 T200,8" stroke="currentColor" strokeWidth="4" fill="none" strokeLinecap="round"/>
-                </svg>
               </span>
+              {' '}in Pforzheim
             </h1>
             
-            {/* Paragraph - pure white with strong text shadow for WCAG AA contrast */}
+            {/* Paragraph - refined, professional tone */}
             <p 
-              className="text-lg md:text-xl text-white mb-10 max-w-2xl mx-auto leading-relaxed font-semibold"
-              style={{ textShadow: '0 1px 3px rgba(0,0,0,0.6), 0 2px 16px rgba(0,0,0,0.8)' }}
+              className="text-base md:text-lg text-white/90 mb-12 max-w-2xl mx-auto leading-relaxed"
+              style={{ textShadow: '0 1px 12px rgba(0,0,0,0.7)' }}
             >
-              PersoFlex verbindet Unternehmen mit den besten Fachkräften in Pforzheim und dem Enzkreis. 
-              Zeitarbeit und Personalvermittlung mit Leidenschaft.
+              PersoFlex vermittelt qualifizierte Fachkräfte an Unternehmen in Pforzheim und dem Enzkreis — 
+              seit Jahren zuverlässiger Partner für Zeitarbeit und Personalvermittlung.
             </p>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            {/* CTA Buttons - refined, no excessive rings */}
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Link 
                 to="/jobs" 
-                className="group bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 shadow-2xl shadow-orange-500/40 hover:shadow-orange-500/60 hover:-translate-y-0.5 inline-flex items-center justify-center gap-2 ring-2 ring-orange-400/50"
+                className="group bg-orange-500 hover:bg-orange-600 text-white px-7 py-3.5 rounded-lg font-semibold text-sm transition-all duration-200 shadow-lg shadow-orange-500/20 hover:shadow-orange-500/40 inline-flex items-center justify-center gap-2"
               >
                 <span>Jobs entdecken</span>
-                <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+                <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />
               </Link>
               <Link 
                 to="/unternehmen" 
-                className="px-8 py-4 bg-gray-900/60 backdrop-blur-md border-2 border-white/70 text-white rounded-xl font-semibold hover:bg-gray-900/80 hover:border-white transition-all inline-flex items-center justify-center gap-2 shadow-xl"
+                className="px-7 py-3.5 bg-white/10 backdrop-blur-md border border-white/30 text-white rounded-lg font-semibold text-sm hover:bg-white/15 hover:border-white/50 transition-all inline-flex items-center justify-center gap-2"
               >
                 Personal anfragen
               </Link>
             </div>
 
-            {/* Trust Indicators - darker pill backgrounds for strong contrast on bright image */}
-            <div className="mt-16 flex flex-wrap justify-center gap-4">
-              <div className="flex items-center gap-2 px-5 py-2.5 bg-gray-900/70 backdrop-blur-md rounded-full border border-white/30 shadow-xl">
-                <CheckCircle2 className="w-5 h-5 text-orange-400" />
-                <span className="text-sm font-semibold text-white">GVP Mitglied</span>
+            {/* Trust Indicators - minimal, refined */}
+            <div className="mt-20 flex flex-wrap justify-center gap-x-8 gap-y-3">
+              <div className="flex items-center gap-2">
+                <CheckCircle2 className="w-4 h-4 text-orange-400" />
+                <span className="text-xs font-medium text-white/90 tracking-wide uppercase">GVP Mitglied</span>
               </div>
-              <div className="flex items-center gap-2 px-5 py-2.5 bg-gray-900/70 backdrop-blur-md rounded-full border border-white/30 shadow-xl">
-                <CheckCircle2 className="w-5 h-5 text-orange-400" />
-                <span className="text-sm font-semibold text-white">AÜG Erlaubnis</span>
+              <div className="hidden sm:block w-px h-4 bg-white/20 self-center" />
+              <div className="flex items-center gap-2">
+                <CheckCircle2 className="w-4 h-4 text-orange-400" />
+                <span className="text-xs font-medium text-white/90 tracking-wide uppercase">AÜG Erlaubnis</span>
               </div>
-              <div className="flex items-center gap-2 px-5 py-2.5 bg-gray-900/70 backdrop-blur-md rounded-full border border-white/30 shadow-xl">
-                <CheckCircle2 className="w-5 h-5 text-orange-400" />
-                <span className="text-sm font-semibold text-white">Tarifgebunden</span>
+              <div className="hidden sm:block w-px h-4 bg-white/20 self-center" />
+              <div className="flex items-center gap-2">
+                <CheckCircle2 className="w-4 h-4 text-orange-400" />
+                <span className="text-xs font-medium text-white/90 tracking-wide uppercase">Tarifgebunden</span>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
-          <div className="w-6 h-10 border-2 border-orange-300 rounded-full flex items-start justify-center p-2">
-            <div className="w-1.5 h-3 bg-orange-500 rounded-full animate-bounce" />
+        {/* Scroll Indicator - minimal & refined */}
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 hidden md:block">
+          <div className="w-5 h-8 border border-white/40 rounded-full flex items-start justify-center p-1.5">
+            <div className="w-0.5 h-2 bg-white/70 rounded-full animate-bounce" />
           </div>
         </div>
       </section>
 
-      {/* Services Section - Enhanced Information Page */}
-      <section className="py-24 bg-gray-50">
+      {/* Services Section */}
+      <section className="py-24 bg-gray-50 border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-6">
-          {/* Header */}
-          <div className="text-center mb-20">
-            <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-orange-100 text-orange-600 text-sm font-semibold uppercase tracking-wider mb-4">
+          {/* Header - refined typography */}
+          <div className="text-center mb-16 max-w-3xl mx-auto">
+            <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-orange-600 mb-4">
               Unsere Leistungen
             </span>
-            <h2 className="text-3xl md:text-5xl font-black text-gray-900 mt-4 mb-8">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 tracking-tight leading-tight mb-6 text-balance">
               Personaldienstleistungen für Ihren <span className="text-orange-500">Erfolg</span>
             </h2>
-            <p className="text-gray-600 max-w-3xl mx-auto text-lg leading-relaxed">
-              PersoFlex bietet drei spezialisierte Lösungen für Ihren Personalbedarf. Unabhängig davon, ob Sie kurzfristige Flexibilität, gezielt qualifizierte Fachkräfte oder strategische HR-Beratung benötigen - wir haben die richtige Lösung für Sie.
+            <p className="text-gray-600 text-base md:text-lg leading-relaxed">
+              Drei spezialisierte Lösungen für Ihren Personalbedarf — von kurzfristiger Flexibilität bis zur strategischen HR-Beratung.
             </p>
           </div>
 
-          {/* Service Cards Grid */}
-          <div className="grid md:grid-cols-3 gap-8 mb-20">
+          {/* Service Cards Grid - refined, professional */}
+          <div className="grid md:grid-cols-3 gap-6 mb-20">
             {services.map((service, index) => (
-              <div 
-                key={index} 
-                className="group bg-white border border-gray-200 rounded-xl overflow-hidden transition-all duration-300 hover:border-orange-300 hover:shadow-2xl h-full flex flex-col"
+              <Link
+                key={index}
+                to={index === 0 ? '/arbeitnehmerueberlassung' : index === 1 ? '/personalvermittlung' : '/personalberatung'}
+                className="group bg-white border border-gray-200 rounded-xl p-8 transition-all duration-300 hover:border-orange-300 hover:shadow-lg hover:-translate-y-0.5 flex flex-col"
               >
-                {/* Icon Section */}
-                <div className="bg-gradient-to-br from-orange-50 to-orange-100 p-8 flex items-center justify-center">
-                  <div className="w-20 h-20 rounded-xl bg-orange-500 text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                    <service.icon size={40} />
-                  </div>
+                {/* Icon - integrated, not dominant */}
+                <div className="w-12 h-12 rounded-lg bg-orange-50 text-orange-500 flex items-center justify-center mb-6 group-hover:bg-orange-500 group-hover:text-white transition-colors">
+                  <service.icon size={22} strokeWidth={1.75} />
                 </div>
 
-                {/* Content Section */}
-                <div className="p-8 flex flex-col flex-grow">
-                  <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
-                  <p className="text-gray-600 leading-relaxed mb-8 flex-grow">{service.description}</p>
-                  
-                  {/* CTA Link */}
-                  <Link 
-                    to={index === 0 ? '/arbeitnehmerueberlassung' : index === 1 ? '/personalvermittlung' : '/personalberatung'}
-                    className="inline-flex items-center text-orange-500 font-semibold hover:text-orange-600 group/link transition-all"
-                  >
-                    <span>Mehr erfahren</span>
-                    <ArrowRight size={18} className="ml-2 group-hover/link:translate-x-1 transition-transform" />
-                  </Link>
+                {/* Content */}
+                <h3 className="text-lg font-semibold text-gray-900 mb-3 tracking-tight">{service.title}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed mb-6 flex-grow">{service.description}</p>
+
+                {/* CTA */}
+                <div className="inline-flex items-center text-orange-600 font-medium text-sm">
+                  <span>Mehr erfahren</span>
+                  <ArrowRight size={14} className="ml-1.5 group-hover:translate-x-0.5 transition-transform" />
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
 
