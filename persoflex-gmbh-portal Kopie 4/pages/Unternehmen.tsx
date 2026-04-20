@@ -11,7 +11,6 @@ import {
   FileText, 
   Award, 
   MapPin,
-  Flame,
   Building2,
   Phone,
   Star,
@@ -428,11 +427,8 @@ export const Unternehmen: React.FC = () => {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-orange-500/10 rounded-full blur-[150px]" />
         </div>
         
-        <div className="max-w-4xl mx-auto px-6 text-center relative">
-          <div className="w-16 h-16 bg-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-8">
-            <Flame className="w-8 h-8 text-white" />
-          </div>
-          <h2 className="text-3xl md:text-4xl font-black text-white mb-6">
+  <div className="max-w-4xl mx-auto px-6 text-center relative">
+  <h2 className="text-3xl md:text-4xl font-black text-white mb-6">
             Bereit, Ihren Personalbedarf zu lösen?
           </h2>
           <p className="text-lg text-gray-400 mb-10 max-w-2xl mx-auto">
