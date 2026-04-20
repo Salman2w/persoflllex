@@ -155,6 +155,269 @@
   }
 }
 
+@layer components {
+  /* =============================================================================
+     Blog Content Typography - Professional article styling
+     Works independently of any Tailwind Typography plugin
+     ============================================================================= */
+  .blog-content {
+    color: rgb(55 65 81); /* gray-700 */
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  .blog-content > *:first-child {
+    margin-top: 0;
+  }
+
+  .blog-content > *:last-child {
+    margin-bottom: 0;
+  }
+
+  /* H2 - Main section headings */
+  .blog-content h2 {
+    font-size: 1.75rem;
+    line-height: 1.25;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: rgb(17 24 39); /* gray-900 */
+    margin-top: 3rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid rgb(229 231 235); /* gray-200 */
+    scroll-margin-top: 6rem;
+  }
+
+  @media (min-width: 768px) {
+    .blog-content h2 {
+      font-size: 2rem;
+    }
+  }
+
+  .blog-content h2:first-child {
+    margin-top: 0;
+  }
+
+  /* H3 - Subsection headings */
+  .blog-content h3 {
+    font-size: 1.25rem;
+    line-height: 1.4;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+    color: rgb(17 24 39); /* gray-900 */
+    margin-top: 2.25rem;
+    margin-bottom: 0.875rem;
+    scroll-margin-top: 6rem;
+  }
+
+  @media (min-width: 768px) {
+    .blog-content h3 {
+      font-size: 1.375rem;
+    }
+  }
+
+  /* H3 accent - subtle orange left border */
+  .blog-content h3::before {
+    content: '';
+    display: inline-block;
+    width: 3px;
+    height: 0.9em;
+    background-color: hsl(var(--primary));
+    border-radius: 2px;
+    margin-right: 0.625rem;
+    vertical-align: -0.08em;
+  }
+
+  /* H4 - Minor headings */
+  .blog-content h4 {
+    font-size: 1.0625rem;
+    line-height: 1.5;
+    font-weight: 600;
+    color: rgb(17 24 39);
+    margin-top: 1.75rem;
+    margin-bottom: 0.625rem;
+  }
+
+  /* Paragraphs */
+  .blog-content p {
+    margin-top: 0;
+    margin-bottom: 1.25rem;
+    color: rgb(55 65 81);
+  }
+
+  /* Links */
+  .blog-content a {
+    color: hsl(var(--primary));
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid hsl(var(--primary) / 0.3);
+    transition: border-color 0.2s;
+  }
+
+  .blog-content a:hover {
+    border-bottom-color: hsl(var(--primary));
+  }
+
+  /* Strong / Bold */
+  .blog-content strong {
+    color: rgb(17 24 39);
+    font-weight: 600;
+  }
+
+  .blog-content em {
+    font-style: italic;
+    color: rgb(55 65 81);
+  }
+
+  /* Unordered Lists - custom bullet style */
+  .blog-content ul {
+    margin-top: 1.25rem;
+    margin-bottom: 1.5rem;
+    padding-left: 0;
+    list-style: none;
+  }
+
+  .blog-content ul > li {
+    position: relative;
+    padding-left: 1.75rem;
+    margin-bottom: 0.625rem;
+    color: rgb(55 65 81);
+    line-height: 1.65;
+  }
+
+  .blog-content ul > li::before {
+    content: '';
+    position: absolute;
+    left: 0.5rem;
+    top: 0.7em;
+    width: 0.375rem;
+    height: 0.375rem;
+    border-radius: 50%;
+    background-color: hsl(var(--primary));
+  }
+
+  /* Ordered Lists */
+  .blog-content ol {
+    margin-top: 1.25rem;
+    margin-bottom: 1.5rem;
+    padding-left: 0;
+    list-style: none;
+    counter-reset: blog-ordered-list;
+  }
+
+  .blog-content ol > li {
+    position: relative;
+    padding-left: 2.25rem;
+    margin-bottom: 0.625rem;
+    color: rgb(55 65 81);
+    line-height: 1.65;
+    counter-increment: blog-ordered-list;
+  }
+
+  .blog-content ol > li::before {
+    content: counter(blog-ordered-list) ".";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: 700;
+    color: hsl(var(--primary));
+    min-width: 1.75rem;
+  }
+
+  /* Nested lists */
+  .blog-content ul ul,
+  .blog-content ul ol,
+  .blog-content ol ul,
+  .blog-content ol ol {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Blockquote - highlighted callout */
+  .blog-content blockquote {
+    margin: 2rem 0;
+    padding: 1rem 1.5rem;
+    background-color: hsl(var(--primary) / 0.05);
+    border-left: 3px solid hsl(var(--primary));
+    border-radius: 0 0.5rem 0.5rem 0;
+    font-style: normal;
+    color: rgb(55 65 81);
+  }
+
+  .blog-content blockquote p {
+    margin-bottom: 0;
+  }
+
+  .blog-content blockquote p + p {
+    margin-top: 0.75rem;
+  }
+
+  /* Inline code */
+  .blog-content code {
+    padding: 0.125rem 0.375rem;
+    background-color: rgb(243 244 246); /* gray-100 */
+    border-radius: 0.25rem;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.875em;
+    color: rgb(17 24 39);
+  }
+
+  /* Code block */
+  .blog-content pre {
+    margin: 1.75rem 0;
+    padding: 1.25rem 1.5rem;
+    background-color: rgb(17 24 39);
+    color: rgb(243 244 246);
+    border-radius: 0.75rem;
+    overflow-x: auto;
+    font-size: 0.875rem;
+    line-height: 1.6;
+  }
+
+  .blog-content pre code {
+    padding: 0;
+    background: transparent;
+    color: inherit;
+    font-size: inherit;
+  }
+
+  /* Horizontal rule */
+  .blog-content hr {
+    margin: 2.5rem 0;
+    border: 0;
+    border-top: 1px solid rgb(229 231 235);
+  }
+
+  /* Images */
+  .blog-content img {
+    margin: 2rem 0;
+    border-radius: 0.75rem;
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Tables */
+  .blog-content table {
+    margin: 2rem 0;
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9375rem;
+  }
+
+  .blog-content th,
+  .blog-content td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid rgb(229 231 235);
+  }
+
+  .blog-content th {
+    font-weight: 600;
+    color: rgb(17 24 39);
+    background-color: rgb(249 250 251);
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
