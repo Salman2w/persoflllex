@@ -538,32 +538,42 @@ export const BLOG_POSTS: BlogPost[] = [
     content: `
       <h2>Was ist Zeitarbeit und wie funktioniert sie?</h2>
       <p>Zeitarbeit, auch Arbeitnehmerüberlassung genannt, ist ein Beschäftigungsmodell, bei dem Arbeitnehmer bei einem Personaldienstleister angestellt sind und an verschiedene Kundenunternehmen verliehen werden. In Pforzheim und dem Enzkreis hat sich dieses Modell als wichtiger Bestandteil des Arbeitsmarktes etabliert.</p>
+
+      <blockquote>
+        <p><strong>Win-Win-Situation:</strong> Arbeitnehmer profitieren von einem schnellen Einstieg und vielfältiger Berufserfahrung, Unternehmen von flexibler Personalplanung und geprüften Fachkräften.</p>
+      </blockquote>
       
       <h2>Die 7 wichtigsten Vorteile der Zeitarbeit</h2>
       
       <h3>1. Schneller Einstieg in den Arbeitsmarkt</h3>
-      <p>Besonders für Berufseinsteiger, Wiedereinsteiger oder Menschen in beruflicher Neuorientierung bietet Zeitarbeit eine schnelle Möglichkeit, im Arbeitsmarkt Fuß zu fassen.</p>
+      <p>Besonders für Berufseinsteiger, Wiedereinsteiger oder Menschen in beruflicher Neuorientierung bietet Zeitarbeit eine schnelle Möglichkeit, im Arbeitsmarkt Fuß zu fassen – oft innerhalb weniger Tage nach dem ersten Gespräch.</p>
       
       <h3>2. Vielfältige Berufserfahrung</h3>
-      <p>Durch Einsätze in verschiedenen Unternehmen sammeln Zeitarbeitnehmer wertvolle Erfahrungen in unterschiedlichen Branchen und Arbeitsumgebungen.</p>
+      <p>Durch Einsätze in verschiedenen Unternehmen sammeln Zeitarbeitnehmer wertvolle Erfahrungen in unterschiedlichen Branchen und Arbeitsumgebungen – ein echter Pluspunkt für den Lebenslauf.</p>
       
       <h3>3. Faire Bezahlung nach Tarifvertrag</h3>
-      <p>Seriöse Personaldienstleister wie PersoFlex GmbH arbeiten nach dem GVP-Tarifvertrag. Das bedeutet faire Löhne und weitere tarifliche Leistungen.</p>
+      <p>Seriöse Personaldienstleister wie PersoFlex GmbH arbeiten nach dem GVP-Tarifvertrag. Das bedeutet konkret:</p>
+      <ul>
+        <li>Feste Stundenlöhne nach Entgeltgruppen</li>
+        <li>Urlaubs- und Weihnachtsgeld</li>
+        <li>Branchenzuschläge in der Industrie</li>
+        <li>Bis zu 30 Tage Urlaub pro Jahr</li>
+      </ul>
       
       <h3>4. Übernahmechancen</h3>
-      <p>Viele Unternehmen nutzen Zeitarbeit als erweiterte Probezeit. Wer sich bewährt, hat gute Chancen auf eine Festanstellung.</p>
+      <p>Viele Unternehmen nutzen Zeitarbeit als erweiterte Probezeit. Wer sich bewährt, hat gute Chancen auf eine Festanstellung – in der Praxis werden rund <strong>30 % aller Zeitarbeitnehmer</strong> vom Einsatzbetrieb übernommen.</p>
       
       <h3>5. Flexibilität für Unternehmen</h3>
-      <p>Für Unternehmen bietet Zeitarbeit die Möglichkeit, Auftragsspitzen abzufangen, ohne langfristige Verpflichtungen einzugehen.</p>
+      <p>Für Unternehmen bietet Zeitarbeit die Möglichkeit, Auftragsspitzen abzufangen, ohne langfristige Verpflichtungen einzugehen. Besonders in saisonalen Branchen oder bei Projektspitzen ein unverzichtbares Instrument.</p>
       
       <h3>6. Professionelles Recruiting</h3>
-      <p>Unternehmen profitieren von der Expertise des Personaldienstleisters bei der Auswahl geeigneter Kandidaten.</p>
+      <p>Unternehmen profitieren von der Expertise des Personaldienstleisters bei der Auswahl geeigneter Kandidaten – das spart Zeit, Ressourcen und verhindert teure Fehlbesetzungen.</p>
       
       <h3>7. Rechtliche Sicherheit</h3>
-      <p>Bei der Zusammenarbeit mit einem seriösen Personaldienstleister sind alle rechtlichen Aspekte professionell geregelt.</p>
+      <p>Bei der Zusammenarbeit mit einem seriösen Personaldienstleister sind alle rechtlichen Aspekte professionell geregelt: AÜG-Erlaubnis, Tarifbindung, Sozialversicherung und Arbeitsschutz.</p>
       
       <h2>Fazit</h2>
-      <p>Zeitarbeit in Pforzheim und Umgebung bietet echte Karrierechancen für Arbeitnehmer und flexible Personalplanung für Unternehmen.</p>
+      <p>Zeitarbeit in Pforzheim und Umgebung bietet echte Karrierechancen für Arbeitnehmer und flexible Personalplanung für Unternehmen. Entscheidend ist die Wahl eines seriösen, tarifgebundenen Partners wie der PersoFlex GmbH.</p>
     `,
     author: 'PersoFlex Team',
     date: '2024-12-15',
@@ -579,20 +589,44 @@ export const BLOG_POSTS: BlogPost[] = [
     content: `
       <h2>Die Logistik-Branche in Pforzheim boomt</h2>
       <p>Pforzheim und der Enzkreis haben sich in den vergangenen Jahren zu einem bedeutenden Logistik-Standort in Baden-Württemberg entwickelt. Die zentrale Lage und die hervorragende Verkehrsanbindung machen die Region besonders attraktiv für Logistikunternehmen – und schaffen zahlreiche neue Arbeitsplätze.</p>
+
+      <blockquote>
+        <p><strong>Gut zu wissen:</strong> Die Logistik gehört zu den Branchen mit dem höchsten Personalbedarf in der Region – viele Stellen werden bereits innerhalb weniger Tage besetzt.</p>
+      </blockquote>
       
       <h2>Welche Logistik-Jobs gibt es?</h2>
       
       <h3>Kommissionierer (m/w/d)</h3>
-      <p>Als Kommissionierer stellen Sie Waren nach Kundenaufträgen zusammen – oft mit moderner Scannertechnik. Die Einstiegsgehälter liegen derzeit bei 13 € bis 15 € pro Stunde.</p>
+      <p>Als Kommissionierer stellen Sie Waren nach Kundenaufträgen zusammen – oft mit moderner Scannertechnik.</p>
+      <ul>
+        <li><strong>Gehalt:</strong> 13 € bis 15 € pro Stunde</li>
+        <li><strong>Anforderungen:</strong> Sorgfalt, körperliche Fitness, Schichtbereitschaft</li>
+        <li><strong>Einstieg:</strong> Auch ohne Vorkenntnisse möglich</li>
+      </ul>
       
       <h3>Staplerfahrer (m/w/d)</h3>
-      <p>Mit einem gültigen Staplerschein sind Sie in der Logistik heiß begehrt. Staplerfahrer verdienen zwischen 14 € und 17 € pro Stunde und profitieren von einer besonders hohen Nachfrage.</p>
+      <p>Mit einem gültigen Staplerschein sind Sie in der Logistik heiß begehrt und profitieren von einer besonders hohen Nachfrage.</p>
+      <ul>
+        <li><strong>Gehalt:</strong> 14 € bis 17 € pro Stunde</li>
+        <li><strong>Anforderungen:</strong> Gültiger Staplerschein, idealerweise Berufserfahrung</li>
+        <li><strong>Perspektive:</strong> Überdurchschnittlich gute Chancen auf Festanstellung</li>
+      </ul>
       
       <h3>Lagerhelfer (m/w/d)</h3>
-      <p>Der ideale Einstieg in die Logistikbranche: Vorkenntnisse sind in der Regel nicht erforderlich, die Einarbeitung erfolgt direkt vor Ort.</p>
+      <p>Der ideale Einstieg in die Logistikbranche – perfekt für Quereinsteiger und Berufsanfänger.</p>
+      <ul>
+        <li><strong>Gehalt:</strong> 12,50 € bis 14 € pro Stunde</li>
+        <li><strong>Anforderungen:</strong> Keine Vorkenntnisse nötig, Einarbeitung vor Ort</li>
+        <li><strong>Arbeitszeit:</strong> Voll- oder Teilzeit, oft im Schichtbetrieb</li>
+      </ul>
       
       <h3>Fachkraft für Lagerlogistik</h3>
       <p>Mit abgeschlossener Ausbildung übernehmen Sie verantwortungsvolle Aufgaben wie Wareneingang, Bestandskontrolle und Versandabwicklung.</p>
+      <ul>
+        <li><strong>Gehalt:</strong> 16 € bis 20 € pro Stunde</li>
+        <li><strong>Anforderungen:</strong> Abgeschlossene Ausbildung, EDV-Kenntnisse</li>
+        <li><strong>Perspektive:</strong> Aufstieg zum Schichtleiter möglich</li>
+      </ul>
       
       <h2>So finden Sie Ihren Logistik-Job</h2>
       <p>Der schnellste und effektivste Weg zum neuen Job führt über einen spezialisierten Personaldienstleister wie die PersoFlex GmbH. Wir kennen die Unternehmen der Region und ihre konkreten Bedarfe – und bringen Sie gezielt mit dem passenden Arbeitgeber zusammen.</p>
@@ -613,25 +647,36 @@ export const BLOG_POSTS: BlogPost[] = [
       <p>Eine Bewerbung bei einem Personaldienstleister unterscheidet sich in einigen wichtigen Punkten von einer klassischen Bewerbung bei einem einzelnen Unternehmen. Mit der richtigen Vorbereitung steigern Sie Ihre Chancen erheblich – und finden oft innerhalb weniger Tage Ihren neuen Job.</p>
       
       <h2>Welche Unterlagen benötigen Sie?</h2>
+      <p>Halten Sie folgende Dokumente für Ihre Bewerbung bereit:</p>
       <ul>
-        <li>Aktueller, übersichtlicher Lebenslauf</li>
-        <li>Arbeitszeugnisse (sofern vorhanden)</li>
-        <li>Relevante Zertifikate (z. B. Staplerschein, Schweißerausweis)</li>
-        <li>Gültiges Ausweisdokument</li>
+        <li><strong>Lebenslauf:</strong> Aktuell, übersichtlich und lückenlos</li>
+        <li><strong>Arbeitszeugnisse:</strong> Sofern vorhanden, auch Zwischenzeugnisse</li>
+        <li><strong>Zertifikate:</strong> Staplerschein, Schweißerausweis, Sprachzertifikate</li>
+        <li><strong>Ausweisdokument:</strong> Personalausweis oder Reisepass mit Aufenthaltstitel</li>
       </ul>
       
       <h2>Das persönliche Gespräch</h2>
       <p>Im persönlichen Gespräch gilt: Seien Sie offen und ehrlich über Ihre Stärken und Schwächen. Nur so können wir Sie optimal einschätzen und Ihnen die passenden Jobangebote unterbreiten.</p>
+
+      <h3>Typische Fragen im Gespräch</h3>
+      <ul>
+        <li>Welche Berufserfahrung bringen Sie mit?</li>
+        <li>In welchen Branchen möchten Sie am liebsten arbeiten?</li>
+        <li>Wie flexibel sind Sie bei Arbeitszeiten und Einsatzorten?</li>
+        <li>Was sind Ihre Gehaltsvorstellungen?</li>
+      </ul>
       
       <h2>Was Sie mitbringen sollten</h2>
       <ul>
-        <li>Eine klare Vorstellung über gewünschte Einsatzbereiche</li>
-        <li>Flexibilität bei Arbeitszeiten und möglichen Einsatzorten</li>
-        <li>Motivation, Zuverlässigkeit und Pünktlichkeit</li>
+        <li><strong>Zielklarheit:</strong> Eine klare Vorstellung über gewünschte Einsatzbereiche</li>
+        <li><strong>Flexibilität:</strong> Bei Arbeitszeiten und möglichen Einsatzorten</li>
+        <li><strong>Soft Skills:</strong> Motivation, Zuverlässigkeit und Pünktlichkeit</li>
+        <li><strong>Lernbereitschaft:</strong> Offenheit für neue Aufgaben und Tätigkeitsbereiche</li>
       </ul>
-      
-      <h2>Unser Tipp</h2>
-      <p>Bei der PersoFlex GmbH legen wir besonderen Wert auf persönliche Betreuung. Kommen Sie einfach zu einem unverbindlichen Gespräch in unserem Büro in Pforzheim vorbei – wir freuen uns auf Sie!</p>
+
+      <blockquote>
+        <p><strong>Unser Tipp:</strong> Bei der PersoFlex GmbH legen wir besonderen Wert auf persönliche Betreuung. Kommen Sie einfach zu einem unverbindlichen Gespräch in unserem Büro in Pforzheim vorbei – wir freuen uns auf Sie!</p>
+      </blockquote>
     `,
     author: 'PersoFlex Team',
     date: '2024-12-05',
@@ -651,16 +696,35 @@ export const BLOG_POSTS: BlogPost[] = [
       <h2>Beliebte Industrie-Jobs im Überblick</h2>
       
       <h3>Produktionshelfer (m/w/d)</h3>
-      <p>Als Produktionshelfer unterstützen Sie aktiv in der Fertigung. Besonders wichtig sind dabei Zuverlässigkeit, Genauigkeit und Schichtbereitschaft.</p>
+      <p>Als Produktionshelfer unterstützen Sie aktiv in der Fertigung – ein idealer Einstieg in die Industrie, auch ohne Vorkenntnisse.</p>
+      <ul>
+        <li><strong>Gehalt:</strong> 13 € bis 16 € pro Stunde</li>
+        <li><strong>Anforderungen:</strong> Zuverlässigkeit, Genauigkeit, Schichtbereitschaft</li>
+        <li><strong>Einstieg:</strong> Ohne Ausbildung möglich, Einarbeitung vor Ort</li>
+      </ul>
       
       <h3>Maschinenführer (m/w/d)</h3>
       <p>Mit wachsender Erfahrung übernehmen Sie verantwortungsvolle Aufgaben an modernen Produktionsanlagen – eine perfekte Position für alle mit technischem Verständnis.</p>
+      <ul>
+        <li><strong>Gehalt:</strong> 15 € bis 19 € pro Stunde</li>
+        <li><strong>Anforderungen:</strong> Technisches Verständnis, idealerweise erste Berufserfahrung</li>
+        <li><strong>Perspektive:</strong> Aufstieg zum Einrichter oder Schichtleiter</li>
+      </ul>
       
       <h3>Qualitätsprüfer (m/w/d)</h3>
       <p>Als Qualitätsprüfer stellen Sie sicher, dass sämtliche Produkte den hohen Anforderungen entsprechen und die Qualitätsstandards eingehalten werden.</p>
+      <ul>
+        <li><strong>Gehalt:</strong> 14 € bis 18 € pro Stunde</li>
+        <li><strong>Anforderungen:</strong> Sorgfalt, gutes Sehvermögen, Messgerätekenntnis</li>
+        <li><strong>Arbeitsumgebung:</strong> Meist in klimatisierten Prüfräumen</li>
+      </ul>
       
       <h2>Verdienst in der Industrie</h2>
       <p>Industriejobs bieten durch Schichtzulagen, Sonderzahlungen und Branchenzuschläge überdurchschnittliche Verdienstmöglichkeiten – besonders attraktiv für alle, die ihr Einkommen langfristig steigern möchten.</p>
+
+      <blockquote>
+        <p><strong>Typische Zusatzleistungen:</strong> Nachtschichtzuschlag 25 %, Sonntagszuschlag 50 %, Feiertagszuschlag bis zu 100 %, dazu Urlaubs- und Weihnachtsgeld nach Tarif.</p>
+      </blockquote>
     `,
     author: 'PersoFlex Team',
     date: '2024-11-28',
@@ -676,20 +740,33 @@ export const BLOG_POSTS: BlogPost[] = [
     content: `
       <h2>Ihre Rechte als Zeitarbeitnehmer</h2>
       <p>Als Zeitarbeitnehmer haben Sie dieselben grundlegenden Rechte wie alle anderen Arbeitnehmer in Deutschland – und teilweise sogar zusätzliche Schutzmechanismen durch spezielle Tarifverträge.</p>
+
+      <blockquote>
+        <p><strong>Wichtig zu wissen:</strong> Ihr Arbeitgeber ist der Personaldienstleister – nicht das Kundenunternehmen, in dem Sie eingesetzt werden. Der Arbeitsvertrag regelt Ihre Rechte und Pflichten.</p>
+      </blockquote>
       
       <h2>Häufig gestellte Fragen</h2>
       
       <h3>Wie lange darf ich beim selben Kunden eingesetzt werden?</h3>
-      <p>Die gesetzliche Höchstüberlassungsdauer beträgt grundsätzlich 18 Monate. Durch Tarifverträge kann diese Frist in bestimmten Fällen verlängert werden.</p>
+      <p>Die gesetzliche Höchstüberlassungsdauer beträgt grundsätzlich <strong>18 Monate</strong>. Durch Tarifverträge kann diese Frist in bestimmten Fällen verlängert werden – in Einzelfällen auf bis zu 48 Monate.</p>
       
       <h3>Was bedeutet Equal Pay?</h3>
-      <p>Nach spätestens 9 Monaten Einsatz beim selben Kunden haben Sie Anspruch auf die gleiche Bezahlung wie vergleichbare Stammmitarbeiter des Einsatzbetriebs.</p>
+      <p>Nach spätestens <strong>9 Monaten Einsatz</strong> beim selben Kunden haben Sie Anspruch auf die gleiche Bezahlung wie vergleichbare Stammmitarbeiter des Einsatzbetriebs. Dieser Grundsatz schützt Sie vor Lohndumping.</p>
       
       <h3>Wie sieht es mit dem Kündigungsschutz aus?</h3>
-      <p>Es gelten die regulären gesetzlichen und tariflichen Kündigungsfristen entsprechend Ihrem Arbeitsvertrag – ganz wie bei einer klassischen Festanstellung.</p>
+      <p>Es gelten die regulären gesetzlichen und tariflichen Kündigungsfristen entsprechend Ihrem Arbeitsvertrag – ganz wie bei einer klassischen Festanstellung. Nach 6 Monaten greift der volle Kündigungsschutz nach dem KSchG.</p>
       
       <h3>Bekomme ich auch Urlaubsgeld?</h3>
-      <p>Bei der PersoFlex GmbH arbeiten wir konsequent nach GVP-Tarifvertrag: Sie erhalten bis zu 30 Tage Urlaub sowie zusätzliches Urlaubsgeld.</p>
+      <p>Bei der PersoFlex GmbH arbeiten wir konsequent nach GVP-Tarifvertrag. Ihre Zusatzleistungen umfassen:</p>
+      <ul>
+        <li><strong>Urlaub:</strong> Bis zu 30 Tage pro Jahr</li>
+        <li><strong>Urlaubsgeld:</strong> Zusätzlich zum regulären Gehalt</li>
+        <li><strong>Weihnachtsgeld:</strong> Im November ausgezahlt</li>
+        <li><strong>Branchenzuschläge:</strong> In tarifgebundenen Einsatzbetrieben</li>
+      </ul>
+
+      <h3>Was passiert in einsatzfreien Zeiten?</h3>
+      <p>Auch zwischen zwei Einsätzen werden Sie weiterbezahlt – denn Ihr Arbeitsvertrag läuft mit dem Personaldienstleister, nicht mit dem Kundenunternehmen.</p>
     `,
     author: 'PersoFlex Team',
     date: '2024-11-20',
