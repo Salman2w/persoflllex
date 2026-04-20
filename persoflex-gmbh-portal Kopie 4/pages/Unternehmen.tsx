@@ -106,10 +106,9 @@ export const Unternehmen: React.FC = () => {
                 Personallösungen für{' '}
                 <span className="text-orange-500">Pforzheim & Enzkreis.</span>
               </h1>
-              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                Schluss mit &ldquo;haben wir schon immer so gemacht&rdquo;. Wir sind Ihr neuer, motivierter Partner 
-                für Industrie, Logistik und Verwaltung. Flexibel, transparent und persönlich.
-              </p>
+  <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+    Sie brauchen Personal – und zwar schnell, verlässlich und ohne administrative Belastung. PersoFlex besetzt offene Stellen in Rekordzeit, kümmert sich um alle Papierkram und steht Ihnen mit Vor-Ort-Betreuung zur Seite. Für Produktion, Logistik, Verwaltung und Handwerk.
+  </p>
               
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <Link 
