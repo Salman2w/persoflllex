@@ -21,7 +21,7 @@ import { SEO } from '../components/SEO';
 import { FAQSection } from '../components/FAQSection';
 import { TeamPreview } from '../components/TeamPreview';
 import { TrustBar } from '../components/TrustBar';
-import heroDiverseTeam from '../public/bilder/hero-diverse-team.jpg';
+import heroPersoflex from '../public/bilder/hero-persoflex.jpg';
 
 // Schema.org Structured Data for SEO
 const structuredData = {
@@ -133,11 +133,11 @@ const structuredData = {
       />
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Image - classic img tag with absolute positioning */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gray-900">
+        {/* Background Image — high-resolution, center-composed, LCP-optimized */}
         <img 
-          src={heroDiverseTeam} 
-          alt="Vielfältiges Team aus zufriedenen Fachkräften und Mitarbeitern in Produktion, Logistik und Büro - Menschen, die ihren Traumjob bei PersoFlex gefunden haben" 
+          src={heroPersoflex} 
+          alt="PersoFlex Team aus Fachkräften in Logistik und Produktion im Großraum Pforzheim und Enzkreis" 
           className="absolute inset-0 w-full h-full object-cover object-center z-0"
           width={1920}
           height={1080}
@@ -145,19 +145,19 @@ const structuredData = {
           decoding="async"
         />
         
-        {/* Light overlay for text readability - keeps image visible */}
-        <div className="absolute inset-0 z-10 pointer-events-none bg-gradient-to-b from-gray-900/25 via-gray-900/15 to-gray-900/35" />
+        {/* Primary overlay — balanced darkness for text legibility while preserving image detail */}
+        <div className="absolute inset-0 z-10 pointer-events-none bg-gradient-to-b from-gray-900/55 via-gray-900/40 to-gray-900/65" />
         
-        {/* Soft radial spotlight behind text for readability */}
+        {/* Soft radial vignette behind headline for optimal contrast */}
         <div 
           className="absolute inset-0 z-10 pointer-events-none"
           style={{
-            background: 'radial-gradient(ellipse 800px 550px at center 50%, rgba(17, 24, 39, 0.4) 0%, rgba(17, 24, 39, 0) 70%)'
+            background: 'radial-gradient(ellipse 900px 600px at center 45%, rgba(17, 24, 39, 0.35) 0%, rgba(17, 24, 39, 0) 75%)'
           }}
         />
         
-        {/* Smooth bottom fade to white */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 z-10 bg-gradient-to-t from-white via-white/50 to-transparent pointer-events-none" />
+        {/* Smooth bottom fade into next section */}
+        <div className="absolute bottom-0 left-0 right-0 h-40 z-10 bg-gradient-to-t from-white via-white/60 to-transparent pointer-events-none" />
 
         <div className="relative z-20 max-w-7xl mx-auto px-6 pt-32 pb-20">
           <div className="text-center max-w-4xl mx-auto">
