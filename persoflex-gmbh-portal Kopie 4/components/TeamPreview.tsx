@@ -35,7 +35,7 @@ const TRUST_FACTS = [
   {
     icon: Shield,
     label: 'AÜG-Erlaubnis',
-    value: 'Vorhanden',
+    value: '',
     source: 'Bundesagentur für Arbeit',
   },
   {
@@ -83,7 +83,12 @@ export const TeamPreview: React.FC = () => {
                   </div>
                   <div>
                     <p className="text-sm font-semibold text-gray-900">
-                      {fact.label}: <span className="text-orange-600">{fact.value}</span>
+                      {fact.label}
+                      {fact.value && (
+                        <>
+                          : <span className="text-orange-600">{fact.value}</span>
+                        </>
+                      )}
                     </p>
                     <p className="text-xs text-gray-500 mt-0.5">{fact.source}</p>
                   </div>
