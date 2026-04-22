@@ -102,12 +102,14 @@ export const Unternehmen: React.FC = () => {
               </div>
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-6 leading-tight">
-                Personallösungen für{' '}
+                Personal für Produktion, Logistik und Industrie in{' '}
                 <span className="text-orange-500">Pforzheim & Enzkreis.</span>
               </h1>
-  <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-    Sie brauchen Personal – und zwar schnell, verlässlich und ohne administrative Belastung. PersoFlex besetzt offene Stellen in Rekordzeit, kümmert sich um alle Papierkram und steht Ihnen mit Vor-Ort-Betreuung zur Seite. Für Produktion, Logistik, Verwaltung und Handwerk.
-  </p>
+              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                Zeitarbeit und Personalvermittlung für Auftragsspitzen, Schichtbetrieb und Festanstellungen. 
+                Wir stellen geprüfte Fachkräfte und Helfer innerhalb von 24 bis 48 Stunden — 
+                rechtssicher nach AÜG, tarifgebunden und mit festem Ansprechpartner vor Ort.
+              </p>
               
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <Link 

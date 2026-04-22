@@ -21,6 +21,7 @@ import { SEO } from '../components/SEO';
 import { FAQSection } from '../components/FAQSection';
 import { TeamPreview } from '../components/TeamPreview';
 import { TrustBar } from '../components/TrustBar';
+import { RegionalSection } from '../components/RegionalSection';
 import heroDiverseTeam from '../public/bilder/hero-diverse-team.jpg';
 
 // Schema.org Structured Data for SEO
@@ -161,65 +162,74 @@ const structuredData = {
 
         <div className="relative z-20 max-w-7xl mx-auto px-6 pt-32 pb-20">
           <div className="text-center max-w-4xl mx-auto">
-            {/* Badge - refined, less flashy */}
+            {/* Regional badge - precise location signal for local SEO */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md text-white mb-10 border border-white/20">
               <MapPin className="w-3.5 h-3.5 text-orange-400" />
-              <span className="text-xs font-medium tracking-wider uppercase">Personaldienstleister in Pforzheim</span>
+              <span className="text-xs font-medium tracking-wider uppercase">Pforzheim · Enzkreis · Nordschwarzwald</span>
             </div>
 
-            {/* Headline - serious, sharper typography */}
+            {/* Headline - specific positioning per business brief */}
             <h1 
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 leading-[1.1] tracking-tight text-balance"
+              className="text-4xl md:text-5xl lg:text-[3.5rem] font-bold text-white mb-6 leading-[1.1] tracking-tight text-balance"
               style={{ textShadow: '0 2px 20px rgba(0,0,0,0.5)' }}
             >
-              Finden Sie Ihren{' '}
-              <span className="text-orange-400">
-                Traumjob
-              </span>
-              {' '}in Pforzheim
+              Zeitarbeit und Personalvermittlung in{' '}
+              <span className="text-orange-400">Pforzheim</span>{' '}
+              für Industrie, Logistik und Produktion
             </h1>
             
-            {/* Paragraph - refined, professional tone */}
+            {/* Subheadline - clear value proposition for both audiences */}
             <p 
-              className="text-base md:text-lg text-white/90 mb-12 max-w-2xl mx-auto leading-relaxed"
+              className="text-base md:text-lg text-white/90 mb-10 max-w-2xl mx-auto leading-relaxed"
               style={{ textShadow: '0 1px 12px rgba(0,0,0,0.7)' }}
             >
-              PersoFlex vermittelt qualifizierte Fachkräfte an Unternehmen in Pforzheim und dem Enzkreis — 
-              seit Jahren zuverlässiger Partner für Zeitarbeit und Personalvermittlung.
+              Regionaler Personaldienstleister für Unternehmen und Bewerber im Enzkreis. 
+              Persönlich betreut, tariflich bezahlt, schnell verfügbar — seit Gründung verwurzelt in der Region.
             </p>
 
-            {/* CTA Buttons - refined, no excessive rings */}
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            {/* Primary CTA Group - three clear paths: companies, applicants, initiative */}
+            <div className="flex flex-col sm:flex-row gap-3 justify-center mb-5">
               <Link 
-                to="/jobs" 
+                to="/personalanfrage" 
                 className="group bg-orange-500 hover:bg-orange-600 text-white px-7 py-3.5 rounded-lg font-semibold text-sm transition-all duration-200 shadow-lg shadow-orange-500/20 hover:shadow-orange-500/40 inline-flex items-center justify-center gap-2"
               >
-                <span>Jobs entdecken</span>
+                <span>Personal anfragen</span>
                 <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />
               </Link>
               <Link 
-                to="/unternehmen" 
-                className="px-7 py-3.5 bg-white/10 backdrop-blur-md border border-white/30 text-white rounded-lg font-semibold text-sm hover:bg-white/15 hover:border-white/50 transition-all inline-flex items-center justify-center gap-2"
+                to="/jobs" 
+                className="group px-7 py-3.5 bg-white/10 backdrop-blur-md border border-white/30 text-white rounded-lg font-semibold text-sm hover:bg-white/15 hover:border-white/50 transition-all inline-flex items-center justify-center gap-2"
               >
-                Personal anfragen
+                <span>Jobs ansehen</span>
+                <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />
+              </Link>
+            </div>
+
+            {/* Secondary CTA - initiative application path */}
+            <div className="flex justify-center">
+              <Link
+                to="/fuer-bewerber"
+                className="text-sm text-white/80 hover:text-white underline underline-offset-4 decoration-white/40 hover:decoration-white/80 transition-colors"
+              >
+                Oder initiativ bewerben →
               </Link>
             </div>
 
             {/* Trust Indicators - minimal, refined */}
-            <div className="mt-20 flex flex-wrap justify-center gap-x-8 gap-y-3">
+            <div className="mt-16 flex flex-wrap justify-center gap-x-8 gap-y-3">
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-orange-400" />
-                <span className="text-xs font-medium text-white/90 tracking-wide uppercase">GVP Mitglied</span>
+                <span className="text-xs font-medium text-white/90 tracking-wide uppercase">GVP-Mitglied</span>
               </div>
               <div className="hidden sm:block w-px h-4 bg-white/20 self-center" />
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-orange-400" />
-                <span className="text-xs font-medium text-white/90 tracking-wide uppercase">AÜG Erlaubnis</span>
+                <span className="text-xs font-medium text-white/90 tracking-wide uppercase">BAP-Tarifvertrag</span>
               </div>
               <div className="hidden sm:block w-px h-4 bg-white/20 self-center" />
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-orange-400" />
-                <span className="text-xs font-medium text-white/90 tracking-wide uppercase">Tarifgebunden</span>
+                <span className="text-xs font-medium text-white/90 tracking-wide uppercase">Regional verwurzelt</span>
               </div>
             </div>
           </div>
@@ -245,10 +255,11 @@ const structuredData = {
               Unsere Leistungen
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 tracking-tight leading-tight mb-6 text-balance">
-              Personaldienstleistungen für Ihren <span className="text-orange-500">Erfolg</span>
+              Zeitarbeit, Personalvermittlung und <span className="text-orange-500">On-Site-Betreuung</span>
             </h2>
             <p className="text-gray-600 text-base md:text-lg leading-relaxed">
-              Drei spezialisierte Lösungen für Ihren Personalbedarf — von kurzfristiger Flexibilität bis zur strategischen HR-Beratung.
+              Drei klare Wege zum passenden Personal in Pforzheim und dem Enzkreis — 
+              für Auftragsspitzen, Festanstellungen und den laufenden Schichtbetrieb.
             </p>
           </div>
 
@@ -287,10 +298,10 @@ const structuredData = {
                 </h3>
                 <div className="space-y-5">
                   {[
-                    { title: 'GVP Mitglied', desc: 'Tarifgebundene Dienstleistungen nach Branchenstandards' },
-                    { title: 'AÜG Erlaubnis', desc: 'Vollständig lizenziert und von der Bundesagentur für Arbeit genehmigt' },
-                    { title: 'Regionale Expertise', desc: 'Tiefes Verständnis des Pforzheimer und Enzkreis Arbeitsmarkts' },
-                    { title: 'Persönliche Betreuung', desc: 'Direkter Kontakt zu Ihrem Ansprechpartner vor Ort' }
+                    { title: 'GVP-Mitglied', desc: 'Tariftreue nach BAP-Tarifvertrag mit Branchenzuschlägen in Industrie und Logistik.' },
+                    { title: 'Regional verwurzelt', desc: 'Seit Gründung in Pforzheim ansässig — wir kennen Betriebe und Bewerber persönlich.' },
+                    { title: 'Schnelle Besetzung', desc: 'Erste Kandidatenvorschläge in 24 bis 48 Stunden, auch bei kurzfristigen Auftragsspitzen.' },
+                    { title: 'Fester Ansprechpartner', desc: 'Keine Hotline, keine Callcenter — direkter Kontakt zu einem Betreuer vor Ort.' }
                   ].map((benefit, idx) => (
                     <div key={idx} className="flex gap-3">
                       <CheckCircle2 className="w-5 h-5 text-orange-500 flex-shrink-0 mt-0.5" strokeWidth={2} />
@@ -505,6 +516,9 @@ const structuredData = {
           </div>
         </div>
       </section>
+
+      {/* Regional section — local SEO & GEO/AI readability block */}
+      <RegionalSection />
 
       {/* Team Preview - Named team members build Subject Expertise & Credibility signals */}
       <TeamPreview />

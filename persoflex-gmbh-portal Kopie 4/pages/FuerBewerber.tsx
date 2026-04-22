@@ -93,7 +93,7 @@ export const FuerBewerber: React.FC = () => {
   ];
 
   const whyUs = [
-    { icon: Shield, title: "Sicherheit", desc: "Unbefristete Arbeitsverträge und tarifliche Absicherung geben dir Planungssicherheit." },
+    { icon: Shield, title: "Sicherheit", desc: "Feste Arbeitsverträge und tarifliche Absicherung nach BAP geben dir Planungssicherheit." },
     { icon: Heart, title: "Wertschätzung", desc: "Du bist bei uns kein Fall, sondern ein Mensch. Wir behandeln dich mit Respekt." },
     { icon: Clock, title: "Flexibilität", desc: "Vollzeit, Teilzeit oder Schichtarbeit – wir finden das Modell, das zu deinem Leben passt." },
     { icon: TrendingUp, title: "Perspektive", desc: "Zeitarbeit als Sprungbrett: Viele unserer Mitarbeiter werden von den Betrieben übernommen." }
@@ -131,13 +131,13 @@ export const FuerBewerber: React.FC = () => {
               </div>
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 mb-6 leading-tight">
-                Mehr als nur <br />
-                <span className="text-orange-500">ein Job.</span>
+                Jobs in Pforzheim —{' '}
+                <span className="text-orange-500">schnell, fair, persönlich.</span>
               </h1>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                Wir sind dein neuer Partner in Pforzheim. Wir bieten dir echte Perspektiven, 
-                faire Bezahlung und ein Team, das dich wertschätzt. Ob Zeitarbeit oder 
-                Direktvermittlung – wir finden den richtigen Weg für dich.
+                Wir vermitteln dich in Produktion, Logistik, Lager und Handwerk bei Betrieben im 
+                Enzkreis. Tariflich bezahlt nach BAP, mit 30 Tagen Urlaub, persönlichem Ansprechpartner 
+                in Pforzheim — und oft mit konkreter Übernahmechance in die Festanstellung.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 mb-10">
