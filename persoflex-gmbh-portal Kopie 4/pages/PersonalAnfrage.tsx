@@ -61,7 +61,7 @@ const BENEFITS = [
   {
     icon: ShieldCheck,
     title: "Rechtssicherheit",
-    description: "Wir besitzen die unbefristete Erlaubnis zur Arbeitnehmerüberlassung (AÜG)."
+    description: "Wir besitzen die offizielle Erlaubnis zur Arbeitnehmerüberlassung nach AÜG."
   },
   {
     icon: Users,

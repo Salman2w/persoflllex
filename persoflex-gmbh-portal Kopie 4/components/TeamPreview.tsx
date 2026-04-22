@@ -35,7 +35,7 @@ const TRUST_FACTS = [
   {
     icon: Shield,
     label: 'AÜG-Erlaubnis',
-    value: 'Unbefristet',
+    value: 'Vorhanden',
     source: 'Bundesagentur für Arbeit',
   },
   {

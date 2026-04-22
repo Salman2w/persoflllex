@@ -96,7 +96,7 @@ const MILESTONES = [
   },
   {
     title: "AÜG-Erlaubnis",
-    description: "Erhalt der unbefristeten Erlaubnis zur Arbeitnehmerüberlassung durch die Bundesagentur für Arbeit."
+    description: "Erhalt der offiziellen Erlaubnis zur Arbeitnehmerüberlassung durch die Bundesagentur für Arbeit."
   },
   {
     title: "GVP-Mitgliedschaft",
@@ -181,7 +181,7 @@ export const UeberUns: React.FC = () => {
                   </div>
                   <div>
                     <p className="font-semibold text-gray-900">AÜG-Erlaubnis</p>
-                    <p className="text-sm text-gray-600">Unbefristete Erlaubnis zur Arbeitnehmerüberlassung</p>
+                    <p className="text-sm text-gray-600">Offiziell erteilte Erlaubnis zur Arbeitnehmerüberlassung</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4 p-4 bg-gray-50 rounded-xl">
