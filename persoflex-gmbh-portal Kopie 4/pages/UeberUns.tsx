@@ -23,12 +23,20 @@ import { ObfuscatedEmail } from '../components/ObfuscatedEmail';
 
 const TEAM_MEMBERS = [
   {
-    name: "Salman Karakus",
+    name: "Arina Karakus",
     role: "Geschäftsführung",
+    email: "info@persoflex-gmbh.de",
+    phone: "07231 60 39 493",
+    imageSrc: "/bilder/arina_karakus.webp",
+    bio: "Leitung und strategische Ausrichtung des Unternehmens"
+  },
+  {
+    name: "Salman Karakus",
+    role: "Geschäftsleitung",
     email: "salman.karakus@persoflex-gmbh.de",
     phone: "07231 60 39 493",
     imageSrc: "/bilder/salman_karakus.webp",
-    bio: "Operative Führung, Kundenbetreuung und strategische Ausrichtung des Unternehmens"
+    bio: "Operative Führung und Kundenbetreuung"
   },
   {
     name: "Albert Budagyan",

@@ -27,7 +27,7 @@ export const Impressum: React.FC = () => {
           <section>
             <h2 className="text-xl font-bold mb-2">Vertreten durch</h2>
             <p className="leading-relaxed">
-              Salman Karakus (Geschäftsführer)
+              Arina Karakus
             </p>
           </section>
 

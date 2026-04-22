@@ -1,28 +1,33 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Phone, Clock, Shield, Users } from 'lucide-react';
+import { ArrowRight, Phone, Clock, Shield } from 'lucide-react';
 
 /**
  * Team-Preview section for the Home page.
- * Photo-free, text-based presentation that still communicates trust and expertise
- * via named roles, responsibilities, and sourced trust facts.
+ * Builds Subject Expertise & Credibility signals by showing real, named people.
+ * Mirrors the 4 members from UeberUns to keep a single source of truth visually consistent.
  */
 
 const TEAM_PREVIEW = [
   {
-    name: 'Salman Karakus',
+    name: 'Arina Karakus',
     role: 'Geschäftsführung',
-    focus: 'Operative Leitung & Kundenbetreuung',
+    imageSrc: '/bilder/arina_karakus.webp',
+  },
+  {
+    name: 'Salman Karakus',
+    role: 'Geschäftsleitung',
+    imageSrc: '/bilder/salman_karakus.webp',
   },
   {
     name: 'Albert Budagyan',
     role: 'Vertriebsleitung',
-    focus: 'Neukunden & Unternehmenspartnerschaften',
+    imageSrc: '/bilder/albert_budagyan.webp',
   },
   {
     name: 'Samira Kampen',
     role: 'Recruiting & HR',
-    focus: 'Bewerberbetreuung & Personalauswahl',
+    imageSrc: '/bilder/samira_van_kampen.webp',
   },
 ];
 
@@ -47,20 +52,12 @@ const TRUST_FACTS = [
   },
 ];
 
-// Returns initials (max 2 characters) for a given full name.
-const getInitials = (name: string): string =>
-  name
-    .split(' ')
-    .map((part) => part.charAt(0).toUpperCase())
-    .slice(0, 2)
-    .join('');
-
 export const TeamPreview: React.FC = () => {
   return (
     <section className="py-20 md:py-24 bg-white" aria-labelledby="team-preview-heading">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-          {/* Left: Heading + Copy + Trust Facts */}
+          {/* Left: Heading + Copy */}
           <div className="lg:col-span-5">
             <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-orange-600 mb-4">
               Das Team hinter PersoFlex
@@ -103,53 +100,38 @@ export const TeamPreview: React.FC = () => {
             </Link>
           </div>
 
-          {/* Right: Text-only team cards */}
+          {/* Right: Team Grid */}
           <div className="lg:col-span-7">
-            <div className="flex items-center gap-2 mb-6">
-              <Users size={16} className="text-orange-500" strokeWidth={2} />
-              <span className="text-xs font-semibold uppercase tracking-[0.15em] text-gray-500">
-                Ihre direkten Ansprechpartner
-              </span>
-            </div>
-            <ul className="space-y-3">
+            <div className="grid grid-cols-2 gap-4 md:gap-6">
               {TEAM_PREVIEW.map((member, idx) => (
-                <li key={idx}>
-                  <Link
-                    to="/ueber-uns"
-                    className="group flex items-center gap-4 md:gap-5 p-4 md:p-5 bg-white border border-gray-200 rounded-xl hover:border-orange-300 hover:shadow-md transition-all"
-                    aria-label={`Mehr &uuml;ber ${member.name}, ${member.role}`}
-                  >
-                    {/* Initials avatar — no personal photo */}
-                    <div
-                      aria-hidden="true"
-                      className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-gradient-to-br from-orange-50 to-orange-100 border border-orange-200 flex items-center justify-center flex-shrink-0"
-                    >
-                      <span className="text-sm md:text-base font-bold tracking-tight text-orange-600">
-                        {getInitials(member.name)}
-                      </span>
-                    </div>
-
-                    {/* Text content */}
-                    <div className="flex-1 min-w-0">
-                      <p className="font-semibold text-gray-900 text-sm md:text-base tracking-tight group-hover:text-orange-600 transition-colors">
-                        {member.name}
-                      </p>
-                      <p className="text-xs md:text-sm text-orange-600 font-medium mt-0.5">
-                        {member.role}
-                      </p>
-                      <p className="text-xs md:text-sm text-gray-500 mt-1 leading-snug">
-                        {member.focus}
-                      </p>
-                    </div>
-
-                    <ArrowRight
-                      size={16}
-                      className="text-gray-400 group-hover:text-orange-500 group-hover:translate-x-0.5 transition-all flex-shrink-0"
+                <Link
+                  key={idx}
+                  to="/ueber-uns"
+                  className="group block"
+                  aria-label={`Mehr über ${member.name}, ${member.role}`}
+                >
+                  <div className="aspect-[4/5] bg-gray-100 rounded-xl overflow-hidden border border-gray-200 group-hover:border-orange-300 transition-all shadow-sm group-hover:shadow-md">
+                    <img
+                      src={member.imageSrc}
+                      alt={`${member.name}, ${member.role} bei PersoFlex GmbH in Pforzheim`}
+                      className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500"
+                      width={400}
+                      height={500}
+                      loading="lazy"
+                      decoding="async"
                     />
-                  </Link>
-                </li>
+                  </div>
+                  <div className="mt-3">
+                    <p className="font-semibold text-gray-900 text-sm md:text-base tracking-tight">
+                      {member.name}
+                    </p>
+                    <p className="text-xs md:text-sm text-orange-600 font-medium mt-0.5">
+                      {member.role}
+                    </p>
+                  </div>
+                </Link>
               ))}
-            </ul>
+            </div>
           </div>
         </div>
       </div>

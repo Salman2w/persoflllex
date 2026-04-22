@@ -188,7 +188,7 @@ export const Datenschutz: React.FC = () => {
             <div className="bg-gray-50 rounded-lg p-4 my-4">
               <p className="mb-0">
                 <strong>PersoFlex GmbH</strong><br />
-                Vertreten durch: Salman Karakus (Geschaeftsfuehrer)<br />
+                Vertreten durch: Arina Karakus (Geschaeftsfuehrer)<br />
                 Wilhelmshoehe 7<br />
                 75173 Pforzheim<br />
                 Telefon: 07231 6039493<br />
