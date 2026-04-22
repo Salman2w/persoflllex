@@ -1,5 +1,5 @@
 import React from 'react';
-import { Award, ShieldCheck, MapPin, FileCheck } from 'lucide-react';
+import { Award, MapPin, FileCheck } from 'lucide-react';
 
 /**
  * Credibility Trust Bar with sourced authority signals.
@@ -15,12 +15,6 @@ type TrustItem = {
 };
 
 const TRUST_SIGNALS: TrustItem[] = [
-  {
-    icon: ShieldCheck,
-    title: 'AÜG-Erlaubnis',
-    source: 'Bundesagentur für Arbeit',
-    ariaLabel: 'Unbefristete Erlaubnis zur Arbeitnehmerüberlassung nach AÜG',
-  },
   {
     icon: Award,
     title: 'GVP-Mitglied',
