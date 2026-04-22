@@ -66,10 +66,36 @@ export const Kontakt: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       <SEO
-        title="Kontakt - PersoFlex GmbH Pforzheim"
-        description="Kontaktieren Sie PersoFlex in Pforzheim. Telefon, E-Mail und Anfahrt."
-        keywords="Kontakt PersoFlex, Pforzheim"
+        title="Kontakt | PersoFlex GmbH in Pforzheim erreichen"
+        description="Kontaktieren Sie PersoFlex in der Kiehnlestraße 4, 75172 Pforzheim. Telefonisch unter 07231 6039493, per E-Mail oder direkt im Büro. Öffnungszeiten Mo–Fr 08:00–17:00 Uhr."
+        keywords="Kontakt PersoFlex, Personaldienstleister Pforzheim Telefon, Zeitarbeit Pforzheim Adresse, Personal anfragen Enzkreis"
         canonicalUrl="https://www.persoflex-gmbh.de/kontakt"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "ContactPage",
+          "name": "Kontakt PersoFlex GmbH",
+          "url": "https://www.persoflex-gmbh.de/kontakt",
+          "mainEntity": {
+            "@type": "LocalBusiness",
+            "name": "PersoFlex GmbH",
+            "telephone": "+49 7231 6039493",
+            "email": "info@persoflex-gmbh.de",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Kiehnlestraße 4",
+              "addressLocality": "Pforzheim",
+              "postalCode": "75172",
+              "addressRegion": "Baden-Württemberg",
+              "addressCountry": "DE"
+            },
+            "openingHoursSpecification": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+              "opens": "08:00",
+              "closes": "17:00"
+            }
+          }
+        }}
       />
 
       {/* Hero Section */}

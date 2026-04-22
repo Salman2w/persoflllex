@@ -22,6 +22,7 @@ import { FAQSection } from '../components/FAQSection';
 import { TeamPreview } from '../components/TeamPreview';
 import { TrustBar } from '../components/TrustBar';
 import { RegionalSection } from '../components/RegionalSection';
+import { NewsletterSection } from '../components/NewsletterSection';
 import heroDiverseTeam from '../public/bilder/hero-diverse-team.jpg';
 
 // Schema.org Structured Data for SEO
@@ -69,6 +70,70 @@ const structuredData = {
         "target": "https://www.persoflex-gmbh.de/jobs?q={search_term_string}",
         "query-input": "required name=search_term_string"
       }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Was ist Zeitarbeit und wie funktioniert sie?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Zeitarbeit (Arbeitnehmerüberlassung) bedeutet, dass Sie bei PersoFlex GmbH angestellt sind und in verschiedenen Kundenunternehmen arbeiten. Sie erhalten einen festen Arbeitsvertrag mit tariflicher Bezahlung, Urlaubs- und Weihnachtsgeld sowie vollen Sozialversicherungsschutz."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Welche Jobs bietet PersoFlex in Pforzheim an?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Wir vermitteln Stellen in Produktion, Logistik, Lager, Industrie und Handwerk in Pforzheim und dem Enzkreis. Typische Positionen sind Produktionshelfer, Lageristen, Staplerfahrer, Maschinenbediener und Fachkräfte in der Metallverarbeitung."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ist die Bewerbung bei PersoFlex kostenlos?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ja, die Bewerbung und Vermittlung ist für Bewerber komplett kostenlos. Sie können sich online, telefonisch unter 07231 1545010 oder persönlich in unserer Niederlassung in der Kiehnlestraße 4, 75172 Pforzheim bewerben."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Was ist der Unterschied zwischen Zeitarbeit und Personalvermittlung?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Bei der Zeitarbeit sind Sie bei PersoFlex angestellt und arbeiten bei unseren Kunden. Bei der Personalvermittlung vermitteln wir Sie direkt in eine Festanstellung beim Kundenunternehmen. Beide Optionen bieten Vorteile je nach Ihrer persönlichen Situation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Welche Vorteile bietet PersoFlex als Arbeitgeber?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Als GVP-Mitglied bieten wir tarifliche Bezahlung, Urlaubs- und Weihnachtsgeld, persönliche Betreuung, Weiterbildungsmöglichkeiten und die Chance auf Übernahme beim Kundenunternehmen. Wir sind ein regionaler Partner mit Fokus auf Pforzheim und den Enzkreis."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie schnell kann ich bei PersoFlex anfangen?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nach einem ersten persönlichen Gespräch und der Prüfung Ihrer Unterlagen können Sie in der Regel innerhalb von wenigen Tagen starten. Bei dringendem Personalbedarf auch schneller – oft schon am nächsten Werktag."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Startseite",
+          "item": "https://www.persoflex-gmbh.de/"
+        }
+      ]
     }
   ]
 };
@@ -567,6 +632,9 @@ const structuredData = {
 
       {/* FAQ Section - mirrors JSON-LD FAQPage schema for improved SEO/LLM discoverability */}
       <FAQSection />
+
+      {/* Newsletter lead-magnet — addresses lead-generation gap flagged in SEO audit */}
+      <NewsletterSection />
 
       {/* CTA Section */}
       <section className="py-24 bg-orange-500">
