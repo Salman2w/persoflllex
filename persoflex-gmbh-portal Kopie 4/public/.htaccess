@@ -3,18 +3,19 @@
 # ======================================================================
 
 # ----------------------------------------------------------------------
-# HTTPS WEITERLEITUNG (HTTP zu HTTPS)
+# KANONISCHE WEITERLEITUNG — HTTPS + www in EINEM Sprung
+# Früher waren das zwei separate Regeln, wodurch bei http://persoflex-gmbh.de
+# eine Kette aus 2 aufeinanderfolgenden 301-Redirects entstand. Google hat
+# das als "Umleitungsfehler" gemeldet. Jetzt: ein einziger 301 zur kanonischen
+# URL, egal wo der Nutzer oder Crawler einsteigt.
 # ----------------------------------------------------------------------
 RewriteEngine On
-RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+RewriteBase /
 
-# ----------------------------------------------------------------------
-# WWW WEITERLEITUNG (non-www zu www)
-# Konsistent mit allen canonical URLs (Sitemap, SEO-Tags, Schema-Markup).
-# Verhindert das www/non-www Canonical-Split-Problem aus dem SEO-Audit.
-# ----------------------------------------------------------------------
-RewriteCond %{HTTP_HOST} ^persoflex-gmbh\.de$ [NC]
+# Wenn Host nicht www ist ODER HTTPS aus ist, in einem Schritt auf die
+# kanonische URL (https://www.persoflex-gmbh.de) umleiten.
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} !^www\.persoflex-gmbh\.de$ [NC]
 RewriteRule ^(.*)$ https://www.persoflex-gmbh.de/$1 [R=301,L]
 
 # ----------------------------------------------------------------------
@@ -26,7 +27,10 @@ RewriteCond %{REQUEST_URI} \.(pdf|jpg|jpeg|png|gif|webp|svg|ico|woff|woff2|ttf|o
 RewriteRule ^ - [L]
 
 # Alle anderen Anfragen an index.html weiterleiten (SPA-Routing)
+# !-f  = keine existierende Datei
+# !-d  = kein existierendes Verzeichnis (verhindert, dass Ordner-Requests fehlschlagen)
 RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^.*$ index.html [L]
 
 # ----------------------------------------------------------------------
@@ -152,9 +156,13 @@ RewriteRule ^.*$ index.html [L]
 
 # ----------------------------------------------------------------------
 # FEHLERSEITEN
+# Wichtig: KEIN "ErrorDocument 404 /index.html" mehr. Das würde aus jedem
+# fehlgeschlagenen Request einen Soft-404 mit HTTP-Status 200 machen, was
+# Google in der Search Console als "Seite mit Weiterleitung" meldet. Die
+# SPA-Rewrite-Regel oben fängt alle gültigen Client-Routen bereits ab;
+# echte fehlende Assets (z.B. /nonexistent.jpg) sollen einen echten 404
+# erhalten, damit Google den Status korrekt interpretiert.
 # ----------------------------------------------------------------------
-ErrorDocument 404 /index.html
-ErrorDocument 500 /index.html
 
 # ----------------------------------------------------------------------
 # VERZEICHNISAUFLISTUNG DEAKTIVIEREN
