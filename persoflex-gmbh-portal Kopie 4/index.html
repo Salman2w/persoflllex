@@ -231,56 +231,10 @@
     }
     </script>
     
-    <!-- Schema.org Structured Data - FAQPage for LLM visibility -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Was ist Zeitarbeit?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Zeitarbeit (Arbeitnehmerüberlassung) bedeutet, dass Sie bei einem Personaldienstleister wie PersoFlex GmbH angestellt sind und in verschiedenen Kundenunternehmen arbeiten. Sie erhalten einen festen Arbeitsvertrag mit tariflicher Bezahlung, Urlaubs- und Weihnachtsgeld sowie vollen Sozialversicherungsschutz."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Welche Jobs bietet PersoFlex in Pforzheim an?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "PersoFlex GmbH vermittelt Jobs in Produktion, Logistik, Lager, Industrie und Handwerk in Pforzheim und dem Enzkreis. Typische Positionen sind Produktionshelfer, Lageristen, Staplerfahrer, Maschinenbediener und Fachkräfte in der Metallverarbeitung."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Ist die Bewerbung bei PersoFlex kostenlos?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Ja, die Bewerbung und Vermittlung ist für Bewerber komplett kostenlos. Sie können sich online, telefonisch unter 07231 1545010 oder persönlich in unserer Niederlassung in der Kiehnlestraße 4, 75172 Pforzheim bewerben."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Was ist der Unterschied zwischen Zeitarbeit und Personalvermittlung?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Bei der Zeitarbeit sind Sie bei PersoFlex angestellt und arbeiten bei unseren Kunden. Bei der Personalvermittlung vermitteln wir Sie direkt in eine Festanstellung beim Kundenunternehmen. Beide Optionen bieten Vorteile je nach Ihrer persönlichen Situation."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Welche Vorteile bietet PersoFlex als Arbeitgeber?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Als GVP-Mitglied bietet PersoFlex tarifliche Bezahlung, Urlaubs- und Weihnachtsgeld, persönliche Betreuung, Weiterbildungsmöglichkeiten und die Chance auf Übernahme beim Kundenunternehmen. Wir sind ein regionaler Partner mit Fokus auf Pforzheim und den Enzkreis."
-          }
-        }
-      ]
-    }
-    </script>
-    
+    <!-- NOTE: FAQPage JSON-LD intentionally removed here — it is now rendered dynamically
+         only on the homepage via Home.tsx structuredData to avoid Google's "Feld FAQPage doppelt"
+         duplicate-schema error that was reported in Search Console on 2026-04-22. -->
+
     <!-- LLM/AI Metadata for enhanced discoverability -->
     <meta name="ai.summary" content="PersoFlex GmbH ist ein Personaldienstleister in Pforzheim, spezialisiert auf Zeitarbeit und Personalvermittlung in Produktion, Logistik und Industrie. Bewerber finden hier Jobs, Unternehmen flexible Personallösungen." />
     <meta name="ai.keywords" content="Zeitarbeit Pforzheim, Personalvermittlung Enzkreis, Produktionsjobs, Logistik Jobs, Arbeitnehmerüberlassung Baden-Württemberg" />
