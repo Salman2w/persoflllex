@@ -10,10 +10,12 @@ RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 # ----------------------------------------------------------------------
-# WWW WEITERLEITUNG (www zu non-www)
+# WWW WEITERLEITUNG (non-www zu www)
+# Konsistent mit allen canonical URLs (Sitemap, SEO-Tags, Schema-Markup).
+# Verhindert das www/non-www Canonical-Split-Problem aus dem SEO-Audit.
 # ----------------------------------------------------------------------
-RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
-RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+RewriteCond %{HTTP_HOST} ^persoflex-gmbh\.de$ [NC]
+RewriteRule ^(.*)$ https://www.persoflex-gmbh.de/$1 [R=301,L]
 
 # ----------------------------------------------------------------------
 # SINGLE PAGE APPLICATION (SPA) ROUTING
