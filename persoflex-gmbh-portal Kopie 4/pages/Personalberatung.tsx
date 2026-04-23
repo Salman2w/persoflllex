@@ -22,7 +22,7 @@ export function Personalberatung() {
     <main className="min-h-screen bg-white">
       <SEO 
         title="Personalberatung Pforzheim | Strategische HR-Lösungen | PersoFlex GmbH"
-        description="Personalberatung in Pforzheim & Enzkreis: Strategische HR-Beratung, Recruiting-Konzepte und individuelle Lösungen für Ihren nachhaltigen Unternehmenserfolg."
+        description="Personalberatung Pforzheim & Enzkreis: Strategische HR-Beratung, Recruiting-Konzepte und individuelle Lösungen für Ihren Unternehmenserfolg."
         keywords="Personalberatung Pforzheim, HR-Beratung Enzkreis, Recruiting Beratung, Personalstrategie, HR Consulting"
         canonicalUrl="https://www.persoflex-gmbh.de/personalberatung"
       />
@@ -30,11 +30,15 @@ export function Personalberatung() {
       <section className="relative pt-32 pb-20 overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
-          <img 
-            src="/bilder/beratung-strategie.jpg" 
-            alt="Personalberatung" 
-            className="w-full h-full object-cover"
-          />
+  <img
+  src="/bilder/beratung-strategie.jpg"
+  alt="Personalberatung und HR-Strategie bei PersoFlex GmbH Pforzheim"
+  className="w-full h-full object-cover"
+  width={1920}
+  height={1080}
+  fetchPriority="high"
+  decoding="async"
+  />
           <div className="absolute inset-0 bg-gradient-to-r from-gray-900/95 via-gray-900/80 to-gray-900/60" />
         </div>
         

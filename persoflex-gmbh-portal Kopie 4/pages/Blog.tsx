@@ -824,7 +824,7 @@ export const Blog: React.FC = () => {
     <div className="min-h-screen bg-white">
       <SEO 
         title="Blog – Karriere-Ratgeber & Expertenwissen | PersoFlex GmbH"
-        description="Praxisnahe Tipps zu Zeitarbeit, Jobs und Karriere in Pforzheim und dem Enzkreis. Ratgeber, Brancheneinblicke und Expertenwissen für Bewerber und Unternehmen."
+        description="Praxisnahe Tipps zu Zeitarbeit, Jobs und Karriere in Pforzheim. Ratgeber und Brancheneinblicke für Bewerber und Unternehmen im Enzkreis."
         keywords="Zeitarbeit Blog, Karriere Ratgeber, Jobs Pforzheim, Personaldienstleister Enzkreis, Arbeitsmarkt Pforzheim"
         canonicalUrl="https://www.persoflex-gmbh.de/blog"
       />

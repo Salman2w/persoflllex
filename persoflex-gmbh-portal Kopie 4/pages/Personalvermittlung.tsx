@@ -32,8 +32,12 @@ export function Personalvermittlung() {
         <div className="absolute inset-0">
           <img 
             src="/bilder/vermittlung-desk.jpg" 
-            alt="Personalvermittlung" 
+            alt="Personalvermittlung in Pforzheim und Enzkreis — PersoFlex GmbH" 
             className="w-full h-full object-cover"
+            width={1920}
+            height={1080}
+            fetchPriority="high"
+            decoding="async"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-gray-900/95 via-gray-900/80 to-gray-900/60" />
         </div>

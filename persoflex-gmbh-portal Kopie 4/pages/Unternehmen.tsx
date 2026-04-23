@@ -72,7 +72,7 @@ export const Unternehmen: React.FC = () => {
     <div className="min-h-screen bg-white">
       <SEO 
         title="Personal für Unternehmen in Pforzheim & Enzkreis | PersoFlex GmbH"
-        description="Schnelle Personallösungen für Produktion, Logistik und Industrie in Pforzheim. Arbeitnehmerüberlassung, Personalvermittlung und On-Site Management aus einer Hand."
+        description="Personaldienstleister in Pforzheim: Zeitarbeit, Personalvermittlung und On-Site-Management für Produktion, Logistik und Industrie im Enzkreis."
         keywords="Personaldienstleister Pforzheim, Zeitarbeit Enzkreis, Arbeitnehmerüberlassung Baden-Württemberg, On-Site Management, Personal für Unternehmen"
         canonicalUrl="https://www.persoflex-gmbh.de/unternehmen"
       />
@@ -81,11 +81,15 @@ export const Unternehmen: React.FC = () => {
       <section className="relative pt-32 pb-24 overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
-          <img 
-            src="/bilder/unternehmen-hero.jpg" 
-            alt="Für Unternehmen" 
-            className="w-full h-full object-cover"
-          />
+  <img
+  src="/bilder/unternehmen-hero.jpg"
+  alt="Personallösungen für Unternehmen in Pforzheim — PersoFlex GmbH"
+  className="w-full h-full object-cover"
+  width={1920}
+  height={1080}
+  fetchPriority="high"
+  decoding="async"
+  />
           <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/80 to-white/40" />
         </div>
         <div className="absolute inset-0">

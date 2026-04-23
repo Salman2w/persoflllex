@@ -303,7 +303,7 @@ export default function JobDetail() {
           {/* Header Bild */}
           {job.Image1Uuid && (
             <div className="rounded-2xl overflow-hidden border border-gray-200 aspect-[21/9]">
-              <img src={getImageUrl(job.Image1Uuid)} alt="Job Header" className="w-full h-full object-cover" />
+              <img src={getImageUrl(job.Image1Uuid)} alt={`Stellenanzeige ${job.BezeichnungAusschreibung || job.Bezeichnung}`} className="w-full h-full object-cover" width={1600} height={600} fetchPriority="high" decoding="async" />
             </div>
           )}
 
@@ -467,7 +467,7 @@ export default function JobDetail() {
               
               <div className="flex items-center gap-4 mb-4">
                  {job.ImageKontaktUuid ? (
-                    <img src={getImageUrl(job.ImageKontaktUuid)} className="w-12 h-12 rounded-xl object-cover border border-gray-200" alt="Kontakt" />
+                    <img src={getImageUrl(job.ImageKontaktUuid)} className="w-12 h-12 rounded-xl object-cover border border-gray-200" alt="Ansprechpartner für diese Stelle bei PersoFlex" width={48} height={48} loading="lazy" decoding="async" />
                  ) : (
                     <div className="w-12 h-12 rounded-xl bg-gray-200 flex items-center justify-center text-gray-500">
                       <User size={20} />

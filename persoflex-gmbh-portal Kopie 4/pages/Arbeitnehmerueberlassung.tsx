@@ -20,7 +20,7 @@ export function Arbeitnehmerueberlassung() {
     <main className="min-h-screen bg-white">
       <SEO 
         title="Arbeitnehmerüberlassung Pforzheim & Enzkreis | PersoFlex GmbH"
-        description="Professionelle Arbeitnehmerüberlassung in Pforzheim und Enzkreis. Flexible Personallösungen nach AÜG – faire Konditionen, schnelle Vermittlung, hohe Qualität."
+        description="Arbeitnehmerüberlassung in Pforzheim und Enzkreis. Flexible Personallösungen nach AÜG – faire Konditionen und schnelle Vermittlung."
         keywords="Arbeitnehmerüberlassung Pforzheim, AÜG, Zeitarbeit, Leiharbeit, Personalüberlassung Enzkreis"
         canonicalUrl="https://www.persoflex-gmbh.de/arbeitnehmerueberlassung"
       />
@@ -28,11 +28,15 @@ export function Arbeitnehmerueberlassung() {
       <section className="relative pt-32 pb-20 overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
-          <img 
-            src="/bilder/aueg-hero.jpg" 
-            alt="Arbeitnehmerüberlassung" 
-            className="w-full h-full object-cover"
-          />
+  <img
+  src="/bilder/aueg-hero.jpg"
+  alt="Arbeitnehmerüberlassung in Pforzheim und Enzkreis — PersoFlex GmbH"
+  className="w-full h-full object-cover"
+  width={1920}
+  height={1080}
+  fetchPriority="high"
+  decoding="async"
+  />
           <div className="absolute inset-0 bg-gradient-to-r from-gray-900/95 via-gray-900/80 to-gray-900/60" />
         </div>
         

@@ -103,7 +103,7 @@ export const FuerBewerber: React.FC = () => {
     <div className="min-h-screen bg-white">
   <SEO
   title="Jobs in Pforzheim finden | Für Bewerber | PersoFlex GmbH"
-  description="Jobs in Produktion, Logistik und Handwerk in Pforzheim & Enzkreis. Tariflicher Lohn, 30 Tage Urlaub, Tankgutschein und persönliche Betreuung. Jetzt bewerben."
+  description="Jobs in Produktion, Logistik und Handwerk in Pforzheim. Tariflicher Lohn nach BAP, 30 Tage Urlaub, Tankgutschein und persönliche Betreuung."
   keywords="Jobs Pforzheim, Bewerber, Zeitarbeit Enzkreis, Produktionshelfer, Staplerfahrer, Lagerjobs"
   canonicalUrl="https://www.persoflex-gmbh.de/fuer-bewerber"
   structuredData={structuredData}
@@ -113,11 +113,15 @@ export const FuerBewerber: React.FC = () => {
       <section className="relative pt-32 pb-24 overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
-          <img 
-            src="/bilder/bewerber-hero.jpg" 
-            alt="Für Bewerber" 
-            className="w-full h-full object-cover"
-          />
+  <img
+  src="/bilder/bewerber-hero.jpg"
+  alt="Jobs und Karrieremöglichkeiten in Pforzheim und Enzkreis — PersoFlex GmbH"
+  className="w-full h-full object-cover"
+  width={1920}
+  height={1080}
+  fetchPriority="high"
+  decoding="async"
+  />
           <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-white/50" />
         </div>
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-orange-200/30 rounded-full blur-[120px]" />

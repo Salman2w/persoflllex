@@ -192,7 +192,7 @@ const structuredData = {
     <>
       <SEO 
         title="Zeitarbeit & Personalvermittlung Pforzheim | PersoFlex GmbH"
-        description="PersoFlex GmbH aus Pforzheim vermittelt Personal in Produktion, Logistik und Industrie. Tariflich bezahlt, persönlich betreut, regional verwurzelt im Enzkreis."
+        description="PersoFlex GmbH Pforzheim: Zeitarbeit und Personalvermittlung für Produktion, Logistik und Industrie. Tariflich, persönlich, regional im Enzkreis."
         keywords="Zeitarbeit Pforzheim, Personalvermittlung Enzkreis, Jobs Pforzheim, Arbeitnehmerüberlassung, Personaldienstleister Baden-Württemberg"
         canonicalUrl="https://www.persoflex-gmbh.de/"
         structuredData={structuredData}

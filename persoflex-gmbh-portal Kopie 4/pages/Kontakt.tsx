@@ -67,7 +67,7 @@ export const Kontakt: React.FC = () => {
     <div className="min-h-screen bg-white">
       <SEO
         title="Kontakt | PersoFlex GmbH in Pforzheim erreichen"
-        description="Kontaktieren Sie PersoFlex in der Kiehnlestraße 4, 75172 Pforzheim. Telefonisch unter 07231 6039493, per E-Mail oder direkt im Büro. Öffnungszeiten Mo–Fr 08:00–17:00 Uhr."
+        description="PersoFlex GmbH kontaktieren: Kiehnlestraße 4, 75172 Pforzheim. Tel. 07231 6039493, Mo–Fr 08:00–17:00 Uhr oder per E-Mail und Kontaktformular."
         keywords="Kontakt PersoFlex, Personaldienstleister Pforzheim Telefon, Zeitarbeit Pforzheim Adresse, Personal anfragen Enzkreis"
         canonicalUrl="https://www.persoflex-gmbh.de/kontakt"
         structuredData={{

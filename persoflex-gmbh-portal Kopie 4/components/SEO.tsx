@@ -15,6 +15,22 @@ interface SEOProps {
 }
 
 /**
+ * Truncate a description to a safe meta-length (≤ 160 chars) at a word boundary.
+ * Collapses newlines/double-spaces first, then cuts at the last space before the limit
+ * and appends an ellipsis. Prevents broken Google snippets for dynamic titles/excerpts.
+ */
+const MAX_DESCRIPTION_LENGTH = 160;
+const truncateDescription = (input: string): string => {
+  if (!input) return '';
+  const normalised = input.replace(/\s+/g, ' ').trim();
+  if (normalised.length <= MAX_DESCRIPTION_LENGTH) return normalised;
+  const hardLimit = MAX_DESCRIPTION_LENGTH - 1; // reserve 1 char for the ellipsis
+  const lastSpace = normalised.lastIndexOf(' ', hardLimit);
+  const cutIndex = lastSpace > 80 ? lastSpace : hardLimit;
+  return `${normalised.slice(0, cutIndex).replace(/[.,;:!?\-–—\s]+$/u, '')}…`;
+};
+
+/**
  * SEO Component - Handles all meta tags for optimal search engine visibility
  * 
  * Usage:
@@ -43,6 +59,9 @@ export const SEO: React.FC<SEOProps> = ({
     // Update Title
     document.title = title;
 
+    // Ensure description is always within safe meta length for Google snippets
+    const safeDescription = truncateDescription(description);
+
     // Helper function to update meta tags
     const updateMetaTag = (name: string, content: string, attribute: string = 'name') => {
       let element = document.querySelector(`meta[${attribute}="${name}"]`);
@@ -65,8 +84,8 @@ export const SEO: React.FC<SEOProps> = ({
       element.setAttribute('href', href);
     };
 
-    // Basic Meta Tags
-    updateMetaTag('description', description);
+    // Basic Meta Tags — truncated to ≤160 chars to match Google snippet limit
+    updateMetaTag('description', safeDescription);
     if (keywords) {
       updateMetaTag('keywords', keywords);
     }
@@ -81,7 +100,7 @@ export const SEO: React.FC<SEOProps> = ({
 
     // Open Graph Tags
     updateMetaTag('og:title', title, 'property');
-    updateMetaTag('og:description', description, 'property');
+    updateMetaTag('og:description', safeDescription, 'property');
     updateMetaTag('og:type', ogType, 'property');
     updateMetaTag('og:image', ogImage, 'property');
     updateMetaTag('og:site_name', 'PersoFlex GmbH', 'property');
@@ -106,7 +125,7 @@ export const SEO: React.FC<SEOProps> = ({
     // Twitter Card Tags
     updateMetaTag('twitter:card', 'summary_large_image', 'name');
     updateMetaTag('twitter:title', title, 'name');
-    updateMetaTag('twitter:description', description, 'name');
+    updateMetaTag('twitter:description', safeDescription, 'name');
     updateMetaTag('twitter:image', ogImage, 'name');
 
     // Additional SEO Tags
