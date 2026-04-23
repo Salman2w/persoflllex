@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 
 // Alle Seiten importieren
 import { Home } from './pages/Home';
@@ -49,6 +49,8 @@ function App() {
         <Route path="/fuer-bewerber" element={<FuerBewerber />} />
         <Route path="/ueber-uns" element={<UeberUns />} />
         <Route path="/personalanfrage" element={<PersonalAnfrage />} />
+        {/* Legacy URL redirect — keeps already-indexed backlinks working and prevents 404s */}
+        <Route path="/personal-anfrage" element={<Navigate to="/personalanfrage" replace />} />
         <Route path="/impressum" element={<Impressum />} />
         <Route path="/datenschutz" element={<Datenschutz />} />
         <Route path="/agb" element={<AGB />} />

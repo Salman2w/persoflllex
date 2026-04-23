@@ -161,7 +161,7 @@ export default function JobDetail() {
         title={`${job.BezeichnungAusschreibung || job.Bezeichnung} | Jobs bei PersoFlex`}
         description={`Jetzt bewerben: ${job.BezeichnungAusschreibung || job.Bezeichnung} in ${job.EinsatzortOrt}. Faire Bezahlung, persönliche Betreuung.`}
         keywords={`${job.Bezeichnung}, Jobs ${job.EinsatzortOrt}, Stellenangebot Pforzheim`}
-        canonicalUrl={`https://www.persoflex-gmbh.de/jobs/${job.ObjectUuid}`}
+        canonicalUrl={`https://www.persoflex-gmbh.de/jobs/${job.ObjectUuid || id}`}
         structuredData={{
           "@context": "https://schema.org",
           "@type": "JobPosting",

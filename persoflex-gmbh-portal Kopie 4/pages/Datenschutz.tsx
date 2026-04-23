@@ -47,7 +47,8 @@ export const Datenschutz: React.FC = () => {
     <div className="min-h-screen bg-gray-50">
       <SEO
         title="Datenschutz | PersoFlex GmbH"
-        description="Datenschutzerklaerung der PersoFlex GmbH. Informationen zur Verarbeitung Ihrer personenbezogenen Daten gemaess DSGVO."
+        description="Datenschutzerklärung der PersoFlex GmbH. Informationen zur Verarbeitung Ihrer personenbezogenen Daten gemäß DSGVO."
+        canonicalUrl="https://www.persoflex-gmbh.de/datenschutz"
       />
 
       {/* Hero Section */}

@@ -67,7 +67,7 @@ export function Personalvermittlung() {
               
               <div className="flex flex-wrap gap-4">
                 <Link 
-                  to="/personal-anfrage"
+                  to="/personalanfrage"
                   className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold transition-all"
                 >
                   Fachkräfte finden <ArrowRight size={18} />
@@ -187,7 +187,7 @@ export function Personalvermittlung() {
               </ul>
               
               <Link 
-                to="/personal-anfrage"
+                to="/personalanfrage"
                 className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold transition-all"
               >
                 Personal anfragen <ArrowRight size={18} />
@@ -290,7 +290,7 @@ export function Personalvermittlung() {
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link 
-              to="/personal-anfrage"
+              to="/personalanfrage"
               className="inline-flex items-center gap-2 bg-white text-orange-500 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-all"
             >
               Jetzt anfragen <ArrowRight size={18} />
