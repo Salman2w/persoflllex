@@ -23,7 +23,7 @@ import { TeamPreview } from '../components/TeamPreview';
 import { TrustBar } from '../components/TrustBar';
 import { RegionalSection } from '../components/RegionalSection';
 import { NewsletterSection } from '../components/NewsletterSection';
-import heroDiverseTeam from '../public/bilder/hero-diverse-team.jpg';
+import heroDiverseTeam from '../public/bilder/hero-diverse-team.webp';
 
 // Schema.org Structured Data for SEO
 const structuredData = {
@@ -203,7 +203,7 @@ const structuredData = {
         {/* Background Image - classic img tag with absolute positioning */}
         <img 
           src={heroDiverseTeam} 
-          alt="Vielfältiges Team aus zufriedenen Fachkräften und Mitarbeitern in Produktion, Logistik und Büro - Menschen, die ihren Traumjob bei PersoFlex gefunden haben" 
+          alt="Gemischtes PersoFlex-Team aus Fachkräften und Helfern in Industrie, Logistik, Produktion und Verwaltung — Bewerber und Mitarbeiter in Pforzheim und dem Enzkreis" 
           className="absolute inset-0 w-full h-full object-cover object-center z-0"
           width={1920}
           height={1080}
