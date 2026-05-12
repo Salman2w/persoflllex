@@ -20,11 +20,6 @@ const TEAM_PREVIEW = [
     imageSrc: '/bilder/salman_karakus.webp',
   },
   {
-    name: 'Albert Budagyan',
-    role: 'Vertriebsleitung',
-    imageSrc: '/bilder/albert_budagyan.webp',
-  },
-  {
     name: 'Samira Kampen',
     role: 'Recruiting & HR',
     imageSrc: '/bilder/samira_van_kampen.webp',

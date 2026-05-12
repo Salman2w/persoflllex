@@ -39,14 +39,6 @@ const TEAM_MEMBERS = [
     bio: "Operative Führung und Kundenbetreuung"
   },
   {
-    name: "Albert Budagyan",
-    role: "Vertriebsleitung",
-    email: "albert.budagyan@persoflex-gmbh.de",
-    phone: "07231 60 39 493",
-    imageSrc: "/bilder/albert_budagyan.webp",
-    bio: "Neukundengewinnung und Unternehmenspartnerschaften"
-  },
-  {
     name: "Samira Kampen",
     role: "Recruiting & HR",
     email: "samira.vkampen@persoflex-gmbh.de",
