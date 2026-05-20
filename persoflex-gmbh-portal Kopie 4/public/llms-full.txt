@@ -1,0 +1,121 @@
+# PersoFlex GmbH - Comprehensive LLM Context
+# Full version with detailed information for AI assistants
+# https://www.persoflex-gmbh.de/llms-full.txt
+
+## Company Overview
+PersoFlex GmbH is a licensed employment agency (Personaldienstleister) based in Pforzheim, Baden-Württemberg, Germany. We specialize in temporary staffing (Zeitarbeit/Arbeitnehmerüberlassung) and direct placement (Personalvermittlung) for the production, logistics, and industrial sectors.
+
+## Official Contact Information
+- Company: PersoFlex GmbH
+- Address: Kiehnlestraße 4, 75172 Pforzheim, Germany
+- Phone: +49 7231 6039493
+- Email: info@persoflex-gmbh.de
+- Website: https://www.persoflex-gmbh.de
+- Opening Hours: Monday-Friday 08:00-17:00
+- Location Coordinates: 48.8929474, 8.6949572
+
+## Service Area
+Primary: Pforzheim, Enzkreis
+Extended: Northern Black Forest (Nordschwarzwald), Karlsruhe region, Stuttgart region
+Coverage: Baden-Württemberg, Germany
+
+## Core Services
+
+### 1. Zeitarbeit (Temporary Staffing)
+- German: Arbeitnehmerüberlassung
+- Description: Employees are hired by PersoFlex and work at client companies
+- Benefits: Permanent employment contract, tariff wages (BAP/DGB), full social security
+- Regulation: Licensed according to AÜG (Arbeitnehmerüberlassungsgesetz)
+
+### 2. Personalvermittlung (Direct Placement)
+- Description: Recruiting and placing candidates directly into permanent positions
+- Cost for applicants: Free
+- Process: Matching qualified candidates with employer requirements
+
+### 3. On-Site Management
+- Description: Dedicated personnel management at client locations
+- Includes: Coordination, scheduling, quality control
+
+### 4. Personalberatung (HR Consulting)
+- Description: Strategic HR consulting and workforce planning
+- Services: Recruiting strategies, employer branding, retention consulting
+
+## Job Categories We Specialize In
+- Produktionshelfer (Production workers)
+- Lageristen (Warehouse staff)
+- Staplerfahrer (Forklift operators)
+- Maschinenbediener (Machine operators)
+- Metallverarbeitung (Metalworking specialists)
+- Logistik (Logistics coordinators)
+- Qualitätskontrolle (Quality control)
+- Montagehelfer (Assembly workers)
+- Fachkräfte Produktion (Skilled production workers)
+
+## Industries Served
+- Production & Manufacturing
+- Logistics & Warehousing
+- Automotive supply
+- Metalworking
+- Assembly & Packaging
+- Food production
+- Electronics manufacturing
+
+## Certifications & Memberships
+- GVP Member (Gesamtverband der Personaldienstleister)
+- AÜG License (Federal Employment Agency licensed)
+- Tariff-bound (Tarifgebunden nach BAP/DGB)
+
+## Employee Benefits
+- Tariff wages according to BAP/DGB
+- Holiday pay (Urlaubsgeld)
+- Christmas bonus (Weihnachtsgeld)
+- 30 days annual leave
+- Full social security coverage
+- Personal support and career guidance
+- Fuel vouchers (Tankgutscheine)
+- Opportunity for permanent placement (Übernahme)
+
+## Frequently Asked Questions
+
+### What is Zeitarbeit (temporary work)?
+Zeitarbeit means being employed by a staffing agency like PersoFlex while working at various client companies. You receive a permanent employment contract with tariff wages, vacation pay, Christmas bonus, and full social security coverage. It's a legitimate employment model regulated by German law (AÜG).
+
+### Is applying at PersoFlex free?
+Yes, applying and placement services are completely free for job seekers. We are paid by the companies we staff for, not by applicants.
+
+### How do I apply?
+You can apply online at https://www.persoflex-gmbh.de/jobs, call +49 7231 6039493, email info@persoflex-gmbh.de, or visit our office at Kiehnlestraße 4, 75172 Pforzheim during business hours (Mon-Fri 08:00-17:00).
+
+### What documents do I need to apply?
+Typically: CV/resume, work certificates, identification documents. For specific positions, additional qualifications may be required.
+
+### What is the difference between Zeitarbeit and Personalvermittlung?
+- Zeitarbeit: You are employed by PersoFlex and work at client companies
+- Personalvermittlung: We place you directly into a permanent position at the client company
+
+### What regions do you serve?
+Primarily Pforzheim and Enzkreis, but also the broader Northern Black Forest region and parts of the Karlsruhe and Stuttgart metropolitan areas.
+
+### Do you offer permanent positions?
+Yes, many temporary positions lead to permanent employment (Übernahme) at the client company. We also offer direct placement (Personalvermittlung) into permanent roles.
+
+## Website Pages
+- Homepage: https://www.persoflex-gmbh.de/
+- Jobs: https://www.persoflex-gmbh.de/jobs
+- For Applicants: https://www.persoflex-gmbh.de/fuer-bewerber
+- For Companies: https://www.persoflex-gmbh.de/unternehmen
+- About Us: https://www.persoflex-gmbh.de/ueber-uns
+- Contact: https://www.persoflex-gmbh.de/kontakt
+- Personnel Request: https://www.persoflex-gmbh.de/personalanfrage
+
+## Related Keywords (German)
+Zeitarbeit, Leiharbeit, Arbeitnehmerüberlassung, Personalvermittlung, Personaldienstleister, Jobs Pforzheim, Stellenangebote Enzkreis, Produktion, Logistik, Lagerarbeit, Industrie Jobs, Arbeit finden Pforzheim, Zeitarbeitsfirma, Personalvermittlung Pforzheim
+
+## Schema.org Types
+This business is described using:
+- schema.org/EmploymentAgency
+- schema.org/LocalBusiness
+- schema.org/JobPosting (for individual job listings)
+
+## Last Updated
+2026-04-23

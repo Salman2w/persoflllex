@@ -1,50 +1,126 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Phone } from 'lucide-react';
-import { Logo } from './Logo'; // Hier ist dein Logo-Import
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { Phone, Menu, X } from 'lucide-react';
 
 export const Navbar = () => {
-  return (
-    <nav className="fixed w-full top-0 z-50 bg-white border-b border-gray-100 h-20 flex items-center relative">
-      <div className="max-w-7xl mx-auto px-6 w-full flex justify-between items-center h-full">
-        
-        {/* --- LINKS: LOGO --- */}
-        <div className="flex items-center z-10">
-          <Link to="/" className="flex items-center hover:opacity-80 transition-opacity">
-            <Logo />
-          </Link>
-        </div>
-        
-        {/* --- MITTE: TEXT-LINKS (ABSOLUT ZENTRIERT, BOLD & ANIMIERT) --- */}
-        <div className="absolute left-1/2 -translate-x-1/2 flex space-x-10 font-bold text-sm text-gray-800">
-          <Link to="/unternehmen" className="relative group text-brand-orange">
-            Für Unternehmen
-            <span className="absolute left-0 -bottom-1.5 w-full h-0.5 bg-brand-orange scale-x-100 transition-transform origin-left"></span>
-          </Link>
-          <Link to="/fuer-bewerber" className="relative group hover:text-brand-orange transition-colors">
-            Für Bewerber
-            <span className="absolute left-0 -bottom-1.5 w-full h-0.5 bg-brand-orange scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
-          </Link>
-          <Link to="/jobs" className="relative group hover:text-brand-orange transition-colors">
-            Jobbörse
-            <span className="absolute left-0 -bottom-1.5 w-full h-0.5 bg-brand-orange scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
-          </Link>
-          <Link to="/ueber-uns" className="relative group hover:text-brand-orange transition-colors">
-            Über uns
-            <span className="absolute left-0 -bottom-1.5 w-full h-0.5 bg-brand-orange scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
-          </Link>
-          <Link to="/kontakt" className="relative group hover:text-brand-orange transition-colors">
-            Kontakt
-            <span className="absolute left-0 -bottom-1.5 w-full h-0.5 bg-brand-orange scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
-          </Link>
-        </div>
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
-        {/* --- RECHTS: KONTAKT BUTTON --- */}
-        <div className="flex items-center z-10">
-           <a href="tel:072316039493" className="bg-gray-900 text-white px-5 py-3 rounded flex items-center font-bold text-sm tracking-wide hover:bg-brand-orange transition-colors">
-             <Phone size={18} className="mr-2.5 text-white" />
-             07231 60 39 493
-           </a>
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const navLinks = [
+    { to: '/unternehmen', label: 'Für Unternehmen' },
+    { to: '/fuer-bewerber', label: 'Für Bewerber' },
+    { to: '/jobs', label: 'Jobbörse' },
+    { to: '/ueber-uns', label: 'Über uns' },
+    { to: '/blog', label: 'Blog' },
+    { to: '/kontakt', label: 'Kontakt' },
+  ];
+
+  const isActive = (path: string) => location.pathname === path;
+
+  return (
+    <nav 
+      className={`fixed w-full top-0 left-0 z-50 transition-all duration-300 ${
+        isScrolled 
+          ? 'bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm' 
+          : 'bg-white'
+      }`}
+      role="navigation"
+      aria-label="Hauptnavigation"
+    >
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="flex justify-between items-center h-20">
+          
+          {/* Logo */}
+          <Link to="/" className="flex items-center gap-3 group" aria-label="PersoFlex GmbH - Zur Startseite">
+            <img 
+              src="/bilder/logo.webp" 
+              alt="PersoFlex GmbH - Personaldienstleister Pforzheim" 
+              className="h-12 w-auto transition-transform duration-300 group-hover:scale-105"
+              width="180"
+              height="48"
+            />
+          </Link>
+          
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center gap-1">
+            {navLinks.map((link) => (
+              <Link 
+                key={link.to}
+                to={link.to} 
+                className={`relative font-medium text-sm px-4 py-2.5 rounded-lg transition-all duration-300 ${
+                  isActive(link.to) 
+                    ? 'bg-orange-500 text-white' 
+                    : 'text-gray-700 hover:text-orange-500 hover:bg-orange-50'
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+
+          {/* CTA Button */}
+          <div className="hidden lg:flex items-center gap-4">
+            <a 
+              href="tel:072316039493" 
+              className="group bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg flex items-center font-semibold text-sm transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/25"
+              aria-label="Jetzt anrufen: 07231 60 39 493"
+            >
+              <Phone size={16} className="mr-2" />
+              <span>07231 60 39 493</span>
+            </a>
+          </div>
+
+          {/* Mobile Menu Button — min 44×44px touch target per WCAG */}
+          <button 
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="lg:hidden min-w-[44px] min-h-[44px] flex items-center justify-center text-gray-700 hover:text-orange-500 transition-colors rounded-lg hover:bg-gray-100 active:bg-gray-200"
+            aria-label={isMobileMenuOpen ? 'Menü schließen' : 'Menü öffnen'}
+            aria-expanded={isMobileMenuOpen}
+          >
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      <div 
+        className={`lg:hidden absolute top-full left-0 w-full bg-white border-b border-gray-200 shadow-lg transition-all duration-300 ${
+          isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'
+        }`}
+        role="menu"
+      >
+        <div className="max-w-7xl mx-auto px-4 py-4 space-y-1">
+          {navLinks.map((link) => (
+            <Link
+              key={link.to}
+              to={link.to}
+              onClick={() => setIsMobileMenuOpen(false)}
+              className={`block min-h-[48px] py-3 px-4 rounded-lg font-medium transition-colors flex items-center ${
+                isActive(link.to) 
+                  ? 'bg-orange-500 text-white' 
+                  : 'text-gray-700 hover:bg-orange-50 hover:text-orange-500 active:bg-orange-100'
+              }`}
+              role="menuitem"
+            >
+              {link.label}
+            </Link>
+          ))}
+          <a 
+            href="tel:072316039493" 
+            className="mt-3 w-full min-h-[52px] bg-orange-500 hover:bg-orange-600 active:bg-orange-700 text-white px-6 py-4 rounded-lg flex items-center justify-center font-semibold transition-colors"
+          >
+            <Phone size={18} className="mr-2" />
+            07231 60 39 493
+          </a>
         </div>
       </div>
     </nav>

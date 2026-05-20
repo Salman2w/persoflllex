@@ -17,7 +17,7 @@ export const WhatsAppButton: React.FC = () => {
       href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 bg-[#25D366] rounded-full shadow-lg hover:scale-110 transition-transform duration-300 hover:shadow-xl group"
+      className="fixed bottom-20 sm:bottom-6 right-4 sm:right-6 z-40 flex items-center justify-center w-14 h-14 bg-[#25D366] rounded-full shadow-lg hover:scale-110 transition-transform duration-300 hover:shadow-xl group"
       aria-label="Kontakt per WhatsApp"
     >
       {/* Tooltip (optional, erscheint beim Drüberfahren) */}

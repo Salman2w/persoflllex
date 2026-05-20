@@ -1,13 +1,263 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de-DE">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PersoFlex GmbH | Zeitarbeit & Personalvermittlung</title>
-  </head>
-  <body>
-    <div id="root"></div>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
     
+    <!-- Favicon & Icons -->
+    <link rel="icon" type="image/webp" href="/bilder/web-icon.webp" />
+    <link rel="apple-touch-icon" href="/bilder/web-icon.webp" />
+    
+    <!-- Primary Meta Tags - Title max 60 chars, Description max 155 chars -->
+    <title>Zeitarbeit & Personalvermittlung Pforzheim | PersoFlex GmbH</title>
+    <meta name="title" content="Zeitarbeit & Personalvermittlung Pforzheim | PersoFlex GmbH" />
+    <meta name="description" content="PersoFlex GmbH – Ihr regionaler Personaldienstleister in Pforzheim & Enzkreis. Faire Zeitarbeit, Personalvermittlung & Jobs in Produktion, Logistik und Industrie." />
+    <meta name="keywords" content="Zeitarbeit Pforzheim, Personalvermittlung Pforzheim, Jobs Pforzheim, Personaldienstleister Enzkreis, Arbeitnehmerüberlassung, Jobs Enzkreis, Produktion, Logistik" />
+    <meta name="author" content="PersoFlex GmbH" />
+    <meta name="application-name" content="PersoFlex GmbH" />
+    <meta name="apple-mobile-web-app-title" content="PersoFlex GmbH" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="language" content="German" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.persoflex-gmbh.de/" />
+    
+    <!-- Geographic Meta Tags -->
+    <meta name="geo.region" content="DE-BW" />
+    <meta name="geo.placename" content="Pforzheim" />
+    <meta name="geo.position" content="48.8929474;8.6949572" />
+    <meta name="ICBM" content="48.8929474, 8.6949572" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.persoflex-gmbh.de/" />
+    <meta property="og:title" content="Zeitarbeit & Personalvermittlung Pforzheim | PersoFlex GmbH" />
+    <meta property="og:description" content="PersoFlex GmbH – Ihr regionaler Personaldienstleister in Pforzheim & Enzkreis. Faire Zeitarbeit, Personalvermittlung & Jobs in Produktion, Logistik und Industrie." />
+    <meta property="og:image" content="https://www.persoflex-gmbh.de/bilder/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="PersoFlex GmbH - Ihr Partner für Zeitarbeit und Personalvermittlung in Pforzheim" />
+    <meta property="og:locale" content="de_DE" />
+    <meta property="og:site_name" content="PersoFlex GmbH" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://www.persoflex-gmbh.de/" />
+    <meta name="twitter:title" content="Zeitarbeit & Personalvermittlung Pforzheim | PersoFlex GmbH" />
+    <meta name="twitter:description" content="PersoFlex GmbH – Ihr regionaler Personaldienstleister in Pforzheim. Jobs in Produktion, Logistik und Industrie." />
+    <meta name="twitter:image" content="https://www.persoflex-gmbh.de/bilder/og-image.jpg" />
+    <meta name="twitter:image:alt" content="PersoFlex GmbH - Zeitarbeit Pforzheim" />
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#f97316" />
+    <meta name="msapplication-TileColor" content="#f97316" />
+    
+    <!-- Web Manifest for PWA -->
+    <link rel="manifest" href="/manifest.json" />
+    
+    <!-- Preload critical hero image -->
+    <link rel="preload" as="image" href="/bilder/hero-diverse-team.webp" type="image/webp" fetchpriority="high" />
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- DNS Prefetch -->
+    <link rel="dns-prefetch" href="https://www.google.com" />
+    <link rel="dns-prefetch" href="https://persoflex-gmbh.europersonal.com" />
+    
+    <!-- Schema.org Structured Data - Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EmploymentAgency",
+      "@id": "https://www.persoflex-gmbh.de/#organization",
+      "name": "PersoFlex GmbH",
+      "alternateName": "PersoFlex Personaldienstleistungen",
+      "url": "https://www.persoflex-gmbh.de",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.persoflex-gmbh.de/bilder/logo.webp",
+        "width": 200,
+        "height": 60
+      },
+      "image": "https://www.persoflex-gmbh.de/bilder/og-image.jpg",
+      "description": "PersoFlex GmbH ist Ihr regionaler Partner für Zeitarbeit und Personalvermittlung in Pforzheim und dem Enzkreis. Wir vermitteln Fachkräfte in Produktion, Logistik und Industrie.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Kiehnlestraße 4",
+        "addressLocality": "Pforzheim",
+        "postalCode": "75172",
+        "addressRegion": "Baden-Württemberg",
+        "addressCountry": "DE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "48.8929474",
+        "longitude": "8.6949572"
+      },
+      "telephone": "+49 7231 1545010",
+      "email": "info@persoflex-gmbh.de",
+      "foundingDate": "2024",
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Pforzheim"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Enzkreis"
+        },
+        {
+          "@type": "State",
+          "name": "Baden-Württemberg"
+        }
+      ],
+      "makesOffer": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Zeitarbeit",
+            "description": "Flexible Personallösungen durch Arbeitnehmerüberlassung"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Personalvermittlung",
+            "description": "Direkte Vermittlung von Fachkräften in Festanstellung"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Arbeitnehmerüberlassung",
+            "description": "Professionelle Personaldienstleistung nach AÜG"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Personalberatung",
+            "description": "Beratung zu Personalstrategien und Recruiting"
+          }
+        }
+      ],
+      "knowsAbout": ["Produktion", "Logistik", "Industrie", "Metallverarbeitung", "Lagerlogistik"],
+      "memberOf": {
+        "@type": "Organization",
+        "name": "GVP - Gesamtverband der Personaldienstleister"
+      },
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "AÜG Erlaubnis",
+          "credentialCategory": "license"
+        }
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "17:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/company/persoflex-gmbh",
+        "https://www.xing.com/companies/persoflexgmbh"
+      ],
+      "priceRange": "Kostenlos für Bewerber"
+    }
+    </script>
+    
+    <!-- Schema.org Structured Data - WebSite with SearchAction -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://www.persoflex-gmbh.de/#website",
+      "name": "PersoFlex GmbH",
+      "alternateName": ["PersoFlex", "PersoFlex Personaldienstleistungen"],
+      "url": "https://www.persoflex-gmbh.de",
+      "inLanguage": "de-DE",
+      "publisher": { "@id": "https://www.persoflex-gmbh.de/#organization" },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://www.persoflex-gmbh.de/jobs?search={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    
+    <!-- Schema.org Structured Data - BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.persoflex-gmbh.de/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Jobs",
+          "item": "https://www.persoflex-gmbh.de/jobs"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Für Bewerber",
+          "item": "https://www.persoflex-gmbh.de/fuer-bewerber"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Für Unternehmen",
+          "item": "https://www.persoflex-gmbh.de/unternehmen"
+        }
+      ]
+    }
+    </script>
+    
+    <!-- NOTE: FAQPage JSON-LD intentionally removed here — it is now rendered dynamically
+         only on the homepage via Home.tsx structuredData to avoid Google's "Feld FAQPage doppelt"
+         duplicate-schema error that was reported in Search Console on 2026-04-22. -->
+
+    <!-- LLM/AI Metadata for enhanced discoverability -->
+    <meta name="ai.summary" content="PersoFlex GmbH ist ein Personaldienstleister in Pforzheim, spezialisiert auf Zeitarbeit und Personalvermittlung in Produktion, Logistik und Industrie. Bewerber finden hier Jobs, Unternehmen flexible Personallösungen." />
+    <meta name="ai.keywords" content="Zeitarbeit Pforzheim, Personalvermittlung Enzkreis, Produktionsjobs, Logistik Jobs, Arbeitnehmerüberlassung Baden-Württemberg" />
+    <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM Context (Short)" />
+    <link rel="alternate" type="text/plain" href="/llms-full.txt" title="LLM Context (Full)" />
+  </head>
+  <body class="bg-white text-gray-900">
+    <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
+
+    <!-- Google Analytics - deferred to prevent render-blocking -->
+    <script>
+      window.addEventListener('load', function () {
+        var gaScript = document.createElement('script');
+        gaScript.async = true;
+        gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-54EE1QK7FJ';
+        document.head.appendChild(gaScript);
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { window.dataLayer.push(arguments); }
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', 'G-54EE1QK7FJ', { 'anonymize_ip': true });
+      });
+    </script>
   </body>
 </html>

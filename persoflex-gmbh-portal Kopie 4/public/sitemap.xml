@@ -1,74 +1,234 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <!-- Main Pages -->
   <url>
-    <loc>https://persoflex-gmbh.de/</loc>
-    <lastmod>2025-12-02</lastmod>
+    <loc>https://www.persoflex-gmbh.de/</loc>
+    <lastmod>2026-04-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://persoflex-gmbh.de/fuer-bewerber</loc>
-    <lastmod>2025-12-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://persoflex-gmbh.de/unternehmen</loc>
-    <lastmod>2025-12-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://persoflex-gmbh.de/jobs</loc>
-    <lastmod>2025-12-02</lastmod>
+    <loc>https://www.persoflex-gmbh.de/jobs</loc>
+    <lastmod>2026-04-23</lastmod>
     <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.persoflex-gmbh.de/fuer-bewerber</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.persoflex-gmbh.de/unternehmen</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <!-- Service Pages (NEW) -->
+  <url>
+    <loc>https://www.persoflex-gmbh.de/arbeitnehmerueberlassung</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://persoflex-gmbh.de/ueber-uns</loc>
-    <lastmod>2025-12-02</lastmod>
+    <loc>https://www.persoflex-gmbh.de/personalvermittlung</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.persoflex-gmbh.de/personalberatung</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Info Pages -->
+  <url>
+    <loc>https://www.persoflex-gmbh.de/ueber-uns</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.persoflex-gmbh.de/kontakt</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.persoflex-gmbh.de/personalanfrage</loc>
+    <lastmod>2026-04-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://persoflex-gmbh.de/kontakt</loc>
-    <lastmod>2025-12-02</lastmod>
+    <loc>https://www.persoflex-gmbh.de/downloads</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- Blog Main Page -->
+  <url>
+    <loc>https://www.persoflex-gmbh.de/blog</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Blog Articles -->
+  <url>
+    <loc>https://www.persoflex-gmbh.de/blog/produktionshelfer-pforzheim-einstieg-karriere</loc>
+    <lastmod>2025-04-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.persoflex-gmbh.de/bilder/blog/produktionshelfer-arbeit.jpg</image:loc>
+      <image:title>Produktionshelfer in Pforzheim bei der Arbeit</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://persoflex-gmbh.de/unternehmen/anfrage</loc>
-    <lastmod>2025-12-02</lastmod>
+    <loc>https://www.persoflex-gmbh.de/blog/fachkraefte-logistik-enzkreis-chancen-2025</loc>
+    <lastmod>2025-04-12</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.persoflex-gmbh.de/bilder/blog/logistik-lager-enzkreis.jpg</image:loc>
+      <image:title>Logistik Jobs im Enzkreis</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://persoflex-gmbh.de/unternehmen/downloads</loc>
-    <lastmod>2025-12-02</lastmod>
+    <loc>https://www.persoflex-gmbh.de/blog/personalvermittlung-vs-zeitarbeit-unterschiede</loc>
+    <lastmod>2025-04-10</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.persoflex-gmbh.de/bilder/blog/personalvermittlung-gespraech.jpg</image:loc>
+      <image:title>Personalvermittlung Beratungsgespräch</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://persoflex-gmbh.de/bewerbung/initiativ</loc>
-    <lastmod>2025-12-02</lastmod>
+    <loc>https://www.persoflex-gmbh.de/blog/staplerschein-pforzheim-kosten-ablauf</loc>
+    <lastmod>2025-04-08</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.persoflex-gmbh.de/bilder/blog/staplerschein-ausbildung.jpg</image:loc>
+      <image:title>Staplerschein Ausbildung in Pforzheim</image:title>
+    </image:image>
   </url>
   <url>
-    <loc>https://persoflex-gmbh.de/impressum</loc>
-    <lastmod>2025-12-02</lastmod>
+    <loc>https://www.persoflex-gmbh.de/blog/arbeitsmarkt-pforzheim-aktuelle-trends-2025</loc>
+    <lastmod>2025-04-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.persoflex-gmbh.de/bilder/blog/arbeitsmarkt-pforzheim.jpg</image:loc>
+      <image:title>Arbeitsmarkt Pforzheim 2025</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.persoflex-gmbh.de/blog/rechte-zeitarbeitnehmer-was-ihnen-zusteht</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.persoflex-gmbh.de/bilder/blog/rechte-zeitarbeitnehmer.jpg</image:loc>
+      <image:title>Rechte als Zeitarbeitnehmer</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.persoflex-gmbh.de/blog/zeitarbeit-und-arbeitnehmerueberlassung-so-sichern-sie-sich-spannende-jobs</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.persoflex-gmbh.de/bilder/blog/zeitarbeit-hauptartikel.jpg</image:loc>
+      <image:title>Zeitarbeit und Arbeitnehmerüberlassung</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.persoflex-gmbh.de/blog/zeitarbeit-pforzheim-vorteile</loc>
+    <lastmod>2024-12-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.persoflex-gmbh.de/bilder/blog/zeitarbeit-vorteile.webp</image:loc>
+      <image:title>Vorteile der Zeitarbeit in Pforzheim</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.persoflex-gmbh.de/blog/logistik-jobs-pforzheim-enzkreis</loc>
+    <lastmod>2024-12-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.persoflex-gmbh.de/bilder/blog/logistik-jobs-guide.jpg</image:loc>
+      <image:title>Logistik Jobs Guide Pforzheim</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.persoflex-gmbh.de/blog/bewerbungstipps-zeitarbeit</loc>
+    <lastmod>2024-12-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.persoflex-gmbh.de/bilder/blog/bewerbungstipps.jpg</image:loc>
+      <image:title>Bewerbungstipps für Zeitarbeit</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.persoflex-gmbh.de/blog/industriejobs-pforzheim-nordschwarzwald</loc>
+    <lastmod>2024-11-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.persoflex-gmbh.de/bilder/blog/cnc-fachkraefte.jpg</image:loc>
+      <image:title>Industrie Jobs in Pforzheim</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.persoflex-gmbh.de/blog/arbeitsrecht-zeitarbeit-faq</loc>
+    <lastmod>2024-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.persoflex-gmbh.de/bilder/blog/arbeitsrecht-faq.jpg</image:loc>
+      <image:title>Arbeitsrecht in der Zeitarbeit FAQ</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.persoflex-gmbh.de/blog/personaldienstleister-pforzheim-vergleich</loc>
+    <lastmod>2024-11-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.persoflex-gmbh.de/bilder/blog/personaldienstleister-vergleich.jpg</image:loc>
+      <image:title>Personaldienstleister in Pforzheim Vergleich</image:title>
+    </image:image>
+  </url>
+  
+  <!-- Legal Pages -->
+  <url>
+    <loc>https://www.persoflex-gmbh.de/impressum</loc>
+    <lastmod>2026-04-23</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://persoflex-gmbh.de/datenschutz</loc>
-    <lastmod>2025-12-02</lastmod>
+    <loc>https://www.persoflex-gmbh.de/datenschutz</loc>
+    <lastmod>2026-04-23</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://persoflex-gmbh.de/agb</loc>
-    <lastmod>2025-12-02</lastmod>
+    <loc>https://www.persoflex-gmbh.de/agb</loc>
+    <lastmod>2026-04-23</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>

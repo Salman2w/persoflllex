@@ -24,6 +24,7 @@ export const AGB: React.FC = () => {
       <SEO 
         title="Allgemeine Geschäftsbedingungen | AGB PersoFlex GmbH"
         description="Unsere Allgemeinen Geschäftsbedingungen für die Arbeitnehmerüberlassung und Personalvermittlung. Transparent, fair und rechtssicher."
+        canonicalUrl="https://www.persoflex-gmbh.de/agb"
       />
       
       <div className="max-w-7xl mx-auto px-6">

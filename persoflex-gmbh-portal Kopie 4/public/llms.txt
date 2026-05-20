@@ -1,0 +1,62 @@
+# PersoFlex GmbH - LLM Context File
+# https://www.persoflex-gmbh.de
+
+## About
+PersoFlex GmbH is a staffing agency (Personaldienstleister) based in Pforzheim, Germany. We specialize in temporary staffing (Zeitarbeit/Arbeitnehmerüberlassung) and direct placement (Personalvermittlung) for production, logistics, and industrial sectors in the Pforzheim and Enzkreis region.
+
+## Company Information
+- Name: PersoFlex GmbH
+- Location: Kiehnlestraße 4, 75172 Pforzheim, Germany
+- Phone: +49 7231 6039493
+- Email: info@persoflex-gmbh.de
+- Website: https://www.persoflex-gmbh.de
+- Industry: Employment Agency / Staffing Services
+- Service Area: Pforzheim, Enzkreis, Northern Black Forest, Baden-Württemberg
+
+## Services
+1. **Zeitarbeit (Temporary Staffing)**: Employees are hired by PersoFlex and work at client companies. Full employment contract with tariff wages, social security, and benefits.
+2. **Personalvermittlung (Direct Placement)**: Recruiting and placing candidates directly into permanent positions at client companies. Free for applicants.
+3. **Arbeitnehmerüberlassung (Employee Leasing)**: Professional personnel services according to German AÜG regulations. Licensed by the Federal Employment Agency.
+4. **Personalberatung (HR Consulting)**: Strategic consulting on staffing, recruiting strategies, and workforce planning.
+
+## Job Categories
+- Production workers (Produktionshelfer)
+- Warehouse staff (Lageristen)
+- Forklift operators (Staplerfahrer)
+- Machine operators (Maschinenbediener)
+- Metalworking specialists (Metallverarbeitung)
+- Logistics coordinators
+- Quality control inspectors
+- Assembly workers (Montagehelfer)
+
+## Key Facts
+- Member of GVP (Gesamtverband der Personaldienstleister)
+- Licensed for employee leasing (AÜG Erlaubnis)
+- Tariff-bound wages (Tarifgebunden)
+- Free application process for job seekers
+- Regional focus with personal support
+- Opening hours: Monday-Friday 08:00-17:00
+
+## FAQ
+
+### What is Zeitarbeit?
+Zeitarbeit (temporary work/agency work) means being employed by a staffing agency like PersoFlex while working at various client companies. You receive a permanent employment contract with tariff wages, vacation pay, Christmas bonus, and full social security coverage.
+
+### Is applying free?
+Yes, applying and placement services are completely free for job seekers.
+
+### How can I contact PersoFlex?
+Call +49 7231 6039493, email info@persoflex-gmbh.de, or visit our office at Kiehnlestraße 4, 75172 Pforzheim. Office hours: Monday-Friday 08:00-17:00.
+
+### What regions do you serve?
+Pforzheim, Enzkreis, Northern Black Forest (Nordschwarzwald), and the broader Baden-Württemberg region in Germany.
+
+### What industries do you specialize in?
+Production, logistics, warehouse, industrial manufacturing, metalworking, and assembly work.
+
+## Contact
+For job seekers: Apply online at https://www.persoflex-gmbh.de/jobs or call +49 7231 6039493
+For companies: Request staff at https://www.persoflex-gmbh.de/personalanfrage
+
+## Sitemap
+Main pages available at: https://www.persoflex-gmbh.de/sitemap.xml

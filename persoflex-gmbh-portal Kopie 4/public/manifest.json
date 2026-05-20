@@ -1,0 +1,27 @@
+{
+  "name": "PersoFlex GmbH - Zeitarbeit Pforzheim",
+  "short_name": "PersoFlex",
+  "description": "Ihr regionaler Partner für Zeitarbeit und Personalvermittlung in Pforzheim und dem Enzkreis",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#f97316",
+  "orientation": "portrait-primary",
+  "lang": "de-DE",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/bilder/web-icon.webp",
+      "sizes": "192x192",
+      "type": "image/webp",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/bilder/web-icon.webp",
+      "sizes": "512x512",
+      "type": "image/webp",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "productivity"]
+}
