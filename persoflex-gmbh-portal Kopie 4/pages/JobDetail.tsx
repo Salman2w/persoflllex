@@ -192,9 +192,9 @@ export default function JobDetail() {
             "@type": "Place",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "",
+              "streetAddress": "Kiehnlestraße 4",
               "addressLocality": job.EinsatzortOrt,
-              "postalCode": job.EinsatzortPlz || "",
+              "postalCode": job.EinsatzortPlz || "75172",
               "addressRegion": "Baden-Württemberg",
               "addressCountry": "DE"
             }
@@ -210,12 +210,12 @@ export default function JobDetail() {
                 "unitText": job.GehaltZeitraum?.toUpperCase().includes('STUNDE') ? 'HOUR' :
                            job.GehaltZeitraum?.toUpperCase().includes('MONAT') ? 'MONTH' :
                            job.GehaltZeitraum?.toUpperCase().includes('JAHR') ? 'YEAR' :
-                           'HOUR'
+                           'MONTH'
               }
             }
           } : {}),
           ...(job.Skills && job.Skills.length > 0 ? {
-            "skills": job.Skills.map(s => s.Bezeichnung).join(', ')
+            "skills": job.Skills.map(s => s.Bezeichnung)
           } : {}),
           ...(job.Qualifikation ? {
             "qualifications": job.Qualifikation.Bezeichnung
