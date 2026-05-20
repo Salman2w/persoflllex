@@ -19,6 +19,7 @@ import {
   Briefcase
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
+import { Breadcrumb } from '../components/Breadcrumb';
 
 const CONTACT_REASONS = [
   { id: 'bewerber', label: 'Ich suche einen Job', icon: Briefcase },
@@ -64,7 +65,7 @@ export const Kontakt: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <main className="min-h-screen bg-white" id="main-content" role="main">
       <SEO
         title="Kontakt | PersoFlex GmbH in Pforzheim erreichen"
         description="PersoFlex GmbH kontaktieren: Kiehnlestraße 4, 75172 Pforzheim. Tel. 07231 6039493, Mo–Fr 08:00–17:00 Uhr oder per E-Mail und Kontaktformular."
@@ -104,6 +105,9 @@ export const Kontakt: React.FC = () => {
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-orange-200/30 rounded-full blur-[120px]" />
         
         <div className="max-w-7xl mx-auto px-6 relative z-10">
+          {/* Breadcrumb for SEO/LLM visibility */}
+          <Breadcrumb items={[{ label: 'Kontakt' }]} className="mb-6" />
+          
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-center lg:text-left">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500 text-white mb-6 shadow-lg shadow-orange-500/25">
@@ -493,6 +497,6 @@ export const Kontakt: React.FC = () => {
           </div>
         </div>
       </section>
-    </div>
+    </main>
   );
 };

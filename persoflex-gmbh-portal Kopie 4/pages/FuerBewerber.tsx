@@ -100,7 +100,7 @@ export const FuerBewerber: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <main className="min-h-screen bg-white" id="main-content" role="main">
   <SEO
   title="Jobs in Pforzheim finden | Für Bewerber | PersoFlex GmbH"
   description="Jobs in Produktion, Logistik und Handwerk in Pforzheim. Tariflicher Lohn nach BAP, 30 Tage Urlaub, Tankgutschein und persönliche Betreuung."
@@ -513,7 +513,7 @@ export const FuerBewerber: React.FC = () => {
           </div>
         </div>
       </section>
-    </div>
+    </main>
   );
 };
 

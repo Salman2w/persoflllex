@@ -102,7 +102,7 @@ const MILESTONES = [
 
 export const UeberUns: React.FC = () => {
   return (
-    <div className="min-h-screen bg-white pt-[80px]">
+    <main className="min-h-screen bg-white pt-[80px]" id="main-content" role="main">
       <SEO 
         title="Über uns | Team & Werte der PersoFlex GmbH Pforzheim"
         description="Das Team der PersoFlex GmbH: regionaler Personaldienstleister in Pforzheim mit Expertise für Zeitarbeit und Personalvermittlung im Enzkreis."
@@ -547,6 +547,6 @@ export const UeberUns: React.FC = () => {
         </div>
       </section>
 
-    </div>
+    </main>
   );
 };

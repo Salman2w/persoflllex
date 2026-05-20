@@ -20,6 +20,7 @@ import {
   X
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
+import { Breadcrumb } from '../components/Breadcrumb';
 
 interface JobListItem {
   ObjectUuid: string;
@@ -112,7 +113,7 @@ export const Jobs: React.FC = () => {
   });
 
   return (
-    <div className="flex flex-col min-h-screen bg-white">
+    <main className="flex flex-col min-h-screen bg-white" id="main-content" role="main">
       <SEO 
         title="Jobs Pforzheim - Stellenangebote PersoFlex"
         description="Aktuelle Jobs in Pforzheim und Enzkreis. Stellenangebote in Produktion und Logistik."
@@ -126,6 +127,8 @@ export const Jobs: React.FC = () => {
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-orange-200/30 rounded-full blur-[120px]" />
         
         <div className="max-w-7xl mx-auto px-6 relative z-10">
+          {/* Breadcrumb for SEO/LLM visibility */}
+          <Breadcrumb items={[{ label: 'Jobs' }]} className="mb-6" />
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-center lg:text-left">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500 text-white mb-6 shadow-lg shadow-orange-500/25">
@@ -438,6 +441,6 @@ export const Jobs: React.FC = () => {
           </div>
         </div>
       </section>
-    </div>
+    </main>
   );
 };

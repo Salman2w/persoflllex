@@ -198,6 +198,12 @@ const structuredData = {
         structuredData={structuredData}
       />
 
+      {/* Skip Link for Accessibility */}
+      <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:bg-orange-500 focus:text-white focus:px-4 focus:py-2 focus:rounded-lg">
+        Zum Hauptinhalt springen
+      </a>
+
+      <main id="main-content" role="main">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background Image - classic img tag with absolute positioning */}
@@ -716,6 +722,7 @@ const structuredData = {
           </div>
         </div>
       </section>
+      </main>
     </>
   );
 };

@@ -69,7 +69,7 @@ export const Unternehmen: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <main className="min-h-screen bg-white" id="main-content" role="main">
       <SEO 
         title="Personal für Unternehmen in Pforzheim & Enzkreis | PersoFlex GmbH"
         description="Personaldienstleister in Pforzheim: Zeitarbeit, Personalvermittlung und On-Site-Management für Produktion, Logistik und Industrie im Enzkreis."
@@ -459,6 +459,6 @@ export const Unternehmen: React.FC = () => {
           </div>
         </div>
       </section>
-    </div>
+    </main>
   );
 };

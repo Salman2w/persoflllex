@@ -73,5 +73,9 @@ Crawl-delay: 1
 # Sitemap location
 Sitemap: https://www.persoflex-gmbh.de/sitemap.xml
 
+# LLM Context Files for AI discoverability
+# Short version: /llms.txt
+# Full version: /llms-full.txt
+
 # Host directive
 Host: https://www.persoflex-gmbh.de
