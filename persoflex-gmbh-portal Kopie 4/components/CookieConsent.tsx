@@ -169,26 +169,26 @@ export function CookieConsent() {
             )}
           </div>
 
-          {/* Actions */}
-          <div className="px-6 py-4 bg-gray-50 border-t border-gray-200 flex flex-col sm:flex-row gap-3">
+          {/* Actions — flex-wrap for very small screens */}
+          <div className="px-4 sm:px-6 py-4 bg-gray-50 border-t border-gray-200 flex flex-wrap sm:flex-nowrap gap-2 sm:gap-3">
             {!showSettings ? (
               <>
                 <button
                   onClick={() => setShowSettings(true)}
-                  className="flex-1 px-4 py-2.5 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors flex items-center justify-center gap-2"
+                  className="flex-1 min-w-[120px] px-4 py-3 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 active:bg-gray-100 transition-colors flex items-center justify-center gap-2"
                 >
                   <Settings className="w-4 h-4" />
                   Einstellungen
                 </button>
                 <button
                   onClick={acceptNecessaryOnly}
-                  className="flex-1 px-4 py-2.5 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
+                  className="flex-1 min-w-[120px] px-4 py-3 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 active:bg-gray-100 transition-colors"
                 >
                   Nur notwendige
                 </button>
                 <button
                   onClick={acceptAll}
-                  className="flex-1 px-4 py-2.5 text-sm font-medium text-white bg-orange-500 rounded-lg hover:bg-orange-600 transition-colors"
+                  className="flex-1 min-w-[120px] px-4 py-3 text-sm font-medium text-white bg-orange-500 rounded-lg hover:bg-orange-600 active:bg-orange-700 transition-colors"
                 >
                   Alle akzeptieren
                 </button>
@@ -197,13 +197,13 @@ export function CookieConsent() {
               <>
                 <button
                   onClick={() => setShowSettings(false)}
-                  className="flex-1 px-4 py-2.5 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
+                  className="flex-1 min-w-[120px] px-4 py-3 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 active:bg-gray-100 transition-colors"
                 >
                   Zurueck
                 </button>
                 <button
                   onClick={saveCustomPreferences}
-                  className="flex-1 px-4 py-2.5 text-sm font-medium text-white bg-orange-500 rounded-lg hover:bg-orange-600 transition-colors"
+                  className="flex-1 min-w-[120px] px-4 py-3 text-sm font-medium text-white bg-orange-500 rounded-lg hover:bg-orange-600 active:bg-orange-700 transition-colors"
                 >
                   Auswahl speichern
                 </button>

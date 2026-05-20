@@ -59,12 +59,33 @@
     color: hsl(var(--foreground));
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    /* Prevent horizontal overflow on mobile */
+    overflow-x: hidden;
   }
   
   body {
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));
     min-height: 100vh;
+    /* Prevent horizontal overflow on mobile */
+    overflow-x: hidden;
+    /* Improve touch scrolling on iOS */
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Ensure minimum touch target size for interactive elements */
+  button, a, input, select, textarea {
+    min-height: 44px;
+  }
+  
+  /* Exception for inline links within text */
+  p a, li a, span a, .blog-content a {
+    min-height: auto;
+  }
+  
+  /* Prevent tap highlight on mobile */
+  button, a {
+    -webkit-tap-highlight-color: transparent;
   }
 }
 

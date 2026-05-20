@@ -79,10 +79,10 @@ export const Navbar = () => {
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Button — min 44×44px touch target per WCAG */}
           <button 
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 text-gray-700 hover:text-orange-500 transition-colors"
+            className="lg:hidden min-w-[44px] min-h-[44px] flex items-center justify-center text-gray-700 hover:text-orange-500 transition-colors rounded-lg hover:bg-gray-100 active:bg-gray-200"
             aria-label={isMobileMenuOpen ? 'Menü schließen' : 'Menü öffnen'}
             aria-expanded={isMobileMenuOpen}
           >
@@ -94,20 +94,20 @@ export const Navbar = () => {
       {/* Mobile Menu */}
       <div 
         className={`lg:hidden absolute top-full left-0 w-full bg-white border-b border-gray-200 shadow-lg transition-all duration-300 ${
-          isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
+          isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'
         }`}
         role="menu"
       >
-        <div className="max-w-7xl mx-auto px-6 py-6 space-y-2">
+        <div className="max-w-7xl mx-auto px-4 py-4 space-y-1">
           {navLinks.map((link) => (
             <Link
               key={link.to}
               to={link.to}
               onClick={() => setIsMobileMenuOpen(false)}
-              className={`block py-3 px-4 rounded-lg font-medium transition-colors ${
+              className={`block min-h-[48px] py-3 px-4 rounded-lg font-medium transition-colors flex items-center ${
                 isActive(link.to) 
                   ? 'bg-orange-500 text-white' 
-                  : 'text-gray-700 hover:bg-orange-50 hover:text-orange-500'
+                  : 'text-gray-700 hover:bg-orange-50 hover:text-orange-500 active:bg-orange-100'
               }`}
               role="menuitem"
             >
@@ -116,7 +116,7 @@ export const Navbar = () => {
           ))}
           <a 
             href="tel:072316039493" 
-            className="mt-4 w-full bg-orange-500 hover:bg-orange-600 text-white px-6 py-4 rounded-lg flex items-center justify-center font-semibold transition-colors"
+            className="mt-3 w-full min-h-[52px] bg-orange-500 hover:bg-orange-600 active:bg-orange-700 text-white px-6 py-4 rounded-lg flex items-center justify-center font-semibold transition-colors"
           >
             <Phone size={18} className="mr-2" />
             07231 60 39 493

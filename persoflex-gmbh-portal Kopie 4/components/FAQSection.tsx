@@ -85,7 +85,7 @@ export const FAQSection: React.FC<FAQSectionProps> = ({
                 <button
                   type="button"
                   onClick={() => setOpenIndex(isOpen ? null : idx)}
-                  className="w-full flex items-center justify-between gap-6 py-5 text-left group"
+                  className="w-full flex items-center justify-between gap-4 py-5 min-h-[56px] text-left group"
                   aria-expanded={isOpen}
                   aria-controls={`faq-answer-${idx}`}
                 >

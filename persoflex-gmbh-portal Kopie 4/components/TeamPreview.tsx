@@ -100,9 +100,9 @@ export const TeamPreview: React.FC = () => {
             </Link>
           </div>
 
-          {/* Right: Team Grid */}
+          {/* Right: Team Grid — single column on very small screens, 2 cols on sm+, 3 cols fits naturally */}
           <div className="lg:col-span-7">
-            <div className="grid grid-cols-2 gap-4 md:gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
               {TEAM_PREVIEW.map((member, idx) => (
                 <Link
                   key={idx}

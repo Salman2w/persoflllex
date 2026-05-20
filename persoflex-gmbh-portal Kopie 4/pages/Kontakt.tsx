@@ -205,16 +205,16 @@ export const Kontakt: React.FC = () => {
               {/* Contact Reason Selector */}
               <div className="mb-8">
                 <label className="block text-sm font-semibold text-gray-900 mb-3">Worum geht es?</label>
-                <div className="grid grid-cols-2 gap-3">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {CONTACT_REASONS.map((reason) => (
                     <button
                       key={reason.id}
                       type="button"
                       onClick={() => setSelectedReason(reason.id)}
-                      className={`flex items-center gap-3 p-4 rounded-xl border-2 transition-all text-left ${
+                      className={`flex items-center gap-3 p-4 rounded-xl border-2 transition-all text-left min-h-[64px] ${
                         selectedReason === reason.id
                           ? 'border-orange-500 bg-orange-50'
-                          : 'border-gray-200 hover:border-orange-300'
+                          : 'border-gray-200 hover:border-orange-300 active:bg-gray-50'
                       }`}
                     >
                       <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${

@@ -75,6 +75,7 @@ export const Footer: React.FC = () => {
                       user="info"
                       domain="persoflex-gmbh.de"
                       className="text-sm text-gray-400 hover:text-orange-500 transition-colors break-all"
+                      style={{ overflowWrap: 'anywhere', wordBreak: 'break-word' }}
                     />
                   </li>
                 </ul>
